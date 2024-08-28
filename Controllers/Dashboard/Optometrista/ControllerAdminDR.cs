@@ -72,7 +72,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             int pos = ObjAdminDR.dgvDR.CurrentRow.Index;
             //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
-            if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjAdminDR.dgvDR[1, pos].Value.ToString()} {ObjAdminDR.dgvDR[2, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjAdminDR.dgvDR[0, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAO_DR daoDel = new DAO_DR();
                 daoDel.DR_ID1 = int.Parse(ObjAdminDR.dgvDR[0, pos].Value.ToString());

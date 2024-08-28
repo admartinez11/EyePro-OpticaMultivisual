@@ -63,7 +63,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             int pos = ObjAdminLens.dgvLens.CurrentRow.Index;
             //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
-            if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjAdminLens.dgvLens[1, pos].Value.ToString()} {ObjAdminLens.dgvLens[2, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjAdminLens.dgvLens[0, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOLens daoDel = new DAOLens();
                 daoDel.lens_ID1 = int.Parse(ObjAdminLens.dgvLens[0, pos].Value.ToString());

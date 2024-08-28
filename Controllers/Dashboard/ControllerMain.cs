@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdministrarClientes.View.RegistroCliente;
 using OpticaMultivisual.Controllers.Helper;
 using OpticaMultivisual.Models.DAO;
 using OpticaMultivisual.Views.Dashboard;
@@ -29,7 +30,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjMain.lblUsername.Text = SessionVar.Username;
             //Se invoca al evento AbrirFormularioAdminUsuarios para que este puede ser mostrado según el boton que el usuario presione.
             ObjMain.btnAdmin.Click += new EventHandler(AbrirFormularioAdminUsuarios);
-            ObjMain.btnClientes.Click += new EventHandler(AbrirFormularioChooseClient);
+            ObjMain.btnClientes.Click += new EventHandler(AbrirFormularioAdminClientes);
             ObjMain.btnReceta.Click += new EventHandler(AbrirFormularioRecetaBase);
             ObjMain.btnExit.Click += new EventHandler(CerrarSesion);
             ObjMain.FormClosing += new FormClosingEventHandler(cerrarPrograma);
@@ -147,9 +148,9 @@ namespace OpticaMultivisual.Controllers.Dashboard
             AbrirFormulario<ViewAdminEmp>();
         }
 
-        private void AbrirFormularioChooseClient(object sender, EventArgs e)
+        private void AbrirFormularioAdminClientes(object sender, EventArgs e)
         {
-            AbrirFormulario<ViewSearchScheduleAppointment>();
+            AbrirFormulario<AdministrarCientes>();
         }
 
         private void AbrirFormularioRecetaBase(object sender, EventArgs e)
