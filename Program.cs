@@ -9,6 +9,7 @@ using AdministrarClientes.View.RegistroCliente;
 using OpticaMultivisual.Views.ScheduleAppointment;
 using OpticaMultivisual.Views.Login;
 using OpticaMultivisual.Views.Dashboard.Optometrista;
+using OpticaMultivisual.Views.Reports.RecetaBase;
 
 namespace OpticaMultivisual
 {
@@ -24,7 +25,7 @@ namespace OpticaMultivisual
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar y ejecutar el primer formulario
-            Application.Run(new ViewLogin());
+            Application.Run(new ViewReportRecetaBase());
         }
     }
 
