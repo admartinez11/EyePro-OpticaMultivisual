@@ -20,5 +20,6 @@ namespace OpticaMultivisual.Views.Dashboard.Optometrista
             ControllerAdminDR ObjAddDR = new ControllerAdminDR(this);
             ControllerAdminDR ObjAdminDR = new ControllerAdminDR(this, accion);
         }
+
     }
 }

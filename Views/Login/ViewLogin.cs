@@ -25,5 +25,7 @@ namespace OpticaMultivisual.Views.Login
             Region = Region.FromHrgn(CommonClasses.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             //PasswordHide.Visible = false;
         }
+
+
     }
 }
