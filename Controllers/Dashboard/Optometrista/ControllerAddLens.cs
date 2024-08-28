@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -61,16 +62,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 //Datos para creación de persona
                 //OD
                 DAOInsert.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                DAOInsert.OD_cilindro1 = double.Parse(ObjAddLens.txtODCilindro.Text.ToString());
-                DAOInsert.OD_eje1 = double.Parse(ObjAddLens.txtODEje.Text.ToString());
-                DAOInsert.OD_prisma1 = int.Parse(ObjAddLens.txtODPrisma.Text.ToString());
-                DAOInsert.OD_adicion1 = int.Parse(ObjAddLens.txtODAdicion.Text.ToString());
+                DAOInsert.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.ToString();
+                DAOInsert.OD_eje1 = ObjAddLens.txtODEje.Text.ToString();
+                DAOInsert.OD_prisma1 = ObjAddLens.txtODPrisma.Text.ToString();
+                DAOInsert.OD_adicion1 = ObjAddLens.txtODAdicion.Text.ToString();
                 //OI
                 DAOInsert.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                DAOInsert.OI_cilindro1 = double.Parse(ObjAddLens.txtOICilindro.Text.ToString());
-                DAOInsert.OI_eje1 = double.Parse(ObjAddLens.txtOIEje.Text.ToString());
-                DAOInsert.OI_prisma1 = int.Parse(ObjAddLens.txtOIPrisma.Text.ToString());
-                DAOInsert.OI_adicion1 = int.Parse(ObjAddLens.txtOIAdicion.Text.ToString());
+                DAOInsert.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.ToString();
+                DAOInsert.OI_eje1 = ObjAddLens.txtOIEje.Text.ToString();
+                DAOInsert.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.ToString();
+                DAOInsert.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.ToString();
 
                 int valorRetornado = DAOInsert.InsertarLens();
                 //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
@@ -101,16 +102,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
 
                 daoUpdate.lens_ID1 = int.Parse(ObjAddLens.txtDRid.Text.ToString());
                 daoUpdate.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                daoUpdate.OD_cilindro1 = double.Parse(ObjAddLens.txtODCilindro.Text.ToString());
-                daoUpdate.OD_eje1 = double.Parse(ObjAddLens.txtODEje.Text.ToString());
-                daoUpdate.OD_prisma1 = int.Parse(ObjAddLens.txtODPrisma.Text.ToString());
-                daoUpdate.OD_adicion1 = int.Parse(ObjAddLens.txtODAdicion.Text.ToString());
+                daoUpdate.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.ToString();
+                daoUpdate.OD_eje1 = ObjAddLens.txtODEje.Text.ToString();
+                daoUpdate.OD_prisma1 = ObjAddLens.txtODPrisma.Text.ToString();
+                daoUpdate.OD_adicion1 = ObjAddLens.txtODAdicion.Text.ToString();
                 //OI
                 daoUpdate.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                daoUpdate.OI_cilindro1 = double.Parse(ObjAddLens.txtOICilindro.Text.ToString());
-                daoUpdate.OI_eje1 = double.Parse(ObjAddLens.txtOIEje.Text.ToString());
-                daoUpdate.OI_prisma1 = int.Parse(ObjAddLens.txtOIPrisma.Text.ToString());
-                daoUpdate.OI_adicion1 = int.Parse(ObjAddLens.txtOIAdicion.Text.ToString());
+                daoUpdate.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.ToString();
+                daoUpdate.OI_eje1 = ObjAddLens.txtOIEje.Text.ToString();
+                daoUpdate.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.ToString();
+                daoUpdate.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.ToString();
 
                 int valorRetornado = daoUpdate.ActualizarLens();
                 if (valorRetornado == 1)
@@ -141,8 +142,24 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private bool ValidarCampos()
         {
             CommonClasses commonClasses = new CommonClasses();
-            string OD_cilindro = ObjAddLens.txtODCilindro.Text.Trim();
 
+            string OD_esfera = ObjAddLens.txtODEsfera.Text.Trim();
+            // Si está vacío, permitimos la inserción
+            if (string.IsNullOrEmpty(OD_esfera))
+            {
+                return true;
+            }
+            // Si no está vacío, validamos el punto decimal
+            if (!Regex.IsMatch(OD_esfera, @"^\d+$"))
+            {
+                MessageBox.Show("El tipo de valores ingresados son incorrectos",
+                                        "Validación de Ojo Derecho Esfera",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string OD_cilindro = ObjAddLens.txtODCilindro.Text.Trim();
             // Si está vacío, permitimos la inserción
             if (string.IsNullOrEmpty(OD_cilindro))
             {
@@ -206,8 +223,23 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return false;
             }
 
-            string OI_cilindro = ObjAddLens.txtOICilindro.Text.Trim();
+            string OI_esfera = ObjAddLens.txtOIEsfera.Text.Trim();
+            // Si está vacío, permitimos la inserción
+            if (string.IsNullOrEmpty(OI_esfera))
+            {
+                return true;
+            }
+            // Si no está vacío, validamos el punto decimal
+            if (!Regex.IsMatch(OI_esfera, @"^\d+$"))
+            {
+                MessageBox.Show("El tipo de valores ingresados son incorrectos",
+                                        "Validación de Ojo Izquierdo Esfera",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                return false;
+            }
 
+            string OI_cilindro = ObjAddLens.txtOICilindro.Text.Trim();
             // Si está vacío, permitimos la inserción
             if (string.IsNullOrEmpty(OI_cilindro))
             {
@@ -271,7 +303,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return false;
             }
 
-            string OD_esfera = ObjAddLens.txtODEsfera.Text.Trim();
+
             if (ObjAddLens.txtODEsfera.Text.Length > 5)
             {
                 MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -332,7 +364,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return false;
             }
 
-            string OI_esfera = ObjAddLens.txtOIEsfera.Text.Trim();
+
             if (ObjAddLens.txtOIEsfera.Text.Length > 5)
             {
                 MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
