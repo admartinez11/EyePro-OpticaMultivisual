@@ -17,7 +17,7 @@ namespace OpticaMultivisual.Controllers.Login
         public ControllerCambiarClaveDefecto(ViewCambiarClaveDefecto vista)
         {
             this.vista = vista;
-            vista.btnCambiarClave1.Click += new EventHandler(CambiarClaveDefecto);
+            vista.btnCambiarClave.Click += new EventHandler(CambiarClaveDefecto);
             vista.Load += new EventHandler(ConfigurarValidacionDeComandos);
         }
 
@@ -25,26 +25,26 @@ namespace OpticaMultivisual.Controllers.Login
         {
             CommonClasses commonClasses = new CommonClasses();
             // Asociar el evento KeyDown a los TextBox que se quiere proteger
-            vista.txtUsuario1.KeyDown += commonClasses.ValidarComandos;
-            vista.txtNuevaContra1.KeyDown += commonClasses.ValidarComandos;
-            vista.txtConfirmarNuevaContra1.KeyDown += commonClasses.ValidarComandos;
+            vista.txtUsuario.KeyDown += commonClasses.ValidarComandos;
+            vista.txtNuevaContra.KeyDown += commonClasses.ValidarComandos;
+            vista.txtConfirmarNuevaContra.KeyDown += commonClasses.ValidarComandos;
 
             // Deshabilitar el menú contextual
-            vista.txtUsuario1.ContextMenuStrip = new ContextMenuStrip();
-            vista.txtNuevaContra1.ContextMenuStrip = new ContextMenuStrip();
-            vista.txtConfirmarNuevaContra1.ContextMenuStrip = new ContextMenuStrip();
+            vista.txtUsuario.ContextMenuStrip = new ContextMenuStrip();
+            vista.txtNuevaContra.ContextMenuStrip = new ContextMenuStrip();
+            vista.txtConfirmarNuevaContra.ContextMenuStrip = new ContextMenuStrip();
         }
 
         void CambiarClaveDefecto(object sender, EventArgs e)
         {
             DAOAdminEmp daoUpdatePassword = new DAOAdminEmp();
             CommonClasses common = new CommonClasses();
-            daoUpdatePassword.User = vista.txtUsuario1.Text.Trim();
-            if (vista.txtNuevaContra1.Text.Trim().Equals(vista.txtConfirmarNuevaContra1.Text.Trim()))
+            daoUpdatePassword.User = vista.txtUsuario.Text.Trim();
+            if (vista.txtNuevaContra.Text.Trim().Equals(vista.txtConfirmarNuevaContra.Text.Trim()))
             {
-                if (common.EsValida(vista.txtConfirmarNuevaContra1.Text.Trim()))
+                if (common.EsValida(vista.txtConfirmarNuevaContra.Text.Trim()))
                 {
-                    daoUpdatePassword.Password = common.ComputeSha256Hash(vista.txtConfirmarNuevaContra1.Text.Trim());
+                    daoUpdatePassword.Password = common.ComputeSha256Hash(vista.txtConfirmarNuevaContra.Text.Trim());
                     if (daoUpdatePassword.RestablecerContrasena())
                     {
                         MessageBox.Show("Contraseña actualizada con éxito.", "Proceso finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
