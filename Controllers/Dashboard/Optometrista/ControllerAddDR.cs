@@ -194,6 +194,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount = OD_cilindro.Split('.').Length - 1;
+            if (dotCount != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho Cilindro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OD_eje = ObjAddDR.txtODEje.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -208,6 +218,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         "Validación de Ojo Derecho Eje",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
+                return false;
+            }
+            // Validamos la cantidad de puntos decimales
+            int dotCount1 = OD_eje.Split('.').Length - 1;
+            if (dotCount1 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho Eje",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -258,6 +278,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount2 = OD_DP.Split('.').Length - 1;
+            if (dotCount2 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho DP",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OD_AO = ObjAddDR.txtODao.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -290,7 +320,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
-
+            // Validamos la cantidad de puntos decimales
+            int dotCount3 = OD_AP.Split('.').Length - 1;
+            if (dotCount3 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho AP",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OI_esfera = ObjAddDR.txtODEsfera.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -324,6 +363,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount4 = OD_cilindro.Split('.').Length - 1;
+            if (dotCount4 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo Cilindro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OI_eje = ObjAddDR.txtOIEje.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -338,6 +387,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         "Validación de Ojo Izquierdo Eje",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
+                return false;
+            }
+            // Validamos la cantidad de puntos decimales
+            int dotCount5 = OI_eje.Split('.').Length - 1;
+            if (dotCount5 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo Eje",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -388,6 +447,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount6 = OI_DP.Split('.').Length - 1;
+            if (dotCount6 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo DP",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OI_AO = ObjAddDR.txtOIao.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -418,6 +487,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         "Validación de Ojo Izquierdo AP",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
+                return false;
+            }
+            // Validamos la cantidad de puntos decimales
+            int dotCount7 = OI_AP.Split('.').Length - 1;
+            if (dotCount7 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo AP",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                 return false;
             }
 

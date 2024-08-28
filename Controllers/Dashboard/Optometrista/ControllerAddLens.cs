@@ -174,6 +174,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount1 = OD_cilindro.Split('.').Length - 1;
+            if (dotCount1 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho Cilindro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OD_eje = ObjAddLens.txtODEje.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -190,6 +200,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount2 = OD_eje.Split('.').Length - 1;
+            if (dotCount2 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Derecho Eje",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OD_prisma = ObjAddLens.txtODPrisma.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -198,7 +218,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OD_prisma.Contains("."))
+            if (!Regex.IsMatch(OD_prisma, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Prisma",
@@ -214,7 +234,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OD_adicion.Contains("."))
+            if (!Regex.IsMatch(OD_adicion, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Adicion",
@@ -254,6 +274,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount3 = OI_cilindro.Split('.').Length - 1;
+            if (dotCount3 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo Cilindro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OI_eje = ObjAddLens.txtOIEje.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -270,6 +300,16 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+            // Validamos la cantidad de puntos decimales
+            int dotCount4 = OI_eje.Split('.').Length - 1;
+            if (dotCount4 != 1)  // Verifica si no hay o hay más de un punto decimal
+            {
+                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
+                                "Validación de Ojo Izquierdo Eje",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
 
             string OI_prisma = ObjAddLens.txtOIPrisma.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -278,7 +318,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OI_prisma.Contains("."))
+            if (!Regex.IsMatch(OI_prisma, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Izquierdo Prisma",
@@ -294,7 +334,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OI_adicion.Contains("."))
+            if (!Regex.IsMatch(OI_adicion, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Izquierdo Adicion",
