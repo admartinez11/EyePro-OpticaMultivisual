@@ -234,7 +234,7 @@
             this.BtnStart.OnPressedState.IconLeftImage = null;
             this.BtnStart.OnPressedState.IconRightImage = null;
             this.BtnStart.Size = new System.Drawing.Size(140, 38);
-            this.BtnStart.TabIndex = 28;
+            this.BtnStart.TabIndex = 2;
             this.BtnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnStart.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.BtnStart.TextMarginLeft = 0;
@@ -328,9 +328,9 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(379, 32);
+            this.txtPassword.Size = new System.Drawing.Size(379, 39);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPassword.TabIndex = 16;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMarginBottom = 0;
             this.txtPassword.TextMarginLeft = 1;
@@ -404,9 +404,9 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(379, 32);
+            this.txtUsername.Size = new System.Drawing.Size(379, 39);
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUsername.TabIndex = 14;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TextMarginBottom = 0;
             this.txtUsername.TextMarginLeft = 1;
@@ -440,7 +440,7 @@
             this.LblUsername.Location = new System.Drawing.Point(41, 154);
             this.LblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(84, 28);
+            this.LblUsername.Size = new System.Drawing.Size(69, 21);
             this.LblUsername.TabIndex = 14;
             this.LblUsername.Text = "Usuario";
             // 
@@ -453,7 +453,7 @@
             this.LblPassword.Location = new System.Drawing.Point(41, 211);
             this.LblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(118, 28);
+            this.LblPassword.Size = new System.Drawing.Size(96, 21);
             this.LblPassword.TabIndex = 15;
             this.LblPassword.Text = "Contraseña";
             // 
@@ -465,7 +465,7 @@
             this.LblForgotpass.LinkColor = System.Drawing.Color.White;
             this.LblForgotpass.Location = new System.Drawing.Point(42, 280);
             this.LblForgotpass.Name = "LblForgotpass";
-            this.LblForgotpass.Size = new System.Drawing.Size(190, 23);
+            this.LblForgotpass.Size = new System.Drawing.Size(150, 17);
             this.LblForgotpass.TabIndex = 3;
             this.LblForgotpass.TabStop = true;
             this.LblForgotpass.Text = "¿Olvido su contraseña?";
@@ -478,7 +478,7 @@
             this.Lblregistration.LinkColor = System.Drawing.Color.White;
             this.Lblregistration.Location = new System.Drawing.Point(42, 313);
             this.Lblregistration.Name = "Lblregistration";
-            this.Lblregistration.Size = new System.Drawing.Size(99, 23);
+            this.Lblregistration.Size = new System.Drawing.Size(76, 17);
             this.Lblregistration.TabIndex = 4;
             this.Lblregistration.TabStop = true;
             this.Lblregistration.Text = "Registrarse";
@@ -503,7 +503,7 @@
             this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
             this.BtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(29, 26);
+            this.BtnExit.Size = new System.Drawing.Size(24, 26);
             this.BtnExit.Text = "toolStripButton1";
             // 
             // BtnTest
@@ -511,12 +511,12 @@
             this.BtnTest.Image = ((System.Drawing.Image)(resources.GetObject("BtnTest.Image")));
             this.BtnTest.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnTest.Name = "BtnTest";
-            this.BtnTest.Size = new System.Drawing.Size(141, 26);
+            this.BtnTest.Size = new System.Drawing.Size(118, 26);
             this.BtnTest.Text = "Probar conexión";
             // 
             // ViewLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1348, 679);

@@ -17,7 +17,7 @@ namespace OpticaMultivisual.Models
             try
             {
                 // Nombre del servidor y base de datos a los que conectarse
-                string server = "A11\\SQLEXPRESS";
+                string server = "DESKTOP-MHQ9T8J\\SQLEXPRESS";
                 string database = "EyePro";
                 // Creación de una instancia de SqlConnection utilizando la cadena de conexión especificada
                 SqlConnection conexion = new SqlConnection($"Server = {server}; Database = {database}; Integrated Security = true");
