@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using OpticaMultivisual.Controllers.Helper;
 using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
 
 namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
 {
@@ -66,24 +67,28 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 //OD
                 //DAOInsert.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
                 DAOInsert.OD_esfera1 = ObjAddDR.txtODEsfera.Text.Trim();
-                DAOInsert.OD_cilindro1 = double.Parse(ObjAddDR.txtODCilindro.Text.ToString());
-                DAOInsert.OD_eje1 = double.Parse(ObjAddDR.txtODEje.Text.ToString());
-                DAOInsert.OD_prisma1 = int.Parse(ObjAddDR.txtODPrisma.Text.ToString());
-                DAOInsert.OD_adicion1 = int.Parse(ObjAddDR.txtODAdicion.Text.ToString());
-                DAOInsert.OD_DP1 = double.Parse(ObjAddDR.txtODdp.Text.ToString());
-                DAOInsert.OD_AO1 = int.Parse(ObjAddDR.txtODao.Text.ToString());
-                DAOInsert.OD_AP1 = double.Parse(ObjAddDR.txtODap.Text.ToString());
+                DAOInsert.OD_cilindro1 = ObjAddDR.txtODCilindro.Text.Trim();
+                DAOInsert.OD_eje1 = ObjAddDR.txtODEje.Text.Trim();
+                DAOInsert.OD_prisma1 = ObjAddDR.txtODPrisma.Text.Trim();
+                DAOInsert.OD_adicion1 = ObjAddDR.txtODAdicion.Text.Trim();
+                DAOInsert.OD_DP1 = ObjAddDR.txtODdp.Text.Trim();
+                DAOInsert.OD_AO1 = ObjAddDR.txtODao.Text.Trim();
+                DAOInsert.OD_AP1 = ObjAddDR.txtODap.Text.Trim();
                 //OI
                 DAOInsert.OI_esfera1 = ObjAddDR.txtOIEsfera.Text.Trim();
-                DAOInsert.OI_cilindro1 = double.Parse(ObjAddDR.txtOICilindro.Text.ToString());
-                DAOInsert.OI_eje1 = double.Parse(ObjAddDR.txtOIEje.Text.ToString());
-                DAOInsert.OI_prisma1 = int.Parse(ObjAddDR.txtOIPrisma.Text.ToString());
-                DAOInsert.OI_adicion1 = int.Parse(ObjAddDR.txtOIAdicion.Text.ToString());
-                DAOInsert.OI_DP1 = double.Parse(ObjAddDR.txtOIdp.Text.ToString());
-                DAOInsert.OI_AO1 = int.Parse(ObjAddDR.txtOIao.Text.ToString());
-                DAOInsert.OI_AP1 = double.Parse(ObjAddDR.txtOIap.Text.ToString());
+                DAOInsert.OI_cilindro1 = ObjAddDR.txtOICilindro.Text.Trim();
+                DAOInsert.OI_eje1 = ObjAddDR.txtOIEje.Text.Trim();
+                DAOInsert.OI_prisma1 = ObjAddDR.txtOIPrisma.Text.Trim();
+                DAOInsert.OI_adicion1 = ObjAddDR.txtOIAdicion.Text.Trim();
+                DAOInsert.OI_DP1 = ObjAddDR.txtOIdp.Text.Trim();
+                DAOInsert.OI_AO1 = ObjAddDR.txtOIao.Text.Trim();
+                DAOInsert.OI_AP1 = ObjAddDR.txtOIap.Text.Trim();
 
                 int valorRetornado = DAOInsert.InsertarDR();
+                MessageBox.Show($"Valor Retonado{valorRetornado}",
+                                    "xx",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -111,22 +116,22 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
 
                 daoUpdate.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
                 daoUpdate.OD_esfera1 = ObjAddDR.txtODEsfera.Text.Trim();
-                daoUpdate.OD_cilindro1 = double.Parse(ObjAddDR.txtODCilindro.Text.ToString());
-                daoUpdate.OD_eje1 = double.Parse(ObjAddDR.txtODEje.Text.ToString());
-                daoUpdate.OD_prisma1 = int.Parse(ObjAddDR.txtODPrisma.Text.ToString());
-                daoUpdate.OD_adicion1 = int.Parse(ObjAddDR.txtODAdicion.Text.ToString());
-                daoUpdate.OD_DP1 = double.Parse(ObjAddDR.txtODdp.Text.ToString());
-                daoUpdate.OD_AO1 = int.Parse(ObjAddDR.txtODao.Text.ToString());
-                daoUpdate.OD_AP1 = double.Parse(ObjAddDR.txtODap.Text.ToString());
+                daoUpdate.OD_cilindro1 = ObjAddDR.txtODCilindro.Text.ToString();
+                daoUpdate.OD_eje1 = ObjAddDR.txtODEje.Text.ToString();
+                daoUpdate.OD_prisma1 = ObjAddDR.txtODPrisma.Text.ToString();
+                daoUpdate.OD_adicion1 = ObjAddDR.txtODAdicion.Text.ToString();
+                daoUpdate.OD_DP1 = ObjAddDR.txtODdp.Text.ToString();
+                daoUpdate.OD_AO1 = ObjAddDR.txtODao.Text.ToString();
+                daoUpdate.OD_AP1 = ObjAddDR.txtODap.Text.ToString();
                 //OI
                 daoUpdate.OI_esfera1 = ObjAddDR.txtOIEsfera.Text.Trim();
-                daoUpdate.OI_cilindro1 = double.Parse(ObjAddDR.txtOICilindro.Text.ToString());
-                daoUpdate.OI_eje1 = double.Parse(ObjAddDR.txtOIEje.Text.ToString());
-                daoUpdate.OI_prisma1 = int.Parse(ObjAddDR.txtOIPrisma.Text.ToString());
-                daoUpdate.OI_adicion1 = int.Parse(ObjAddDR.txtOIAdicion.Text.ToString());
-                daoUpdate.OI_DP1 = double.Parse(ObjAddDR.txtOIdp.Text.ToString());
-                daoUpdate.OI_AO1 = int.Parse(ObjAddDR.txtOIao.Text.ToString());
-                daoUpdate.OI_AP1 = double.Parse(ObjAddDR.txtOIap.Text.ToString());
+                daoUpdate.OI_cilindro1 = ObjAddDR.txtOICilindro.Text.ToString();
+                daoUpdate.OI_eje1 = ObjAddDR.txtOIEje.Text.ToString();
+                daoUpdate.OI_prisma1 = ObjAddDR.txtOIPrisma.Text.ToString();
+                daoUpdate.OI_adicion1 = ObjAddDR.txtOIAdicion.Text.ToString();
+                daoUpdate.OI_DP1 = ObjAddDR.txtOIdp.Text.ToString();
+                daoUpdate.OI_AO1 = ObjAddDR.txtOIao.Text.ToString();
+                daoUpdate.OI_AP1 = ObjAddDR.txtOIap.Text.ToString();
 
                 int valorRetornado = daoUpdate.ActualizarDR();
                 if (valorRetornado == 1)
@@ -157,8 +162,24 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private bool ValidarCampos()
         {
             CommonClasses commonClasses = new CommonClasses();
-            string OD_cilindro = ObjAddDR.txtODCilindro.Text.Trim();
 
+            string OD_esfera = ObjAddDR.txtODEsfera.Text.Trim();
+            // Si está vacío, permitimos la inserción
+            if (string.IsNullOrEmpty(OD_esfera))
+            {
+                return true;
+            }
+            // Si no está vacío, validamos el punto decimal
+            if (!Regex.IsMatch(OD_esfera, @"^\d+$"))
+            {
+                MessageBox.Show("El tipo de valores ingresados son incorrectos",
+                                        "Validación de Ojo Derecho Esfera",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string OD_cilindro = ObjAddDR.txtODCilindro.Text.Trim();
             // Si está vacío, permitimos la inserción
             if (string.IsNullOrEmpty(OD_cilindro))
             {
@@ -197,7 +218,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OD_prisma.Contains("."))
+            if (!Regex.IsMatch(OD_prisma, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Prisma",
@@ -213,7 +234,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OD_adicion.Contains("."))
+            if (!Regex.IsMatch(OD_adicion, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Adicion",
@@ -245,7 +266,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OD_AO.Contains("."))
+            if (!Regex.IsMatch(OD_AO, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho AO",
@@ -265,6 +286,23 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho AP",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                return false;
+            }
+
+
+            string OI_esfera = ObjAddDR.txtODEsfera.Text.Trim();
+            // Si está vacío, permitimos la inserción
+            if (string.IsNullOrEmpty(OI_esfera))
+            {
+                return true;
+            }
+            // Si no está vacío, validamos el punto decimal
+            if (!Regex.IsMatch(OI_esfera, @"^\d+$"))
+            {
+                MessageBox.Show("El tipo de valores ingresados son incorrectos",
+                                        "Validación de Ojo Izquierdo Esfera",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
                 return false;
@@ -310,7 +348,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OI_prisma.Contains("."))
+            if (!Regex.IsMatch(OI_prisma, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Izquierdo Prisma",
@@ -326,7 +364,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OI_adicion.Contains("."))
+            if (!Regex.IsMatch(OI_adicion, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Izquierdo Adicion",
@@ -358,7 +396,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return true;
             }
             // Si no está vacío, validamos el punto decimal
-            if (OI_AO.Contains("."))
+            if (!Regex.IsMatch(OI_AO, @"^\d+$"))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Izquierdo AO",
@@ -383,7 +421,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 return false;
             }
 
-            string OD_esfera = ObjAddDR.txtODEsfera.Text.Trim();
             if (ObjAddDR.txtODEsfera.Text.Length > 5)
             {
                 MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -481,7 +518,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
 
-            string OI_esfera = ObjAddDR.txtOIEsfera.Text.Trim();
             if (ObjAddDR.txtOIEsfera.Text.Length > 5)
             {
                 MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
