@@ -158,8 +158,9 @@
             this.txtSecurityAnswer.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSecurityAnswer.Lines = new string[0];
             this.txtSecurityAnswer.Location = new System.Drawing.Point(32, 340);
+            this.txtSecurityAnswer.MaximumSize = new System.Drawing.Size(443, 32);
             this.txtSecurityAnswer.MaxLength = 32767;
-            this.txtSecurityAnswer.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSecurityAnswer.MinimumSize = new System.Drawing.Size(443, 32);
             this.txtSecurityAnswer.Modified = false;
             this.txtSecurityAnswer.Multiline = false;
             this.txtSecurityAnswer.Name = "txtSecurityAnswer";
@@ -193,7 +194,7 @@
             this.txtSecurityAnswer.SelectionLength = 0;
             this.txtSecurityAnswer.SelectionStart = 0;
             this.txtSecurityAnswer.ShortcutsEnabled = true;
-            this.txtSecurityAnswer.Size = new System.Drawing.Size(443, 40);
+            this.txtSecurityAnswer.Size = new System.Drawing.Size(443, 32);
             this.txtSecurityAnswer.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSecurityAnswer.TabIndex = 7;
             this.txtSecurityAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -462,7 +463,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Femenino",
             "Masculino"});
-            this.cmbGender.Location = new System.Drawing.Point(48, 401);
+            this.cmbGender.Location = new System.Drawing.Point(36, 403);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(176, 21);
@@ -475,7 +476,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(42, 383);
+            this.label17.Location = new System.Drawing.Point(33, 383);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(62, 16);
@@ -488,7 +489,7 @@
             this.mskDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
             this.mskDocument.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mskDocument.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDocument.Location = new System.Drawing.Point(299, 403);
+            this.mskDocument.Location = new System.Drawing.Point(299, 405);
             this.mskDocument.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mskDocument.Mask = "00000000-0";
             this.mskDocument.Name = "mskDocument";
@@ -610,8 +611,9 @@
             this.txtPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhone.Lines = new string[0];
             this.txtPhone.Location = new System.Drawing.Point(30, 213);
+            this.txtPhone.MaximumSize = new System.Drawing.Size(181, 32);
             this.txtPhone.MaxLength = 32767;
-            this.txtPhone.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtPhone.MinimumSize = new System.Drawing.Size(181, 32);
             this.txtPhone.Modified = false;
             this.txtPhone.Multiline = false;
             this.txtPhone.Name = "txtPhone";
@@ -699,8 +701,9 @@
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(30, 101);
+            this.txtEmail.MaximumSize = new System.Drawing.Size(447, 32);
             this.txtEmail.MaxLength = 32767;
-            this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtEmail.MinimumSize = new System.Drawing.Size(447, 32);
             this.txtEmail.Modified = false;
             this.txtEmail.Multiline = false;
             this.txtEmail.Name = "txtEmail";
@@ -734,7 +737,7 @@
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(447, 31);
+            this.txtEmail.Size = new System.Drawing.Size(447, 32);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 2;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -788,8 +791,9 @@
             this.txtAddress.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.Lines = new string[0];
             this.txtAddress.Location = new System.Drawing.Point(30, 155);
+            this.txtAddress.MaximumSize = new System.Drawing.Size(445, 32);
             this.txtAddress.MaxLength = 32767;
-            this.txtAddress.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtAddress.MinimumSize = new System.Drawing.Size(445, 32);
             this.txtAddress.Modified = false;
             this.txtAddress.Multiline = false;
             this.txtAddress.Name = "txtAddress";
@@ -823,7 +827,7 @@
             this.txtAddress.SelectionLength = 0;
             this.txtAddress.SelectionStart = 0;
             this.txtAddress.ShortcutsEnabled = true;
-            this.txtAddress.Size = new System.Drawing.Size(445, 31);
+            this.txtAddress.Size = new System.Drawing.Size(445, 32);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAddress.TabIndex = 3;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -937,8 +941,9 @@
             this.txtLastName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLastName.Lines = new string[0];
             this.txtLastName.Location = new System.Drawing.Point(275, 47);
+            this.txtLastName.MaximumSize = new System.Drawing.Size(202, 32);
             this.txtLastName.MaxLength = 32767;
-            this.txtLastName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtLastName.MinimumSize = new System.Drawing.Size(202, 32);
             this.txtLastName.Modified = false;
             this.txtLastName.Multiline = false;
             this.txtLastName.Name = "txtLastName";
@@ -972,7 +977,7 @@
             this.txtLastName.SelectionLength = 0;
             this.txtLastName.SelectionStart = 0;
             this.txtLastName.ShortcutsEnabled = true;
-            this.txtLastName.Size = new System.Drawing.Size(202, 31);
+            this.txtLastName.Size = new System.Drawing.Size(202, 32);
             this.txtLastName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtLastName.TabIndex = 1;
             this.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1026,8 +1031,9 @@
             this.txtFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFirstName.Lines = new string[0];
             this.txtFirstName.Location = new System.Drawing.Point(30, 47);
+            this.txtFirstName.MaximumSize = new System.Drawing.Size(202, 32);
             this.txtFirstName.MaxLength = 32767;
-            this.txtFirstName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtFirstName.MinimumSize = new System.Drawing.Size(202, 32);
             this.txtFirstName.Modified = false;
             this.txtFirstName.Multiline = false;
             this.txtFirstName.Name = "txtFirstName";
@@ -1061,7 +1067,7 @@
             this.txtFirstName.SelectionLength = 0;
             this.txtFirstName.SelectionStart = 0;
             this.txtFirstName.ShortcutsEnabled = true;
-            this.txtFirstName.Size = new System.Drawing.Size(219, 31);
+            this.txtFirstName.Size = new System.Drawing.Size(202, 32);
             this.txtFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
