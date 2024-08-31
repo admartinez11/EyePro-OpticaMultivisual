@@ -171,6 +171,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if (!commonClasses.ValidateEmail(ObjAddUser.txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
+                                "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else if (ObjAddUser.txtEmail.Text.Length > 100)
             {
                 MessageBox.Show("El campo de correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -299,6 +305,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
             {
                 MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!commonClasses.ValidateEmail(ObjAddUser.txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
+                                "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (ObjAddUser.txtEmail.Text.Length > 100)

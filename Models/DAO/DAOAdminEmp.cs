@@ -42,6 +42,23 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        public bool RegistrarPIN()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string queryupdate = "UPDATE Usuario SET VerificationCode = @valor1 WHERE username = @username";
+                SqlCommand cmdupdate = new SqlCommand(queryupdate, Command.Connection);
+                cmdupdate.Parameters.AddWithValue("valor1", VerificationCode);
+                cmdupdate.Parameters.AddWithValue("username", User);
+                return cmdupdate.ExecuteNonQuery() > 0 ? true : false;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+        }
+
         public bool RestablecerContrasena()
         {
             try
@@ -327,6 +344,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
+                RollBack();
                 //Se retorna -1 en caso que en el segmento del try haya ocurrido algún error.
                 return -1;
             }
@@ -335,6 +353,15 @@ namespace OpticaMultivisual.Models.DAO
                 //Independientemente se haga o no el proceso cerramos la conexión
                 Command.Connection.Close();
             }
+        }
+
+        public void RollBack()
+        {
+            //Eliminar el usuario ingresado
+            string query = "DELETE FROM Usuario WHERE username = @username";
+            SqlCommand cmddel = new SqlCommand(query, Command.Connection);
+            cmddel.Parameters.AddWithValue("username", User);
+            int retorno = cmddel.ExecuteNonQuery();
         }
 
         public DataSet ObtenerPersonas()

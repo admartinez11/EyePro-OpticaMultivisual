@@ -74,20 +74,19 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.21662F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.37982F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.47775F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.76265F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.50584F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.63424F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.82769F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6701F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.35493F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1797, 836);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 609);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -96,22 +95,20 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(372, 183);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(228, 133);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(364, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 127);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -125,14 +122,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.046481F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(384, 195);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(237, 142);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.408602F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.94624F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.913979F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1004, 458);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(616, 333);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -142,28 +138,26 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(49, 46);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(30, 34);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.86869F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.13131F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(900, 380);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(551, 276);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.92974F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.07026F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.76191F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.23809F));
             this.tableLayoutPanel5.Controls.Add(this.BtnVerifyAndReset, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 334);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 242);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(892, 42);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(545, 31);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // BtnVerifyAndReset
@@ -213,8 +207,7 @@
             this.BtnVerifyAndReset.IdleIconLeftImage = null;
             this.BtnVerifyAndReset.IdleIconRightImage = null;
             this.BtnVerifyAndReset.IndicateFocus = false;
-            this.BtnVerifyAndReset.Location = new System.Drawing.Point(565, 4);
-            this.BtnVerifyAndReset.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnVerifyAndReset.Location = new System.Drawing.Point(301, 3);
             this.BtnVerifyAndReset.Name = "BtnVerifyAndReset";
             this.BtnVerifyAndReset.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnVerifyAndReset.OnDisabledState.BorderRadius = 35;
@@ -248,7 +241,7 @@
             this.BtnVerifyAndReset.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnVerifyAndReset.OnPressedState.IconLeftImage = null;
             this.BtnVerifyAndReset.OnPressedState.IconRightImage = null;
-            this.BtnVerifyAndReset.Size = new System.Drawing.Size(323, 34);
+            this.BtnVerifyAndReset.Size = new System.Drawing.Size(241, 25);
             this.BtnVerifyAndReset.TabIndex = 29;
             this.BtnVerifyAndReset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnVerifyAndReset.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -267,8 +260,7 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 7;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -278,7 +270,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(892, 322);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(545, 233);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // txtConfirmPassword
@@ -311,8 +303,7 @@
             this.txtConfirmPassword.IconRight = null;
             this.txtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConfirmPassword.Lines = new string[0];
-            this.txtConfirmPassword.Location = new System.Drawing.Point(4, 229);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(3, 168);
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtConfirmPassword.Modified = false;
@@ -338,7 +329,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtConfirmPassword.OnIdleState = stateProperties4;
-            this.txtConfirmPassword.Padding = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtConfirmPassword.PasswordChar = '\0';
             this.txtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtConfirmPassword.PlaceholderText = "";
@@ -348,7 +339,7 @@
             this.txtConfirmPassword.SelectionLength = 0;
             this.txtConfirmPassword.SelectionStart = 0;
             this.txtConfirmPassword.ShortcutsEnabled = true;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(884, 37);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(539, 27);
             this.txtConfirmPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtConfirmPassword.TabIndex = 17;
             this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -389,8 +380,7 @@
             this.txtNewPassword.IconRight = null;
             this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPassword.Lines = new string[0];
-            this.txtNewPassword.Location = new System.Drawing.Point(4, 139);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNewPassword.Location = new System.Drawing.Point(3, 102);
             this.txtNewPassword.MaxLength = 32767;
             this.txtNewPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPassword.Modified = false;
@@ -416,7 +406,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewPassword.OnIdleState = stateProperties8;
-            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(4);
+            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewPassword.PlaceholderText = "";
@@ -426,7 +416,7 @@
             this.txtNewPassword.SelectionLength = 0;
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(884, 37);
+            this.txtNewPassword.Size = new System.Drawing.Size(539, 27);
             this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewPassword.TabIndex = 16;
             this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -467,8 +457,7 @@
             this.txtVerificationCode.IconRight = null;
             this.txtVerificationCode.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVerificationCode.Lines = new string[0];
-            this.txtVerificationCode.Location = new System.Drawing.Point(4, 49);
-            this.txtVerificationCode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVerificationCode.Location = new System.Drawing.Point(3, 36);
             this.txtVerificationCode.MaxLength = 32767;
             this.txtVerificationCode.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtVerificationCode.Modified = false;
@@ -494,7 +483,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtVerificationCode.OnIdleState = stateProperties12;
-            this.txtVerificationCode.Padding = new System.Windows.Forms.Padding(4);
+            this.txtVerificationCode.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtVerificationCode.PasswordChar = '\0';
             this.txtVerificationCode.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtVerificationCode.PlaceholderText = "";
@@ -504,7 +493,7 @@
             this.txtVerificationCode.SelectionLength = 0;
             this.txtVerificationCode.SelectionStart = 0;
             this.txtVerificationCode.ShortcutsEnabled = true;
-            this.txtVerificationCode.Size = new System.Drawing.Size(884, 37);
+            this.txtVerificationCode.Size = new System.Drawing.Size(539, 27);
             this.txtVerificationCode.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtVerificationCode.TabIndex = 15;
             this.txtVerificationCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -518,16 +507,15 @@
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.40573F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.59427F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
             this.tableLayoutPanel9.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 184);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 135);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(884, 37);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(539, 27);
             this.tableLayoutPanel9.TabIndex = 6;
             // 
             // label3
@@ -536,10 +524,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(4, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 32);
+            this.label3.Size = new System.Drawing.Size(214, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Confirmar Contraseña:";
             // 
@@ -550,12 +537,11 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.59427F));
             this.tableLayoutPanel8.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 94);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 69);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(884, 37);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(539, 27);
             this.tableLayoutPanel8.TabIndex = 5;
             // 
             // label2
@@ -564,26 +550,24 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(4, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 32);
+            this.label2.Size = new System.Drawing.Size(180, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nueva Contraseña:";
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.10407F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.89593F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.51852F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.48148F));
             this.tableLayoutPanel7.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(884, 37);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(539, 27);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // label1
@@ -592,23 +576,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(4, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 32);
+            this.label1.Size = new System.Drawing.Size(218, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Código de Verificación:";
             // 
             // ViewVerifyCode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1797, 836);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(2554, 1318);
-            this.MinimumSize = new System.Drawing.Size(1813, 873);
+            this.MaximumSize = new System.Drawing.Size(1920, 1078);
+            this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "ViewVerifyCode";
             this.Text = "ViewVerifyCode";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -8,6 +8,8 @@ using System.Data;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using OpticaMultivisual.Controllers.Helper;
+using System.Net.Mail;
+using System.Net;
 
 namespace OpticaMultivisual.Controllers.Dashboard
 {
@@ -22,11 +24,100 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjAdminEmp.btnNuevo.Click += new EventHandler(NewUser);
             ObjAdminEmp.btnEditar.Click += new EventHandler(UpdateUser);
             ObjAdminEmp.btnEliminar.Click += new EventHandler(DeleteUser);
+            ObjAdminEmp.cmsResPass.Click += new EventHandler(RestartPassword);
             ObjAdminEmp.btnBuscar.Click += new EventHandler(BuscarPersonasControllerEvent);
             ObjAdminEmp.txtSearch.KeyPress += new KeyPressEventHandler(Search);
         }
 
-        public void Search(object sender, KeyPressEventArgs e)
+        void RestartPassword(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de restablecer la contraseña del usuario que ha seleccionado?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DAOAdminEmp daoRestartPassword = new DAOAdminEmp();
+                CommonClasses commonClasses = new CommonClasses();
+                int pos = ObjAdminEmp.dgvEmpleados.CurrentRow.Index;
+                //Capturando nombres del usuario
+                string firstName = ObjAdminEmp.dgvEmpleados[1, pos].Value.ToString();
+                string lastName = ObjAdminEmp.dgvEmpleados[2, pos].Value.ToString();
+                string nombrePersona = firstName + " " + lastName;
+                string emailDestinatario = ObjAdminEmp.dgvEmpleados[5, pos].Value.ToString();
+                daoRestartPassword.User = ObjAdminEmp.dgvEmpleados[9, pos].Value.ToString();
+                //Generando PIN de seguridad y enviado PIN a la base de datos
+                string pin = commonClasses.GenerarPin();
+                daoRestartPassword.VerificationCode = pin;
+                //Enviando PIN al correo de usuario
+                if (ValidateEmail(emailDestinatario))
+                {
+                    if (EnviarPinPorCorreo(emailDestinatario, pin, nombrePersona) && daoRestartPassword.RegistrarPIN())
+                    {
+                        MessageBox.Show("PIN de seguridad generado correctamente, indique al empleado que el PIN ha sido enviado a su correo registrado en el sistema.", "PIN de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El PIN no pudo ser registrado en la base de datos o no pudo enviarse al correo del destinatario, verifica la información.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La dirección de correo no es válida.",
+                                    "Correo inválido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        // Método para validar el correo electrónico
+        private bool ValidateEmail(string email)
+        {
+            try
+            {
+                var addr = new MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        bool EnviarPinPorCorreo(string emailDestinatario, string pin, string nombrePersona)
+        {
+            MailMessage mail = new MailMessage();
+            int puertoSmtp = 587; // Puerto común para SMTP
+            string SmtpServer = "smtp.gmail.com";
+            string remitente = "ccom.ptc2024@gmail.com";
+            string contraseña = "ngqy wagb fchr uvfr";
+            // Crear un mensaje de correo electrónico
+            MailMessage mensaje = new MailMessage(remitente, emailDestinatario);
+            mensaje.Subject = "Restablecimiento de contraseña";
+            mensaje.Body = $"Hola {nombrePersona}.\n\nEl administrador ha restablecido tu contraseña y para tu seguridad te hemos enviado un PIN el cual deberás ingresar para crear una nueva contraseña.\n\nDirígete al Inicio de Sesión y haz click en ¿Olvido su contraseña? posteriormente selecciona la opción de PIN de seguridad.\n\nEl pin que deberás introducir es: {pin}, no compartas este PIN y tampoco el acceso a tu correo electrónico registrado en el sistema.\nEn caso no solicitaste el restablecimiento de tu usuario, contacta con el administrador.";
+            // Configurar el cliente SMTP
+            SmtpClient clienteSmtp = new SmtpClient(SmtpServer, puertoSmtp);
+            clienteSmtp.Credentials = new NetworkCredential(remitente, contraseña);
+            clienteSmtp.EnableSsl = true;
+
+            // Enviar el correo  
+            try
+            {
+                clienteSmtp.Send(mensaje);
+                return true;
+            }
+            catch (SmtpException ex)
+            {
+                MessageBox.Show($"{ex.Message}");
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}");
+                return false;
+
+            }
+        }
+
+            public void Search(object sender, KeyPressEventArgs e)
         {
             BuscarPersonasController();
         }

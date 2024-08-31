@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -161,6 +162,18 @@ namespace OpticaMultivisual.Controllers.Helper
             return true;
         }
 
+        public string GenerarPin()
+        {
+            int longitud = 6;
+            byte[] data = new byte[longitud / 2];
+            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
+            {
+                crypto.GetBytes(data);
+            }
+            string hex = BitConverter.ToString(data);
+            return hex.Replace("-", "").Substring(0, longitud);
+        }
+
         public bool ValidarNumero(string numero)
         {
             // Expresión regular que permite solo números y un punto
@@ -177,6 +190,19 @@ namespace OpticaMultivisual.Controllers.Helper
 
             // Verificar que el número coincida con el patrón
             return Regex.IsMatch(numero, patron);
+        }
+
+        public bool ValidateEmail(string email)
+        {
+            try
+            {
+                var addr = new MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool EsValida(string contrasena)

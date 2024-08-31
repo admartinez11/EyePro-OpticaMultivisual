@@ -34,10 +34,11 @@ namespace OpticaMultivisual.Controllers.Dashboard
         // Método para enviar el correo de recuperación
         private void SendRecoveryEmail(object sender, EventArgs e)
         {
+            CommonClasses commonClasses = new CommonClasses();
             string userEmail = ObjRecoverPassword.txtCorreo.Text.Trim();
             if (ValidateEmail(userEmail))
             {
-                string verificationCode = GenerateVerificationCode();
+                string verificationCode = commonClasses.GenerarPin();
                 DAORecoverPassword DAOInsert = new DAORecoverPassword();
 
                 bool isStored = DAOInsert.StoreVerificationCode(userEmail, verificationCode);
@@ -95,13 +96,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
             {
                 return false;
             }
-        }
-
-        // Método para generar un código de verificación
-        private string GenerateVerificationCode()
-        {
-            //Utilizar otro metodo para generar el codigo aleatorio
-            return new Random().Next(100000, 999999).ToString();
         }
 
         // Método para enviar el correo electrónico de recuperación con el código de verificación
