@@ -44,8 +44,6 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.BtnStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.PasswordHide = new System.Windows.Forms.PictureBox();
-            this.PasswordVisible = new System.Windows.Forms.PictureBox();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -56,13 +54,13 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnExit = new System.Windows.Forms.ToolStripButton();
             this.BtnTest = new System.Windows.Forms.ToolStripButton();
+            this.PasswordVisible = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.PasswordHide = new Bunifu.UI.WinForms.BunifuImageButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordHide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordVisible)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -135,9 +133,9 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(172)))));
             this.bunifuPanel1.BorderRadius = 40;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.BtnStart);
             this.bunifuPanel1.Controls.Add(this.PasswordHide);
             this.bunifuPanel1.Controls.Add(this.PasswordVisible);
+            this.bunifuPanel1.Controls.Add(this.BtnStart);
             this.bunifuPanel1.Controls.Add(this.txtPassword);
             this.bunifuPanel1.Controls.Add(this.txtUsername);
             this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
@@ -199,7 +197,7 @@
             this.BtnStart.IdleIconLeftImage = null;
             this.BtnStart.IdleIconRightImage = null;
             this.BtnStart.IndicateFocus = false;
-            this.BtnStart.Location = new System.Drawing.Point(275, 292);
+            this.BtnStart.Location = new System.Drawing.Point(275, 303);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnStart.OnDisabledState.BorderRadius = 20;
@@ -241,28 +239,6 @@
             this.BtnStart.TextPadding = new System.Windows.Forms.Padding(0);
             this.BtnStart.UseDefaultRadiusAndThickness = true;
             // 
-            // PasswordHide
-            // 
-            this.PasswordHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.PasswordHide.Image = global::OpticaMultivisual.Properties.Resources.hide;
-            this.PasswordHide.Location = new System.Drawing.Point(392, 243);
-            this.PasswordHide.Name = "PasswordHide";
-            this.PasswordHide.Size = new System.Drawing.Size(23, 22);
-            this.PasswordHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PasswordHide.TabIndex = 12;
-            this.PasswordHide.TabStop = false;
-            // 
-            // PasswordVisible
-            // 
-            this.PasswordVisible.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.PasswordVisible.Image = global::OpticaMultivisual.Properties.Resources.visible;
-            this.PasswordVisible.Location = new System.Drawing.Point(392, 243);
-            this.PasswordVisible.Name = "PasswordVisible";
-            this.PasswordVisible.Size = new System.Drawing.Size(23, 22);
-            this.PasswordVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PasswordVisible.TabIndex = 13;
-            this.PasswordVisible.TabStop = false;
-            // 
             // txtPassword
             // 
             this.txtPassword.AcceptsReturn = false;
@@ -292,7 +268,7 @@
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(45, 235);
+            this.txtPassword.Location = new System.Drawing.Point(45, 247);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -450,7 +426,7 @@
             this.LblPassword.BackColor = System.Drawing.Color.Transparent;
             this.LblPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPassword.ForeColor = System.Drawing.Color.White;
-            this.LblPassword.Location = new System.Drawing.Point(41, 211);
+            this.LblPassword.Location = new System.Drawing.Point(41, 223);
             this.LblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(96, 21);
@@ -463,7 +439,7 @@
             this.LblForgotpass.BackColor = System.Drawing.Color.Transparent;
             this.LblForgotpass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblForgotpass.LinkColor = System.Drawing.Color.White;
-            this.LblForgotpass.Location = new System.Drawing.Point(42, 280);
+            this.LblForgotpass.Location = new System.Drawing.Point(42, 296);
             this.LblForgotpass.Name = "LblForgotpass";
             this.LblForgotpass.Size = new System.Drawing.Size(150, 17);
             this.LblForgotpass.TabIndex = 3;
@@ -476,7 +452,7 @@
             this.Lblregistration.BackColor = System.Drawing.Color.Transparent;
             this.Lblregistration.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lblregistration.LinkColor = System.Drawing.Color.White;
-            this.Lblregistration.Location = new System.Drawing.Point(42, 313);
+            this.Lblregistration.Location = new System.Drawing.Point(42, 324);
             this.Lblregistration.Name = "Lblregistration";
             this.Lblregistration.Size = new System.Drawing.Size(76, 17);
             this.Lblregistration.TabIndex = 4;
@@ -514,6 +490,76 @@
             this.BtnTest.Size = new System.Drawing.Size(118, 26);
             this.BtnTest.Text = "Probar conexión";
             // 
+            // PasswordVisible
+            // 
+            this.PasswordVisible.ActiveImage = null;
+            this.PasswordVisible.AllowAnimations = true;
+            this.PasswordVisible.AllowBuffering = false;
+            this.PasswordVisible.AllowToggling = false;
+            this.PasswordVisible.AllowZooming = true;
+            this.PasswordVisible.AllowZoomingOnFocus = false;
+            this.PasswordVisible.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.PasswordVisible.BackgroundImage = global::OpticaMultivisual.Properties.Resources.visible;
+            this.PasswordVisible.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordVisible.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PasswordVisible.ErrorImage")));
+            this.PasswordVisible.FadeWhenInactive = false;
+            this.PasswordVisible.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.PasswordVisible.Image = ((System.Drawing.Image)(resources.GetObject("PasswordVisible.Image")));
+            this.PasswordVisible.ImageActive = null;
+            this.PasswordVisible.ImageLocation = null;
+            this.PasswordVisible.ImageMargin = 10;
+            this.PasswordVisible.ImageSize = new System.Drawing.Size(31, 24);
+            this.PasswordVisible.ImageZoomSize = new System.Drawing.Size(41, 34);
+            this.PasswordVisible.InitialImage = ((System.Drawing.Image)(resources.GetObject("PasswordVisible.InitialImage")));
+            this.PasswordVisible.Location = new System.Drawing.Point(374, 249);
+            this.PasswordVisible.Name = "PasswordVisible";
+            this.PasswordVisible.Rotation = 0;
+            this.PasswordVisible.ShowActiveImage = true;
+            this.PasswordVisible.ShowCursorChanges = true;
+            this.PasswordVisible.ShowImageBorders = false;
+            this.PasswordVisible.ShowSizeMarkers = false;
+            this.PasswordVisible.Size = new System.Drawing.Size(41, 34);
+            this.PasswordVisible.TabIndex = 16;
+            this.PasswordVisible.ToolTipText = "Ver la contraseña";
+            this.PasswordVisible.WaitOnLoad = false;
+            this.PasswordVisible.Zoom = 10;
+            this.PasswordVisible.ZoomSpeed = 10;
+            // 
+            // PasswordHide
+            // 
+            this.PasswordHide.ActiveImage = null;
+            this.PasswordHide.AllowAnimations = true;
+            this.PasswordHide.AllowBuffering = false;
+            this.PasswordHide.AllowToggling = false;
+            this.PasswordHide.AllowZooming = true;
+            this.PasswordHide.AllowZoomingOnFocus = false;
+            this.PasswordHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.PasswordHide.BackgroundImage = global::OpticaMultivisual.Properties.Resources.visible;
+            this.PasswordHide.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordHide.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PasswordHide.ErrorImage")));
+            this.PasswordHide.FadeWhenInactive = false;
+            this.PasswordHide.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.PasswordHide.Image = global::OpticaMultivisual.Properties.Resources.hide;
+            this.PasswordHide.ImageActive = null;
+            this.PasswordHide.ImageLocation = null;
+            this.PasswordHide.ImageMargin = 10;
+            this.PasswordHide.ImageSize = new System.Drawing.Size(31, 24);
+            this.PasswordHide.ImageZoomSize = new System.Drawing.Size(41, 34);
+            this.PasswordHide.InitialImage = ((System.Drawing.Image)(resources.GetObject("PasswordHide.InitialImage")));
+            this.PasswordHide.Location = new System.Drawing.Point(374, 249);
+            this.PasswordHide.Name = "PasswordHide";
+            this.PasswordHide.Rotation = 0;
+            this.PasswordHide.ShowActiveImage = true;
+            this.PasswordHide.ShowCursorChanges = true;
+            this.PasswordHide.ShowImageBorders = false;
+            this.PasswordHide.ShowSizeMarkers = false;
+            this.PasswordHide.Size = new System.Drawing.Size(41, 34);
+            this.PasswordHide.TabIndex = 17;
+            this.PasswordHide.ToolTipText = "Ocultar contraseña";
+            this.PasswordHide.WaitOnLoad = false;
+            this.PasswordHide.Zoom = 10;
+            this.PasswordHide.ZoomSpeed = 10;
+            // 
             // ViewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,8 +580,6 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordHide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PasswordVisible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -554,8 +598,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnStart;
-        public System.Windows.Forms.PictureBox PasswordHide;
-        public System.Windows.Forms.PictureBox PasswordVisible;
         public Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
@@ -563,5 +605,7 @@
         public System.Windows.Forms.Label LblPassword;
         public System.Windows.Forms.LinkLabel LblForgotpass;
         public System.Windows.Forms.LinkLabel Lblregistration;
+        public Bunifu.UI.WinForms.BunifuImageButton PasswordVisible;
+        public Bunifu.UI.WinForms.BunifuImageButton PasswordHide;
     }
 }

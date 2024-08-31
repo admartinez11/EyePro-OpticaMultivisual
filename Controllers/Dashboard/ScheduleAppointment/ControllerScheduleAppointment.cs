@@ -83,7 +83,8 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
             }
 
             string correo = ObjVistaR.txtCiCorreo.Text.Trim();
-            if (!EsCorreoValido(correo))
+            CommonClasses commonClasses = new CommonClasses();
+            if (!commonClasses.EsCorreoValido(correo))
             {
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Validación de Correo Electrónico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -100,11 +101,7 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
 
             return true;
         }
-        private bool EsCorreoValido(string correo)
-        {
-            string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return Regex.IsMatch(correo, patron);
-        }
+        
         private bool EsValido(string valor)
         {
             int guionCount = 0;

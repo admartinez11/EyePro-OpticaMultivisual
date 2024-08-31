@@ -84,7 +84,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             //Se captura el numero de la fila a la cual se le dió click, sabiendo que la primer fila tiene como valor cero.
             int pos = ObjAdminEmp.dgvEmpleados.CurrentRow.Index;
             /*Se invoca al formulario llamado ViewAddUser y se crea un objeto de el, posteriormente se envían los datos del datagrid al constructor del formulario según el orden establecido (se sugiere ver el código del formulario para observar ambos constructores).
-             * El numero dos indicado en la linea posterior significa que la acción que se desea realizar es una actualízación.*/
+             * El numero dos indicado en la linea posterior significa que la acción que se desea realizar es una actualización.*/
             ViewAddUser openForm = new ViewAddUser(2,
                 int.Parse(ObjAdminEmp.dgvEmpleados[0, pos].Value.ToString()),
                 ObjAdminEmp.dgvEmpleados[1, pos].Value.ToString(),

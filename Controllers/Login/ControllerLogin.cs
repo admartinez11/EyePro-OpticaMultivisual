@@ -57,10 +57,10 @@ namespace OpticaMultivisual.Controllers.Login
             switch (answer)
             {
                 case 0: // Usuario no existe
-                    MessageBox.Show("Usuario inexistente, ingrese con un usuario existente.", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Usuario inexistente, ingrese con un usuario existente o en el caso de no tener un usuario regístrese.", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 1: // Contraseña incorrecta
-                    MessageBox.Show("Datos incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Contraseña incorrecta", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 2: // Usuario y contraseña correctos
                     if (ObjLogin.txtPassword.Text.Trim() != DAOData.Username + "OP123")
@@ -148,14 +148,18 @@ namespace OpticaMultivisual.Controllers.Login
 
         private void ShowPassword(object sender, EventArgs e)
         {
+            // Mostrar la contraseña en texto plano
             ObjLogin.txtPassword.UseSystemPasswordChar = false;
+            ObjLogin.txtPassword.PasswordChar = '\0'; // Mostrar el texto plano
             ObjLogin.PasswordVisible.Visible = false;
             ObjLogin.PasswordHide.Visible = true;
         }
 
         private void HidePassword(object sender, EventArgs e)
         {
+            // Establecer el carácter de contraseña del sistema manualmente
             ObjLogin.txtPassword.UseSystemPasswordChar = true;
+            ObjLogin.txtPassword.PasswordChar = (char)0x25CF; // Usar el punto negro (•), el carácter estándar para contraseñas
             ObjLogin.PasswordVisible.Visible = true;
             ObjLogin.PasswordHide.Visible = false;
         }

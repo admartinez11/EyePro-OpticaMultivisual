@@ -367,7 +367,7 @@ namespace OpticaMultivisual.Models.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-                getConnection().Close();
+                Command.Connection.Close();
             }
         }
 

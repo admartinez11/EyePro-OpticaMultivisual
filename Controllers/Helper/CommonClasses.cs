@@ -73,6 +73,12 @@ namespace OpticaMultivisual.Controllers.Helper
             return contrasena.Any(simbolo => simbolos.Contains(simbolo));
         }
 
+        public bool EsCorreoValido(string correo)
+        {
+            string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(correo, patron);
+        }
+
         // Método para validar los comandos de teclado
         public void ValidarComandos(object sender, KeyEventArgs e)
         {
