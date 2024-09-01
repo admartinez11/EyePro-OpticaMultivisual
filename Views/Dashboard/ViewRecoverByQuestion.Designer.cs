@@ -120,8 +120,8 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.641026F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.05128F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5641F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.72222F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.722222F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(539, 288);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -135,23 +135,23 @@
             this.tableLayoutPanel4.Location = new System.Drawing.Point(16, 19);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.82491F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.1751F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(505, 229);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.27848F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.72152F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(505, 237);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.10107F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.89893F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.35271F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.64729F));
             this.tableLayoutPanel5.Controls.Add(this.btnRecover, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 197);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 198);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(499, 29);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(499, 36);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btnRecover
@@ -182,6 +182,7 @@
             this.btnRecover.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRecover.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnRecover.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnRecover.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRecover.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnRecover.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecover.ForeColor = System.Drawing.Color.White;
@@ -201,7 +202,7 @@
             this.btnRecover.IdleIconLeftImage = null;
             this.btnRecover.IdleIconRightImage = null;
             this.btnRecover.IndicateFocus = false;
-            this.btnRecover.Location = new System.Drawing.Point(392, 3);
+            this.btnRecover.Location = new System.Drawing.Point(384, 3);
             this.btnRecover.Name = "btnRecover";
             this.btnRecover.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRecover.OnDisabledState.BorderRadius = 35;
@@ -235,7 +236,7 @@
             this.btnRecover.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnRecover.OnPressedState.IconLeftImage = null;
             this.btnRecover.OnPressedState.IconRightImage = null;
-            this.btnRecover.Size = new System.Drawing.Size(104, 23);
+            this.btnRecover.Size = new System.Drawing.Size(112, 30);
             this.btnRecover.TabIndex = 31;
             this.btnRecover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecover.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -260,12 +261,12 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.245283F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.03773F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.15094F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.56604F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.95735F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.84834F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.4359F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.39623F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(499, 188);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(499, 189);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // txtNewPassword
@@ -298,7 +299,7 @@
             this.txtNewPassword.IconRight = null;
             this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPassword.Lines = new string[0];
-            this.txtNewPassword.Location = new System.Drawing.Point(3, 153);
+            this.txtNewPassword.Location = new System.Drawing.Point(3, 155);
             this.txtNewPassword.MaxLength = 32767;
             this.txtNewPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPassword.Modified = false;
@@ -324,7 +325,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewPassword.OnIdleState = stateProperties4;
-            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewPassword.PlaceholderText = "";
@@ -334,7 +335,7 @@
             this.txtNewPassword.SelectionLength = 0;
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(493, 32);
+            this.txtNewPassword.Size = new System.Drawing.Size(493, 31);
             this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewPassword.TabIndex = 17;
             this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -375,7 +376,7 @@
             this.txtSecurityAnswer.IconRight = null;
             this.txtSecurityAnswer.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSecurityAnswer.Lines = new string[0];
-            this.txtSecurityAnswer.Location = new System.Drawing.Point(3, 96);
+            this.txtSecurityAnswer.Location = new System.Drawing.Point(3, 93);
             this.txtSecurityAnswer.MaxLength = 32767;
             this.txtSecurityAnswer.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSecurityAnswer.Modified = false;
@@ -401,7 +402,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSecurityAnswer.OnIdleState = stateProperties8;
-            this.txtSecurityAnswer.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtSecurityAnswer.Padding = new System.Windows.Forms.Padding(3);
             this.txtSecurityAnswer.PasswordChar = '\0';
             this.txtSecurityAnswer.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSecurityAnswer.PlaceholderText = "";
@@ -411,7 +412,7 @@
             this.txtSecurityAnswer.SelectionLength = 0;
             this.txtSecurityAnswer.SelectionStart = 0;
             this.txtSecurityAnswer.ShortcutsEnabled = true;
-            this.txtSecurityAnswer.Size = new System.Drawing.Size(493, 29);
+            this.txtSecurityAnswer.Size = new System.Drawing.Size(493, 27);
             this.txtSecurityAnswer.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSecurityAnswer.TabIndex = 16;
             this.txtSecurityAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -427,9 +428,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(3, 128);
+            this.label3.Location = new System.Drawing.Point(3, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 22);
+            this.label3.Size = new System.Drawing.Size(270, 25);
             this.label3.TabIndex = 50;
             this.label3.Text = "Ingrese su nueva contraseña:";
             // 
@@ -438,7 +439,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(3, 64);
+            this.label4.Location = new System.Drawing.Point(3, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 25);
             this.label4.TabIndex = 48;
