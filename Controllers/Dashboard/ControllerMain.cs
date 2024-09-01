@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using AdministrarClientes.View.RegistroCliente;
 using OpticaMultivisual.Controllers.Helper;
 using OpticaMultivisual.Models.DAO;
+using OpticaMultivisual.Views.Article;
 using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Dashboard.Optometrista;
 using OpticaMultivisual.Views.Login;
@@ -35,6 +36,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjMain.btnExit.Click += new EventHandler(CerrarSesion);
             ObjMain.FormClosing += new FormClosingEventHandler(cerrarPrograma);
             ObjMain.btnVisita.Click += new EventHandler(AbrirFormularioVis);
+            ObjMain.btnArticulo.Click += new EventHandler(AbrirFormArt);
+        }
+
+        private void AbrirFormArt(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewAdminArticle>();
         }
 
         private void AbrirFormularioVis(object sender, EventArgs e)

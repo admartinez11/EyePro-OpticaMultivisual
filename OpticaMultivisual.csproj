@@ -110,6 +110,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Article\ControllerAddArticle.cs" />
+    <Compile Include="Controllers\Article\ControllerAdminArticle.cs" />
     <Compile Include="Controllers\Dashboard\ControllerAdduser.cs" />
     <Compile Include="Controllers\Dashboard\ControllerAdminEmp.cs" />
     <Compile Include="Controllers\Dashboard\ControllerByQuestion.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="Controllers\Registrar\Controlador_ListaRegistro.cs" />
     <Compile Include="Controllers\Registrar\Controlador_Registrar.cs" />
     <Compile Include="Models\DAO\DAOAdminEmp.cs" />
+    <Compile Include="Models\DAO\DAOArticle.cs" />
     <Compile Include="Models\DAO\DAOLens.cs" />
     <Compile Include="Models\DAO\DAOLogin.cs" />
     <Compile Include="Models\DAO\DAORecoverPassword.cs" />
@@ -140,6 +143,7 @@
     <Compile Include="Models\DAO\DAO_DR.cs" />
     <Compile Include="Models\dbContext.cs" />
     <Compile Include="Models\DTO\DTOAdminEmp.cs" />
+    <Compile Include="Models\DTO\DTOArticle.cs" />
     <Compile Include="Models\DTO\DTOLens.cs" />
     <Compile Include="Models\DTO\DTOLogin.cs" />
     <Compile Include="Models\DTO\DTORecetaBase.cs" />
@@ -154,6 +158,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\Dashboard\Article\ViewAddArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Article\ViewAddArticle.Designer.cs">
+      <DependentUpon>ViewAddArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\Article\ViewAdminArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\Article\ViewAdminArticle.Designer.cs">
+      <DependentUpon>ViewAdminArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard\Optometrista\ViewAddDR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +294,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\Article\ViewAddArticle.resx">
+      <DependentUpon>ViewAddArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\Article\ViewAdminArticle.resx">
+      <DependentUpon>ViewAdminArticle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\Optometrista\ViewAddDR.resx">
       <DependentUpon>ViewAddDR.cs</DependentUpon>
