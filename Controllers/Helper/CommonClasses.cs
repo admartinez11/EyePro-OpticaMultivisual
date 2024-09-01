@@ -54,29 +54,42 @@ namespace OpticaMultivisual.Controllers.Helper
 
         public bool TieneAlMenos8Caracteres(string contrasena)
         {
+            // Verifica si la longitud de la contraseña es mayor o igual a 8 caracteres.
             return contrasena.Length >= 8;
         }
+
         public bool ContieneAlMenosUnNumero(string contrasena)
         {
+            // Verifica si la contraseña contiene al menos un dígito numérico utilizando LINQ.
+            // Any() devuelve true si al menos un elemento cumple la condición.
             return contrasena.Any(char.IsDigit);
         }
+
         public bool ContieneAlMenosUnaMayuscula(string contrasena)
         {
+            // Verifica si la contraseña contiene al menos una letra mayúscula.
             return contrasena.Any(char.IsUpper);
         }
+
         public bool ContieneAlMenosUnaMinuscula(string contrasena)
         {
+            // Verifica si la contraseña contiene al menos una letra minúscula.
             return contrasena.Any(char.IsLower);
         }
+
         public bool ContieneAlMenosUnSimbolo(string contrasena)
         {
+            // Define una cadena con los símbolos permitidos.
             string simbolos = "@$#_";
+            // Verifica si la contraseña contiene al menos uno de los símbolos definidos.
             return contrasena.Any(simbolo => simbolos.Contains(simbolo));
         }
 
         public bool EsCorreoValido(string correo)
         {
+            // Define una expresión regular para validar la estructura básica de un correo electrónico.
             string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            // Utiliza Regex.IsMatch para verificar si la cadena coincide con la expresión regular.
             return Regex.IsMatch(correo, patron);
         }
 
@@ -164,14 +177,14 @@ namespace OpticaMultivisual.Controllers.Helper
 
         public string GenerarPin()
         {
-            int longitud = 6;
-            byte[] data = new byte[longitud / 2];
-            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
+            int longitud = 6; // Establece la longitud deseada de la cadena hexadecimal
+            byte[] data = new byte[longitud / 2]; // Crea un arreglo de bytes con la mitad de la longitud deseada, ya que cada byte representa dos caracteres hexadecimales
+            using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider()) // Crea un generador de números aleatorios criptográficamente seguro
             {
-                crypto.GetBytes(data);
+                crypto.GetBytes(data); // Llena el arreglo de bytes con números aleatorios generados por el RNG
             }
-            string hex = BitConverter.ToString(data);
-            return hex.Replace("-", "").Substring(0, longitud);
+            string hex = BitConverter.ToString(data); // Convierte el arreglo de bytes a una cadena hexadecimal, separando cada byte con un guión
+            return hex.Replace("-", "").Substring(0, longitud); // Elimina los guiones de la cadena hexadecimal y devuelve la subcadena inicial con la longitud deseada
         }
 
         public bool ValidarNumero(string numero)
@@ -192,21 +205,35 @@ namespace OpticaMultivisual.Controllers.Helper
             return Regex.IsMatch(numero, patron);
         }
 
+        public bool EsNombreValido(string nombre)
+        {
+            // Permite letras con tildes, espacios, guiones y apóstrofes.
+            string patron = @"^[a-zA-Z\u00C0-\u017F\s'-]+$";
+            return Regex.IsMatch(nombre, patron);
+        }
+
         public bool ValidateEmail(string email)
         {
+            // Intenta crear un objeto MailAddress con la dirección de correo electrónico.
+            // Si se produce una excepción, significa que la dirección no es válida.
             try
             {
                 var addr = new MailAddress(email);
+                // Verifica si la dirección extraída del objeto MailAddress es igual a la original.
+                // Esto ayuda a detectar casos especiales donde la dirección podría ser modificada.
                 return addr.Address == email;
             }
             catch
             {
+                // Si se produce una excepción, significa que la dirección no es válida.
                 return false;
             }
         }
 
         public bool EsValida(string contrasena)
         {
+            // Combina las validaciones de longitud, números, mayúsculas, minúsculas y símbolos.
+            // Si todas las condiciones se cumplen, la contraseña es válida.
             return TieneAlMenos8Caracteres(contrasena) &&
                    ContieneAlMenosUnNumero(contrasena) &&
                    ContieneAlMenosUnaMayuscula(contrasena) &&

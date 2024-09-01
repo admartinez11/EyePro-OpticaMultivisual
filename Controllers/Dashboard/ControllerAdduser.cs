@@ -164,6 +164,19 @@ namespace OpticaMultivisual.Controllers.Dashboard
         public void NewRegister(object sender, EventArgs e)
         {
             CommonClasses commonClasses = new CommonClasses();
+            string nombre = ObjAddUser.txtFirstName.Text.Trim();
+            if (!commonClasses.EsNombreValido(nombre))
+            {
+                MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string apellido = ObjAddUser.txtLastName.Text.Trim();
+            if (!commonClasses.EsNombreValido(apellido))
+            {
+                MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             // Validaciones de campos NOT NULL y longitud de caracteres
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
@@ -301,6 +314,20 @@ namespace OpticaMultivisual.Controllers.Dashboard
         public void UpdateRegister(object sender, EventArgs e)
         {
             CommonClasses commonClasses = new CommonClasses();
+            string nombre = ObjAddUser.txtFirstName.Text.Trim();
+            if (!commonClasses.EsNombreValido(nombre))
+            {
+                MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string apellido = ObjAddUser.txtLastName.Text.Trim();
+            if (!commonClasses.EsNombreValido(apellido))
+            {
+                MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Validaciones de campos NOT NULL y longitud de caracteres
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
             {
