@@ -77,7 +77,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
         public void Acceso()
         {
-            //Estructura selectiva para evaluar los posibles valores de la vraible Access
+            //Estructura selectiva para evaluar los posibles valores de la variable Access
             switch (SessionVar.Access)
             {
                 case "Administrador":

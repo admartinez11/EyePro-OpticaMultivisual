@@ -32,7 +32,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.ScheduleAppointment
         {
             DAOScheduleAppointment ObjRegistro = new DAOScheduleAppointment();
             DataSet ds = ObjRegistro.ObtenerInfoVisita();
-            ObjVista.dgvInfoVisita.DataSource = ds.Tables["Visita"];
+            ObjVista.dgvInfoVisita.DataSource = ds.Tables["ViewVisita"];
 
         }
         public void BuscarVisitaControlador(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.ScheduleAppointment
             DateTime.Parse(ObjVista.dgvInfoVisita[1, pos].Value.ToString()),//fecha visita
             ObjVista.dgvInfoVisita[2, pos].Value.ToString(),        // Nombre
             ObjVista.dgvInfoVisita[3, pos].Value.ToString(),     // Apellido
-            ObjVista.dgvInfoVisita[4, pos].Value.ToString(),   // Telefono
+            ObjVista.dgvInfoVisita[4, pos].Value.ToString(),   // Teléfono
             ObjVista.dgvInfoVisita[5, pos].Value.ToString(),   // Correo
             ObjVista.dgvInfoVisita[6, pos].Value.ToString(),   // Observaciones
             ObjVista.dgvInfoVisita[7, pos].Value.ToString() // DUI

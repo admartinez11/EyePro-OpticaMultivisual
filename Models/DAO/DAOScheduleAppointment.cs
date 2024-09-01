@@ -15,13 +15,13 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT * FROM Visita";
+                string query = "SELECT * FROM ViewVisita";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("valor", true);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "Visita");
+                adp.Fill(ds, "ViewVisita");
                 return ds;
             }
             catch (Exception)
@@ -92,7 +92,7 @@ namespace OpticaMultivisual.Models.DAO
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
+                //Rellenamos con el Adaptador el DataSet diciéndole de que tabla provienen los datos
                 adp.Fill(ds, "Visita");
                 return ds;
             }
