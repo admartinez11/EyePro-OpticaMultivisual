@@ -49,7 +49,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.23943F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.943662F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(122, 68);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(174, 36);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.075235F));
@@ -252,7 +252,7 @@
             this.BtnSecurityQ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSecurityQ.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.BtnSecurityQ.TextMarginLeft = 0;
-            this.BtnSecurityQ.TextPadding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.BtnSecurityQ.TextPadding = new System.Windows.Forms.Padding(0, 0, 35, 0);
             this.BtnSecurityQ.UseDefaultRadiusAndThickness = true;
             // 
             // BtnGmail
@@ -342,7 +342,7 @@
             this.BtnGmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.BtnGmail.TextMarginLeft = 0;
-            this.BtnGmail.TextPadding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.BtnGmail.TextPadding = new System.Windows.Forms.Padding(0, 0, 65, 0);
             this.BtnGmail.UseDefaultRadiusAndThickness = true;
             // 
             // ViewRecuperaciónPass
