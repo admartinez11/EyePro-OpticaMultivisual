@@ -134,9 +134,9 @@ namespace OpticaMultivisual.Controllers.Login
 
         private void RecoverPassword(object sender, EventArgs e)
         {
-            ViewRecoverPassword viewRecoverPassword = new ViewRecoverPassword();
-            viewRecoverPassword.Show();
-            ObjLogin.Hide();
+            ViewRecuperaciónPass viewRecuPass = new ViewRecuperaciónPass();
+            viewRecuPass.Show();
+            ObjLogin.Close();
         }
 
         /// <summary>

@@ -31,11 +31,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
         void RestartPassword(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de restablecer la contraseña del usuario que ha seleccionado?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            DAOAdminEmp daoRestartPassword = new DAOAdminEmp();
+            int pos = ObjAdminEmp.dgvEmpleados.CurrentRow.Index;
+            string usuario = ObjAdminEmp.dgvEmpleados[9, pos].Value.ToString();
+            if (MessageBox.Show($"¿Está seguro que desea restablecer la contraseña del usuario: {usuario}?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DAOAdminEmp daoRestartPassword = new DAOAdminEmp();
                 CommonClasses commonClasses = new CommonClasses();
-                int pos = ObjAdminEmp.dgvEmpleados.CurrentRow.Index;
                 //Capturando nombres del usuario
                 string firstName = ObjAdminEmp.dgvEmpleados[1, pos].Value.ToString();
                 string lastName = ObjAdminEmp.dgvEmpleados[2, pos].Value.ToString();
@@ -44,18 +45,44 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 daoRestartPassword.User = ObjAdminEmp.dgvEmpleados[9, pos].Value.ToString();
                 //Generando PIN de seguridad y enviado PIN a la base de datos
                 string pin = commonClasses.GenerarPin();
-                daoRestartPassword.VerificationCode = pin;
+                // Muestra los valores en un MessageBox
+                daoRestartPassword.VerificationCode = commonClasses.ComputeSha256Hash(pin);
                 //Enviando PIN al correo de usuario
                 if (ValidateEmail(emailDestinatario))
                 {
-                    if (EnviarPinPorCorreo(emailDestinatario, pin, nombrePersona) && daoRestartPassword.RegistrarPIN())
+                    bool pinRegistrado = daoRestartPassword.RegistrarPIN();
+                    bool correoEnviado = false;
+
+                    if (pinRegistrado)
+                    {
+                        correoEnviado = EnviarPinPorCorreo(emailDestinatario, pin, nombrePersona);
+                    }
+
+                    if (pinRegistrado && correoEnviado)
                     {
                         MessageBox.Show("PIN de seguridad generado correctamente, indique al empleado que el PIN ha sido enviado a su correo registrado en el sistema.", "PIN de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
+                    else if (!pinRegistrado && !correoEnviado)
                     {
-                        MessageBox.Show("El PIN no pudo ser registrado en la base de datos o no pudo enviarse al correo del destinatario, verifica la información.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El PIN no pudo ser registrado en la base de datos, por lo tanto no se envió al correo del destinatario", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else if (!pinRegistrado)
+                    {
+                        MessageBox.Show("El PIN no pudo ser registrado en la base de datos.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (!correoEnviado)
+                    {
+                        MessageBox.Show("El PIN fue registrado en la base de datos, pero no pudo enviarse al correo del destinatario.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    //if (EnviarPinPorCorreo(emailDestinatario, pin, nombrePersona) && daoRestartPassword.RegistrarPIN())
+                    //{
+                    //    MessageBox.Show("PIN de seguridad generado correctamente, indique al empleado que el PIN ha sido enviado a su correo registrado en el sistema.", "PIN de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("El PIN no pudo ser registrado en la base de datos o no pudo enviarse al correo del destinatario, verifica la información.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
                 else
                 {
@@ -91,7 +118,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             // Crear un mensaje de correo electrónico
             MailMessage mensaje = new MailMessage(remitente, emailDestinatario);
             mensaje.Subject = "Restablecimiento de contraseña";
-            mensaje.Body = $"Hola {nombrePersona}.\n\nEl administrador ha restablecido tu contraseña y para tu seguridad te hemos enviado un PIN el cual deberás ingresar para crear una nueva contraseña.\n\nDirígete al Inicio de Sesión y haz click en ¿Olvido su contraseña? posteriormente selecciona la opción de PIN de seguridad.\n\nEl pin que deberás introducir es: {pin}, no compartas este PIN y tampoco el acceso a tu correo electrónico registrado en el sistema.\nEn caso no solicitaste el restablecimiento de tu usuario, contacta con el administrador.";
+            mensaje.Body = $"Hola *{nombrePersona}*.\n\nEl administrador ha restablecido tu contraseña y para tu seguridad te hemos enviado un PIN el cual deberás ingresar para crear una nueva contraseña.\n\nDirígete al Inicio de Sesión y haz click en ¿Olvido su contraseña? posteriormente selecciona la opción de PIN de seguridad.\n\nEl pin que deberás introducir es: *{pin}*, no compartas este PIN y tampoco el acceso a tu correo electrónico registrado en el sistema.\nEn caso no solicitaste el restablecimiento de tu usuario, contacta con el administrador.";
             // Configurar el cliente SMTP
             SmtpClient clienteSmtp = new SmtpClient(SmtpServer, puertoSmtp);
             clienteSmtp.Credentials = new NetworkCredential(remitente, contraseña);

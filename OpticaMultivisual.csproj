@@ -126,7 +126,9 @@
     <Compile Include="Controllers\Helper\CommonClasses.cs" />
     <Compile Include="Controllers\Helper\SessionVar.cs" />
     <Compile Include="Controllers\Login\ControllerCambiarClaveDefecto.cs" />
+    <Compile Include="Controllers\Login\ControllerCambiarContrasena.cs" />
     <Compile Include="Controllers\Login\ControllerLogin.cs" />
+    <Compile Include="Controllers\Login\ControllerMetodosDeRecuperacion.cs" />
     <Compile Include="Controllers\Registrar\Controlador_ListaRegistro.cs" />
     <Compile Include="Controllers\Registrar\Controlador_Registrar.cs" />
     <Compile Include="Models\DAO\DAOAdminEmp.cs" />
@@ -218,6 +220,12 @@
     <Compile Include="Views\Dashboard\ViewVerifyCode.Designer.cs">
       <DependentUpon>ViewVerifyCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Login\ViewCambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\ViewCambiarClave.Designer.cs">
+      <DependentUpon>ViewCambiarClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login\ViewCambiarClaveDefecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +237,12 @@
     </Compile>
     <Compile Include="Views\Login\ViewLogin.Designer.cs">
       <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\ViewRecuperaciónPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\ViewRecuperaciónPass.Designer.cs">
+      <DependentUpon>ViewRecuperaciónPass.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistroClientes.cs">
       <SubType>Form</SubType>
@@ -298,11 +312,17 @@
     <EmbeddedResource Include="Views\Dashboard\ViewVerifyCode.resx">
       <DependentUpon>ViewVerifyCode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\ViewCambiarClave.resx">
+      <DependentUpon>ViewCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\ViewCambiarClaveDefecto.resx">
       <DependentUpon>ViewCambiarClaveDefecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\ViewRecuperaciónPass.resx">
+      <DependentUpon>ViewRecuperaciónPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
@@ -346,6 +366,9 @@
     <None Include="Resources\hide.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Admin.png" />
+    <None Include="Resources\SecurityQ.png" />
+    <None Include="Resources\Gmail.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

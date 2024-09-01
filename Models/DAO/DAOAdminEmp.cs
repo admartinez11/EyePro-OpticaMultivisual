@@ -42,20 +42,62 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        public bool VerificarPINSeguridad()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT * FROM Usuario WHERE username = @username AND VerificationCode = @pin AND userStatus = @status";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("username", User);
+                cmd.Parameters.AddWithValue("pin", VerificationCode);
+                cmd.Parameters.AddWithValue("status", true);
+                SqlDataReader rd = cmd.ExecuteReader();
+                return rd.HasRows;
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("No se pudo almacenar el PIN, vuelva a intentarlo. EC-005");
+                return false;
+            }
+        }
+
         public bool RegistrarPIN()
         {
             try
             {
                 Command.Connection = getConnection();
-                string queryupdate = "UPDATE Usuario SET VerificationCode = @valor1 WHERE username = @username";
+                string queryupdate = "UPDATE Usuario SET VerificationCode = @VerificationCode, CodeExpiration = @CodeExpiration WHERE username = @username";
                 SqlCommand cmdupdate = new SqlCommand(queryupdate, Command.Connection);
-                cmdupdate.Parameters.AddWithValue("valor1", VerificationCode);
+                cmdupdate.Parameters.AddWithValue("VerificationCode", VerificationCode);
                 cmdupdate.Parameters.AddWithValue("username", User);
-                return cmdupdate.ExecuteNonQuery() > 0 ? true : false;
+                // Definir la fecha y hora de expiración del código (15 minutos a partir de ahora)
+                DateTime expiryDate = DateTime.Now.AddMinutes(15);
+                cmdupdate.Parameters.AddWithValue("@CodeExpiration", expiryDate);
+
+                try
+                {
+                    int result = cmdupdate.ExecuteNonQuery();
+                    return result > 0; // Retorna true si la operación fue exitosa
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones
+                    MessageBox.Show($"Error al almacenar el código de verificación: {ex.Message}",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return false;
+                }
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
+                MessageBox.Show($"{ex}");
                 return false;
+            }
+            finally
+            {
+                Command.Connection.Close();
             }
         }
 

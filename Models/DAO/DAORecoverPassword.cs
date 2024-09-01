@@ -81,7 +81,7 @@ namespace OpticaMultivisual.Models.DAO
                     command.Parameters.AddWithValue("@VerificationCode", verificationCode);
                     command.Parameters.AddWithValue("@Email", userEmail);
 
-                    // Definir la fecha y hora de expiración del código (ejemplo: 15 minutos a partir de ahora)
+                    // Definir la fecha y hora de expiración del código (15 minutos a partir de ahora)
                     DateTime expiryDate = DateTime.Now.AddMinutes(15);
                     command.Parameters.AddWithValue("@CodeExpiration", expiryDate);
 
