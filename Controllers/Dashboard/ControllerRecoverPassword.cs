@@ -28,7 +28,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
         {
             ObjRecoverPassword = view;
             ObjRecoverPassword.BtnSendEmail.Click += new EventHandler(SendRecoveryEmail);
-            ObjRecoverPassword.linkLabel1.Click += new EventHandler(ShowNewForm);
         }
 
         // Método para enviar el correo de recuperación
@@ -108,7 +107,8 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 mail.From = new MailAddress("ccom.ptc2024@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Recuperación de contraseña";
-                mail.Body = $"Tu código de verificación es: {verificationCode}";
+                mail.Body = $"Hola,\n\nHemos recibido tu solicitud para restablecer la contraseña de tu cuenta. Para continuar, por favor ingresa el siguiente código de verificación en nuestra página de recuperación de contraseña:\n\n{verificationCode}\n\n";
+                //mail.Body = $"Tu código de verificación es: {verificationCode}";
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("ccom.ptc2024@gmail.com", "ngqy wagb fchr uvfr");
                 SmtpServer.EnableSsl = true;
@@ -123,13 +123,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
                                 MessageBoxIcon.Error);
                 return false;
             }
-        }
-
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            ObjRecoverPassword.Close();
-            ViewByQuestion viewByQuestion = new ViewByQuestion();
-            viewByQuestion.Show();
         }
     }
 }
