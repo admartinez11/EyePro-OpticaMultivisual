@@ -136,7 +136,6 @@ namespace OpticaMultivisual.Controllers.Login
         {
             ViewRecuperaciónPass viewRecuPass = new ViewRecuperaciónPass();
             viewRecuPass.ShowDialog();
-            ObjLogin.Hide();
         }
 
         /// <summary>

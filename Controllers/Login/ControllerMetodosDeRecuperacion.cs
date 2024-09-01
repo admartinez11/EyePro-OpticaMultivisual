@@ -22,19 +22,22 @@ namespace OpticaMultivisual.Controllers.Login
         void openFormSecQ(object sender, EventArgs e)
         {
             ViewByQuestion openForm = new ViewByQuestion();
-            openForm.ShowDialog();
+            openForm.Show();
+            vista.Close();
         }
 
         void openFormMail(object sender, EventArgs e)
         {
             ViewRecoverPassword openForm = new ViewRecoverPassword();
-            openForm.ShowDialog();
+            openForm.Show();
+            vista.Close();
         }
 
         void openFormIntervencionAdmin(object sender, EventArgs e)
         {
             ViewCambiarClave openForm = new ViewCambiarClave();
-            openForm.ShowDialog();
+            openForm.Show();
+            vista.Close();
         }
     }
 }

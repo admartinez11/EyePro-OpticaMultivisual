@@ -16,23 +16,20 @@ namespace OpticaMultivisual.Models
         {
             try
             {
-                // Nombre del servidor y base de datos a los que conectarse
-                string server = "DESKTOP-MHQ9T8J\\SQLEXPRESS";
-                string database = "EyePro";
-                // Creación de una instancia de SqlConnection utilizando la cadena de conexión especificada
-                SqlConnection conexion = new SqlConnection($"Server = {server}; Database = {database}; Integrated Security = true");
-                // Abre la conexión
+                string server = "sql8020.site4now.net";
+                string database = "db_aac9bb_eyepro";
+                string userId = "db_aac9bb_eyepro_admin";
+                string Password = "EyePro123";
+                SqlConnection conexion = new SqlConnection($"Server = {server}; DataBase = {database}; User Id = {userId}; Password = {Password}");
                 conexion.Open();
-                // Retorna la conexión abierta
                 return conexion;
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
-                // En caso de error al conectar, retorna null
+                MessageBox.Show($"{ex.Message} Código de error: EC-001 \nNo fue posible conectarse a la base de datos, favor verifique las credenciales o que tenga acceso al sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-
         }
-        
+
     }
 }
