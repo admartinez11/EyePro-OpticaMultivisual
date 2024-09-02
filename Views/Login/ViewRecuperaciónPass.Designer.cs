@@ -37,8 +37,10 @@
             this.btnAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.BtnSecurityQ = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.BtnGmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -49,13 +51,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.23943F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.943662F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(174, 36);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 14);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.075235F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.22257F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.015674F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(447, 358);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(596, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -66,13 +69,14 @@
             this.tableLayoutPanel2.Controls.Add(this.BtnSecurityQ, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.BtnGmail, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 17);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(22, 21);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(409, 319);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(546, 393);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnAdmin
@@ -123,7 +127,8 @@
             this.btnAdmin.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.Admin;
             this.btnAdmin.IdleIconRightImage = null;
             this.btnAdmin.IndicateFocus = false;
-            this.btnAdmin.Location = new System.Drawing.Point(13, 19);
+            this.btnAdmin.Location = new System.Drawing.Point(17, 24);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdmin.OnDisabledState.BorderRadius = 20;
@@ -157,7 +162,7 @@
             this.btnAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAdmin.OnPressedState.IconLeftImage = null;
             this.btnAdmin.OnPressedState.IconRightImage = null;
-            this.btnAdmin.Size = new System.Drawing.Size(383, 67);
+            this.btnAdmin.Size = new System.Drawing.Size(511, 82);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -213,7 +218,8 @@
             this.BtnSecurityQ.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.SecurityQ;
             this.BtnSecurityQ.IdleIconRightImage = null;
             this.BtnSecurityQ.IndicateFocus = false;
-            this.BtnSecurityQ.Location = new System.Drawing.Point(13, 125);
+            this.BtnSecurityQ.Location = new System.Drawing.Point(17, 154);
+            this.BtnSecurityQ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSecurityQ.Name = "BtnSecurityQ";
             this.BtnSecurityQ.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnSecurityQ.OnDisabledState.BorderRadius = 20;
@@ -247,7 +253,7 @@
             this.BtnSecurityQ.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnSecurityQ.OnPressedState.IconLeftImage = null;
             this.BtnSecurityQ.OnPressedState.IconRightImage = null;
-            this.BtnSecurityQ.Size = new System.Drawing.Size(383, 68);
+            this.BtnSecurityQ.Size = new System.Drawing.Size(511, 84);
             this.BtnSecurityQ.TabIndex = 2;
             this.BtnSecurityQ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSecurityQ.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -303,7 +309,8 @@
             this.BtnGmail.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.Gmail;
             this.BtnGmail.IdleIconRightImage = null;
             this.BtnGmail.IndicateFocus = false;
-            this.BtnGmail.Location = new System.Drawing.Point(13, 231);
+            this.BtnGmail.Location = new System.Drawing.Point(17, 285);
+            this.BtnGmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGmail.Name = "BtnGmail";
             this.BtnGmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnGmail.OnDisabledState.BorderRadius = 20;
@@ -337,7 +344,7 @@
             this.BtnGmail.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnGmail.OnPressedState.IconLeftImage = null;
             this.BtnGmail.OnPressedState.IconRightImage = null;
-            this.BtnGmail.Size = new System.Drawing.Size(383, 69);
+            this.BtnGmail.Size = new System.Drawing.Size(511, 85);
             this.BtnGmail.TabIndex = 3;
             this.BtnGmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -345,17 +352,34 @@
             this.BtnGmail.TextPadding = new System.Windows.Forms.Padding(0, 0, 65, 0);
             this.BtnGmail.UseDefaultRadiusAndThickness = true;
             // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(172)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(172)))));
+            this.bunifuPanel1.BorderRadius = 30;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.bunifuPanel1.Location = new System.Drawing.Point(221, 51);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(647, 475);
+            this.bunifuPanel1.TabIndex = 1;
+            // 
             // ViewRecuperaciónPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.bunifuPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewRecuperaciónPass";
             this.Text = "ViewRecuperaciónPass";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,5 +391,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAdmin;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnSecurityQ;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnGmail;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }

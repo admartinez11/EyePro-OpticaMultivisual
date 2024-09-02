@@ -120,7 +120,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.34274F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.69394F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 750);
-            this.tableLayoutPanel1.TabIndex = 12;
+            this.tableLayoutPanel1.TabIndex = 13;
             // 
             // bunifuPanel1
             // 
@@ -1256,9 +1256,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Bunifu.UI.WinForms.BunifuDatePicker DTPfechacita;
+        public Bunifu.UI.WinForms.BunifuDatePicker DTPfechacita;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private Bunifu.UI.WinForms.BunifuTextBox txtCiObs;
+        public Bunifu.UI.WinForms.BunifuTextBox txtCiObs;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnActualizar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgendar;

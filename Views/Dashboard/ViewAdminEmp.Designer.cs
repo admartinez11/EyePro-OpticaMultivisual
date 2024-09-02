@@ -74,13 +74,14 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.519685F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.086614F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.20689F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.269294F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 609);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 750);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -96,11 +97,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 18);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(33, 22);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(980, 37);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1307, 45);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -108,10 +110,10 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 32);
+            this.label1.Size = new System.Drawing.Size(225, 39);
             this.label1.TabIndex = 40;
             this.label1.Text = "Buscar empleado:";
             // 
@@ -121,11 +123,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.txtSearch, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(185, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(247, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(633, 31);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(845, 37);
             this.tableLayoutPanel4.TabIndex = 41;
             // 
             // txtSearch
@@ -158,7 +161,8 @@
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(3, 3);
+            this.txtSearch.Location = new System.Drawing.Point(4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearch.Modified = false;
@@ -184,7 +188,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSearch.OnIdleState = stateProperties4;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSearch.PlaceholderText = "Buscador";
@@ -194,7 +198,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(627, 25);
+            this.txtSearch.Size = new System.Drawing.Size(837, 29);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 50;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -211,11 +215,12 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.btnBuscar, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(858, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1145, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(119, 31);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(158, 37);
             this.tableLayoutPanel5.TabIndex = 42;
             // 
             // btnBuscar
@@ -225,7 +230,7 @@
             this.btnBuscar.AllowToggling = false;
             this.btnBuscar.AnimationSpeed = 200;
             this.btnBuscar.AutoGenerateColors = false;
-            this.btnBuscar.AutoRoundBorders = false;
+            this.btnBuscar.AutoRoundBorders = true;
             this.btnBuscar.AutoSizeLeftIcon = true;
             this.btnBuscar.AutoSizeRightIcon = true;
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
@@ -260,13 +265,14 @@
             this.btnBuscar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnBuscar.IconSize = 25;
             this.btnBuscar.IdleBorderColor = System.Drawing.Color.Silver;
-            this.btnBuscar.IdleBorderRadius = 20;
+            this.btnBuscar.IdleBorderRadius = 27;
             this.btnBuscar.IdleBorderThickness = 1;
             this.btnBuscar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
             this.btnBuscar.IdleIconLeftImage = null;
             this.btnBuscar.IdleIconRightImage = null;
             this.btnBuscar.IndicateFocus = true;
-            this.btnBuscar.Location = new System.Drawing.Point(3, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscar.OnDisabledState.BorderRadius = 20;
@@ -300,7 +306,7 @@
             this.btnBuscar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.OnPressedState.IconLeftImage = null;
             this.btnBuscar.OnPressedState.IconRightImage = null;
-            this.btnBuscar.Size = new System.Drawing.Size(113, 25);
+            this.btnBuscar.Size = new System.Drawing.Size(150, 29);
             this.btnBuscar.TabIndex = 50;
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuscar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -317,11 +323,12 @@
             this.tableLayoutPanel3.Controls.Add(this.dgvEmpleados, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(25, 61);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(33, 75);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(980, 518);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 638);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // dgvEmpleados
@@ -336,35 +343,38 @@
             this.dgvEmpleados.ContextMenuStrip = this.MenuRecu;
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.dgvEmpleados.Location = new System.Drawing.Point(3, 3);
+            this.dgvEmpleados.Location = new System.Drawing.Point(4, 4);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersVisible = false;
+            this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(817, 512);
+            this.dgvEmpleados.Size = new System.Drawing.Size(1090, 630);
             this.dgvEmpleados.TabIndex = 1;
             // 
             // MenuRecu
             // 
             this.MenuRecu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MenuRecu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuRecu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsResPass,
             this.cmsResetPass});
             this.MenuRecu.Name = "MenuRecu";
-            this.MenuRecu.Size = new System.Drawing.Size(196, 70);
+            this.MenuRecu.Size = new System.Drawing.Size(236, 56);
             // 
             // cmsResPass
             // 
             this.cmsResPass.Image = global::OpticaMultivisual.Properties.Resources.Admin;
             this.cmsResPass.Name = "cmsResPass";
-            this.cmsResPass.Size = new System.Drawing.Size(195, 22);
+            this.cmsResPass.Size = new System.Drawing.Size(235, 26);
             this.cmsResPass.Text = "Restablecer contraseña";
             this.cmsResPass.ToolTipText = "Cambiar la contraseña al empleado deseado";
             // 
             // cmsResetPass
             // 
             this.cmsResetPass.Name = "cmsResetPass";
-            this.cmsResetPass.Size = new System.Drawing.Size(195, 22);
+            this.cmsResetPass.Size = new System.Drawing.Size(235, 26);
             this.cmsResetPass.Text = "Reiniciar contraseña";
             // 
             // tableLayoutPanel6
@@ -375,7 +385,8 @@
             this.tableLayoutPanel6.Controls.Add(this.btnEditar, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.btnEliminar, 0, 5);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(851, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1136, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 7;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.91667F));
@@ -385,7 +396,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.23485F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.386364F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.59091F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(126, 512);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(167, 630);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // btnNuevo
@@ -436,7 +447,8 @@
             this.btnNuevo.IdleIconLeftImage = null;
             this.btnNuevo.IdleIconRightImage = null;
             this.btnNuevo.IndicateFocus = false;
-            this.btnNuevo.Location = new System.Drawing.Point(3, 120);
+            this.btnNuevo.Location = new System.Drawing.Point(4, 148);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNuevo.OnDisabledState.BorderRadius = 20;
@@ -470,7 +482,7 @@
             this.btnNuevo.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.OnPressedState.IconLeftImage = null;
             this.btnNuevo.OnPressedState.IconRightImage = null;
-            this.btnNuevo.Size = new System.Drawing.Size(120, 29);
+            this.btnNuevo.Size = new System.Drawing.Size(159, 36);
             this.btnNuevo.TabIndex = 47;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -526,7 +538,8 @@
             this.btnEditar.IdleIconLeftImage = null;
             this.btnEditar.IdleIconRightImage = null;
             this.btnEditar.IndicateFocus = false;
-            this.btnEditar.Location = new System.Drawing.Point(3, 240);
+            this.btnEditar.Location = new System.Drawing.Point(4, 297);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEditar.OnDisabledState.BorderRadius = 20;
@@ -560,7 +573,7 @@
             this.btnEditar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnEditar.OnPressedState.IconLeftImage = null;
             this.btnEditar.OnPressedState.IconRightImage = null;
-            this.btnEditar.Size = new System.Drawing.Size(120, 30);
+            this.btnEditar.Size = new System.Drawing.Size(159, 37);
             this.btnEditar.TabIndex = 48;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -616,7 +629,8 @@
             this.btnEliminar.IdleIconLeftImage = null;
             this.btnEliminar.IdleIconRightImage = null;
             this.btnEliminar.IndicateFocus = false;
-            this.btnEliminar.Location = new System.Drawing.Point(3, 364);
+            this.btnEliminar.Location = new System.Drawing.Point(4, 450);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminar.OnDisabledState.BorderRadius = 20;
@@ -650,7 +664,7 @@
             this.btnEliminar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.OnPressedState.IconLeftImage = null;
             this.btnEliminar.OnPressedState.IconRightImage = null;
-            this.btnEliminar.Size = new System.Drawing.Size(120, 31);
+            this.btnEliminar.Size = new System.Drawing.Size(159, 38);
             this.btnEliminar.TabIndex = 49;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -660,13 +674,14 @@
             // 
             // ViewAdminEmp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(1920, 1078);
-            this.MinimumSize = new System.Drawing.Size(1027, 591);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(2554, 1316);
+            this.MinimumSize = new System.Drawing.Size(1363, 717);
             this.Name = "ViewAdminEmp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración de Empleados";
