@@ -20,7 +20,7 @@ namespace OpticaMultivisual.Controllers.Article
             ObjVista = Vista;
             ObjVista.Load += new EventHandler(CargarInfo);
             ObjVista.btnBuscar.Click += new EventHandler(BuscarArticuloControlador);
-            ObjVista.btnNuevoART.Click += new EventHandler(AgregarArticulo);
+            ObjVista.btnNuevoArt.Click += new EventHandler(AgregarArticulo);
             ObjVista.btnEliminarArt.Click += new EventHandler(EliminarArticulo);
             ObjVista.btnActArt.Click += new EventHandler(ActualizarArticulo);
         }
