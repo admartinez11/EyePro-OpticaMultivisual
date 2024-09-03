@@ -42,6 +42,39 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        public bool ValidateAdminCredentials(string username, string password)
+        {
+            CommonClasses commonClasses = new CommonClasses();
+            bool isValid = false;
+            // Consulta SQL para verificar credenciales en la vista
+            string query = @"
+            SELECT COUNT(*)
+            FROM ViewLogin
+            WHERE username = @username
+              AND password = @password
+              AND rol_nombre = 'Administrador'
+              AND userStatus = 1";
+
+            using (SqlConnection connection = getConnection())
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                // Agregar parámetros para evitar SQL Injection
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", password);
+                try
+                {
+                    int count = (int)command.ExecuteScalar();
+                    isValid = (count > 0);
+                }
+                catch (Exception ex)
+                {
+                    // Manejar excepciones, por ejemplo, registrar el error
+                    Console.WriteLine("Error al validar credenciales: " + ex.Message);
+                }
+            }
+            return isValid;
+        }
+
         public bool VerificarPINSeguridad()
         {
             try

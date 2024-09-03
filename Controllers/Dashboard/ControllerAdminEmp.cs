@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using OpticaMultivisual.Controllers.Helper;
 using System.Net.Mail;
 using System.Net;
+using System.Data.SqlClient;
 
 namespace OpticaMultivisual.Controllers.Dashboard
 {

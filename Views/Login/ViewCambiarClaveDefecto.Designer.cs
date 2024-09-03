@@ -72,11 +72,10 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(945, 358);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(709, 291);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -90,10 +89,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(476, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(357, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 350);
+            this.panel1.Size = new System.Drawing.Size(349, 285);
             this.panel1.TabIndex = 7;
             this.panel1.TabStop = true;
             // 
@@ -144,7 +142,8 @@
             this.btnCambiarClave.IdleIconLeftImage = null;
             this.btnCambiarClave.IdleIconRightImage = null;
             this.btnCambiarClave.IndicateFocus = false;
-            this.btnCambiarClave.Location = new System.Drawing.Point(278, 269);
+            this.btnCambiarClave.Location = new System.Drawing.Point(208, 219);
+            this.btnCambiarClave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCambiarClave.Name = "btnCambiarClave";
             this.btnCambiarClave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCambiarClave.OnDisabledState.BorderRadius = 35;
@@ -178,7 +177,7 @@
             this.btnCambiarClave.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnCambiarClave.OnPressedState.IconLeftImage = null;
             this.btnCambiarClave.OnPressedState.IconRightImage = null;
-            this.btnCambiarClave.Size = new System.Drawing.Size(150, 39);
+            this.btnCambiarClave.Size = new System.Drawing.Size(112, 32);
             this.btnCambiarClave.TabIndex = 7;
             this.btnCambiarClave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCambiarClave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -215,7 +214,8 @@
             this.txtConfirmarNuevaContra.IconRight = null;
             this.txtConfirmarNuevaContra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConfirmarNuevaContra.Lines = new string[0];
-            this.txtConfirmarNuevaContra.Location = new System.Drawing.Point(36, 198);
+            this.txtConfirmarNuevaContra.Location = new System.Drawing.Point(27, 161);
+            this.txtConfirmarNuevaContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConfirmarNuevaContra.MaxLength = 32767;
             this.txtConfirmarNuevaContra.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtConfirmarNuevaContra.Modified = false;
@@ -241,7 +241,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtConfirmarNuevaContra.OnIdleState = stateProperties4;
-            this.txtConfirmarNuevaContra.Padding = new System.Windows.Forms.Padding(3);
+            this.txtConfirmarNuevaContra.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConfirmarNuevaContra.PasswordChar = '\0';
             this.txtConfirmarNuevaContra.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtConfirmarNuevaContra.PlaceholderText = "";
@@ -250,8 +250,8 @@
             this.txtConfirmarNuevaContra.SelectedText = "";
             this.txtConfirmarNuevaContra.SelectionLength = 0;
             this.txtConfirmarNuevaContra.SelectionStart = 0;
-            this.txtConfirmarNuevaContra.ShortcutsEnabled = true;
-            this.txtConfirmarNuevaContra.Size = new System.Drawing.Size(392, 27);
+            this.txtConfirmarNuevaContra.ShortcutsEnabled = false;
+            this.txtConfirmarNuevaContra.Size = new System.Drawing.Size(294, 22);
             this.txtConfirmarNuevaContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtConfirmarNuevaContra.TabIndex = 6;
             this.txtConfirmarNuevaContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -291,7 +291,8 @@
             this.txtNuevaContra.IconRight = null;
             this.txtNuevaContra.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNuevaContra.Lines = new string[0];
-            this.txtNuevaContra.Location = new System.Drawing.Point(36, 130);
+            this.txtNuevaContra.Location = new System.Drawing.Point(27, 106);
+            this.txtNuevaContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNuevaContra.MaxLength = 32767;
             this.txtNuevaContra.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNuevaContra.Modified = false;
@@ -317,7 +318,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNuevaContra.OnIdleState = stateProperties8;
-            this.txtNuevaContra.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNuevaContra.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNuevaContra.PasswordChar = '\0';
             this.txtNuevaContra.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNuevaContra.PlaceholderText = "";
@@ -326,8 +327,8 @@
             this.txtNuevaContra.SelectedText = "";
             this.txtNuevaContra.SelectionLength = 0;
             this.txtNuevaContra.SelectionStart = 0;
-            this.txtNuevaContra.ShortcutsEnabled = true;
-            this.txtNuevaContra.Size = new System.Drawing.Size(392, 27);
+            this.txtNuevaContra.ShortcutsEnabled = false;
+            this.txtNuevaContra.Size = new System.Drawing.Size(294, 22);
             this.txtNuevaContra.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNuevaContra.TabIndex = 5;
             this.txtNuevaContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -367,7 +368,8 @@
             this.txtUsuario.IconRight = null;
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
-            this.txtUsuario.Location = new System.Drawing.Point(36, 64);
+            this.txtUsuario.Location = new System.Drawing.Point(27, 52);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsuario.Modified = false;
@@ -393,7 +395,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUsuario.OnIdleState = stateProperties12;
-            this.txtUsuario.Padding = new System.Windows.Forms.Padding(3);
+            this.txtUsuario.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUsuario.PlaceholderText = "";
@@ -402,8 +404,8 @@
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.ShortcutsEnabled = true;
-            this.txtUsuario.Size = new System.Drawing.Size(392, 27);
+            this.txtUsuario.ShortcutsEnabled = false;
+            this.txtUsuario.Size = new System.Drawing.Size(294, 22);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsuario.TabIndex = 4;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -419,10 +421,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(31, 170);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(23, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 25);
+            this.label3.Size = new System.Drawing.Size(161, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirmar contraseña";
             // 
@@ -431,10 +432,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 102);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(23, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 25);
+            this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nueva contraseña";
             // 
@@ -443,10 +443,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(23, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
@@ -460,10 +459,9 @@
             this.panel2.Controls.Add(this.lblLongitud);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 350);
+            this.panel2.Size = new System.Drawing.Size(348, 285);
             this.panel2.TabIndex = 6;
             this.panel2.TabStop = true;
             // 
@@ -472,10 +470,9 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.White;
-            this.lblNumero.Location = new System.Drawing.Point(57, 223);
-            this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumero.Location = new System.Drawing.Point(43, 181);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(212, 25);
+            this.lblNumero.Size = new System.Drawing.Size(166, 20);
             this.lblNumero.TabIndex = 2;
             this.lblNumero.Text = "• Al menos un número";
             // 
@@ -484,10 +481,9 @@
             this.lblMinus.AutoSize = true;
             this.lblMinus.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinus.ForeColor = System.Drawing.Color.White;
-            this.lblMinus.Location = new System.Drawing.Point(57, 197);
-            this.lblMinus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinus.Location = new System.Drawing.Point(43, 160);
             this.lblMinus.Name = "lblMinus";
-            this.lblMinus.Size = new System.Drawing.Size(273, 25);
+            this.lblMinus.Size = new System.Drawing.Size(215, 20);
             this.lblMinus.TabIndex = 2;
             this.lblMinus.Text = "• Al menos una minúscula a-z";
             // 
@@ -496,10 +492,9 @@
             this.lblMayus.AutoSize = true;
             this.lblMayus.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMayus.ForeColor = System.Drawing.Color.White;
-            this.lblMayus.Location = new System.Drawing.Point(57, 174);
-            this.lblMayus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMayus.Location = new System.Drawing.Point(43, 141);
             this.lblMayus.Name = "lblMayus";
-            this.lblMayus.Size = new System.Drawing.Size(282, 25);
+            this.lblMayus.Size = new System.Drawing.Size(223, 20);
             this.lblMayus.TabIndex = 2;
             this.lblMayus.Text = "• Al menos una mayúscula A-Z";
             // 
@@ -508,10 +503,9 @@
             this.lblSignos.AutoSize = true;
             this.lblSignos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignos.ForeColor = System.Drawing.Color.White;
-            this.lblSignos.Location = new System.Drawing.Point(57, 151);
-            this.lblSignos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSignos.Location = new System.Drawing.Point(43, 123);
             this.lblSignos.Name = "lblSignos";
-            this.lblSignos.Size = new System.Drawing.Size(167, 25);
+            this.lblSignos.Size = new System.Drawing.Size(130, 20);
             this.lblSignos.TabIndex = 2;
             this.lblSignos.Text = "• Un signo $, @, _";
             // 
@@ -520,10 +514,9 @@
             this.lblLongitud.AutoSize = true;
             this.lblLongitud.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLongitud.ForeColor = System.Drawing.Color.White;
-            this.lblLongitud.Location = new System.Drawing.Point(57, 126);
-            this.lblLongitud.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLongitud.Location = new System.Drawing.Point(43, 102);
             this.lblLongitud.Name = "lblLongitud";
-            this.lblLongitud.Size = new System.Drawing.Size(313, 25);
+            this.lblLongitud.Size = new System.Drawing.Size(245, 20);
             this.lblLongitud.TabIndex = 2;
             this.lblLongitud.Text = "• Minimo 8 caracteres de longitud";
             // 
@@ -532,23 +525,21 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 75);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(32, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(324, 50);
+            this.label5.Size = new System.Drawing.Size(255, 40);
             this.label5.TabIndex = 2;
             this.label5.Text = "Caracteristicas que debe cumplir la \r\ncontraseña";
             // 
             // ViewCambiarClaveDefecto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(945, 358);
+            this.ClientSize = new System.Drawing.Size(709, 291);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(969, 506);
-            this.MinimumSize = new System.Drawing.Size(961, 395);
+            this.MaximumSize = new System.Drawing.Size(731, 418);
+            this.MinimumSize = new System.Drawing.Size(725, 328);
             this.Name = "ViewCambiarClaveDefecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambiar clave por defecto";
