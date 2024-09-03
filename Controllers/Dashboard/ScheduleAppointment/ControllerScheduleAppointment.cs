@@ -68,6 +68,26 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
         }
         private bool ValidarCampos()
         {
+
+            if (string.IsNullOrEmpty(ObjVistaR.txtCiNombre.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtCiApellido.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtCiObs.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtCiDUI.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtCiTel.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtCiCorreo.Text.Trim())
+                )
+            {
+                MessageBox.Show("Existen campos vacíos, complete cada uno de los apartados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            DateTime Vis_fcita = ObjVistaR.DTPfechacita.Value;
+            if (!ValidarFechaSeleccionada(Vis_fcita))
+            {
+                MessageBox.Show("El campo Fecha solo puede contener fechas validas", "Validación de Fecha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             string telefono = ObjVistaR.txtCiTel.Text.Trim();
             if (!EsValido(telefono))
             {
@@ -83,25 +103,56 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
             }
 
             string correo = ObjVistaR.txtCiCorreo.Text.Trim();
-            CommonClasses commonClasses = new CommonClasses();
-            if (!commonClasses.EsCorreoValido(correo))
+            if (!EsCorreoValido(correo))
             {
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Validación de Correo Electrónico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (string.IsNullOrEmpty(ObjVistaR.txtCiNombre.Text.Trim()) ||
-                string.IsNullOrEmpty(ObjVistaR.txtCiApellido.Text.Trim()) ||
-                string.IsNullOrEmpty(ObjVistaR.txtCiObs.Text.Trim())
-                )
+            if (ObjVistaR.txtCiNombre.Text.Length > 100)
             {
-                MessageBox.Show("Existen campos vacíos, complete cada uno de los apartados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de Nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ObjVistaR.txtCiApellido.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de Apellido no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ObjVistaR.txtCiTel.Text.Length > 25)
+            {
+                MessageBox.Show("El campo de Telefóno no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ObjVistaR.txtCiCorreo.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de Correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ObjVistaR.txtCiObs.Text.Length > 200)
+            {
+                MessageBox.Show("El campo de Motivo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ObjVistaR.txtCiDUI.Text.Length > 10)
+            {
+                MessageBox.Show("El campo de DUI no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            DateTime vis_fcita = ObjVistaR.DTPfechacita.Value;
+            if (!ValidarFechaFutura(vis_fcita))
+            {
+                MessageBox.Show("El campo Fecha debe ser una fecha futura.", "Validación de Fecha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             return true;
         }
-        
+        private bool EsCorreoValido(string correo)
+        {
+            string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(correo, patron);
+        }
         private bool EsValido(string valor)
         {
             int guionCount = 0;
@@ -117,6 +168,24 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
                 }
             }
             return guionCount <= 1;
+        }
+        private bool ValidarFechaSeleccionada(DateTime fecha)
+        {
+            if (fecha == DateTime.MinValue)
+            {
+                MessageBox.Show("Debe seleccionar una fecha.");
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarFechaFutura(DateTime fecha)
+        {
+            if (fecha < DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha seleccionada debe ser posterior a la fecha actual.");
+                return false;
+            }
+            return true;
         }
         public ControllerScheduleAppointment(ViewScheduleAppointment Vista, int p_accion, DateTime Vis_fcita, string Vis_nombre, string Vis_apellido, string Vis_tel, string Vis_correo, string Vis_dui, string Vis_obser)
         {
