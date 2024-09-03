@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRecuperaciónPass));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRecuperaciónPass));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.BtnSecurityQ = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.BtnGmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnInterAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +51,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.23943F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.943662F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(174, 36);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(172, 42);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.075235F));
@@ -62,13 +64,15 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.btnInterAdmin, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.btnAdmin, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.BtnSecurityQ, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.BtnGmail, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(16, 17);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -90,16 +94,16 @@
             this.btnAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
             this.btnAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.ButtonText = "Intervención de administrador";
+            this.btnAdmin.ButtonText = "Restablecimiento de usuario";
             this.btnAdmin.ButtonTextMarginLeft = 0;
             this.btnAdmin.ColorContrastOnClick = 45;
             this.btnAdmin.ColorContrastOnHover = 45;
             this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnAdmin.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnAdmin.CustomizableEdges = borderEdges2;
             this.btnAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -123,7 +127,7 @@
             this.btnAdmin.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.Admin;
             this.btnAdmin.IdleIconRightImage = null;
             this.btnAdmin.IndicateFocus = false;
-            this.btnAdmin.Location = new System.Drawing.Point(13, 19);
+            this.btnAdmin.Location = new System.Drawing.Point(13, 6);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdmin.OnDisabledState.BorderRadius = 20;
@@ -162,7 +166,7 @@
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdmin.TextMarginLeft = 0;
-            this.btnAdmin.TextPadding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.btnAdmin.TextPadding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAdmin.UseDefaultRadiusAndThickness = true;
             // 
             // BtnSecurityQ
@@ -185,11 +189,11 @@
             this.BtnSecurityQ.ColorContrastOnClick = 45;
             this.BtnSecurityQ.ColorContrastOnHover = 45;
             this.BtnSecurityQ.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.BtnSecurityQ.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.BtnSecurityQ.CustomizableEdges = borderEdges3;
             this.BtnSecurityQ.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnSecurityQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnSecurityQ.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -213,7 +217,7 @@
             this.BtnSecurityQ.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.SecurityQ;
             this.BtnSecurityQ.IdleIconRightImage = null;
             this.BtnSecurityQ.IndicateFocus = false;
-            this.BtnSecurityQ.Location = new System.Drawing.Point(13, 125);
+            this.BtnSecurityQ.Location = new System.Drawing.Point(13, 84);
             this.BtnSecurityQ.Name = "BtnSecurityQ";
             this.BtnSecurityQ.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnSecurityQ.OnDisabledState.BorderRadius = 20;
@@ -275,11 +279,11 @@
             this.BtnGmail.ColorContrastOnClick = 45;
             this.BtnGmail.ColorContrastOnHover = 45;
             this.BtnGmail.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.BtnGmail.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.BtnGmail.CustomizableEdges = borderEdges4;
             this.BtnGmail.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnGmail.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnGmail.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -303,7 +307,7 @@
             this.BtnGmail.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.Gmail;
             this.BtnGmail.IdleIconRightImage = null;
             this.BtnGmail.IndicateFocus = false;
-            this.BtnGmail.Location = new System.Drawing.Point(13, 231);
+            this.BtnGmail.Location = new System.Drawing.Point(13, 163);
             this.BtnGmail.Name = "BtnGmail";
             this.BtnGmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnGmail.OnDisabledState.BorderRadius = 20;
@@ -345,6 +349,96 @@
             this.BtnGmail.TextPadding = new System.Windows.Forms.Padding(0, 0, 65, 0);
             this.BtnGmail.UseDefaultRadiusAndThickness = true;
             // 
+            // btnInterAdmin
+            // 
+            this.btnInterAdmin.AllowAnimations = true;
+            this.btnInterAdmin.AllowMouseEffects = true;
+            this.btnInterAdmin.AllowToggling = false;
+            this.btnInterAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInterAdmin.AnimationSpeed = 200;
+            this.btnInterAdmin.AutoGenerateColors = false;
+            this.btnInterAdmin.AutoRoundBorders = false;
+            this.btnInterAdmin.AutoSizeLeftIcon = true;
+            this.btnInterAdmin.AutoSizeRightIcon = true;
+            this.btnInterAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnInterAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.btnInterAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInterAdmin.BackgroundImage")));
+            this.btnInterAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnInterAdmin.ButtonText = "Intervención de administrador";
+            this.btnInterAdmin.ButtonTextMarginLeft = 0;
+            this.btnInterAdmin.ColorContrastOnClick = 45;
+            this.btnInterAdmin.ColorContrastOnHover = 45;
+            this.btnInterAdmin.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnInterAdmin.CustomizableEdges = borderEdges1;
+            this.btnInterAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnInterAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnInterAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnInterAdmin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnInterAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnInterAdmin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInterAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnInterAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInterAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnInterAdmin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnInterAdmin.IconMarginLeft = 11;
+            this.btnInterAdmin.IconPadding = 10;
+            this.btnInterAdmin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInterAdmin.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnInterAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnInterAdmin.IconSize = 25;
+            this.btnInterAdmin.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.btnInterAdmin.IdleBorderRadius = 20;
+            this.btnInterAdmin.IdleBorderThickness = 1;
+            this.btnInterAdmin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.btnInterAdmin.IdleIconLeftImage = global::OpticaMultivisual.Properties.Resources.Admin;
+            this.btnInterAdmin.IdleIconRightImage = null;
+            this.btnInterAdmin.IndicateFocus = false;
+            this.btnInterAdmin.Location = new System.Drawing.Point(13, 244);
+            this.btnInterAdmin.Name = "btnInterAdmin";
+            this.btnInterAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnInterAdmin.OnDisabledState.BorderRadius = 20;
+            this.btnInterAdmin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnInterAdmin.OnDisabledState.BorderThickness = 1;
+            this.btnInterAdmin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnInterAdmin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnInterAdmin.OnDisabledState.IconLeftImage = null;
+            this.btnInterAdmin.OnDisabledState.IconRightImage = null;
+            this.btnInterAdmin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnInterAdmin.onHoverState.BorderRadius = 20;
+            this.btnInterAdmin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnInterAdmin.onHoverState.BorderThickness = 1;
+            this.btnInterAdmin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnInterAdmin.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnInterAdmin.onHoverState.IconLeftImage = null;
+            this.btnInterAdmin.onHoverState.IconRightImage = null;
+            this.btnInterAdmin.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.btnInterAdmin.OnIdleState.BorderRadius = 20;
+            this.btnInterAdmin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnInterAdmin.OnIdleState.BorderThickness = 1;
+            this.btnInterAdmin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.btnInterAdmin.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnInterAdmin.OnIdleState.IconLeftImage = global::OpticaMultivisual.Properties.Resources.Admin;
+            this.btnInterAdmin.OnIdleState.IconRightImage = null;
+            this.btnInterAdmin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnInterAdmin.OnPressedState.BorderRadius = 20;
+            this.btnInterAdmin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnInterAdmin.OnPressedState.BorderThickness = 1;
+            this.btnInterAdmin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnInterAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnInterAdmin.OnPressedState.IconLeftImage = null;
+            this.btnInterAdmin.OnPressedState.IconRightImage = null;
+            this.btnInterAdmin.Size = new System.Drawing.Size(383, 67);
+            this.btnInterAdmin.TabIndex = 4;
+            this.btnInterAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInterAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnInterAdmin.TextMarginLeft = 0;
+            this.btnInterAdmin.TextPadding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.btnInterAdmin.UseDefaultRadiusAndThickness = true;
+            // 
             // ViewRecuperaciónPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +461,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAdmin;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnSecurityQ;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnGmail;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnInterAdmin;
     }
 }

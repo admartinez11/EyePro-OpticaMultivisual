@@ -34,8 +34,8 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -47,11 +47,11 @@
             this.btnClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnReceta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnService = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnArticulo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.PanelContenedor = new System.Windows.Forms.TableLayoutPanel();
-            this.btnArticulo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -69,11 +69,10 @@
             this.tableLayoutPanel1.Controls.Add(this.PanelContenedor, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1797, 836);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1350, 709);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -83,13 +82,12 @@
             this.tableLayoutPanel2.Controls.Add(this.bunifuPictureBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.62556F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.37444F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(377, 828);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 703);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bunifuPictureBox1
@@ -100,10 +98,9 @@
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 7);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(369, 187);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(277, 152);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 6;
             this.bunifuPictureBox1.TabStop = false;
@@ -117,14 +114,13 @@
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.bunifuPanel1, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 199);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 169);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.36221F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.43307F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.00787F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(369, 625);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(277, 531);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // btnExit
@@ -175,8 +171,7 @@
             this.btnExit.IdleIconLeftImage = null;
             this.btnExit.IdleIconRightImage = null;
             this.btnExit.IndicateFocus = false;
-            this.btnExit.Location = new System.Drawing.Point(8, 488);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(6, 414);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExit.OnDisabledState.BorderRadius = 20;
@@ -210,7 +205,7 @@
             this.btnExit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnExit.OnPressedState.IconLeftImage = null;
             this.btnExit.OnPressedState.IconRightImage = null;
-            this.btnExit.Size = new System.Drawing.Size(353, 57);
+            this.btnExit.Size = new System.Drawing.Size(265, 46);
             this.btnExit.TabIndex = 5;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -228,10 +223,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnArticulo);
             this.flowLayoutPanel1.Controls.Add(this.btnAdmin);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(361, 476);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(271, 405);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
             // label1
@@ -239,10 +233,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 41);
+            this.label1.Size = new System.Drawing.Size(111, 33);
             this.label1.TabIndex = 8;
             this.label1.Text = "Acciones";
             // 
@@ -294,8 +287,7 @@
             this.btnVisita.IdleIconLeftImage = null;
             this.btnVisita.IdleIconRightImage = null;
             this.btnVisita.IndicateFocus = false;
-            this.btnVisita.Location = new System.Drawing.Point(4, 45);
-            this.btnVisita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisita.Location = new System.Drawing.Point(3, 36);
             this.btnVisita.Name = "btnVisita";
             this.btnVisita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVisita.OnDisabledState.BorderRadius = 20;
@@ -329,7 +321,7 @@
             this.btnVisita.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVisita.OnPressedState.IconLeftImage = null;
             this.btnVisita.OnPressedState.IconRightImage = null;
-            this.btnVisita.Size = new System.Drawing.Size(361, 57);
+            this.btnVisita.Size = new System.Drawing.Size(271, 46);
             this.btnVisita.TabIndex = 0;
             this.btnVisita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVisita.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -385,8 +377,7 @@
             this.btnClientes.IdleIconLeftImage = null;
             this.btnClientes.IdleIconRightImage = null;
             this.btnClientes.IndicateFocus = false;
-            this.btnClientes.Location = new System.Drawing.Point(4, 110);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClientes.Location = new System.Drawing.Point(3, 88);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClientes.OnDisabledState.BorderRadius = 20;
@@ -420,7 +411,7 @@
             this.btnClientes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnClientes.OnPressedState.IconLeftImage = null;
             this.btnClientes.OnPressedState.IconRightImage = null;
-            this.btnClientes.Size = new System.Drawing.Size(361, 58);
+            this.btnClientes.Size = new System.Drawing.Size(271, 47);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClientes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -476,8 +467,7 @@
             this.btnReceta.IdleIconLeftImage = null;
             this.btnReceta.IdleIconRightImage = null;
             this.btnReceta.IndicateFocus = false;
-            this.btnReceta.Location = new System.Drawing.Point(4, 176);
-            this.btnReceta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReceta.Location = new System.Drawing.Point(3, 141);
             this.btnReceta.Name = "btnReceta";
             this.btnReceta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnReceta.OnDisabledState.BorderRadius = 20;
@@ -511,7 +501,7 @@
             this.btnReceta.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnReceta.OnPressedState.IconLeftImage = null;
             this.btnReceta.OnPressedState.IconRightImage = null;
-            this.btnReceta.Size = new System.Drawing.Size(361, 63);
+            this.btnReceta.Size = new System.Drawing.Size(271, 51);
             this.btnReceta.TabIndex = 2;
             this.btnReceta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReceta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -567,8 +557,7 @@
             this.btnService.IdleIconLeftImage = null;
             this.btnService.IdleIconRightImage = null;
             this.btnService.IndicateFocus = false;
-            this.btnService.Location = new System.Drawing.Point(4, 247);
-            this.btnService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnService.Location = new System.Drawing.Point(3, 198);
             this.btnService.Name = "btnService";
             this.btnService.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnService.OnDisabledState.BorderRadius = 20;
@@ -602,147 +591,13 @@
             this.btnService.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnService.OnPressedState.IconLeftImage = null;
             this.btnService.OnPressedState.IconRightImage = null;
-            this.btnService.Size = new System.Drawing.Size(361, 60);
+            this.btnService.Size = new System.Drawing.Size(271, 49);
             this.btnService.TabIndex = 3;
             this.btnService.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnService.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnService.TextMarginLeft = 0;
             this.btnService.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnService.UseDefaultRadiusAndThickness = true;
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.AllowAnimations = true;
-            this.btnAdmin.AllowMouseEffects = true;
-            this.btnAdmin.AllowToggling = false;
-            this.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdmin.AnimationSpeed = 200;
-            this.btnAdmin.AutoGenerateColors = false;
-            this.btnAdmin.AutoRoundBorders = false;
-            this.btnAdmin.AutoSizeLeftIcon = true;
-            this.btnAdmin.AutoSizeRightIcon = true;
-            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
-            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
-            this.btnAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.ButtonText = "Administración";
-            this.btnAdmin.ButtonTextMarginLeft = 0;
-            this.btnAdmin.ColorContrastOnClick = 45;
-            this.btnAdmin.ColorContrastOnHover = 45;
-            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnAdmin.CustomizableEdges = borderEdges7;
-            this.btnAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAdmin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAdmin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAdmin.IconMarginLeft = 11;
-            this.btnAdmin.IconPadding = 10;
-            this.btnAdmin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdmin.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAdmin.IconSize = 25;
-            this.btnAdmin.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
-            this.btnAdmin.IdleBorderRadius = 20;
-            this.btnAdmin.IdleBorderThickness = 1;
-            this.btnAdmin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
-            this.btnAdmin.IdleIconLeftImage = null;
-            this.btnAdmin.IdleIconRightImage = null;
-            this.btnAdmin.IndicateFocus = false;
-            this.btnAdmin.Location = new System.Drawing.Point(4, 385);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAdmin.OnDisabledState.BorderRadius = 20;
-            this.btnAdmin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.OnDisabledState.BorderThickness = 1;
-            this.btnAdmin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAdmin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAdmin.OnDisabledState.IconLeftImage = null;
-            this.btnAdmin.OnDisabledState.IconRightImage = null;
-            this.btnAdmin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAdmin.onHoverState.BorderRadius = 20;
-            this.btnAdmin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.onHoverState.BorderThickness = 1;
-            this.btnAdmin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAdmin.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.onHoverState.IconLeftImage = null;
-            this.btnAdmin.onHoverState.IconRightImage = null;
-            this.btnAdmin.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
-            this.btnAdmin.OnIdleState.BorderRadius = 20;
-            this.btnAdmin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.OnIdleState.BorderThickness = 1;
-            this.btnAdmin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
-            this.btnAdmin.OnIdleState.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.OnIdleState.IconLeftImage = null;
-            this.btnAdmin.OnIdleState.IconRightImage = null;
-            this.btnAdmin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAdmin.OnPressedState.BorderRadius = 20;
-            this.btnAdmin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAdmin.OnPressedState.BorderThickness = 1;
-            this.btnAdmin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.OnPressedState.IconLeftImage = null;
-            this.btnAdmin.OnPressedState.IconRightImage = null;
-            this.btnAdmin.Size = new System.Drawing.Size(361, 62);
-            this.btnAdmin.TabIndex = 4;
-            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAdmin.TextMarginLeft = 0;
-            this.btnAdmin.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAdmin.UseDefaultRadiusAndThickness = true;
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.bunifuPanel1.BorderRadius = 20;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.lblUsername);
-            this.bunifuPanel1.Location = new System.Drawing.Point(54, 558);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(261, 58);
-            this.bunifuPanel1.TabIndex = 14;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(24, 18);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(13, 18);
-            this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = ".";
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.ColumnCount = 1;
-            this.PanelContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelContenedor.Location = new System.Drawing.Point(389, 4);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.RowCount = 1;
-            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 828F));
-            this.PanelContenedor.Size = new System.Drawing.Size(1404, 828);
-            this.PanelContenedor.TabIndex = 1;
             // 
             // btnArticulo
             // 
@@ -792,8 +647,7 @@
             this.btnArticulo.IdleIconLeftImage = null;
             this.btnArticulo.IdleIconRightImage = null;
             this.btnArticulo.IndicateFocus = false;
-            this.btnArticulo.Location = new System.Drawing.Point(4, 315);
-            this.btnArticulo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnArticulo.Location = new System.Drawing.Point(3, 253);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnArticulo.OnDisabledState.BorderRadius = 20;
@@ -827,7 +681,7 @@
             this.btnArticulo.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnArticulo.OnPressedState.IconLeftImage = null;
             this.btnArticulo.OnPressedState.IconRightImage = null;
-            this.btnArticulo.Size = new System.Drawing.Size(361, 62);
+            this.btnArticulo.Size = new System.Drawing.Size(271, 50);
             this.btnArticulo.TabIndex = 9;
             this.btnArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnArticulo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -835,16 +689,145 @@
             this.btnArticulo.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnArticulo.UseDefaultRadiusAndThickness = true;
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.AllowAnimations = true;
+            this.btnAdmin.AllowMouseEffects = true;
+            this.btnAdmin.AllowToggling = false;
+            this.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdmin.AnimationSpeed = 200;
+            this.btnAdmin.AutoGenerateColors = false;
+            this.btnAdmin.AutoRoundBorders = false;
+            this.btnAdmin.AutoSizeLeftIcon = true;
+            this.btnAdmin.AutoSizeRightIcon = true;
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
+            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
+            this.btnAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAdmin.ButtonText = "Administración";
+            this.btnAdmin.ButtonTextMarginLeft = 0;
+            this.btnAdmin.ColorContrastOnClick = 45;
+            this.btnAdmin.ColorContrastOnHover = 45;
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btnAdmin.CustomizableEdges = borderEdges7;
+            this.btnAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAdmin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdmin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAdmin.IconMarginLeft = 11;
+            this.btnAdmin.IconPadding = 10;
+            this.btnAdmin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdmin.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAdmin.IconSize = 25;
+            this.btnAdmin.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
+            this.btnAdmin.IdleBorderRadius = 20;
+            this.btnAdmin.IdleBorderThickness = 1;
+            this.btnAdmin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
+            this.btnAdmin.IdleIconLeftImage = null;
+            this.btnAdmin.IdleIconRightImage = null;
+            this.btnAdmin.IndicateFocus = false;
+            this.btnAdmin.Location = new System.Drawing.Point(3, 309);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAdmin.OnDisabledState.BorderRadius = 20;
+            this.btnAdmin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAdmin.OnDisabledState.BorderThickness = 1;
+            this.btnAdmin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAdmin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAdmin.OnDisabledState.IconLeftImage = null;
+            this.btnAdmin.OnDisabledState.IconRightImage = null;
+            this.btnAdmin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAdmin.onHoverState.BorderRadius = 20;
+            this.btnAdmin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAdmin.onHoverState.BorderThickness = 1;
+            this.btnAdmin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAdmin.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin.onHoverState.IconLeftImage = null;
+            this.btnAdmin.onHoverState.IconRightImage = null;
+            this.btnAdmin.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
+            this.btnAdmin.OnIdleState.BorderRadius = 20;
+            this.btnAdmin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAdmin.OnIdleState.BorderThickness = 1;
+            this.btnAdmin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(219)))), ((int)(((byte)(114)))));
+            this.btnAdmin.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.OnIdleState.IconLeftImage = null;
+            this.btnAdmin.OnIdleState.IconRightImage = null;
+            this.btnAdmin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAdmin.OnPressedState.BorderRadius = 20;
+            this.btnAdmin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAdmin.OnPressedState.BorderThickness = 1;
+            this.btnAdmin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin.OnPressedState.IconLeftImage = null;
+            this.btnAdmin.OnPressedState.IconRightImage = null;
+            this.btnAdmin.Size = new System.Drawing.Size(271, 50);
+            this.btnAdmin.TabIndex = 4;
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdmin.TextMarginLeft = 0;
+            this.btnAdmin.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAdmin.UseDefaultRadiusAndThickness = true;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.bunifuPanel1.BorderRadius = 20;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lblUsername);
+            this.bunifuPanel1.Location = new System.Drawing.Point(40, 475);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(196, 47);
+            this.bunifuPanel1.TabIndex = 14;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(18, 15);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(11, 15);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = ".";
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.ColumnCount = 1;
+            this.PanelContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelContenedor.Location = new System.Drawing.Point(292, 3);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.RowCount = 1;
+            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 673F));
+            this.PanelContenedor.Size = new System.Drawing.Size(1053, 673);
+            this.PanelContenedor.TabIndex = 1;
+            // 
             // ViewMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1797, 836);
+            this.ClientSize = new System.Drawing.Size(1350, 709);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(2554, 1316);
-            this.MinimumSize = new System.Drawing.Size(1813, 873);
+            this.MaximumSize = new System.Drawing.Size(1920, 1077);
+            this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "ViewMain";
             this.Text = "Main";
             this.tableLayoutPanel1.ResumeLayout(false);
