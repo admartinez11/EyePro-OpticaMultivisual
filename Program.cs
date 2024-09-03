@@ -11,6 +11,7 @@ using OpticaMultivisual.Views.Login;
 using OpticaMultivisual.Views.Dashboard.Optometrista;
 using OpticaMultivisual.Views.Reports.RecetaBase;
 using OpticaMultivisual.Views.Dashboard;
+using OpticaMultivisual.Views.Consultas;
 
 namespace OpticaMultivisual
 {
