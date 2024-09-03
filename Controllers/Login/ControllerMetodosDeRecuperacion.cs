@@ -14,7 +14,7 @@ namespace OpticaMultivisual.Controllers.Login
         public ControllerMetodosDeRecuperacion(ViewRecuperaciónPass vista)
         {
             this.vista = vista;
-            vista.btnAdmin.Click += new EventHandler(openFormIntervencionAdmin);
+            vista.btnAdmin.Click += new EventHandler(openFormRestablecerAdmin);
             vista.BtnGmail.Click += new EventHandler(openFormMail);
             vista.BtnSecurityQ.Click += new EventHandler(openFormSecQ);
         }
@@ -22,22 +22,19 @@ namespace OpticaMultivisual.Controllers.Login
         void openFormSecQ(object sender, EventArgs e)
         {
             ViewByQuestion openForm = new ViewByQuestion();
-            openForm.Show();
-            vista.Close();
+            openForm.ShowDialog();
         }
 
         void openFormMail(object sender, EventArgs e)
         {
             ViewRecoverPassword openForm = new ViewRecoverPassword();
-            openForm.Show();
-            vista.Close();
+            openForm.ShowDialog();
         }
 
-        void openFormIntervencionAdmin(object sender, EventArgs e)
+        void openFormRestablecerAdmin(object sender, EventArgs e)
         {
             ViewCambiarClave openForm = new ViewCambiarClave();
-            openForm.Show();
-            vista.Close();
+            openForm.ShowDialog();
         }
     }
 }
