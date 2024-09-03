@@ -734,7 +734,7 @@
             this.txtBuscar.SelectedText = "";
             this.txtBuscar.SelectionLength = 0;
             this.txtBuscar.SelectionStart = 0;
-            this.txtBuscar.ShortcutsEnabled = true;
+            this.txtBuscar.ShortcutsEnabled = false;
             this.txtBuscar.Size = new System.Drawing.Size(897, 40);
             this.txtBuscar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscar.TabIndex = 34;

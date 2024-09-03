@@ -68,38 +68,96 @@ namespace OpticaMultivisual.Controllers.Article
         }
         public void NuevoArticulo(object sender, EventArgs e)
         {
-            DAOArticle DAOIngresarR = new DAOArticle
+            if (ValidarCampos())
             {
-                Art_codigo = int.Parse(ObjVistaR.txtArCodigo.Text.Trim()),
-                Art_nombre = ObjVistaR.txtArNombre.Text.Trim(),
-                Art_descripcion = ObjVistaR.txtDescArt.Text.Trim(),
-                Tipoart_ID = (int)ObjVistaR.cmbTipoArt.SelectedValue,
-                Mod_ID = (int)ObjVistaR.cmbModeloArt.SelectedValue,
-                Art_medidas = ObjVistaR.txtMedidas.Text.Trim(),
-                Material_ID = (int)ObjVistaR.cmbMaterialArt.SelectedValue,
-                Color_ID = (int)ObjVistaR.cmbColorArt.SelectedValue,
-                Art_urlimagen = ObjVistaR.txtUrlImagenArt.Text.Trim(),
-                Art_comentarios = ObjVistaR.txtComentariosArt.Text.Trim(),
-                Art_punitario = ObjVistaR.txtPUnitario.Text.Trim(),
-            };
+                DAOArticle DAOIngresarR = new DAOArticle
+                {
+                    Art_codigo = int.Parse(ObjVistaR.txtArCodigo.Text.Trim()),
+                    Art_nombre = ObjVistaR.txtArNombre.Text.Trim(),
+                    Art_descripcion = ObjVistaR.txtDescArt.Text.Trim(),
+                    Tipoart_ID = (int)ObjVistaR.cmbTipoArt.SelectedValue,
+                    Mod_ID = (int)ObjVistaR.cmbModeloArt.SelectedValue,
+                    Art_medidas = ObjVistaR.txtMedidas.Text.Trim(),
+                    Material_ID = (int)ObjVistaR.cmbMaterialArt.SelectedValue,
+                    Color_ID = (int)ObjVistaR.cmbColorArt.SelectedValue,
+                    Art_urlimagen = ObjVistaR.txtUrlImagenArt.Text.Trim(),
+                    Art_comentarios = ObjVistaR.txtComentariosArt.Text.Trim(),
+                    Art_punitario = ObjVistaR.txtPUnitario.Text.Trim(),
+                };
 
-            int valorRetornado = DAOIngresarR.IngresarArticulo();
+                int valorRetornado = DAOIngresarR.IngresarArticulo();
 
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjVistaR.Close();
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjVistaR.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser registrados",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
-            else
+        }
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrEmpty(ObjVistaR.txtArCodigo.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtArNombre.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtDescArt.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtPUnitario.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtUrlImagenArt.Text.Trim()) ||
+                string.IsNullOrEmpty(ObjVistaR.txtComentariosArt.Text.Trim())
+                )
             {
-                MessageBox.Show("Los datos no pudieron ser registrados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Existen campos vacíos, complete cada uno de los apartados", "Proceso interrumpido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
+            if (ObjVistaR.txtArCodigo.Text.Length > 50)
+            {
+                MessageBox.Show("El campo de Codigo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtArNombre.Text.Length > 50)
+            {
+                MessageBox.Show("El campo de Nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtDescArt.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de Descripcion del Articulo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtPUnitario.Text.Length > 10)
+            {
+                MessageBox.Show("El campo de Precio Unitario no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtUrlImagenArt.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de URL de la imagen no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtComentariosArt.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de Comentarios no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.cmbColorArt.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un Color.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.cmbMaterialArt.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un Material.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.cmbModeloArt.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un Modelo.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.cmbTipoArt.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un Tipo de Articulo.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return true;
         }
         public ControllerAddArticle(ViewAddArticle Vista, int p_accion, string art_codigo, string art_nombre, string art_descripcion, int tipoart_ID, int mod_ID, string art_medidas, int material_ID, int color_ID, string art_urlimagen, string art_comentarios, string art_punitario)
         {
@@ -140,46 +198,49 @@ namespace OpticaMultivisual.Controllers.Article
         }
         public void ActualizarRegistro(object sender, EventArgs e)
         {
-            DAOArticle DAOIngresarR = new DAOArticle
+            if (ValidarCampos())
             {
-                Art_codigo = int.Parse(ObjVistaR.txtArCodigo.Text.Trim()),
-                Art_nombre = ObjVistaR.txtArNombre.Text.Trim(),
-                Art_descripcion = ObjVistaR.txtDescArt.Text.Trim(),
-                Tipoart_ID = (int)ObjVistaR.cmbTipoArt.SelectedValue,
-                Mod_ID = (int)ObjVistaR.cmbModeloArt.SelectedValue,
-                Art_medidas = ObjVistaR.txtMedidas.Text.Trim(),
-                Material_ID = (int)ObjVistaR.cmbMaterialArt.SelectedValue,
-                Color_ID = (int)ObjVistaR.cmbColorArt.SelectedValue,
-                Art_urlimagen = ObjVistaR.txtUrlImagenArt.Text.Trim(),
-                Art_comentarios = ObjVistaR.txtComentariosArt.Text.Trim(),
-                Art_punitario = ObjVistaR.txtPUnitario.Text.Trim(),
-            };
+                DAOArticle DAOIngresarR = new DAOArticle
+                {
+                    Art_codigo = int.Parse(ObjVistaR.txtArCodigo.Text.Trim()),
+                    Art_nombre = ObjVistaR.txtArNombre.Text.Trim(),
+                    Art_descripcion = ObjVistaR.txtDescArt.Text.Trim(),
+                    Tipoart_ID = (int)ObjVistaR.cmbTipoArt.SelectedValue,
+                    Mod_ID = (int)ObjVistaR.cmbModeloArt.SelectedValue,
+                    Art_medidas = ObjVistaR.txtMedidas.Text.Trim(),
+                    Material_ID = (int)ObjVistaR.cmbMaterialArt.SelectedValue,
+                    Color_ID = (int)ObjVistaR.cmbColorArt.SelectedValue,
+                    Art_urlimagen = ObjVistaR.txtUrlImagenArt.Text.Trim(),
+                    Art_comentarios = ObjVistaR.txtComentariosArt.Text.Trim(),
+                    Art_punitario = ObjVistaR.txtPUnitario.Text.Trim(),
+                };
 
-            int valorRetornado = DAOIngresarR.ActualizarArticulo();
+                int valorRetornado = DAOIngresarR.ActualizarArticulo();
 
-            if (valorRetornado > 0)
-            {
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjVistaR.Close();
+                if (valorRetornado > 0)
+                {
+                    MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjVistaR.Close();
 
-            }
-            else if (valorRetornado == 0)
-            {
-                MessageBox.Show("No se encontró el registro para actualizar",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
+                }
+                else if (valorRetornado == 0)
+                {
+                    MessageBox.Show("No se encontró el registro para actualizar",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            } 
         }
         public void verificarAccion()
         {
