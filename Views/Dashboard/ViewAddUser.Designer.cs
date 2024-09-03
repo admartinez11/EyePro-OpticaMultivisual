@@ -193,7 +193,7 @@
             this.txtSecurityAnswer.SelectedText = "";
             this.txtSecurityAnswer.SelectionLength = 0;
             this.txtSecurityAnswer.SelectionStart = 0;
-            this.txtSecurityAnswer.ShortcutsEnabled = true;
+            this.txtSecurityAnswer.ShortcutsEnabled = false;
             this.txtSecurityAnswer.Size = new System.Drawing.Size(443, 32);
             this.txtSecurityAnswer.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSecurityAnswer.TabIndex = 7;
@@ -392,6 +392,7 @@
             this.btnUpdate.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpdate.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnUpdate.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
@@ -493,7 +494,8 @@
             this.mskDocument.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mskDocument.Mask = "00000000-0";
             this.mskDocument.Name = "mskDocument";
-            this.mskDocument.Size = new System.Drawing.Size(134, 25);
+            this.mskDocument.ShortcutsEnabled = false;
+            this.mskDocument.Size = new System.Drawing.Size(134, 20);
             this.mskDocument.TabIndex = 9;
             // 
             // label18
@@ -557,7 +559,8 @@
             this.txtUsername.Location = new System.Drawing.Point(28, 86);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(388, 25);
+            this.txtUsername.ShortcutsEnabled = false;
+            this.txtUsername.Size = new System.Drawing.Size(388, 20);
             this.txtUsername.TabIndex = 11;
             // 
             // label15
@@ -646,7 +649,7 @@
             this.txtPhone.SelectedText = "";
             this.txtPhone.SelectionLength = 0;
             this.txtPhone.SelectionStart = 0;
-            this.txtPhone.ShortcutsEnabled = true;
+            this.txtPhone.ShortcutsEnabled = false;
             this.txtPhone.Size = new System.Drawing.Size(181, 32);
             this.txtPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPhone.TabIndex = 4;
@@ -736,7 +739,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
-            this.txtEmail.ShortcutsEnabled = true;
+            this.txtEmail.ShortcutsEnabled = false;
             this.txtEmail.Size = new System.Drawing.Size(447, 32);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 2;
@@ -826,7 +829,7 @@
             this.txtAddress.SelectedText = "";
             this.txtAddress.SelectionLength = 0;
             this.txtAddress.SelectionStart = 0;
-            this.txtAddress.ShortcutsEnabled = true;
+            this.txtAddress.ShortcutsEnabled = false;
             this.txtAddress.Size = new System.Drawing.Size(445, 32);
             this.txtAddress.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAddress.TabIndex = 3;
@@ -976,7 +979,7 @@
             this.txtLastName.SelectedText = "";
             this.txtLastName.SelectionLength = 0;
             this.txtLastName.SelectionStart = 0;
-            this.txtLastName.ShortcutsEnabled = true;
+            this.txtLastName.ShortcutsEnabled = false;
             this.txtLastName.Size = new System.Drawing.Size(202, 32);
             this.txtLastName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtLastName.TabIndex = 1;
@@ -1066,7 +1069,7 @@
             this.txtFirstName.SelectedText = "";
             this.txtFirstName.SelectionLength = 0;
             this.txtFirstName.SelectionStart = 0;
-            this.txtFirstName.ShortcutsEnabled = true;
+            this.txtFirstName.ShortcutsEnabled = false;
             this.txtFirstName.Size = new System.Drawing.Size(202, 32);
             this.txtFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFirstName.TabIndex = 0;

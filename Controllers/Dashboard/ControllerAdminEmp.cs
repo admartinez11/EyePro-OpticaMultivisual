@@ -31,12 +31,21 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
         void RestartPassword(object sender, EventArgs e)
         {
+            CommonClasses commonClasses = new CommonClasses();
             DAOAdminEmp daoRestartPassword = new DAOAdminEmp();
             int pos = ObjAdminEmp.dgvEmpleados.CurrentRow.Index;
             string usuario = ObjAdminEmp.dgvEmpleados[9, pos].Value.ToString();
+            // Verificar el estado del usuario
+            if (!daoRestartPassword.IsUserActive(usuario))
+            {
+                MessageBox.Show($"El usuario: {usuario} esta bloqueado, se debe restablecer por intervención directa del administrador.",
+                                "Usuario bloqueado",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return; // Salir del método si el usuario no está activo
+            }
             if (MessageBox.Show($"¿Está seguro que desea restablecer la contraseña del usuario: {usuario}?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CommonClasses commonClasses = new CommonClasses();
                 //Capturando nombres del usuario
                 string firstName = ObjAdminEmp.dgvEmpleados[1, pos].Value.ToString();
                 string lastName = ObjAdminEmp.dgvEmpleados[2, pos].Value.ToString();
@@ -74,15 +83,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     {
                         MessageBox.Show("El PIN fue registrado en la base de datos, pero no pudo enviarse al correo del destinatario.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    //if (EnviarPinPorCorreo(emailDestinatario, pin, nombrePersona) && daoRestartPassword.RegistrarPIN())
-                    //{
-                    //    MessageBox.Show("PIN de seguridad generado correctamente, indique al empleado que el PIN ha sido enviado a su correo registrado en el sistema.", "PIN de seguridad", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("El PIN no pudo ser registrado en la base de datos o no pudo enviarse al correo del destinatario, verifica la información.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
                 }
                 else
                 {

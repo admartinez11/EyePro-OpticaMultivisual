@@ -62,6 +62,42 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        // Método para obtener el estado del usuario desde la base de datos
+        public bool IsUserActive(string username)
+        {
+            // Suponiendo que tienes una clase de acceso a datos llamada DAOAdminEmp
+            DAOAdminEmp dao = new DAOAdminEmp();
+            bool isActive = false;
+
+            // Consulta SQL para obtener el estado del usuario
+            string query = "SELECT userStatus FROM Usuario WHERE username = @username";
+            try
+            {
+                // Conexión a la base de datos
+                using (SqlConnection connection = getConnection())
+                {
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        isActive = Convert.ToBoolean(result);
+                    }
+                }
+
+                return isActive;
+            }
+            catch (Exception)
+            {
+                return false;
+            } 
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
         public bool RegistrarPIN()
         {
             try
