@@ -131,7 +131,7 @@
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.AnimationSpeed = 200;
             this.btnAgregar.AutoGenerateColors = false;
-            this.btnAgregar.AutoRoundBorders = false;
+            this.btnAgregar.AutoRoundBorders = true;
             this.btnAgregar.AutoSizeLeftIcon = true;
             this.btnAgregar.AutoSizeRightIcon = true;
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
@@ -165,7 +165,7 @@
             this.btnAgregar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAgregar.IconSize = 25;
             this.btnAgregar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.btnAgregar.IdleBorderRadius = 20;
+            this.btnAgregar.IdleBorderRadius = 43;
             this.btnAgregar.IdleBorderThickness = 1;
             this.btnAgregar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnAgregar.IdleIconLeftImage = null;
@@ -222,7 +222,7 @@
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.AnimationSpeed = 200;
             this.btnEliminar.AutoGenerateColors = false;
-            this.btnEliminar.AutoRoundBorders = false;
+            this.btnEliminar.AutoRoundBorders = true;
             this.btnEliminar.AutoSizeLeftIcon = true;
             this.btnEliminar.AutoSizeRightIcon = true;
             this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
@@ -256,7 +256,7 @@
             this.btnEliminar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnEliminar.IconSize = 25;
             this.btnEliminar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.btnEliminar.IdleBorderRadius = 20;
+            this.btnEliminar.IdleBorderRadius = 43;
             this.btnEliminar.IdleBorderThickness = 1;
             this.btnEliminar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnEliminar.IdleIconLeftImage = null;
@@ -313,7 +313,7 @@
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditar.AnimationSpeed = 200;
             this.btnEditar.AutoGenerateColors = false;
-            this.btnEditar.AutoRoundBorders = false;
+            this.btnEditar.AutoRoundBorders = true;
             this.btnEditar.AutoSizeLeftIcon = true;
             this.btnEditar.AutoSizeRightIcon = true;
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
@@ -347,7 +347,7 @@
             this.btnEditar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnEditar.IconSize = 25;
             this.btnEditar.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.btnEditar.IdleBorderRadius = 20;
+            this.btnEditar.IdleBorderRadius = 43;
             this.btnEditar.IdleBorderThickness = 1;
             this.btnEditar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnEditar.IdleIconLeftImage = null;
@@ -499,7 +499,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 782);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(2554, 1318);
             this.MinimumSize = new System.Drawing.Size(1425, 819);
             this.Name = "ViewLens";
