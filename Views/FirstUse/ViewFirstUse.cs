@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpticaMultivisual.Controllers.FirstUse;
+using OpticaMultivisual.Controllers.Helper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +17,10 @@ namespace OpticaMultivisual.Views.FirstUse
         public ViewFirstUse()
         {
             InitializeComponent();
-            ControllerCreateFirstUser control = new ControllerCreateFirstUser(this);
+            //Inicializar controlador en la vista
+            ControllerFirstUse control = new ControllerFirstUse(this);
+            //Se invoca el método CreateRoundRectRgn contenido en la clase Helper
+            Region = Region.FromHrgn(CommonClasses.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
     }
 }
