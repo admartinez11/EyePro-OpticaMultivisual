@@ -127,6 +127,7 @@
     <Compile Include="Controllers\Dashboard\Optometrista\ControllerAdminLens.cs" />
     <Compile Include="Controllers\Dashboard\ScheduleAppointment\ControllerScheduleAppointment.cs" />
     <Compile Include="Controllers\Dashboard\ScheduleAppointment\ControllerSearchScheduleAppointment.cs" />
+    <Compile Include="Controllers\FirstUse\ControllerCreateFirstUser.cs" />
     <Compile Include="Controllers\Helper\CommonClasses.cs" />
     <Compile Include="Controllers\Helper\SessionVar.cs" />
     <Compile Include="Controllers\Login\ControllerCambiarClaveDefecto.cs" />
@@ -451,6 +452,7 @@
     <None Include="Resources\SecurityQ.png" />
     <None Include="Resources\Gmail.png" />
     <None Include="Resources\Close.png" />
+    <None Include="Resources\Sever.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
