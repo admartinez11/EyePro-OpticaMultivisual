@@ -114,6 +114,7 @@
     <Compile Include="Controllers\Article\ControllerAdminArticle.cs" />
     <Compile Include="Controllers\Consulta\ControladorConsulta.cs" />
     <Compile Include="Controllers\Consulta\ControladorVerConsulta.cs" />
+    <Compile Include="Controllers\ControllerInit.cs" />
     <Compile Include="Controllers\Dashboard\ControllerAdduser.cs" />
     <Compile Include="Controllers\Dashboard\ControllerAdminEmp.cs" />
     <Compile Include="Controllers\Dashboard\ControllerByQuestion.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Controllers\Dashboard\ScheduleAppointment\ControllerScheduleAppointment.cs" />
     <Compile Include="Controllers\Dashboard\ScheduleAppointment\ControllerSearchScheduleAppointment.cs" />
     <Compile Include="Controllers\FirstUse\ControllerCreateFirstUser.cs" />
+    <Compile Include="Controllers\FirstUse\ControllerFirstUse.cs" />
     <Compile Include="Controllers\Helper\CommonClasses.cs" />
     <Compile Include="Controllers\Helper\SessionVar.cs" />
     <Compile Include="Controllers\Login\ControllerCambiarClaveDefecto.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Models\DAO\DAOAdminEmp.cs" />
     <Compile Include="Models\DAO\DAOArticle.cs" />
     <Compile Include="Models\DAO\DAOConsulta.cs" />
+    <Compile Include="Models\DAO\DAOFirstUse.cs" />
     <Compile Include="Models\DAO\DAOLens.cs" />
     <Compile Include="Models\DAO\DAOLogin.cs" />
     <Compile Include="Models\DAO\DAORecoverPassword.cs" />
@@ -150,12 +153,14 @@
     <Compile Include="Models\DTO\DTOAdminEmp.cs" />
     <Compile Include="Models\DTO\DTOArticle.cs" />
     <Compile Include="Models\DTO\DTOConsulta.cs" />
+    <Compile Include="Models\DTO\DTOFirstUse.cs" />
     <Compile Include="Models\DTO\DTOLens.cs" />
     <Compile Include="Models\DTO\DTOLogin.cs" />
     <Compile Include="Models\DTO\DTORecetaBase.cs" />
     <Compile Include="Models\DTO\DTORecoverPassword.cs" />
     <Compile Include="Models\DTO\DTORegistro.cs" />
     <Compile Include="Models\DTO\DTOScheduleAppointment.cs" />
+    <Compile Include="Models\ModelInit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

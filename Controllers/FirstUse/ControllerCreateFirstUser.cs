@@ -47,9 +47,119 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 string.IsNullOrEmpty(ObjVista.txtPhone.Text.Trim()) ||
                 string.IsNullOrEmpty(ObjVista.txtUsername.Text.Trim())))
             {
+                CommonClasses commonClasses = new CommonClasses();
+                string nombre = ObjVista.txtFirstName.Text.Trim();
+                if (!commonClasses.EsNombreValido(nombre))
+                {
+                    MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string apellido = ObjVista.txtLastName.Text.Trim();
+                if (!commonClasses.EsNombreValido(apellido))
+                {
+                    MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validaciones de campos NOT NULL y longitud de caracteres
+                if (string.IsNullOrWhiteSpace(ObjVista.txtEmail.Text.Trim()))
+                {
+                    MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!commonClasses.ValidateEmail(ObjVista.txtEmail.Text.Trim()))
+                {
+                    MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
+                                    "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (ObjVista.txtEmail.Text.Length > 100)
+                {
+                    MessageBox.Show("El campo de correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(ObjVista.txtPhone.Text.Trim()))
+                {
+                    MessageBox.Show("El campo de teléfono es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (ObjVista.txtPhone.Text.Length > 25)
+                {
+                    MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!commonClasses.ValidarTelefono(ObjVista.txtPhone.Text.Trim()))
+                {
+                    MessageBox.Show("El campo de teléfono contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!ObjVista.mskDocument.MaskCompleted)
+                {
+                    MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string dui = ObjVista.mskDocument.Text.Replace("-", "").Trim(); // Reemplazar el guion o cualquier otro carácter de máscara
+                if (dui.Length > 10)
+                {
+                    MessageBox.Show("El campo de DUI ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string correo = ObjVista.txtEmail.Text.Trim();
+                if (!ValidarCorreo())
+                {
+                    return;
+                }
+                if (!commonClasses.EsCorreoValido(correo))
+                {
+                    MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(ObjVista.txtUsername.Text.Trim()))
+                {
+                    MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (ObjVista.txtUsername.Text.Length > 100)
+                {
+                    MessageBox.Show("El campo de nombre de usuario no debe exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (ObjVista.comboRole.SelectedValue == null)
+                {
+                    MessageBox.Show("Debe seleccionar un rol.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(ObjVista.txtSecurityAnswer.Text.Trim()))
+                {
+                    MessageBox.Show("El campo de respuesta de seguridad es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (ObjVista.txtSecurityAnswer.Text.Length > 256)
+                {
+                    MessageBox.Show("El campo de respuesta de seguridad ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime fechaNacimiento = ObjVista.dtBirth.Value.Date;
+                if (!commonClasses.ValidarFechaNacimiento(fechaNacimiento))
+                {
+                    MessageBox.Show("La fecha de nacimiento no es válida.",
+                                    "Error de validación",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
                 //Se crea una instancia de la clase DAOAdminUsers llamada DAOInsert
                 DAOAdminEmp DAOInsert = new DAOAdminEmp();
-                CommonClasses commonClasses = new CommonClasses();
                 // Datos para creación de persona
                 DAOInsert.Nombre = ObjVista.txtFirstName.Text.Trim();
                 DAOInsert.Apellido = ObjVista.txtLastName.Text.Trim();
@@ -98,6 +208,27 @@ namespace OpticaMultivisual.Controllers.FirstUse
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
             }
+        }
+
+        bool ValidarCorreo()
+        {
+            string email = ObjVista.txtEmail.Text.Trim();
+            if (!(email.Contains("@")))
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            //adripaosv@gmail.com
+            // Validación del dominio (ejemplo simplificado)
+            string[] dominiosPermitidos = { "gmail.com", "ricaldone.edu.sv" };
+            string extension = email.Substring(email.LastIndexOf('@') + 1);
+            if (!dominiosPermitidos.Contains(extension))
+            {
+                MessageBox.Show("Dominio del correo es invalido, el sistema únicamente admite dominios 'gmail.com' y 'correo institucional'.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

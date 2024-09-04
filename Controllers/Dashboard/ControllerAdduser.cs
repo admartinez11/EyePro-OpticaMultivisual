@@ -14,6 +14,7 @@ using System.Net;
 using OpticaMultivisual.Views.Login;
 using OpticaMultivisual.Controllers.Helper;
 using OpticaMultivisual.Models.DTO;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
 
 namespace OpticaMultivisual.Controllers.Dashboard
 {
@@ -227,6 +228,10 @@ namespace OpticaMultivisual.Controllers.Dashboard
             }
 
             string correo = ObjAddUser.txtEmail.Text.Trim();
+            if (!ValidarCorreo())
+            {
+                return;
+            }
             if (!commonClasses.EsCorreoValido(correo))
             {
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -289,7 +294,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
             daoAdminEmp.SecurityQuestion = ObjAddUser.cmbSecurityQuestion.Text.Trim();
             daoAdminEmp.SecurityAnswer = ObjAddUser.txtSecurityAnswer.Text.Trim();
-
             // Se invoca al método RegistrarUsuario y guarda el valor retornado
             int valorRetornado = daoAdminEmp.RegistrarUsuario();
 
@@ -309,6 +313,27 @@ namespace OpticaMultivisual.Controllers.Dashboard
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        bool ValidarCorreo()
+        {
+            string email = ObjAddUser.txtEmail.Text.Trim();
+            if (!(email.Contains("@")))
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            //adripaosv@gmail.com
+            // Validación del dominio (ejemplo simplificado)
+            string[] dominiosPermitidos = { "gmail.com", "ricaldone.edu.sv" };
+            string extension = email.Substring(email.LastIndexOf('@') + 1);
+            if (!dominiosPermitidos.Contains(extension))
+            {
+                MessageBox.Show("Dominio del correo es invalido, el sistema únicamente admite dominios 'gmail.com' y 'correo institucional'.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         public void UpdateRegister(object sender, EventArgs e)
@@ -347,6 +372,10 @@ namespace OpticaMultivisual.Controllers.Dashboard
             }
 
             string correo = ObjAddUser.txtEmail.Text.Trim();
+            if (!ValidarCorreo())
+            {
+                return;
+            }
             if (!commonClasses.EsCorreoValido(correo))
             {
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
