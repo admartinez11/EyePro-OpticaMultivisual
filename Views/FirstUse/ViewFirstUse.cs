@@ -15,6 +15,7 @@ namespace OpticaMultivisual.Views.FirstUse
         public ViewFirstUse()
         {
             InitializeComponent();
+            ControllerCreateFirstUser control = new ControllerCreateFirstUser(this);
         }
     }
 }
