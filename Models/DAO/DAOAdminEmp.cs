@@ -22,6 +22,40 @@ namespace OpticaMultivisual.Models.DAO
         // Comando SQL que se utiliza para ejecutar consultas y comandos en la base de datos
         readonly SqlCommand Command = new SqlCommand();
 
+        public string ObtenerCorreoPorUsername(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT emp_correo FROM Empleado WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return reader["emp_correo"].ToString(); // Retorna el correo electrónico del usuario
+                }
+                else
+                {
+                    return null; // Usuario no encontrado
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Error al obtener el correo electrónico: {ex.Message}",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+
+        // Método para verificar si el usuario existe en la base de datos
         public bool VerificarUsuario(string username)
         {
             try
@@ -31,10 +65,22 @@ namespace OpticaMultivisual.Models.DAO
                     string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@username", username);
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    return count > 0;
+                    try
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        return count == 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de excepción
+                        Console.WriteLine("Error: " + ex.Message);
+                        return false;
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                return false;
             }
             finally
             {
@@ -42,37 +88,77 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        // Método para validar las credenciales de un administrador
         public bool ValidateAdminCredentials(string username, string password)
         {
-            CommonClasses commonClasses = new CommonClasses();
-            bool isValid = false;
-            // Consulta SQL para verificar credenciales en la vista
-            string query = @"
-            SELECT COUNT(*)
-            FROM ViewLogin
-            WHERE username = @username
-              AND password = @password
-              AND rol_nombre = 'Administrador'
-              AND userStatus = 1";
-
-            using (SqlConnection connection = getConnection())
-            using (SqlCommand command = new SqlCommand(query, connection))
+            try
             {
-                // Agregar parámetros para evitar SQL Injection
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-                try
+                using (SqlConnection connection = getConnection())
                 {
-                    int count = (int)command.ExecuteScalar();
-                    isValid = (count > 0);
-                }
-                catch (Exception ex)
-                {
-                    // Manejar excepciones, por ejemplo, registrar el error
-                    Console.WriteLine("Error al validar credenciales: " + ex.Message);
+                    CommonClasses commonClasses = new CommonClasses();
+                    string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username AND password = @password AND rol_ID = 'Administrador'";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", commonClasses.ComputeSha256Hash(password));
+                    try
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        return count == 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de excepción
+                        Console.WriteLine("Error: " + ex.Message);
+                        return false;
+                    }
                 }
             }
-            return isValid;
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
+        // Método para actualizar la contraseña y el estado del usuario
+        public bool ActualizarClaveUsuario(string username)
+        {
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    CommonClasses commonClasses = new CommonClasses();
+                    string nuevaClave = username + "OP123";  // Generar la nueva clave por defecto
+                    string query = "UPDATE Usuario SET password = @nuevaClave, userStatus = 1 WHERE username = @username";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@nuevaClave", commonClasses.ComputeSha256Hash(nuevaClave));
+                    command.Parameters.AddWithValue("@username", username);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de excepción
+                        Console.WriteLine("Error: " + ex.Message);
+                        return false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally 
+            { 
+                getConnection().Close();
+            }
         }
 
         public bool VerificarPINSeguridad()
@@ -92,6 +178,10 @@ namespace OpticaMultivisual.Models.DAO
             {
                 MessageBox.Show("No se pudo almacenar el PIN, vuelva a intentarlo. EC-005");
                 return false;
+            }
+            finally
+            {
+                Command.Connection.Close();
             }
         }
 
