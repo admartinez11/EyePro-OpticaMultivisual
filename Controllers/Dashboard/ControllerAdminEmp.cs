@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using OpticaMultivisual.Controllers.Helper;
 using System.Net.Mail;
 using System.Net;
+using System.Data.SqlClient;
 
 namespace OpticaMultivisual.Controllers.Dashboard
 {
@@ -54,7 +55,6 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 daoRestartPassword.User = ObjAdminEmp.dgvEmpleados[9, pos].Value.ToString();
                 //Generando PIN de seguridad y enviado PIN a la base de datos
                 string pin = commonClasses.GenerarPin();
-                // Muestra los valores en un MessageBox
                 daoRestartPassword.VerificationCode = commonClasses.ComputeSha256Hash(pin);
                 //Enviando PIN al correo de usuario
                 if (ValidateEmail(emailDestinatario))
@@ -118,7 +118,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             // Crear un mensaje de correo electrónico
             MailMessage mensaje = new MailMessage(remitente, emailDestinatario);
             mensaje.Subject = "Restablecimiento de contraseña";
-            mensaje.Body = $"Hola *{nombrePersona}*.\n\nEl administrador ha restablecido tu contraseña y para tu seguridad te hemos enviado un PIN el cual deberás ingresar para crear una nueva contraseña.\n\nDirígete al Inicio de Sesión y haz click en ¿Olvido su contraseña? posteriormente selecciona la opción de PIN de seguridad.\n\nEl pin que deberás introducir es: *{pin}*, no compartas este PIN y tampoco el acceso a tu correo electrónico registrado en el sistema.\nEn caso no solicitaste el restablecimiento de tu usuario, contacta con el administrador.";
+            mensaje.Body = $"Hola *{nombrePersona}*.\n\nEl administrador ha restablecido tu contraseña y para tu seguridad te hemos enviado un PIN el cual deberás ingresar para crear una nueva contraseña.\n\nDirígete al Inicio de Sesión y haz click en ¿Olvido su contraseña? posteriormente selecciona la opción de Restablecimiento de usuario.\n\nEl pin que deberás introducir es: *{pin}*, no compartas este PIN y tampoco el acceso a tu correo electrónico registrado en el sistema.\nEn caso no solicitaste el restablecimiento de tu usuario, contacta con el administrador.";
             // Configurar el cliente SMTP
             SmtpClient clienteSmtp = new SmtpClient(SmtpServer, puertoSmtp);
             clienteSmtp.Credentials = new NetworkCredential(remitente, contraseña);

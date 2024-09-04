@@ -214,7 +214,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(33, 317);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 20);
+            this.label3.Size = new System.Drawing.Size(165, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Responda la pregunta:";
             // 
@@ -227,7 +227,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 258);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(397, 20);
+            this.label2.Size = new System.Drawing.Size(333, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Seleccione la pregunta de seguridad deseada:";
             // 
@@ -467,7 +467,7 @@
             this.cmbGender.Location = new System.Drawing.Point(36, 403);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(176, 25);
+            this.cmbGender.Size = new System.Drawing.Size(176, 21);
             this.cmbGender.TabIndex = 8;
             // 
             // label17
@@ -480,7 +480,7 @@
             this.label17.Location = new System.Drawing.Point(33, 383);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 20);
+            this.label17.Size = new System.Drawing.Size(62, 16);
             this.label17.TabIndex = 34;
             this.label17.Text = "Genero:";
             // 
@@ -508,7 +508,7 @@
             this.label18.Location = new System.Drawing.Point(296, 383);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 20);
+            this.label18.Size = new System.Drawing.Size(34, 16);
             this.label18.TabIndex = 32;
             this.label18.Text = "Dui:";
             // 
@@ -546,7 +546,7 @@
             this.comboRole.Location = new System.Drawing.Point(28, 38);
             this.comboRole.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboRole.Name = "comboRole";
-            this.comboRole.Size = new System.Drawing.Size(388, 25);
+            this.comboRole.Size = new System.Drawing.Size(388, 21);
             this.comboRole.TabIndex = 10;
             // 
             // txtUsername
@@ -570,7 +570,7 @@
             this.label15.Location = new System.Drawing.Point(24, 20);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 17);
+            this.label15.Size = new System.Drawing.Size(26, 13);
             this.label15.TabIndex = 0;
             this.label15.Text = "Rol";
             // 
@@ -580,7 +580,7 @@
             this.label16.Location = new System.Drawing.Point(24, 65);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 17);
+            this.label16.Size = new System.Drawing.Size(50, 13);
             this.label16.TabIndex = 0;
             this.label16.Text = "Usuario";
             // 
@@ -670,7 +670,7 @@
             this.label13.Location = new System.Drawing.Point(28, 194);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(140, 20);
+            this.label13.Size = new System.Drawing.Size(115, 16);
             this.label13.TabIndex = 29;
             this.label13.Text = "N° de Teléfono:";
             // 
@@ -760,7 +760,7 @@
             this.label14.Location = new System.Drawing.Point(26, 81);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(249, 20);
+            this.label14.Size = new System.Drawing.Size(204, 16);
             this.label14.TabIndex = 27;
             this.label14.Text = "Correo electrónico personal:";
             // 
@@ -850,7 +850,7 @@
             this.label12.Location = new System.Drawing.Point(28, 136);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 20);
+            this.label12.Size = new System.Drawing.Size(77, 16);
             this.label12.TabIndex = 25;
             this.label12.Text = "Dirección:";
             // 
@@ -897,7 +897,7 @@
             this.txtId.Location = new System.Drawing.Point(21, -1);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(72, 25);
+            this.txtId.Size = new System.Drawing.Size(72, 20);
             this.txtId.TabIndex = 19;
             this.txtId.Visible = false;
             // 
@@ -910,7 +910,7 @@
             this.label11.Location = new System.Drawing.Point(230, 194);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(192, 20);
+            this.label11.Size = new System.Drawing.Size(158, 16);
             this.label11.TabIndex = 22;
             this.label11.Text = "Fecha de Nacimiento:";
             // 
@@ -1000,7 +1000,7 @@
             this.label10.Location = new System.Drawing.Point(274, 27);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 20);
+            this.label10.Size = new System.Drawing.Size(77, 16);
             this.label10.TabIndex = 20;
             this.label10.Text = "Apellidos:";
             // 
@@ -1090,13 +1090,13 @@
             this.label1.Location = new System.Drawing.Point(30, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombres:";
             // 
             // ViewAddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1348, 685);

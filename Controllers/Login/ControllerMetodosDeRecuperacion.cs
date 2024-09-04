@@ -17,6 +17,13 @@ namespace OpticaMultivisual.Controllers.Login
             vista.btnAdmin.Click += new EventHandler(openFormRestablecerAdmin);
             vista.BtnGmail.Click += new EventHandler(openFormMail);
             vista.BtnSecurityQ.Click += new EventHandler(openFormSecQ);
+            vista.btnInterAdmin.Click += new EventHandler(openFormIntAdmin);
+        }
+
+        void openFormIntAdmin(object sender, EventArgs e)
+        {
+            ViewIntAdmin openForm = new ViewIntAdmin();
+            openForm.ShowDialog();
         }
 
         void openFormSecQ(object sender, EventArgs e)

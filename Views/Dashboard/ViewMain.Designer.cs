@@ -38,11 +38,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.PanelContenedor = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.btnExit = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnVisita = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnReceta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -51,12 +52,11 @@
             this.btnAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.PanelContenedor = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,22 +90,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 703);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // bunifuPictureBox1
-            // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BorderRadius = 0;
-            this.bunifuPictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(277, 160);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 6;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -122,6 +106,63 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.00787F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(277, 531);
             this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.btnVisita);
+            this.flowLayoutPanel1.Controls.Add(this.btnClientes);
+            this.flowLayoutPanel1.Controls.Add(this.btnReceta);
+            this.flowLayoutPanel1.Controls.Add(this.btnService);
+            this.flowLayoutPanel1.Controls.Add(this.btnArticulo);
+            this.flowLayoutPanel1.Controls.Add(this.btnAdmin);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(271, 405);
+            this.flowLayoutPanel1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 37);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Acciones";
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelContenedor.ColumnCount = 1;
+            this.PanelContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelContenedor.Location = new System.Drawing.Point(292, 3);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.RowCount = 1;
+            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 703F));
+            this.PanelContenedor.Size = new System.Drawing.Size(1055, 703);
+            this.PanelContenedor.TabIndex = 1;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = false;
+            this.bunifuPictureBox1.BorderRadius = 0;
+            this.bunifuPictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(277, 160);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 6;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // btnExit
             // 
@@ -212,32 +253,6 @@
             this.btnExit.TextMarginLeft = 0;
             this.btnExit.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnExit.UseDefaultRadiusAndThickness = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.btnVisita);
-            this.flowLayoutPanel1.Controls.Add(this.btnClientes);
-            this.flowLayoutPanel1.Controls.Add(this.btnReceta);
-            this.flowLayoutPanel1.Controls.Add(this.btnService);
-            this.flowLayoutPanel1.Controls.Add(this.btnArticulo);
-            this.flowLayoutPanel1.Controls.Add(this.btnAdmin);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(271, 405);
-            this.flowLayoutPanel1.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 37);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Acciones";
             // 
             // btnVisita
             // 
@@ -807,21 +822,6 @@
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = ".";
             // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelContenedor.ColumnCount = 1;
-            this.PanelContenedor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelContenedor.Location = new System.Drawing.Point(292, 3);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.RowCount = 1;
-            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PanelContenedor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 673F));
-            this.PanelContenedor.Size = new System.Drawing.Size(1055, 703);
-            this.PanelContenedor.TabIndex = 1;
-            // 
             // ViewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -832,13 +832,14 @@
             this.MaximumSize = new System.Drawing.Size(1920, 1077);
             this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "ViewMain";
-            this.Text = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Inicio";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
