@@ -164,154 +164,50 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
         public void NewRegister(object sender, EventArgs e)
         {
-            CommonClasses commonClasses = new CommonClasses();
-            string nombre = ObjAddUser.txtFirstName.Text.Trim();
-            if (!commonClasses.EsNombreValido(nombre))
+            if (ValidarRe())
             {
-                MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string apellido = ObjAddUser.txtLastName.Text.Trim();
-            if (!commonClasses.EsNombreValido(apellido))
-            {
-                MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validaciones de campos NOT NULL y longitud de caracteres
-            if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
-            {
-                MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (!commonClasses.ValidateEmail(ObjAddUser.txtEmail.Text.Trim()))
-            {
-                MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
-                                "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (ObjAddUser.txtEmail.Text.Length > 100)
-            {
-                MessageBox.Show("El campo de correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(ObjAddUser.txtPhone.Text.Trim()))
-            {
-                MessageBox.Show("El campo de teléfono es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (ObjAddUser.txtPhone.Text.Length > 25)
-            {
-                MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (!commonClasses.ValidarTelefono(ObjAddUser.txtPhone.Text.Trim()))
-            {
-                MessageBox.Show("El campo de teléfono contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!ObjAddUser.mskDocument.MaskCompleted)
-            {
-                MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string dui = ObjAddUser.mskDocument.Text.Replace("-", "").Trim(); // Reemplazar el guion o cualquier otro carácter de máscara
-            if (dui.Length > 10)
-            {
-                MessageBox.Show("El campo de DUI ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string correo = ObjAddUser.txtEmail.Text.Trim();
-            if (!ValidarCorreo())
-            {
-                return;
-            }
-            if (!commonClasses.EsCorreoValido(correo))
-            {
-                MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(ObjAddUser.txtUsername.Text.Trim()))
-            {
-                MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (ObjAddUser.txtUsername.Text.Length > 100)
-            {
-                MessageBox.Show("El campo de nombre de usuario no debe exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (ObjAddUser.comboRole.SelectedValue == null)
-            {
-                MessageBox.Show("Debe seleccionar un rol.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(ObjAddUser.txtSecurityAnswer.Text.Trim()))
-            {
-                MessageBox.Show("El campo de respuesta de seguridad es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (ObjAddUser.txtSecurityAnswer.Text.Length > 256)
-            {
-                MessageBox.Show("El campo de respuesta de seguridad ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            DateTime fechaNacimiento = ObjAddUser.dtBirth.Value.Date;
-            if (!commonClasses.ValidarFechaNacimiento(fechaNacimiento))
-            {
-                MessageBox.Show("La fecha de nacimiento no es válida.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
-            // Datos para creación de persona
-            daoAdminEmp.Nombre = ObjAddUser.txtFirstName.Text.Trim();
-            daoAdminEmp.Apellido = ObjAddUser.txtLastName.Text.Trim();
-            daoAdminEmp.Genero = ObjAddUser.cmbGender.Text.Trim();
-            daoAdminEmp.Nacimiento = ObjAddUser.dtBirth.Value.Date;
-            daoAdminEmp.Correo = ObjAddUser.txtEmail.Text.Trim();
-            daoAdminEmp.Telefono = ObjAddUser.txtPhone.Text.Trim();
-            daoAdminEmp.Dui = ObjAddUser.mskDocument.Text.Trim();
-            daoAdminEmp.Direccion = ObjAddUser.txtAddress.Text.Trim();
-            daoAdminEmp.Rol = int.Parse(ObjAddUser.comboRole.SelectedValue.ToString());
-
-            // Datos para creación de usuario
-            daoAdminEmp.User = ObjAddUser.txtUsername.Text.Trim();
-            daoAdminEmp.Password = commonClasses.ComputeSha256Hash(ObjAddUser.txtUsername.Text.Trim() + "OP123");
-            daoAdminEmp.UserStatus = true;
-
-            daoAdminEmp.SecurityQuestion = ObjAddUser.cmbSecurityQuestion.Text.Trim();
-            daoAdminEmp.SecurityAnswer = ObjAddUser.txtSecurityAnswer.Text.Trim();
-            // Se invoca al método RegistrarUsuario y guarda el valor retornado
-            int valorRetornado = daoAdminEmp.RegistrarUsuario();
-
-            // Verificar si se registró el usuario con éxito y luego guardar la pregunta de seguridad
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjAddUser.Close();
+                CommonClasses commonClasses = new CommonClasses();
+                // Datos para creación de persona
+                daoAdminEmp.Nombre = ObjAddUser.txtFirstName.Text.Trim();
+                daoAdminEmp.Apellido = ObjAddUser.txtLastName.Text.Trim();
+                daoAdminEmp.Genero = ObjAddUser.cmbGender.Text.Trim();
+                daoAdminEmp.Nacimiento = ObjAddUser.dtBirth.Value.Date;
+                daoAdminEmp.Correo = ObjAddUser.txtEmail.Text.Trim();
+                daoAdminEmp.Telefono = ObjAddUser.txtPhone.Text.Trim();
+                daoAdminEmp.Dui = ObjAddUser.mskDocument.Text.Trim();
+                daoAdminEmp.Direccion = ObjAddUser.txtAddress.Text.Trim();
+                daoAdminEmp.Rol = int.Parse(ObjAddUser.comboRole.SelectedValue.ToString());
+                // Datos para creación de usuario
+                daoAdminEmp.User = ObjAddUser.txtUsername.Text.Trim();
+                daoAdminEmp.Password = commonClasses.ComputeSha256Hash(ObjAddUser.txtUsername.Text.Trim() + "OP123");
+                daoAdminEmp.UserStatus = true;
+                daoAdminEmp.SecurityQuestion = ObjAddUser.cmbSecurityQuestion.Text.Trim();
+                daoAdminEmp.SecurityAnswer = ObjAddUser.txtSecurityAnswer.Text.Trim();
+                // Se invoca al método RegistrarUsuario y guarda el valor retornado
+                int valorRetornado = daoAdminEmp.RegistrarUsuario();
+                // Verificar si se registró el usuario con éxito y luego guardar la pregunta de seguridad
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjAddUser.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser registrados",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
             else
             {
                 MessageBox.Show("Los datos no pudieron ser registrados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                                    "Proceso incompleto",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
             }
         }
 
@@ -338,144 +234,303 @@ namespace OpticaMultivisual.Controllers.Dashboard
 
         public void UpdateRegister(object sender, EventArgs e)
         {
+            if (ValidarUp())
+            {
+                CommonClasses commonClasses = new CommonClasses();
+                daoAdminEmp.Id = int.Parse(ObjAddUser.txtId.Text.Trim());
+                daoAdminEmp.Nombre = ObjAddUser.txtFirstName.Text.Trim();
+                daoAdminEmp.Apellido = ObjAddUser.txtLastName.Text.Trim();
+                daoAdminEmp.Genero = ObjAddUser.cmbGender.Text.Trim();
+                daoAdminEmp.Nacimiento = ObjAddUser.dtBirth.Value;
+                daoAdminEmp.Dui = ObjAddUser.mskDocument.Text.Trim();
+                daoAdminEmp.Direccion = ObjAddUser.txtAddress.Text.Trim();
+                daoAdminEmp.Correo = ObjAddUser.txtEmail.Text.Trim();
+                daoAdminEmp.Telefono = ObjAddUser.txtPhone.Text.Trim();
+                daoAdminEmp.Rol = (int)ObjAddUser.comboRole.SelectedValue;
+                daoAdminEmp.User = ObjAddUser.txtUsername.Text.Trim();
+                int valorRetornado = daoAdminEmp.ActualizarEmpleado();
+                if (valorRetornado == 2)
+                {
+                    if (!string.IsNullOrEmpty(securityQuestion) && !string.IsNullOrEmpty(securityAnswer))
+                    {
+                        if (!daoAdminEmp.UpdateSecurityQuestion(ObjAddUser.txtUsername.Text.Trim(), securityQuestion, securityAnswer))
+                        {
+                            MessageBox.Show("Los datos del usuario se actualizaron, pero hubo un problema al actualizar la pregunta de seguridad.",
+                                            "Error",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Error);
+                        }
+                    }
+
+                    MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjAddUser.Close();
+                }
+                else if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Los datos no pudieron ser registrados",
+                                    "Proceso incompleto",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+            }
+        }
+
+        public bool ValidarRe()
+        {
             CommonClasses commonClasses = new CommonClasses();
             string nombre = ObjAddUser.txtFirstName.Text.Trim();
             if (!commonClasses.EsNombreValido(nombre))
             {
                 MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
+            }
+            else if (ObjAddUser.txtFirstName.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
             string apellido = ObjAddUser.txtLastName.Text.Trim();
             if (!commonClasses.EsNombreValido(apellido))
             {
                 MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
+            }
+            else if (ObjAddUser.txtLastName.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de apellido no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
             // Validaciones de campos NOT NULL y longitud de caracteres
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
             {
                 MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             else if (!commonClasses.ValidateEmail(ObjAddUser.txtEmail.Text.Trim()))
             {
                 MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
                                 "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             else if (ObjAddUser.txtEmail.Text.Length > 100)
             {
                 MessageBox.Show("El campo de correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string correo = ObjAddUser.txtEmail.Text.Trim();
-            if (!ValidarCorreo())
-            {
-                return;
-            }
-            if (!commonClasses.EsCorreoValido(correo))
-            {
-                MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
 
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtPhone.Text.Trim()))
             {
                 MessageBox.Show("El campo de teléfono es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             else if (ObjAddUser.txtPhone.Text.Length > 25)
             {
                 MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             else if (!commonClasses.ValidarTelefono(ObjAddUser.txtPhone.Text.Trim()))
             {
                 MessageBox.Show("El campo de teléfono contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
                                 "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             if (!ObjAddUser.mskDocument.MaskCompleted)
             {
                 MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             string dui = ObjAddUser.mskDocument.Text.Replace("-", "").Trim(); // Reemplazar el guion o cualquier otro carácter de máscara
             if (dui.Length > 10)
             {
                 MessageBox.Show("El campo de DUI ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
+            }
+
+            string correo = ObjAddUser.txtEmail.Text.Trim();
+            if (!ValidarCorreo())
+            {
+                return false;
+            }
+            if (!commonClasses.EsCorreoValido(correo))
+            {
+                MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtUsername.Text.Trim()))
             {
                 MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
             else if (ObjAddUser.txtUsername.Text.Length > 100)
             {
                 MessageBox.Show("El campo de nombre de usuario no debe exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             if (ObjAddUser.comboRole.SelectedValue == null)
             {
                 MessageBox.Show("Debe seleccionar un rol.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
-            daoAdminEmp.Id = int.Parse(ObjAddUser.txtId.Text.Trim());
-            daoAdminEmp.Nombre = ObjAddUser.txtFirstName.Text.Trim();
-            daoAdminEmp.Apellido = ObjAddUser.txtLastName.Text.Trim();
-            daoAdminEmp.Genero = ObjAddUser.cmbGender.Text.Trim();
-            daoAdminEmp.Nacimiento = ObjAddUser.dtBirth.Value;
-            daoAdminEmp.Dui = ObjAddUser.mskDocument.Text.Trim();
-            daoAdminEmp.Direccion = ObjAddUser.txtAddress.Text.Trim();
-            daoAdminEmp.Correo = ObjAddUser.txtEmail.Text.Trim();
-            daoAdminEmp.Telefono = ObjAddUser.txtPhone.Text.Trim();
-            daoAdminEmp.Rol = (int)ObjAddUser.comboRole.SelectedValue;
-            daoAdminEmp.User = ObjAddUser.txtUsername.Text.Trim();
-
-
-            int valorRetornado = daoAdminEmp.ActualizarEmpleado();
-            if (valorRetornado == 2)
+            if (string.IsNullOrWhiteSpace(ObjAddUser.txtSecurityAnswer.Text.Trim()))
             {
-                if (!string.IsNullOrEmpty(securityQuestion) && !string.IsNullOrEmpty(securityAnswer))
-                {
-                    if (!daoAdminEmp.UpdateSecurityQuestion(ObjAddUser.txtUsername.Text.Trim(), securityQuestion, securityAnswer))
-                    {
-                        MessageBox.Show("Los datos del usuario se actualizaron, pero hubo un problema al actualizar la pregunta de seguridad.",
-                                        "Error",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                    }
-                }
-
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjAddUser.Close();
+                MessageBox.Show("El campo de respuesta de seguridad es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            else if (valorRetornado == 1)
+            else if (ObjAddUser.txtSecurityAnswer.Text.Length > 256)
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de respuesta de seguridad ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            else
+
+            DateTime fechaNacimiento = ObjAddUser.dtBirth.Value.Date;
+            if (!commonClasses.ValidarFechaNacimiento(fechaNacimiento))
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
+                MessageBox.Show("La fecha de nacimiento no es válida.",
+                                "Error de validación",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+                return false;
             }
+            return true;
+        }
+
+        public bool ValidarUp()
+        {
+            CommonClasses commonClasses = new CommonClasses();
+            string nombre = ObjAddUser.txtFirstName.Text.Trim();
+            if (!commonClasses.EsNombreValido(nombre))
+            {
+                MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (ObjAddUser.txtFirstName.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            string apellido = ObjAddUser.txtLastName.Text.Trim();
+            if (!commonClasses.EsNombreValido(apellido))
+            {
+                MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (ObjAddUser.txtLastName.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de apellido no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Validaciones de campos NOT NULL y longitud de caracteres
+            if (string.IsNullOrWhiteSpace(ObjAddUser.txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("El campo de correo es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!commonClasses.ValidateEmail(ObjAddUser.txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.",
+                                "Correo inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (ObjAddUser.txtEmail.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de correo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            string correo = ObjAddUser.txtEmail.Text.Trim();
+            if (!ValidarCorreo())
+            {
+                return false;
+            }
+            if (!commonClasses.EsCorreoValido(correo))
+            {
+                MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(ObjAddUser.txtPhone.Text.Trim()))
+            {
+                MessageBox.Show("El campo de teléfono es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (ObjAddUser.txtPhone.Text.Length > 25)
+            {
+                MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!commonClasses.ValidarTelefono(ObjAddUser.txtPhone.Text.Trim()))
+            {
+                MessageBox.Show("El campo de teléfono contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
+                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!ObjAddUser.mskDocument.MaskCompleted)
+            {
+                MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            string dui = ObjAddUser.mskDocument.Text.Replace("-", "").Trim(); // Reemplazar el guion o cualquier otro carácter de máscara
+            if (dui.Length > 10)
+            {
+                MessageBox.Show("El campo de DUI ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(ObjAddUser.txtUsername.Text.Trim()))
+            {
+                MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (ObjAddUser.txtUsername.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de nombre de usuario no debe exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (ObjAddUser.comboRole.SelectedValue == null)
+            {
+                MessageBox.Show("Debe seleccionar un rol.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            DateTime fechaNacimiento = ObjAddUser.dtBirth.Value.Date;
+            if (!commonClasses.ValidarFechaNacimiento(fechaNacimiento))
+            {
+                MessageBox.Show("La fecha de nacimiento no es válida.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         public void ChargeValues(int id, string nombre, string apellido, string genero, DateTime nacimiento, string email, string telefono, string dui, string direccion, string username)

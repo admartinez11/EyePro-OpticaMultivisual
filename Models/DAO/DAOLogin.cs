@@ -67,12 +67,12 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException sqlex)
             {
-                MessageBox.Show(sqlex.Message);
+                //MessageBox.Show(sqlex.Message);
                 return -1; // Error en la base de datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return -1; // Otro tipo de error
             }
             finally
@@ -93,12 +93,12 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException sqlex)
             {
-                MessageBox.Show(sqlex.Message);
+                //MessageBox.Show(sqlex.Message);
                 return -1;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
                 return -1;
             }
             finally

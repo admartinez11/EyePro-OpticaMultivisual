@@ -12,6 +12,7 @@ using OpticaMultivisual.Views.Dashboard.Optometrista;
 using OpticaMultivisual.Views.Reports.RecetaBase;
 using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Consultas;
+using OpticaMultivisual.Views.FirstUse;
 
 namespace OpticaMultivisual
 {
@@ -27,7 +28,7 @@ namespace OpticaMultivisual
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar y ejecutar el primer formulario
-            Application.Run(new ViewLogin());
+            Application.Run(new ViewFirstUse());
         }
     }
 
