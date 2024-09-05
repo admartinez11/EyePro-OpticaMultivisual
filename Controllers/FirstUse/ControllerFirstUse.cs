@@ -45,20 +45,41 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     DAOFirstUse DAOGuardar = new DAOFirstUse();
                     CommonClasses commonClasses = new CommonClasses();
                     //Validaciones
-                    if (ObjVista.txtAddressBussines.Text.Length > 0)
+                    if (ObjVista.txtAddressBussines.Text.Length > 100)
                     {
                         MessageBox.Show("La dirección del negocio excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (ObjVista.txtEmailBussines.Text.Length > 100)
+                    {
+                        MessageBox.Show("EL correo excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (ObjVista.txtPhone.Text.Length > 25)
+                    {
+                        MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else if (!commonClasses.ValidarTelefono(ObjVista.txtPhone.Text.Trim()))
+                    {
+                        MessageBox.Show("El campo de teléfono contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
+                                        "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     string nombre = ObjVista.txtNameBussines.Text.Trim();
                     if (!commonClasses.EsNombreValido(nombre))
                     {
-                        MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El nombre de negocio ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else if (ObjVista.txtNameBussines.Text.Length > 100)
                     {
-                        MessageBox.Show("El campo de nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El campo de nombre del negocio no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (ObjVista.txtPbx.Text.Length > 100)
+                    {
+                        MessageBox.Show("EL correo excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     DAOGuardar.NombreNegocio = ObjVista.txtNameBussines.Text.Trim();
