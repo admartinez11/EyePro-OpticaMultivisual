@@ -1,4 +1,5 @@
-﻿using OpticaMultivisual.Models.DAO;
+﻿using OpticaMultivisual.Controllers.Helper;
+using OpticaMultivisual.Models.DAO;
 using OpticaMultivisual.Views.FirstUse;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,24 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     ObjVista.picBussines.Image == null))
                 {
                     DAOFirstUse DAOGuardar = new DAOFirstUse();
+                    CommonClasses commonClasses = new CommonClasses();
+                    //Validaciones
+                    if (ObjVista.txtAddressBussines.Text.Length > 0)
+                    {
+                        MessageBox.Show("La dirección del negocio excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    string nombre = ObjVista.txtNameBussines.Text.Trim();
+                    if (!commonClasses.EsNombreValido(nombre))
+                    {
+                        MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else if (ObjVista.txtNameBussines.Text.Length > 100)
+                    {
+                        MessageBox.Show("El campo de nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     DAOGuardar.NombreNegocio = ObjVista.txtNameBussines.Text.Trim();
                     DAOGuardar.DireccionNegocio = ObjVista.txtAddressBussines.Text.Trim();
                     DAOGuardar.CorreoNegocio = ObjVista.txtEmailBussines.Text.Trim();
