@@ -857,6 +857,7 @@
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewFirstUse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewFirstUse";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
