@@ -137,6 +137,8 @@
     <Compile Include="Controllers\Login\ControllerIntAdmin.cs" />
     <Compile Include="Controllers\Login\ControllerLogin.cs" />
     <Compile Include="Controllers\Login\ControllerMetodosDeRecuperacion.cs" />
+    <Compile Include="Controllers\PedidoDet\ControllerAddPD.cs" />
+    <Compile Include="Controllers\PedidoDet\ControllerAdminPD.cs" />
     <Compile Include="Controllers\Registrar\Controlador_ListaRegistro.cs" />
     <Compile Include="Controllers\Registrar\Controlador_Registrar.cs" />
     <Compile Include="Models\DAO\DAOAdminEmp.cs" />
@@ -145,6 +147,7 @@
     <Compile Include="Models\DAO\DAOFirstUse.cs" />
     <Compile Include="Models\DAO\DAOLens.cs" />
     <Compile Include="Models\DAO\DAOLogin.cs" />
+    <Compile Include="Models\DAO\DAOPedidoDet.cs" />
     <Compile Include="Models\DAO\DAORecoverPassword.cs" />
     <Compile Include="Models\DAO\DAORegistro.cs" />
     <Compile Include="Models\DAO\DAOScheduleAppointment.cs" />
@@ -156,6 +159,7 @@
     <Compile Include="Models\DTO\DTOFirstUse.cs" />
     <Compile Include="Models\DTO\DTOLens.cs" />
     <Compile Include="Models\DTO\DTOLogin.cs" />
+    <Compile Include="Models\DTO\DTOPedidoDet.cs" />
     <Compile Include="Models\DTO\DTORecetaBase.cs" />
     <Compile Include="Models\DTO\DTORecoverPassword.cs" />
     <Compile Include="Models\DTO\DTORegistro.cs" />
@@ -216,6 +220,18 @@
     </Compile>
     <Compile Include="Views\Dashboard\Optometrista\ViewRecetaBase.Designer.cs">
       <DependentUpon>ViewRecetaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\PedidoDet\ViewAddPedidoDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\PedidoDet\ViewAddPedidoDet.Designer.cs">
+      <DependentUpon>ViewAddPedidoDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\PedidoDet\ViewPedidoDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\PedidoDet\ViewPedidoDet.Designer.cs">
+      <DependentUpon>ViewPedidoDet.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Dashboard\ViewAdminEmp.cs">
       <SubType>Form</SubType>
@@ -365,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\Optometrista\ViewRecetaBase.resx">
       <DependentUpon>ViewRecetaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\PedidoDet\ViewAddPedidoDet.resx">
+      <DependentUpon>ViewAddPedidoDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard\PedidoDet\ViewPedidoDet.resx">
+      <DependentUpon>ViewPedidoDet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard\ViewAddUser.resx">
       <DependentUpon>ViewAddUser.cs</DependentUpon>
