@@ -23,10 +23,11 @@ namespace OpticaMultivisual.Views.Dashboard.Optometrista
 
 
         //Constructor utilizado para la actualización de datos
-        public ViewAddLens(int accion, int lens_ID, string OD_esfera, double OD_cilindro, double OD_eje, int OD_prisma, int OD_adicion, string OI_esfera, double OI_cilindro, double OI_eje, int OI_prisma, int OI_adicion)
+        public ViewAddLens(int accion, int lens_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion)
         {
             InitializeComponent();
-            ControllerAddLens objAddLens = new ControllerAddLens(this, accion, lens_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion);
+            ControllerAddLens objAddLens = new ControllerAddLens(this, accion, lens_ID, con_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion);
         }
+
     }
 }

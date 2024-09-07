@@ -28,7 +28,7 @@ namespace OpticaMultivisual
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar y ejecutar el primer formulario
-            Application.Run(new ViewFirstUse());
+            Application.Run(new ViewLens());
         }
     }
 

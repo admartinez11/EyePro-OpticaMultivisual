@@ -9,6 +9,7 @@ namespace OpticaMultivisual.Models.DTO
     internal class DTOLens : dbContext
     {
         private int lens_ID;
+        private int con_ID;
         private string OD_esfera;
         private string OD_cilindro;
         private string OD_eje;
@@ -21,6 +22,7 @@ namespace OpticaMultivisual.Models.DTO
         private string OI_adicion;
 
         public int lens_ID1 { get => lens_ID; set => lens_ID = value; }
+        public int con_ID1 { get => con_ID; set => con_ID = value; }
         public string OD_esfera1 { get => OD_esfera; set => OD_esfera = value; }
         public string OD_cilindro1 { get => OD_cilindro; set => OD_cilindro = value; }
         public string OD_eje1 { get => OD_eje; set => OD_eje = value; }
