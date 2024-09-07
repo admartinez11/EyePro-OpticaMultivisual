@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,14 +17,15 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         ViewAddLens ObjAddLens;
         private int accion;
 
-        public ControllerAddLens(ViewAddLens Vista, int accion, int lens_ID, string OD_esfera, double OD_cilindro, double OD_eje, int OD_prisma, int OD_adicion, string OI_esfera, double OI_cilindro, double OI_eje, int OI_prisma, int OI_adicion)
+        public ControllerAddLens(ViewAddLens Vista, int accion, int lens_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion)
         {
             //Acciones Iniciales
             ObjAddLens = Vista;
             this.accion = accion;
+            Vista.Load += new EventHandler(CargaInicial);
             //Métodos iniciales: estos metodos se ejecutan cuando el formulario está cargando
             verificarAccion();
-            ChargeValues(lens_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion);
+            ChargeValues(lens_ID, con_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion);
             //Métodos que se ejecutan al ocurrir eventos
             ObjAddLens.btnGuardar.Click += new EventHandler(NewRegister);
             ObjAddLens.btnActualizar.Click += new EventHandler(UpdateRegister);
@@ -34,9 +36,24 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             ObjAddLens = frmAddLens;
             this.accion = accion;
+            frmAddLens.Load += new EventHandler(CargaInicial);
             verificarAccion();
             ObjAddLens.btnActualizar.Click += new EventHandler(UpdateRegister);
             ObjAddLens.btnGuardar.Click += new EventHandler(NewRegister);
+        }
+
+        void CargaInicial(object sender, EventArgs e)
+        {
+            LlenarcomboCodigoArt();
+        }
+
+        void LlenarcomboCodigoArt()
+        {
+            DAOLens daoArt = new DAOLens();
+            DataSet ds = daoArt.ObtenerConsulta();
+            ObjAddLens.cbcon_ID.DataSource = ds.Tables["Consulta"];
+            ObjAddLens.cbcon_ID.DisplayMember = "con_ID";
+            ObjAddLens.cbcon_ID.ValueMember = "con_ID";
         }
 
         public void verificarAccion()
@@ -61,19 +78,24 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAOLens DAOInsert = new DAOLens();
                 //Datos para creación de persona
                 //OD
+                DAOInsert.con_ID1 = int.Parse(ObjAddLens.cbcon_ID.SelectedValue.ToString());
                 DAOInsert.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                DAOInsert.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.ToString();
-                DAOInsert.OD_eje1 = ObjAddLens.txtODEje.Text.ToString();
-                DAOInsert.OD_prisma1 = ObjAddLens.txtODPrisma.Text.ToString();
-                DAOInsert.OD_adicion1 = ObjAddLens.txtODAdicion.Text.ToString();
+                DAOInsert.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
+                DAOInsert.OD_eje1 = ObjAddLens.txtODEje.Text.Trim();
+                DAOInsert.OD_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
+                DAOInsert.OD_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
                 //OI
                 DAOInsert.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                DAOInsert.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.ToString();
-                DAOInsert.OI_eje1 = ObjAddLens.txtOIEje.Text.ToString();
-                DAOInsert.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.ToString();
-                DAOInsert.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.ToString();
+                DAOInsert.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
+                DAOInsert.OI_eje1 = ObjAddLens.txtOIEje.Text.Trim();
+                DAOInsert.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
+                DAOInsert.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
 
                 int valorRetornado = DAOInsert.InsertarLens();
+                MessageBox.Show($"{valorRetornado}",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
                 //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -99,19 +121,19 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             if (ValidarCampos())
             {
                 DAOLens daoUpdate = new DAOLens();
-
                 daoUpdate.lens_ID1 = int.Parse(ObjAddLens.txtDRid.Text.ToString());
+                daoUpdate.con_ID1 = int.Parse(ObjAddLens.cbcon_ID.SelectedValue.ToString());
                 daoUpdate.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                daoUpdate.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.ToString();
-                daoUpdate.OD_eje1 = ObjAddLens.txtODEje.Text.ToString();
-                daoUpdate.OD_prisma1 = ObjAddLens.txtODPrisma.Text.ToString();
-                daoUpdate.OD_adicion1 = ObjAddLens.txtODAdicion.Text.ToString();
+                daoUpdate.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
+                daoUpdate.OD_eje1 = ObjAddLens.txtODEje.Text.Trim();
+                daoUpdate.OD_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
+                daoUpdate.OD_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
                 //OI
                 daoUpdate.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                daoUpdate.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.ToString();
-                daoUpdate.OI_eje1 = ObjAddLens.txtOIEje.Text.ToString();
-                daoUpdate.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.ToString();
-                daoUpdate.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.ToString();
+                daoUpdate.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
+                daoUpdate.OI_eje1 = ObjAddLens.txtOIEje.Text.Trim();
+                daoUpdate.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
+                daoUpdate.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
 
                 int valorRetornado = daoUpdate.ActualizarLens();
                 if (valorRetornado == 1)
@@ -468,22 +490,23 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             return true;
         }
 
-        public void ChargeValues(int lens_ID, string OD_esfera, double OD_cilindro, double OD_eje, int OD_prisma, int OD_adicion, string OI_esfera, double OI_cilindro, double OI_eje, int OI_prisma, int OI_adicion)
+        public void ChargeValues(int lens_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion)
         {
             //Asigna los valores recibidos a los campos correpondientes a la vista ObjAddLens
             //Valores de Ojo Derecho
             ObjAddLens.txtDRid.Text = lens_ID.ToString();
+            ObjAddLens.cbcon_ID.SelectedValue = lens_ID.ToString();
             ObjAddLens.txtODEsfera.Text = OD_esfera;
-            ObjAddLens.txtODCilindro.Text = OD_cilindro.ToString();
-            ObjAddLens.txtODEje.Text = OD_eje.ToString();
-            ObjAddLens.txtODPrisma.Text = OD_prisma.ToString();
-            ObjAddLens.txtODAdicion.Text = OD_adicion.ToString();
+            ObjAddLens.txtODCilindro.Text = OD_cilindro;
+            ObjAddLens.txtODEje.Text = OD_eje;
+            ObjAddLens.txtODPrisma.Text = OD_prisma;
+            ObjAddLens.txtODAdicion.Text = OD_adicion;
             //Valores de Ojo Izquierdo
             ObjAddLens.txtOIEsfera.Text = OI_esfera;
-            ObjAddLens.txtOICilindro.Text = OI_cilindro.ToString();
-            ObjAddLens.txtOIEje.Text = OI_eje.ToString();
-            ObjAddLens.txtOIPrisma.Text = OI_prisma.ToString();
-            ObjAddLens.txtOIAdicion.Text = OI_adicion.ToString();
+            ObjAddLens.txtOICilindro.Text = OI_cilindro;
+            ObjAddLens.txtOIEje.Text = OI_eje;
+            ObjAddLens.txtOIPrisma.Text = OI_prisma;
+            ObjAddLens.txtOIAdicion.Text = OI_adicion;
         }
     }
 }

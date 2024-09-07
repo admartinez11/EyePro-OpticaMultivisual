@@ -47,14 +47,43 @@ namespace OpticaMultivisual.Models.DAO
                 getConnection().Close();
             }
         }
+
+        public DataSet ObtenerConsulta()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                //Definir instrucción de lo que se quiere hacer
+                string query = "SELECT con_ID FROM Consulta";
+                //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
+                SqlCommand cmdSelect = new SqlCommand(query, Command.Connection);
+                cmdSelect.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "Consulta");
+                return ds;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Error al obtener el ID de la Consulta, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+
+
         public int InsertarDR()
         {
             try
             {
                 Command.Connection = getConnection();
-                string query3 = "EXEC InsertarDR @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OD_AO, @OD_AP, @OD_DP, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion, @OI_AO, @OI_AP, @OI_DP";
+                string query3 = "EXEC InsertarDR @con_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OD_AO, @OD_AP, @OD_DP, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion, @OI_AO, @OI_AP, @OI_DP";
                 SqlCommand cmd = new SqlCommand(query3, Command.Connection);
 
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);
                 cmd.Parameters.AddWithValue("@OD_eje", OD_eje1);
@@ -90,9 +119,10 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query4 = "EXEC ActualizarDR @DR_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OD_AO, @OD_AP, @OD_DP, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion, @OI_AO, @OI_AP, @OI_DP";
+                string query4 = "EXEC ActualizarDR @DR_ID, @con_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OD_AO, @OD_AP, @OD_DP, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion, @OI_AO, @OI_AP, @OI_DP";
                 SqlCommand cmd = new SqlCommand(query4, Command.Connection);
 
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@DR_ID", DR_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);

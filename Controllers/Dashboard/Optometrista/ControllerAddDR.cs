@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using OpticaMultivisual.Models.DAO;
 using System.Windows.Forms;
@@ -19,14 +20,15 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private int accion;
         //pruebaaaa
 
-        public ControllerAddDR(ViewAddDR Vista, int accion, int DR_ID, string OD_esfera, double OD_cilindro, double OD_eje, int OD_prisma, int OD_adicion, int OD_AO, double OD_AP, double OD_DP, string OI_esfera, double OI_cilindro, double OI_eje, int OI_prisma, int OI_adicion, int OI_AO, double OI_AP, double OI_DP)
+        public ControllerAddDR(ViewAddDR Vista, int accion, int DR_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
         {
             //Acciones Iniciales
             ObjAddDR = Vista;
             this.accion = accion;
+            Vista.Load += new EventHandler(CargaInicial);
             //Métodos iniciales: estos metodos se ejecutan cuando el formulario está cargando
             verificarAccion();
-            ChargeValues(DR_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OD_AO, OD_AP, OD_DP, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion, OI_AO, OI_AP, OI_DP);
+            ChargeValues(DR_ID, con_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OD_AO, OD_AP, OD_DP, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion, OI_AO, OI_AP, OI_DP);
             //Métodos que se ejecutan al ocurrir eventos
             ObjAddDR.btnGuardar.Click += new EventHandler(NewRegister);
             ObjAddDR.btnActualizar.Click += new EventHandler(UpdateRegister);
@@ -37,9 +39,24 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             ObjAddDR = frmAddDR;
             this.accion = accion;
+            frmAddDR.Load += new EventHandler(CargaInicial);
             verificarAccion();
             ObjAddDR.btnActualizar.Click += new EventHandler(UpdateRegister);
             ObjAddDR.btnGuardar.Click += new EventHandler(NewRegister);
+        }
+
+        void CargaInicial(object sender, EventArgs e)
+        {
+            LlenarcomboCodigoArt();
+        }
+
+        void LlenarcomboCodigoArt()
+        {
+            DAO_DR daoArt = new DAO_DR();
+            DataSet ds = daoArt.ObtenerConsulta();
+            ObjAddDR.cbcon_ID.DataSource = ds.Tables["Consulta"];
+            ObjAddDR.cbcon_ID.DisplayMember = "con_ID";
+            ObjAddDR.cbcon_ID.ValueMember = "con_ID";
         }
 
 
@@ -67,6 +84,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 //OD
                 //DAOInsert.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
                 DAOInsert.OD_esfera1 = ObjAddDR.txtODEsfera.Text.Trim();
+                DAOInsert.con_ID1 = int.Parse(ObjAddDR.cbcon_ID.SelectedValue.ToString());
                 DAOInsert.OD_cilindro1 = ObjAddDR.txtODCilindro.Text.Trim();
                 DAOInsert.OD_eje1 = ObjAddDR.txtODEje.Text.Trim();
                 DAOInsert.OD_prisma1 = ObjAddDR.txtODPrisma.Text.Trim();
@@ -115,6 +133,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAO_DR daoUpdate = new DAO_DR();
 
                 daoUpdate.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
+                daoUpdate.con_ID1 = int.Parse(ObjAddDR.cbcon_ID.SelectedValue.ToString());
                 daoUpdate.OD_esfera1 = ObjAddDR.txtODEsfera.Text.Trim();
                 daoUpdate.OD_cilindro1 = ObjAddDR.txtODCilindro.Text.ToString();
                 daoUpdate.OD_eje1 = ObjAddDR.txtODEje.Text.ToString();
@@ -698,28 +717,29 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         }
         //finish validations
 
-        public void ChargeValues(int DR_ID, string OD_esfera, double OD_cilindro, double OD_eje, int OD_prisma, int OD_adicion, int OD_AO, double OD_AP, double OD_DP, string OI_esfera, double OI_cilindro, double OI_eje, int OI_prisma, int OI_adicion, int OI_AO, double OI_AP, double OI_DP)
+        public void ChargeValues(int DR_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
         {
             //Asigna los valores recibidos a los campos correspondientes a la vista ObjAddDR
             //Valores de Ojo Derecho
             ObjAddDR.txtDRid.Text = DR_ID.ToString();
+            ObjAddDR.cbcon_ID.SelectedValue = con_ID.ToString();
             ObjAddDR.txtODEsfera.Text = OD_esfera;
-            ObjAddDR.txtODCilindro.Text = OD_cilindro.ToString();
-            ObjAddDR.txtODEje.Text = OD_eje.ToString();
-            ObjAddDR.txtODPrisma.Text = OD_prisma.ToString();
-            ObjAddDR.txtODAdicion.Text = OD_adicion.ToString();
-            ObjAddDR.txtODdp.Text = OD_DP.ToString();
-            ObjAddDR.txtODao.Text = OD_AO.ToString();
-            ObjAddDR.txtODap.Text = OD_AP.ToString();
+            ObjAddDR.txtODCilindro.Text = OD_cilindro;
+            ObjAddDR.txtODEje.Text = OD_eje;
+            ObjAddDR.txtODPrisma.Text = OD_prisma;
+            ObjAddDR.txtODAdicion.Text = OD_adicion;
+            ObjAddDR.txtODdp.Text = OD_DP;
+            ObjAddDR.txtODao.Text = OD_AO;
+            ObjAddDR.txtODap.Text = OD_AP;
             //Valores de Ojo Izquierdo
             ObjAddDR.txtOIEsfera.Text = OI_esfera;
-            ObjAddDR.txtOICilindro.Text = OI_cilindro.ToString();
-            ObjAddDR.txtOIEje.Text = OI_eje.ToString();
-            ObjAddDR.txtOIPrisma.Text = OI_prisma.ToString();
-            ObjAddDR.txtOIAdicion.Text = OI_adicion.ToString();
-            ObjAddDR.txtOIdp.Text = OI_DP.ToString();
-            ObjAddDR.txtOIao.Text = OI_AO.ToString();
-            ObjAddDR.txtOIap.Text = OI_AP.ToString();
+            ObjAddDR.txtOICilindro.Text = OI_cilindro;
+            ObjAddDR.txtOIEje.Text = OI_eje;
+            ObjAddDR.txtOIPrisma.Text = OI_prisma;
+            ObjAddDR.txtOIAdicion.Text = OI_adicion;
+            ObjAddDR.txtOIdp.Text = OI_DP;
+            ObjAddDR.txtOIao.Text = OI_AO;
+            ObjAddDR.txtOIap.Text = OI_AP;
         }
     }
 }

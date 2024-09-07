@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OpticaMultivisual.Models.DAO
 {
@@ -47,14 +48,42 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        public DataSet ObtenerConsulta()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                //Definir instrucción de lo que se quiere hacer
+                string query = "SELECT con_ID FROM Consulta";
+                //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
+                SqlCommand cmdSelect = new SqlCommand(query, Command.Connection);
+                cmdSelect.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "Consulta");
+                return ds;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Error al obtener el ID de la Consulta, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+
+
         public int InsertarLens()
         {
             try
             {
                 Command.Connection = getConnection();
-                string query3 = "EXEC InsertarLens @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
+                string query3 = "EXEC InsertarLens @con_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
                 SqlCommand cmd = new SqlCommand(query3, Command.Connection);
 
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);
                 cmd.Parameters.AddWithValue("@OD_eje", OD_eje1);
@@ -69,8 +98,12 @@ namespace OpticaMultivisual.Models.DAO
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }
-            catch (Exception)
+            catch (Exception x)
             {
+                MessageBox.Show($"{x}",
+                                    "lol",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -84,9 +117,10 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query4 = "EXEC ActualizarLens @lens_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
+                string query4 = "EXEC ActualizarLens @con_ID, @lens_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
                 SqlCommand cmd = new SqlCommand(query4, Command.Connection);
 
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@lens_ID", lens_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);

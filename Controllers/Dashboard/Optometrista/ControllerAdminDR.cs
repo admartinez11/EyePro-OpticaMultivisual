@@ -94,30 +94,30 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             int pos = ObjAdminDR.dgvDR.CurrentRow.Index;
 
-            int DR_ID, OD_prisma, OD_adicion, OD_AO, OI_prisma, OI_adicion, OI_AO;
-            double OD_cilindro, OD_eje, OD_AP, OD_DP, OI_cilindro, OI_eje, OI_AP, OI_DP;
-            string OD_esfera, OI_esfera;
+            int DR_ID, con_ID; 
+            string OD_esfera, OD_prisma, OD_adicion, OD_AO, OI_prisma, OI_adicion, OI_AO, OD_cilindro, OI_esfera, OD_eje, OD_AP, OD_DP, OI_cilindro, OI_eje, OI_AP, OI_DP;
 
             DR_ID = int.Parse(ObjAdminDR.dgvDR[0, pos].Value.ToString());
-            OD_esfera = ObjAdminDR.dgvDR[1, pos].Value.ToString();
-            OD_cilindro = double.Parse(ObjAdminDR.dgvDR[2, pos].Value.ToString());
-            OD_eje = double.Parse(ObjAdminDR.dgvDR[3, pos].Value.ToString());
-            OD_prisma = int.Parse(ObjAdminDR.dgvDR[4, pos].Value.ToString());
-            OD_adicion = int.Parse(ObjAdminDR.dgvDR[5, pos].Value.ToString());
-            OD_DP = double.Parse(ObjAdminDR.dgvDR[6, pos].Value.ToString());
-            OD_AO = int.Parse(ObjAdminDR.dgvDR[7, pos].Value.ToString());
-            OD_AP = double.Parse(ObjAdminDR.dgvDR[8, pos].Value.ToString());
+            con_ID = int.Parse(ObjAdminDR.dgvDR[1, pos].Value.ToString());
+            OD_esfera = ObjAdminDR.dgvDR[2, pos].Value.ToString();
+            OD_cilindro = ObjAdminDR.dgvDR[3, pos].Value.ToString();
+            OD_eje = ObjAdminDR.dgvDR[4, pos].Value.ToString();
+            OD_prisma = ObjAdminDR.dgvDR[5, pos].Value.ToString();
+            OD_adicion = ObjAdminDR.dgvDR[6, pos].Value.ToString();
+            OD_DP = ObjAdminDR.dgvDR[7, pos].Value.ToString();
+            OD_AO = ObjAdminDR.dgvDR[8, pos].Value.ToString();
+            OD_AP = ObjAdminDR.dgvDR[9, pos].Value.ToString();
 
-            OI_esfera = ObjAdminDR.dgvDR[9, pos].Value.ToString();
-            OI_cilindro = double.Parse(ObjAdminDR.dgvDR[10, pos].Value.ToString());
-            OI_eje = double.Parse(ObjAdminDR.dgvDR[11, pos].Value.ToString());
-            OI_prisma = int.Parse(ObjAdminDR.dgvDR[12, pos].Value.ToString());
-            OI_adicion = int.Parse(ObjAdminDR.dgvDR[13, pos].Value.ToString());
-            OI_DP = double.Parse(ObjAdminDR.dgvDR[14, pos].Value.ToString());
-            OI_AO = int.Parse(ObjAdminDR.dgvDR[15, pos].Value.ToString());
-            OI_AP = double.Parse(ObjAdminDR.dgvDR[16, pos].Value.ToString());
+            OI_esfera = ObjAdminDR.dgvDR[10, pos].Value.ToString();
+            OI_cilindro = ObjAdminDR.dgvDR[11, pos].Value.ToString();
+            OI_eje = ObjAdminDR.dgvDR[12, pos].Value.ToString();
+            OI_prisma = ObjAdminDR.dgvDR[13, pos].Value.ToString();
+            OI_adicion = ObjAdminDR.dgvDR[14, pos].Value.ToString();
+            OI_DP = ObjAdminDR.dgvDR[15, pos].Value.ToString();
+            OI_AO = ObjAdminDR.dgvDR[16, pos].Value.ToString();
+            OI_AP = ObjAdminDR.dgvDR[17, pos].Value.ToString();
 
-            ViewAddDR openForm = new ViewAddDR(2, DR_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OD_AO, OD_AP, OD_DP, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion, OI_AO, OI_AP, OI_DP);
+            ViewAddDR openForm = new ViewAddDR(2, DR_ID, con_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OD_AO, OD_AP, OD_DP, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion, OI_AO, OI_AP, OI_DP);
 
             openForm.ShowDialog();
             RefrescarData();
