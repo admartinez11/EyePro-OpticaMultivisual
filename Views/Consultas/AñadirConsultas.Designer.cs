@@ -624,7 +624,7 @@
             this.cmbDUI.Name = "cmbDUI";
             this.cmbDUI.Size = new System.Drawing.Size(236, 32);
             this.cmbDUI.TabIndex = 4;
-            this.cmbDUI.Text = null;
+            this.cmbDUI.Text = "Consulta";
             this.cmbDUI.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbDUI.TextLeftMargin = 5;
             // 
@@ -671,7 +671,7 @@
             this.cmbVisita.Name = "cmbVisita";
             this.cmbVisita.Size = new System.Drawing.Size(273, 32);
             this.cmbVisita.TabIndex = 5;
-            this.cmbVisita.Text = null;
+            this.cmbVisita.Text = "Visita";
             this.cmbVisita.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbVisita.TextLeftMargin = 5;
             // 
@@ -719,7 +719,7 @@
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(247, 32);
             this.cmbEmpleado.TabIndex = 6;
-            this.cmbEmpleado.Text = null;
+            this.cmbEmpleado.Text = "Profesional";
             this.cmbEmpleado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbEmpleado.TextLeftMargin = 5;
             // 

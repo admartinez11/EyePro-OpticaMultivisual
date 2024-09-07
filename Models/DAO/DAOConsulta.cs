@@ -158,13 +158,13 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "SELECT * FROM Consulta";
+                string query = "SELECT * FROM VistaConsultas";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 cmd.Parameters.AddWithValue("valor", true);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "Consulta");
+                adp.Fill(ds, "VistaConsultas");
                 return ds;
             }
             catch (Exception)

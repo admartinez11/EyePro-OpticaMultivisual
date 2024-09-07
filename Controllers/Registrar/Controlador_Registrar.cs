@@ -75,21 +75,20 @@ namespace AdministrarClientes.Controlador
         private bool ValidarCampos()
         {
             string genero = ObjVistaR.txtGenero.Text.Trim();
-            if (genero != "M" && genero != "F" && genero != "f" && genero != "M")
+            if (genero != "M" && genero != "F" && genero != "f" && genero != "m")
             {
                 MessageBox.Show("El campo Género solo puede contener 'M' o 'F'.", "Validación de Género", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             string telefono = ObjVistaR.txtTelefono.Text.Trim();
-            if (!EsValido(telefono))
+            if (!EsTelValido(telefono))
             {
-                MessageBox.Show("El campo Teléfono solo puede contener números y un solo guion.", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             string DUI = ObjVistaR.txtdui.Text.Trim();
-            if (!EsValido(DUI))
+            if (!EsDUIValido(DUI))
             {
                 MessageBox.Show("El campo DUI solo puede contener números y un solo guion.", "Validación de DUI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -101,9 +100,22 @@ namespace AdministrarClientes.Controlador
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Validación de Correo Electrónico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
-            
-
+            if (!VerificarTextoNombre(ObjVistaR.txtNombre.Text))
+            {
+                return false;
+            }
+            if (!VerificarTextoNombre(ObjVistaR.txtApellido.Text))
+            {
+                return false;
+            }
+            if (!VerificarTextoNombre(ObjVistaR.txtpadecimientos.Text))
+            {
+                return false;
+            }
+            if (!VerificarTextoNombre(ObjVistaR.txtprofecion.Text))
+            {
+                return false;
+            }
             if (string.IsNullOrEmpty(ObjVistaR.txtNombre.Text.Trim()) ||
                 string.IsNullOrEmpty(ObjVistaR.txtApellido.Text.Trim()) ||
                 string.IsNullOrEmpty(ObjVistaR.txtpadecimientos.Text.Trim()) ||
@@ -123,22 +135,62 @@ namespace AdministrarClientes.Controlador
             string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(correo, patron);
         }
-
-        private bool EsValido(string valor)
+        private bool VerificarTextoNombre(string texto)
         {
-            int guionCount = 0;
-            foreach (char c in valor)
+            // Expresión regular para permitir solo letras y espacios
+            string patronTexto = @"^[a-zA-Z\s]+$";
+
+            // Verificar si el texto cumple con el patrón
+            if (!System.Text.RegularExpressions.Regex.IsMatch(texto, patronTexto))
             {
-                if (c == '-')
-                {
-                    guionCount++;
-                }
-                else if (!char.IsDigit(c))
-                {
-                    return false;
-                }
+                MessageBox.Show("El texto solo puede contener letras y espacios.", "Texto Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-            return guionCount <= 1;
+
+            // Verifica si la longitud del texto supera los 100 caracteres.
+            if (texto.Length > 100)
+            {
+                // Si el texto es demasiado largo, muestra un mensaje de advertencia
+                // y retorna false para indicar que la validación ha fallado.
+                MessageBox.Show("El texto no puede tener más de 100 caracteres.", "Texto Demasiado Largo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // Si el texto pasa todas las verificaciones, retorna true,
+            // indicando que la validación ha sido exitosa.
+            return true;
+        }
+        private bool EsDUIValido(string dui)
+        {
+            // Expresión regular para validar el formato del DUI: 8 dígitos seguidos de un guion y un dígito.
+            string patronDUI = @"^\d{8}-\d{1}$";
+
+            // Verifica si el DUI ingresado cumple con el formato usando una expresión regular
+            if (System.Text.RegularExpressions.Regex.IsMatch(dui, patronDUI))
+            {
+                return true; // El formato es válido
+            }
+            else
+            {
+                MessageBox.Show("El DUI ingresado no es válido. Debe tener el formato 12345678-9.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; // El formato es inválido
+            }
+        }
+        private bool EsTelValido(string telefono)
+        {
+            // Expresión regular para validar el formato del teléfono: Puede incluir el código de país opcional (+503) seguido de 8 dígitos.
+            string patronTelefono = @"^(\+503\s?)?\d{4}-?\d{4}$";
+
+            // Verifica si el teléfono ingresado cumple con el formato usando una expresión regular
+            if (System.Text.RegularExpressions.Regex.IsMatch(telefono, patronTelefono))
+            {
+                return true; // El formato es válido
+            }
+            else
+            {
+                MessageBox.Show("El número de teléfono ingresado no es válido. Debe tener el formato +503 1234-5678 o 1234-5678.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; // El formato es inválido
+            }
         }
 
         public Controlador_Registrar(RegistroClientes Vista, int p_accion, string DUI, string Nombre, string Apellido, string Correo_E, string Edad, char Genero, string Profeción, string Padecimientos, string Telefono)
@@ -176,38 +228,45 @@ namespace AdministrarClientes.Controlador
         }
         public void AcualizarRegistro(object sender, EventArgs e)
         {
-            DAORegistro DAOActualizar = new DAORegistro();
-            DAOActualizar.Edad = ObjVistaR.txtEdad.Text.Trim();
-            DAOActualizar.Telefono = ObjVistaR.txtTelefono.Text.Trim();
-            DAOActualizar.Genero = char.Parse(ObjVistaR.txtGenero.Text.Trim());
-            DAOActualizar.Nombre = ObjVistaR.txtNombre.Text.Trim();
-            DAOActualizar.Apellido = ObjVistaR.txtApellido.Text.Trim();
-            DAOActualizar.Padecimientos = ObjVistaR.txtpadecimientos.Text.Trim();
-            DAOActualizar.Profesion = ObjVistaR.txtprofecion.Text.Trim();
-            DAOActualizar.DUI = ObjVistaR.txtdui.Text.Trim();
-            DAOActualizar.Correo_E = ObjVistaR.txtcorreo_electronico.Text.Trim();
-            int valorRetornado = DAOActualizar.ActualizarCliente();
-            if (valorRetornado == 1)
+            if (ValidarCampos())
             {
-                MessageBox.Show("Los datos han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjVistaR.Close();
-            }
-            else if (valorRetornado == 0)
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                {
+                    DAORegistro DAOActualizar = new DAORegistro();
+                    DAOActualizar.Edad = ObjVistaR.txtEdad.Text.Trim();
+                    DAOActualizar.Telefono = ObjVistaR.txtTelefono.Text.Trim();
+                    DAOActualizar.Genero = char.Parse(ObjVistaR.txtGenero.Text.Trim());
+                    DAOActualizar.Nombre = ObjVistaR.txtNombre.Text.Trim();
+                    DAOActualizar.Apellido = ObjVistaR.txtApellido.Text.Trim();
+                    DAOActualizar.Padecimientos = ObjVistaR.txtpadecimientos.Text.Trim();
+                    DAOActualizar.Profesion = ObjVistaR.txtprofecion.Text.Trim();
+                    DAOActualizar.DUI = ObjVistaR.txtdui.Text.Trim();
+                    DAOActualizar.Correo_E = ObjVistaR.txtcorreo_electronico.Text.Trim();
+                    int valorRetornado = DAOActualizar.ActualizarCliente();
+                    if (valorRetornado == 1)
+                    {
+                        MessageBox.Show("Los datos han sido actualizado exitosamente",
+                                        "Proceso completado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        ObjVistaR.Close();
+                    }
+                    else if (valorRetornado == 0)
+                    {
+                        MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                        "Proceso interrumpido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+                }
+
+
             }
         }
 
