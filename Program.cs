@@ -13,6 +13,7 @@ using OpticaMultivisual.Views.Reports.RecetaBase;
 using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Consultas;
 using OpticaMultivisual.Views.FirstUse;
+using OpticaMultivisual.Views.Dashboard.PedidoDet;
 
 namespace OpticaMultivisual
 {
@@ -28,7 +29,7 @@ namespace OpticaMultivisual
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar y ejecutar el primer formulario
-            Application.Run(new ViewLens());
+            Application.Run(new ViewPedidoDet());
         }
     }
 
