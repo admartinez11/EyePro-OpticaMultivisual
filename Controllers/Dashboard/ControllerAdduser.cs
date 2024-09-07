@@ -135,7 +135,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             }
             else
             {
-                MessageBox.Show("No se pudieron cargar los datos de género.",
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos.",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -196,7 +196,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - Los datos no pudieron ser registrados",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -204,7 +204,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser registrados",
+                MessageBox.Show("EPV001 - Error inesperado",
                                     "Proceso incompleto",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
