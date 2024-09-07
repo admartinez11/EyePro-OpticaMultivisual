@@ -199,7 +199,14 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
             ObjAddPD.cbart_codigo.SelectedValue = art_codigo;
             ObjAddPD.txtart_cant.Text = art_cant.ToString();
             ObjAddPD.txtpd_obser.Text = pd_obser;
-            ObjAddPD.cbpd_recetalab.Checked = true;
+            if (pd_recetalab == 1)
+            {
+                ObjAddPD.cbpd_recetalab.Checked = true;
+            }
+            else
+            {
+                ObjAddPD.cbpd_recetalab.Checked = false;
+            }
         }
     }
 }
