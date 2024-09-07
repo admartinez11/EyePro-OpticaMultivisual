@@ -118,7 +118,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - Los datos no pudieron ser registrados",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -163,14 +163,14 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 }
                 else if (valorRetornado == 2)
                 {
-                    MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                    MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados completamente",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                    MessageBox.Show("EPV001 - Error inesperado",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
