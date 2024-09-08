@@ -8,8 +8,10 @@ using AdministrarClientes.View.RegistroCliente;
 using OpticaMultivisual.Controllers.Helper;
 using OpticaMultivisual.Models.DAO;
 using OpticaMultivisual.Views.Article;
+using OpticaMultivisual.Views.Consultas;
 using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Dashboard.Optometrista;
+using OpticaMultivisual.Views.Dashboard.PedidoDet;
 using OpticaMultivisual.Views.Login;
 using OpticaMultivisual.Views.ScheduleAppointment;
 using OpticaMultivisual.Views.Server;
@@ -35,6 +37,8 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjMain.btnClientes.Click += new EventHandler(AbrirFormularioAdminClientes);
             ObjMain.btnReceta.Click += new EventHandler(AbrirFormularioRecetaBase);
             ObjMain.btnExit.Click += new EventHandler(CerrarSesion);
+            ObjMain.btnConsult.Click += new EventHandler(AbrirFormularioConsulta);
+            ObjMain.btnDetalle.Click += new EventHandler(AbrirFormularioPD);
             ObjMain.FormClosing += new FormClosingEventHandler(cerrarPrograma);
             ObjMain.btnVisita.Click += new EventHandler(AbrirFormularioVis);
             ObjMain.btnArticulo.Click += new EventHandler(AbrirFormArt);
@@ -45,6 +49,16 @@ namespace OpticaMultivisual.Controllers.Dashboard
         {
             ViewConfirmPassword objview = new ViewConfirmPassword(ObjMain.lblUsername.Text);
             objview.ShowDialog();
+        }
+
+        private void AbrirFormularioConsulta(object sender, EventArgs e)
+        {
+            AbrirFormulario<VerConsulta>();
+        }
+
+        private void AbrirFormularioPD(object sender, EventArgs e)
+        {
+            AbrirFormulario<ViewPedidoDet>();
         }
 
         private void AbrirFormArt(object sender, EventArgs e)
