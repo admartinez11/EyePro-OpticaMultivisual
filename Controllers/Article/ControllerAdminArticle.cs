@@ -42,9 +42,20 @@ namespace OpticaMultivisual.Controllers.Article
         }
         public void AgregarArticulo(object sender, EventArgs e)
         {
-            ViewAddArticle openForm = new ViewAddArticle(1);
-            openForm.ShowDialog();
-            ActualizarDatos();
+            try
+            {
+                // Crear una instancia del formulario con el constructor adecuado
+                ViewAddArticle openForm = new ViewAddArticle(1);
+                openForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
+
+                // Actualizar los datos después de cerrar el formulario
+                ActualizarDatos();
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si algo falla
+                MessageBox.Show($"Error al abrir el formulario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void EliminarArticulo(object sender, EventArgs e)
         {
