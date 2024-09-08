@@ -141,6 +141,7 @@
     <Compile Include="Controllers\PedidoDet\ControllerAdminPD.cs" />
     <Compile Include="Controllers\Registrar\Controlador_ListaRegistro.cs" />
     <Compile Include="Controllers\Registrar\Controlador_Registrar.cs" />
+    <Compile Include="Controllers\Server\ControllerAdminConnection.cs" />
     <Compile Include="Models\DAO\DAOAdminEmp.cs" />
     <Compile Include="Models\DAO\DAOArticle.cs" />
     <Compile Include="Models\DAO\DAOConsulta.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Models\DTO\DTOAdminEmp.cs" />
     <Compile Include="Models\DTO\DTOArticle.cs" />
     <Compile Include="Models\DTO\DTOConsulta.cs" />
+    <Compile Include="Models\DTO\DTOdbContext.cs" />
     <Compile Include="Models\DTO\DTOFirstUse.cs" />
     <Compile Include="Models\DTO\DTOLens.cs" />
     <Compile Include="Models\DTO\DTOLogin.cs" />

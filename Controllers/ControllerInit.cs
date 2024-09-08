@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpticaMultivisual.Controllers.Helper;
 
 namespace OpticaMultivisual.Controllers
 {
@@ -14,6 +15,8 @@ namespace OpticaMultivisual.Controllers
     {
         public static void DeterminarVistaInicial()
         {
+            CommonClasses objCommon = new CommonClasses();
+            objCommon.LeerArchivoXMLConexion();
             //Creando objetos de la clase DAOLogin y DAOFirstUser
             DAOLogin Objlogin = new DAOLogin();
             DAOFirstUse Objfirst = new DAOFirstUse();

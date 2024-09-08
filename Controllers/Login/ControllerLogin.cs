@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Controllers.Helper;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace OpticaMultivisual.Controllers.Login
 {
@@ -49,8 +50,17 @@ namespace OpticaMultivisual.Controllers.Login
             CommonClasses common = new CommonClasses();
             // Utilizando el objeto DAO para invocar a los métodos getter y setter del DTO
             DAOData.Username = ObjLogin.txtUsername.Text;
+            string username = ObjLogin.txtUsername.Text.Trim();
+            string password = ObjLogin.txtPassword.Text.Trim();
             string cadenaencriptada = common.ComputeSha256Hash(ObjLogin.txtPassword.Text);
             DAOData.Password = cadenaencriptada;
+            // Verificar el estado del usuario (si está activo o inactivo)
+            int userStatus = DAOData.CheckUserStatus(username); // Enviar username como parámetro
+            if (userStatus == 0)
+            {
+                MessageBox.Show("Su usuario ha sido inhabilitado. Pídale al administrador que intervenga.", "Usuario inhabilitado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             // Invocando al método Login contenido en el DAO y capturando el resultado
             int answer = DAOData.ValidarLogin();
             // Evaluando el valor de la variable answer
@@ -60,23 +70,67 @@ namespace OpticaMultivisual.Controllers.Login
                     MessageBox.Show("Usuario inexistente, ingrese con un usuario existente o en el caso de no tener un usuario regístrese.", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 1: // Contraseña incorrecta
-                    MessageBox.Show("Contraseña incorrecta", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // Incrementar el contador de intentos fallidos
+                    DAOData.IncrementUserAttempts(username); // Enviar username como parámetro
+                    int userAttempts = DAOData.GetUserAttempts(username); // Obtener el número de intentos fallidos
+                    if (userAttempts >= 3)
+                    {
+                        // Deshabilitar el usuario y mostrar el mensaje de bloqueo
+                        DAOData.DisableUser(username); // Enviar username como parámetro
+                        MessageBox.Show("Su usuario ha sido inhabilitado. Pídale al administrador que intervenga.", "Usuario inhabilitado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                     break;
                 case 2: // Usuario y contraseña correctos
-                    if (ObjLogin.txtPassword.Text.Trim() != DAOData.Username + "OP123")
+                        // Restablecer el contador de intentos fallidos
+                    DAOData.ResetUserAttempts(username); // Enviar username como parámetro
+                    // Verificar si el usuario tiene un VerificationCode
+                    bool hasVerificationCode = DAOData.HasVerificationCode(ObjLogin.txtUsername.Text);
+                    // Verificar si la contraseña ingresada es la contraseña por defecto esperada
+                    string defaultPassword = ObjLogin.txtUsername.Text + "OP123"; // Concatenar el nombre de usuario con "OP123"
+                    bool isDefaultPassword = ObjLogin.txtPassword.Text == defaultPassword;
+                    if (hasVerificationCode && isDefaultPassword)
                     {
+                        // Mostrar el formulario para ingresar el VerificationCode
                         ObjLogin.Hide();
-                        ViewMain viewMain = new ViewMain(ObjLogin.txtUsername.Text);
-                        viewMain.Show();
+                        ViewCambiarClave viewEnterVerificationCode = new ViewCambiarClave();
+                        viewEnterVerificationCode.Show();
                     }
-                    else if (ObjLogin.txtPassword.Text.Trim() == DAOData.Username + "OP123")
+                    else
                     {
-                        // Limpiar los campos txtPassword
-                        ObjLogin.txtPassword.Text = "";
-                        ViewCambiarClaveDefecto openForm = new ViewCambiarClaveDefecto();
-                        openForm.ShowDialog();
+                        // No tiene VerificationCode, proceder normalmente
+                        if (ObjLogin.txtPassword.Text.Trim() != DAOData.Username + "OP123")
+                        {
+                            ObjLogin.Hide();
+                            ViewMain viewMain = new ViewMain(ObjLogin.txtUsername.Text);
+                            viewMain.Show();
+                        }
+                        else if (ObjLogin.txtPassword.Text.Trim() == DAOData.Username + "OP123")
+                        {
+                            // Limpiar los campos txtPassword
+                            ObjLogin.txtPassword.Text = "";
+                            ViewCambiarClaveDefecto openForm = new ViewCambiarClaveDefecto();
+                            openForm.ShowDialog();
+                        }
                     }
                     break;
+                //if (ObjLogin.txtPassword.Text.Trim() != DAOData.Username + "OP123")
+                //{
+                //    ObjLogin.Hide();
+                //    ViewMain viewMain = new ViewMain(ObjLogin.txtUsername.Text);
+                //    viewMain.Show();
+                //}
+                //else if (ObjLogin.txtPassword.Text.Trim() == DAOData.Username + "OP123")
+                //{
+                //    // Limpiar los campos txtPassword
+                //    ObjLogin.txtPassword.Text = "";
+                //    ViewCambiarClaveDefecto openForm = new ViewCambiarClaveDefecto();
+                //    openForm.ShowDialog();
+                //}
+                //break;
                 default:
                     MessageBox.Show("Error desconocido", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;

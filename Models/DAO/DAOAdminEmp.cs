@@ -96,7 +96,7 @@ namespace OpticaMultivisual.Models.DAO
                 using (SqlConnection connection = getConnection())
                 {
                     CommonClasses commonClasses = new CommonClasses();
-                    string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username AND password = @password AND rol_ID = 'Administrador'";
+                    string query = "SELECT COUNT(1) FROM ViewLogin WHERE username = @username AND password = @password AND rol_ID = 1";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", commonClasses.ComputeSha256Hash(password));
@@ -132,14 +132,12 @@ namespace OpticaMultivisual.Models.DAO
                 {
                     CommonClasses commonClasses = new CommonClasses();
                     string nuevaClave = username + "OP123";  // Generar la nueva clave por defecto
-                    string query = "UPDATE Usuario SET password = @nuevaClave, userStatus = 1 WHERE username = @username";
+                    string query = "UPDATE Usuario SET password = @nuevaClave, userStatus = 1, userAttempts = 0 WHERE username = @username";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nuevaClave", commonClasses.ComputeSha256Hash(nuevaClave));
                     command.Parameters.AddWithValue("@username", username);
-
                     try
                     {
-                        connection.Open();
                         int rowsAffected = command.ExecuteNonQuery();
                         return rowsAffected > 0;
                     }
@@ -498,7 +496,7 @@ namespace OpticaMultivisual.Models.DAO
                 CommonClasses common = new CommonClasses();
                 //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
                 //el query posee parametros para evitar algún tipo de ataque como SQL Injection
-                string query2 = "INSERT INTO Usuario (username, password, userStatus, SecurityQuestion, SecurityAnswer) VALUES (@username, @password, @userStatus, @SecurityQuestion, @SecurityAnswer)";
+                string query2 = "INSERT INTO Usuario (username, password, userStatus, userAttempts, SecurityQuestion, SecurityAnswer, idNegocio) VALUES (@username, @password, @userStatus, @userAttempts, @SecurityQuestion, @SecurityAnswer, @idNegocio)";
                 //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
                 /*Se le da un valor a los parametros contenidos en el query, es importante mencionar que
@@ -507,8 +505,10 @@ namespace OpticaMultivisual.Models.DAO
                 cmd2.Parameters.AddWithValue("username", User);
                 cmd2.Parameters.AddWithValue("password", Password);
                 cmd2.Parameters.AddWithValue("userStatus", UserStatus);
+                cmd2.Parameters.AddWithValue("userAttempts", UserAttempts);
                 cmd2.Parameters.AddWithValue("SecurityQuestion", SecurityQuestion);
                 cmd2.Parameters.AddWithValue("SecurityAnswer", SecurityAnswer);
+                cmd2.Parameters.AddWithValue("idNegocio", 1);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 /*ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se
                 ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.*/

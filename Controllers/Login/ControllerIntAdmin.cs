@@ -53,6 +53,7 @@ namespace OpticaMultivisual.Controllers.Login
                 string pin = commonClasses.GenerarPin();  // Genera el PIN
                 daoAdminEmp.VerificationCode = commonClasses.ComputeSha256Hash(pin);
                 // Registrar el PIN en la base de datos
+                daoAdminEmp.User = ObjAdmin.txtUserEmp.Text.Trim();
                 bool pinRegistrado = daoAdminEmp.RegistrarPIN();
                 // Obtener el correo del usuario
                 string correoUsuario = daoAdminEmp.ObtenerCorreoPorUsername(ObjAdmin.txtUserEmp.Text.Trim());
