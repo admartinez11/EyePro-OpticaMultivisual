@@ -195,10 +195,12 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 DAOInsert.User = ObjVista.txtUsername.Text.Trim();
                 DAOInsert.Password = commonClasses.ComputeSha256Hash(ObjVista.txtUsername.Text.Trim() + "OP123");
                 DAOInsert.UserStatus = true;
+                DAOInsert.UserAttempts = 0;
                 DAOInsert.SecurityQuestion = ObjVista.cmbSecurityQuestion.Text.Trim();
                 DAOInsert.SecurityAnswer = ObjVista.txtSecurityAnswer.Text.Trim();
                 //Se invoca al método RegistrarUsuario mediante el objeto DAOInsert
                 int valorRetornado = DAOInsert.RegistrarUsuario();
+                MessageBox.Show("Filas afectadas: " + valorRetornado);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
