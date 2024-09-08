@@ -12,6 +12,7 @@ using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Dashboard.Optometrista;
 using OpticaMultivisual.Views.Login;
 using OpticaMultivisual.Views.ScheduleAppointment;
+using OpticaMultivisual.Views.Server;
 
 namespace OpticaMultivisual.Controllers.Dashboard
 {
@@ -37,6 +38,13 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjMain.FormClosing += new FormClosingEventHandler(cerrarPrograma);
             ObjMain.btnVisita.Click += new EventHandler(AbrirFormularioVis);
             ObjMain.btnArticulo.Click += new EventHandler(AbrirFormArt);
+            ObjMain.btnServer.Click += new EventHandler(ConfServer);
+        }
+
+        public void ConfServer(object sender, EventArgs e)
+        {
+            ViewConfirmPassword objview = new ViewConfirmPassword(ObjMain.lblUsername.Text);
+            objview.ShowDialog();
         }
 
         private void AbrirFormArt(object sender, EventArgs e)
@@ -92,10 +100,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 case "Optometrista":
                     ObjMain.btnAdmin.Visible = false;
                     ObjMain.btnVisita.Visible = false;
+                    ObjMain.btnServer.Visible = false;
                     break;
                 case "Empleado":
                     ObjMain.btnAdmin.Visible = false;
                     ObjMain.btnReceta.Visible = false;
+                    ObjMain.btnServer.Visible = false;
                     break;
                 default:
                     break;
