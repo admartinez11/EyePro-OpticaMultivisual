@@ -29,23 +29,26 @@ namespace OpticaMultivisual.Controllers.Article
         }
         public void CargaInicial(object sender, EventArgs e)
         {
-            ObjVistaR.cmbTipoArt.SelectedIndexChanged += new EventHandler(CmbTipoArt_SelectedIndexChanged); // Evento para cambiar el material cuando se selecciona un tipo de artículo
             LlenarComboColor();
             LlenarComboTipoArticulo();
             LlenarComboModelo();
+            ObjVistaR.cmbTipoArt.SelectedIndexChanged += CmbTipoArt_SelectedIndexChanged;
         }
-        void LlenarComboMaterial(string tipoArticulo)
+        void LlenarComboMaterial(int tipoArticuloID)
         {
             DAOArticle daoFuncion = new DAOArticle();
-            DataSet ds = daoFuncion.ObtenerMaterial(tipoArticulo);
+            DataSet ds = daoFuncion.ObtenerMaterial(tipoArticuloID);
             ObjVistaR.cmbMaterialArt.DataSource = ds.Tables["MaterialTipoArt"];
             ObjVistaR.cmbMaterialArt.DisplayMember = "material_nombre";
             ObjVistaR.cmbMaterialArt.ValueMember = "material_ID";
         }
-        void CmbTipoArt_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbTipoArt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string tipoArticuloSeleccionado = ObjVistaR.cmbTipoArt.SelectedValue.ToString();
-            LlenarComboMaterial(tipoArticuloSeleccionado); // Filtrar los materiales según el tipo de artículo seleccionado
+            if (ObjVistaR.cmbTipoArt.SelectedValue != null)
+            {
+                int tipoArticuloID = (int)ObjVistaR.cmbTipoArt.SelectedValue; // Convierte el valor a int
+                LlenarComboMaterial(tipoArticuloID); // Pasa el ID del tipo de artículo
+            }
         }
         void LlenarComboColor()
         {
@@ -245,7 +248,7 @@ namespace OpticaMultivisual.Controllers.Article
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-            } 
+            }
         }
         public void verificarAccion()
         {
@@ -262,4 +265,3 @@ namespace OpticaMultivisual.Controllers.Article
         }
     }
 }
-

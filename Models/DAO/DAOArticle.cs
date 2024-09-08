@@ -84,15 +84,18 @@ namespace OpticaMultivisual.Models.DAO
                 command.Connection.Close();
             }
         }
-        public DataSet ObtenerMaterial(string tipoArticulo)
+        public DataSet ObtenerMaterial(int tipoArticuloID)
         {
             try
             {
                 command.Connection = getConnection();
-                string query = "SELECT Material.material_nombre, Material.material_ID FROM \r\nMaterialTipoArt\r\nINNER JOIN TipoArt on TipoArt.tipoart_ID = MaterialTipoArt.tipoart_ID\r\nINNER JOIN Material on Material.material_ID=MaterialTipoArt.material_ID\r\nWHERE TipoArt.tipoart_ID=@TipoArticulo\r\n";
+                string query = "SELECT Material.material_nombre, Material.material_ID " +
+                               "FROM MaterialTipoArt " +
+                               "INNER JOIN TipoArt ON TipoArt.tipoart_ID = MaterialTipoArt.tipoart_ID " +
+                               "INNER JOIN Material ON Material.material_ID = MaterialTipoArt.material_ID " +
+                               "WHERE TipoArt.tipoart_ID = @TipoArticulo";
                 SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
-                cmdSelect.Parameters.AddWithValue("@TipoArticulo", tipoArticulo);
-                cmdSelect.ExecuteNonQuery();
+                cmdSelect.Parameters.AddWithValue("@TipoArticulo", tipoArticuloID); // Asegúrate de que sea un entero
                 SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
                 DataSet ds = new DataSet();
                 adp.Fill(ds, "MaterialTipoArt");
@@ -108,6 +111,7 @@ namespace OpticaMultivisual.Models.DAO
                 command.Connection.Close();
             }
         }
+
         public DataSet ObtenerColor()
         {
             try
