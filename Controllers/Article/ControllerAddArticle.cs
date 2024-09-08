@@ -27,20 +27,25 @@ namespace OpticaMultivisual.Controllers.Article
             //Métodos iniciales: estos metodos se ejecutan cuando el formulario está cargando
             ObjVistaR.btnAgendarArt.Click += new EventHandler(NuevoArticulo);
         }
-        void CargaInicial(object sender, EventArgs e)
+        public void CargaInicial(object sender, EventArgs e)
         {
-            LlenarComboMaterial();
+            ObjVistaR.cmbTipoArt.SelectedIndexChanged += new EventHandler(CmbTipoArt_SelectedIndexChanged); // Evento para cambiar el material cuando se selecciona un tipo de artículo
             LlenarComboColor();
             LlenarComboTipoArticulo();
             LlenarComboModelo();
         }
-        void LlenarComboMaterial()
+        void LlenarComboMaterial(string tipoArticulo)
         {
             DAOArticle daoFuncion = new DAOArticle();
-            DataSet ds = daoFuncion.ObtenerMaterial();
-            ObjVistaR.cmbMaterialArt.DataSource = ds.Tables["Material"];
+            DataSet ds = daoFuncion.ObtenerMaterial(tipoArticulo);
+            ObjVistaR.cmbMaterialArt.DataSource = ds.Tables["MaterialTipoArt"];
             ObjVistaR.cmbMaterialArt.DisplayMember = "material_nombre";
             ObjVistaR.cmbMaterialArt.ValueMember = "material_ID";
+        }
+        void CmbTipoArt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipoArticuloSeleccionado = ObjVistaR.cmbTipoArt.SelectedValue.ToString();
+            LlenarComboMaterial(tipoArticuloSeleccionado); // Filtrar los materiales según el tipo de artículo seleccionado
         }
         void LlenarComboColor()
         {
