@@ -295,5 +295,42 @@ namespace OpticaMultivisual.Controllers.Helper
                    ContieneAlMenosUnaMinuscula(contrasena) &&
                    ContieneAlMenosUnSimbolo(contrasena);
         }
+
+        public bool ValidarFechaPedido(DateTime pd_fpedido, DateTime pd_fprogramada)
+        {
+            // Validar que la fecha del pedido no sea mayor que la fecha programada
+            if (pd_fpedido > pd_fprogramada)
+            {
+                return false;
+            }
+
+            // Validar que la fecha no sea demasiado antigua (más de 2 años)
+            if (pd_fpedido < DateTime.Today.AddYears(-2))
+            {
+                return false;
+            }
+
+            // Validar que la fecha no sea demasiado antigua (más de 2 años)
+            if (pd_fprogramada < DateTime.Today.AddYears(-2))
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool ValidarArtCant(string art_cant)
+        {
+            // Expresión regular que permite solo números sin un punto
+            string patron = @"^[0-9]+$";
+
+            // Verificar que el número coincida con el patrón
+            return Regex.IsMatch(art_cant, patron);
+        }
+
+        public bool ObservacionValida(string pd_obser)
+        {
+            // Permite letras con tildes, espacios, guiones y apóstrofes.
+            string patron = @"^[a-zA-Z\u00C0-\u017F\s'-]+$";
+            return Regex.IsMatch(pd_obser, patron);
+        }
     }
 }

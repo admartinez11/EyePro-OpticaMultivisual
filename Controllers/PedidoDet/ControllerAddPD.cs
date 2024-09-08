@@ -125,70 +125,110 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
 
         public void UpdateRegister(object sender, EventArgs e)
         {
-            DAOPedidoDet daoUpdate = new DAOPedidoDet();
+            if (ValidarCampos())
+            {
+                DAOPedidoDet daoUpdate = new DAOPedidoDet();
 
-            daoUpdate.pd_ID1 = int.Parse(ObjAddPD.txtpd_ID.Text.ToString());
-            daoUpdate.con_ID1 = ObjAddPD.cbcon_ID.SelectedValue.ToString();
-            daoUpdate.pd_fpedido1 = ObjAddPD.DTPpd_fpedido.Value;
-            daoUpdate.pd_fprogramada1 = ObjAddPD.DTPpd_fprogramada.Value;
-            daoUpdate.art_codigo1 = ObjAddPD.cbart_codigo.SelectedValue.ToString();
-            daoUpdate.art_cant1 = int.Parse(ObjAddPD.txtart_cant.Text.ToString());
-            if (ObjAddPD.cbpd_recetalab.Checked == true)
-            {
-                daoUpdate.pd_recetalab1 = 1;
-            }
-            else
-            {
-                daoUpdate.pd_recetalab1 = 0;
-            }
-            daoUpdate.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
-            int valorRetornado = daoUpdate.ActualizarPD();
-            MessageBox.Show($"valor retornado{valorRetornado}",
-                                "xx",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido actualizado exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjAddPD.Close();
-            }
-            else if (valorRetornado == 2)
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                daoUpdate.pd_ID1 = int.Parse(ObjAddPD.txtpd_ID.Text.ToString());
+                daoUpdate.con_ID1 = ObjAddPD.cbcon_ID.SelectedValue.ToString();
+                daoUpdate.pd_fpedido1 = ObjAddPD.DTPpd_fpedido.Value;
+                daoUpdate.pd_fprogramada1 = ObjAddPD.DTPpd_fprogramada.Value;
+                daoUpdate.art_codigo1 = ObjAddPD.cbart_codigo.SelectedValue.ToString();
+                daoUpdate.art_cant1 = int.Parse(ObjAddPD.txtart_cant.Text.ToString());
+                if (ObjAddPD.cbpd_recetalab.Checked == true)
+                {
+                    daoUpdate.pd_recetalab1 = 1;
+                }
+                else
+                {
+                    daoUpdate.pd_recetalab1 = 0;
+                }
+                daoUpdate.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
+                int valorRetornado = daoUpdate.ActualizarPD();
+                MessageBox.Show($"valor retornado{valorRetornado}",
+                                    "xx",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido actualizado exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjAddPD.Close();
+                }
+                else if (valorRetornado == 2)
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 
-        //private bool ValidarCampos()
-        //{
-        //    CommonClasses commonClasses = new CommonClasses();
+        private bool ValidarCampos()
+        {
+            CommonClasses commonClasses = new CommonClasses();
 
-        //    string art_codigo = ObjAddPD.cbart_codigo.SelectedValue.ToString();
-        //    // Validaciones de campos NOT NULL y longitud de caracteres
-        //    if (string.IsNullOrWhiteSpace(ObjAddPD.cbart_codigo.SelectedValue.Trim()))
-        //    {
-        //        MessageBox.Show("El campo del Código de Artículo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return false;
-        //    }
-        //    else if (ObjAddPD.cbart_codigo.SelectedValue.ToString().Length > 50)
-        //    {
-        //        MessageBox.Show("El campo del Código de Artículo no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return false;
-        //    }
+            if (ObjAddPD.cbcon_ID.SelectedValue == null)
+            {
+                MessageBox.Show("Debe seleccionar una consulta.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
-        //}
+            if (ObjAddPD.cbart_codigo.SelectedValue == null)
+            {
+                MessageBox.Show("Debe seleccionar un Código de Artículo.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(ObjAddPD.txtart_cant.Text.Trim()))
+            {
+                MessageBox.Show("El campo de cantidad es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (ObjAddPD.txtart_cant.Text.Length > 40)
+            {
+                MessageBox.Show("El campo de Artículo Cantidad ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            string art_cant = ObjAddPD.txtart_cant.Text.Trim();
+            if (!commonClasses.ValidarArtCant(art_cant))
+            {
+                MessageBox.Show("El campo de Artículo Cantidad contiene caracteres inválidos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            string pd_obser = ObjAddPD.txtpd_obser.Text.Trim();
+            if (!commonClasses.ObservacionValida(pd_obser))
+            {
+                MessageBox.Show("La observación ingresada contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+
+            DateTime fpedidodet = ObjAddPD.DTPpd_fpedido.Value.Date;
+            DateTime fprogramada = ObjAddPD.DTPpd_fprogramada.Value.Date;
+            if (!commonClasses.ValidarFechaPedido(fpedidodet, fprogramada))
+            {
+                MessageBox.Show("La fecha programada no es válida.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
 
         public void ChargeValues(int pd_ID, int con_ID, DateTime pd_fpedido, DateTime pd_fprogramada, string art_codigo, int art_cant, string pd_obser, int pd_recetalab)
         {
