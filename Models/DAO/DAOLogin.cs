@@ -19,6 +19,166 @@ namespace OpticaMultivisual.Models.DAO
     public class DAOLogin : DTOLogin
     {
         SqlCommand Command = new SqlCommand();
+
+        public int CheckUserStatus(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT userStatus FROM Usuario WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                int userStatus = Convert.ToInt32(cmd.ExecuteScalar());
+                return userStatus;
+            }
+            catch (SqlException sqlex)
+            {
+                // Manejar el error
+                //MessageBox.Show(sqlex.Message);
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                //MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+
+        public void IncrementUserAttempts(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "UPDATE Usuario SET userAttempts = userAttempts + 1 WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException sqlex)
+            {
+                // Manejar el error
+                //MessageBox.Show(sqlex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
+        public int GetUserAttempts(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT userAttempts FROM Usuario WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                int userAttempts = Convert.ToInt32(cmd.ExecuteScalar());
+                return userAttempts;
+            }
+            catch (SqlException sqlex)
+            {
+                // Manejar el error
+                //MessageBox.Show(sqlex.Message);
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                //MessageBox.Show(ex.Message);
+                return -1;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+        public bool HasVerificationCode(string username)
+        {
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    // Consulta para verificar si el usuario tiene un código de verificación
+                    string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username AND VerificationCode IS NOT NULL";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    // Ejecutar la consulta y obtener el resultado
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    // Si cuenta es mayor que 0, significa que existe un VerificationCode
+                    return count > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepción en caso de error
+                Console.WriteLine("Error: " + ex.Message);
+                return false; // En caso de error, devuelve false por defecto
+            }
+        }
+
+        public void DisableUser(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "UPDATE Usuario SET userStatus = 0 WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException sqlex)
+            {
+                // Manejar el error
+                //MessageBox.Show(sqlex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
+        public void ResetUserAttempts(string username)
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "UPDATE Usuario SET userAttempts = 0 WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException sqlex)
+            {
+                // Manejar el error
+                //MessageBox.Show(sqlex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Manejar el error
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
         public int ValidarLogin()
         {
             try

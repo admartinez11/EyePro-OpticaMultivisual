@@ -115,12 +115,11 @@ namespace OpticaMultivisual.Controllers.Dashboard
         public void InitialCharge(object sender, EventArgs e)
         {
             DataSet ds = daoAdminEmp.LlenarCombo();
-
             // Llenar combobox Rol
             ObjAddUser.comboRole.DataSource = ds.Tables["Rol"];
             ObjAddUser.comboRole.ValueMember = "rol_ID";
             ObjAddUser.comboRole.DisplayMember = "rol_nombre";
-
+            //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
             if (accion == 2)
             {
                 ObjAddUser.comboRole.Text = role;
@@ -181,6 +180,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 daoAdminEmp.User = ObjAddUser.txtUsername.Text.Trim();
                 daoAdminEmp.Password = commonClasses.ComputeSha256Hash(ObjAddUser.txtUsername.Text.Trim() + "OP123");
                 daoAdminEmp.UserStatus = true;
+                daoAdminEmp.UserAttempts = 0;
                 daoAdminEmp.SecurityQuestion = ObjAddUser.cmbSecurityQuestion.Text.Trim();
                 daoAdminEmp.SecurityAnswer = ObjAddUser.txtSecurityAnswer.Text.Trim();
                 // Se invoca al método RegistrarUsuario y guarda el valor retornado
@@ -190,6 +190,10 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 {
                     MessageBox.Show("Los datos han sido registrados exitosamente",
                                     "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    MessageBox.Show($"Usuario: {ObjAddUser.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjAddUser.txtUsername.Text.Trim()}OP123",
+                                    "Credenciales de acceso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     ObjAddUser.Close();

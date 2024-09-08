@@ -22,7 +22,27 @@ namespace OpticaMultivisual.Controllers.FirstUse
             ObjVista = Vista;
             Vista.Load += new EventHandler(CargarCombos);
             Vista.btnAdd.Click += new EventHandler(RegistrarPrimerUsuario);
+            Vista.toolStripButton1.Click += new EventHandler(Exit);
             Vista.comboRole.Enabled = false;
+        }
+
+        private void InitializeSecurityQuestions()
+        {
+            List<string> securityQuestions = new List<string>
+        {
+            "¿Cuál es tu color favorito?",
+            "¿En qué ciudad naciste?",
+            "¿Cuál es tu deporte favorito?",
+            "¿Cuál es tu comida favorita?",
+            "¿Cuál es tu canción favorita?"
+        };
+
+            ObjVista.cmbSecurityQuestion.DataSource = securityQuestions;
+        }
+
+        void Exit(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         void CargarCombos(object sender, EventArgs e)
@@ -32,9 +52,10 @@ namespace OpticaMultivisual.Controllers.FirstUse
             //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
             DataSet ds = objAdmin.LlenarCombo();
             //Llenar combobox tbRole
-            ObjVista.comboRole.DataSource = ds.Tables["tbRole"];
-            ObjVista.comboRole.ValueMember = "roleId";
-            ObjVista.comboRole.DisplayMember = "roleName";
+            ObjVista.comboRole.DataSource = ds.Tables["Rol"];
+            ObjVista.comboRole.ValueMember = "rol_Id";
+            ObjVista.comboRole.DisplayMember = "rol_nombre";
+            InitializeSecurityQuestions();
         }
 
         void RegistrarPrimerUsuario(object sender, EventArgs e)
@@ -185,7 +206,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                                     "Proceso completado",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    MessageBox.Show($"Usuario administrador: {ObjVista.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjVista.txtUsername.Text.Trim()}PU123",
+                    MessageBox.Show($"Usuario administrador: {ObjVista.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjVista.txtUsername.Text.Trim()}OP123",
                                     "Credenciales de acceso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);

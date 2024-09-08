@@ -26,6 +26,7 @@ namespace OpticaMultivisual.Models.DTO
         private string securityQuestion;
         private string securityAnswer;
         private string verificationCode;
+        private int userAttempts;
         public string SecurityQuestion { get => securityQuestion; set => securityQuestion = value; }
         public string SecurityAnswer { get => securityAnswer; set => securityAnswer = value; }
         // Propiedades públicas para acceder a los campos privados
@@ -44,5 +45,6 @@ namespace OpticaMultivisual.Models.DTO
         public bool UserStatus { get => userStatus; set => userStatus = value; }
         public int Rol { get => rol; set => rol = value; }
         public string VerificationCode { get => verificationCode; set => verificationCode = value; }
+        public int UserAttempts { get => userAttempts; set => userAttempts = value; }
     }
 }
