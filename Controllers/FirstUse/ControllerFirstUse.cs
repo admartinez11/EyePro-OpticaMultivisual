@@ -109,10 +109,10 @@ namespace OpticaMultivisual.Controllers.FirstUse
                         bool respuesta = DAOGuardar.RegistrarNegocio();
                         if (respuesta != false)
                         {
-                            MessageBox.Show($"Tu biblioteca ha sido registrada exitosamente.", "Paso 1 completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Tu negocio ha sido registrada exitosamente.", "Paso 1 completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ViewCreateFirstUser nextForm = new ViewCreateFirstUser();
                             nextForm.Show();
-                            ObjVista.Dispose();
+                            ObjVista.Hide();
                         }
                         else
                         {
