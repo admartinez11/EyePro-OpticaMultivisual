@@ -84,17 +84,18 @@ namespace OpticaMultivisual.Models.DAO
                 command.Connection.Close();
             }
         }
-        public DataSet ObtenerMaterial()
+        public DataSet ObtenerMaterial(string tipoArticulo)
         {
             try
             {
                 command.Connection = getConnection();
-                string query = "SELECT material_ID, material_nombre FROM Material";
+                string query = "SELECT Material.material_nombre, Material.material_ID FROM \r\nMaterialTipoArt\r\nINNER JOIN TipoArt on TipoArt.tipoart_ID = MaterialTipoArt.tipoart_ID\r\nINNER JOIN Material on Material.material_ID=MaterialTipoArt.material_ID\r\nWHERE TipoArt.tipoart_ID=@TipoArticulo\r\n";
                 SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
+                cmdSelect.Parameters.AddWithValue("@TipoArticulo", tipoArticulo);
                 cmdSelect.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "Material");
+                adp.Fill(ds, "MaterialTipoArt");
                 return ds;
             }
             catch (Exception ex)
