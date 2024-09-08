@@ -148,6 +148,9 @@ namespace OpticaMultivisual.Controllers.Dashboard
             {
                 formulario.BringToFront();
             }
+            // Forzar actualización del tamaño al agregar el formulario al panel
+            currentForm.Dock = DockStyle.Fill;
+            currentForm.Refresh();
         }
 
         private void AbrirFormularioAdminUsuarios(object sender, EventArgs e)

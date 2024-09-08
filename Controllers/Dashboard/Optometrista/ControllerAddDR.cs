@@ -124,6 +124,13 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                     MessageBoxIcon.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("EPV006 - Los datos no pudieron ser registrados",
+                                    "Proceso incompleto",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+            }
         }
 
         public void UpdateRegister(object sender, EventArgs e)
@@ -181,7 +188,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private bool ValidarCampos()
         {
             CommonClasses commonClasses = new CommonClasses();
-
             string OD_esfera = ObjAddDR.txtODEsfera.Text.Trim();
             // Si está vacío, permitimos la inserción
             if (string.IsNullOrEmpty(OD_esfera))
@@ -204,8 +210,8 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             {
                 return true;
             }
-            // Si no está vacío, validamos el punto decimal
-            if (!OD_cilindro.Contains("."))
+            //Si no está vacío, validamos el punto decimal
+            else if (!OD_cilindro.Contains("."))
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Cilindro",
@@ -213,6 +219,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                         MessageBoxIcon.Warning);
                 return false;
             }
+
             // Validamos la cantidad de puntos decimales
             int dotCount = OD_cilindro.Split('.').Length - 1;
             if (dotCount != 1)  // Verifica si no hay o hay más de un punto decimal
@@ -222,7 +229,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                 return false;
-            }
+            } 
 
             string OD_eje = ObjAddDR.txtODEje.Text.Trim();
             // Si está vacío, permitimos la inserción
@@ -527,13 +534,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             else if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODEsfera.Text.Trim()))
             {
                 MessageBox.Show("El campo de Ojo Derecho Esfera contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODCilindro.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Derecho Cilindro contiene caracteres no válidos. Solo se permiten puntos y números.",
                                 "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
