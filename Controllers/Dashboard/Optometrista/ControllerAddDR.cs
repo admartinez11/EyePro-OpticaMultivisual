@@ -194,8 +194,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             {
                 return true;
             }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OD_esfera, @"^\d+$"))
+            else if (!Regex.IsMatch(OD_esfera, @"^\d+$")) // Si no está vacío, validamos el punto decimal
             {
                 MessageBox.Show("El tipo de valores ingresados son incorrectos",
                                         "Validación de Ojo Derecho Esfera",
@@ -229,7 +228,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                 return false;
-            } 
+            }
 
             string OD_eje = ObjAddDR.txtODEje.Text.Trim();
             // Si está vacío, permitimos la inserción
