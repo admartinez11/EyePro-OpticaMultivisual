@@ -34,14 +34,14 @@ namespace OpticaMultivisual.Controllers
         {
             DAORegistro ObjRegistro = new DAORegistro();
             DataSet ds = ObjRegistro.ObtenerInfoClientes();
-            ObjVista.dgvInfoClientes.DataSource = ds.Tables["Cliente"];
+            ObjVista.dgvInfoClientes.DataSource = ds.Tables["ViewClientes"];
 
         }
         public void BuscarClientesControlador(object sender, EventArgs e)
         {
             DAORegistro Objadminregistro = new DAORegistro();
             DataSet ds = Objadminregistro.BuscarClientes(ObjVista.txtBuscar.Text.Trim());
-            ObjVista.dgvInfoClientes.DataSource = ds.Tables["Cliente"];
+            ObjVista.dgvInfoClientes.DataSource = ds.Tables["ViewClientes"];
         }
         public void AgregarCliente(object sender, EventArgs e)
         {
