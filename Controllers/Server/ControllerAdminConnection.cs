@@ -83,7 +83,7 @@ namespace OpticaMultivisual.Controllers.Server
             {
                 // Crear una instancia de XmlDocument para trabajar con XML
                 XmlDocument doc = new XmlDocument();
-                // Crear una declaración XML con versión 1.0 y codificación UTF-8
+                // Crear una declaración XML con versión 1.0 y codificación UTF-8 (admite caracteres especiales)
                 XmlDeclaration decl = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
                 doc.AppendChild(decl);
                 // Crear el elemento raíz del XML
