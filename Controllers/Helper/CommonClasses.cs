@@ -60,6 +60,7 @@ namespace OpticaMultivisual.Controllers.Helper
         public void LeerArchivoXMLConexion()
         {
             // Construir la ruta del archivo XML combinando el directorio actual con el nombre del archivo
+            /*Toma el directorio actual junto con el nombre del archivo*/
             string path = Path.Combine(Directory.GetCurrentDirectory().ToString(), "config_server.xml");
             // Verificar si el archivo XML existe en la ruta especificada
             if (File.Exists(path))
@@ -92,8 +93,8 @@ namespace OpticaMultivisual.Controllers.Helper
                 ViewAdminConnection openForm = new ViewAdminConnection(1);
                 openForm.ShowDialog();
                 // Mostrar el formulario de inicio de sesión (ViewLogin)
-                ViewLogin openFormLog = new ViewLogin();
-                openFormLog.Show();
+                //ViewLogin openFormLog = new ViewLogin();
+                //openFormLog.Show();
             }
         }
 
