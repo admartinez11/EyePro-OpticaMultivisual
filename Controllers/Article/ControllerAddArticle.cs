@@ -27,20 +27,28 @@ namespace OpticaMultivisual.Controllers.Article
             //Métodos iniciales: estos metodos se ejecutan cuando el formulario está cargando
             ObjVistaR.btnAgendarArt.Click += new EventHandler(NuevoArticulo);
         }
-        void CargaInicial(object sender, EventArgs e)
+        public void CargaInicial(object sender, EventArgs e)
         {
-            LlenarComboMaterial();
             LlenarComboColor();
             LlenarComboTipoArticulo();
             LlenarComboModelo();
+            ObjVistaR.cmbTipoArt.SelectedIndexChanged += CmbTipoArt_SelectedIndexChanged;
         }
-        void LlenarComboMaterial()
+        void LlenarComboMaterial(int tipoArticuloID)
         {
             DAOArticle daoFuncion = new DAOArticle();
-            DataSet ds = daoFuncion.ObtenerMaterial();
-            ObjVistaR.cmbMaterialArt.DataSource = ds.Tables["Material"];
+            DataSet ds = daoFuncion.ObtenerMaterial(tipoArticuloID);
+            ObjVistaR.cmbMaterialArt.DataSource = ds.Tables["MaterialTipoArt"];
             ObjVistaR.cmbMaterialArt.DisplayMember = "material_nombre";
             ObjVistaR.cmbMaterialArt.ValueMember = "material_ID";
+        }
+        private void CmbTipoArt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ObjVistaR.cmbTipoArt.SelectedValue != null)
+            {
+                int tipoArticuloID = (int)ObjVistaR.cmbTipoArt.SelectedValue; // Convierte el valor a int
+                LlenarComboMaterial(tipoArticuloID); // Pasa el ID del tipo de artículo
+            }
         }
         void LlenarComboColor()
         {
@@ -240,7 +248,7 @@ namespace OpticaMultivisual.Controllers.Article
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-            } 
+            }
         }
         public void verificarAccion()
         {

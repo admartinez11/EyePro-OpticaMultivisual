@@ -43,7 +43,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Error al obtener el correo electrónico: {ex.Message}",
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -155,8 +155,8 @@ namespace OpticaMultivisual.Models.DAO
             {
                 return false;
             }
-            finally 
-            { 
+            finally
+            {
                 getConnection().Close();
             }
         }
@@ -214,7 +214,7 @@ namespace OpticaMultivisual.Models.DAO
             catch (Exception)
             {
                 return false;
-            } 
+            }
             finally
             {
                 getConnection().Close();
@@ -242,7 +242,7 @@ namespace OpticaMultivisual.Models.DAO
                 catch (Exception ex)
                 {
                     // Manejo de excepciones
-                    MessageBox.Show($"Error al almacenar el código de verificación: {ex.Message}",
+                    MessageBox.Show("EPV008 - No se pudo almacenar el código de verificación",
                                     "Error",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -302,11 +302,11 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Error de SQL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV009 - Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Excepción capturada: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -349,12 +349,12 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException ex)
             {
                 // Captura y maneja excepciones de SQL
-                MessageBox.Show($"Error de SQL: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV009 - Error al conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
                 // Captura cualquier otra excepción
-                MessageBox.Show($"Excepción capturada: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV001 - Error inesperado", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -406,7 +406,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al actualizar la pregunta de seguridad: {ex.Message}");
+                MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente");
                 return false;
             }
         }

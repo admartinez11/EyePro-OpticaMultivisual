@@ -65,7 +65,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show($"Error al obtener el Código de Artículo, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -91,7 +91,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show($"Error al obtener la Consulta, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally

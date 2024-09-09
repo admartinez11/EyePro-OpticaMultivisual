@@ -14,6 +14,7 @@ using OpticaMultivisual.Views.Dashboard;
 using OpticaMultivisual.Views.Consultas;
 using OpticaMultivisual.Views.FirstUse;
 using OpticaMultivisual.Views.Dashboard.PedidoDet;
+using OpticaMultivisual.Views.Article;
 
 namespace OpticaMultivisual
 {
@@ -29,7 +30,7 @@ namespace OpticaMultivisual
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar y ejecutar el primer formulario
-            Application.Run(new VerConsulta());
+            Application.Run(new ViewAdminArticle());
         }
     }
 

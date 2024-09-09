@@ -87,7 +87,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV006 - No se pudieron registrar los datos", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally

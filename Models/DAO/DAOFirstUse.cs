@@ -31,12 +31,12 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Excepcion SQL: {ex.Message}", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV009 - Error al conectar con la base de datos", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Excepcion SQL: {ex.Message}", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV009 - Error al conectar con la base de datos", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
