@@ -33,7 +33,7 @@ namespace OpticaMultivisual.Controllers.Consulta
         {
             DAOConsulta dAOConsulta = new DAOConsulta();
             DataSet ds = dAOConsulta.ObtenerInfoConsulta();
-            ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["Consulta"];
+            ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["VistaConsultas"];
 
         }
         public void BuscarConsultaControlador(object sender, EventArgs e)

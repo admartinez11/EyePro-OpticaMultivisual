@@ -34,7 +34,7 @@ namespace OpticaMultivisual.Controllers
         {
             DAORegistro ObjRegistro = new DAORegistro();
             DataSet ds = ObjRegistro.ObtenerInfoClientes();
-            ObjVista.dgvInfoClientes.DataSource = ds.Tables["ViewClientes"];
+            ObjVista.dgvInfoClientes.DataSource = ds.Tables["VistaClientes"];
 
         }
         public void BuscarClientesControlador(object sender, EventArgs e)
