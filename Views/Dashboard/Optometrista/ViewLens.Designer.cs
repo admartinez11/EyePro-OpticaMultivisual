@@ -36,20 +36,23 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvLens = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEliminar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEditar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.dgvLens = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLens)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLens)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -88,19 +91,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1185, 742);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // dgvLens
-            // 
-            this.dgvLens.AllowUserToAddRows = false;
-            this.dgvLens.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.dgvLens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLens.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLens.Location = new System.Drawing.Point(4, 127);
-            this.dgvLens.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvLens.Name = "dgvLens";
-            this.dgvLens.RowHeadersWidth = 51;
-            this.dgvLens.Size = new System.Drawing.Size(1177, 412);
-            this.dgvLens.TabIndex = 47;
             // 
             // tableLayoutPanel3
             // 
@@ -493,6 +483,47 @@
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // dgvLens
+            // 
+            this.dgvLens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvLens.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvLens.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.dgvLens.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvLens.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLens.ColumnHeadersHeight = 30;
+            this.dgvLens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvLens.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLens.EnableHeadersVisualStyles = false;
+            this.dgvLens.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.dgvLens.Location = new System.Drawing.Point(3, 125);
+            this.dgvLens.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLens.Name = "dgvLens";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLens.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLens.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvLens.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLens.Size = new System.Drawing.Size(1179, 416);
+            this.dgvLens.TabIndex = 61;
+            // 
             // ViewLens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -506,9 +537,9 @@
             this.Text = "ViewLens";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLens)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLens)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,12 +548,12 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        public System.Windows.Forms.DataGridView dgvLens;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEliminar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEditar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        public System.Windows.Forms.DataGridView dgvLens;
     }
 }
