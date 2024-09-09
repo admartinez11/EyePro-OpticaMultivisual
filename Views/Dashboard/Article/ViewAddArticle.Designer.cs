@@ -130,7 +130,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel6);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
             this.bunifuPanel1.Location = new System.Drawing.Point(168, 87);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(690, 442);
@@ -146,7 +146,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel7.Controls.Add(this.txtUrlImagenArt, 0, 1);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(34, 172);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.843444F));
@@ -189,7 +189,7 @@
             this.txtUrlImagenArt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUrlImagenArt.Lines = new string[0];
             this.txtUrlImagenArt.Location = new System.Drawing.Point(2, 5);
-            this.txtUrlImagenArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUrlImagenArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtUrlImagenArt.MaxLength = 32767;
             this.txtUrlImagenArt.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUrlImagenArt.Modified = false;
@@ -215,7 +215,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUrlImagenArt.OnIdleState = stateProperties4;
-            this.txtUrlImagenArt.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUrlImagenArt.Padding = new System.Windows.Forms.Padding(2);
             this.txtUrlImagenArt.PasswordChar = '\0';
             this.txtUrlImagenArt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUrlImagenArt.PlaceholderText = "URL de la imagen";
@@ -250,7 +250,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txtComentariosArt, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 219);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.92105F));
@@ -291,7 +291,7 @@
             this.txtDescArt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescArt.Lines = new string[0];
             this.txtDescArt.Location = new System.Drawing.Point(8, 2);
-            this.txtDescArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescArt.MaxLength = 32767;
             this.txtDescArt.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescArt.Modified = false;
@@ -317,7 +317,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtDescArt.OnIdleState = stateProperties8;
-            this.txtDescArt.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescArt.Padding = new System.Windows.Forms.Padding(2);
             this.txtDescArt.PasswordChar = '\0';
             this.txtDescArt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDescArt.PlaceholderText = "Descripción del producto";
@@ -369,7 +369,7 @@
             this.txtComentariosArt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComentariosArt.Lines = new string[0];
             this.txtComentariosArt.Location = new System.Drawing.Point(8, 85);
-            this.txtComentariosArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtComentariosArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtComentariosArt.MaxLength = 32767;
             this.txtComentariosArt.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComentariosArt.Modified = false;
@@ -395,7 +395,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtComentariosArt.OnIdleState = stateProperties12;
-            this.txtComentariosArt.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtComentariosArt.Padding = new System.Windows.Forms.Padding(2);
             this.txtComentariosArt.PasswordChar = '\0';
             this.txtComentariosArt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtComentariosArt.PlaceholderText = "Comentarios del producto";
@@ -428,7 +428,7 @@
             this.tableLayoutPanel5.Controls.Add(this.btnActualizarArt, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAgendarArt, 2, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 157);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
@@ -628,7 +628,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(34, 15);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
@@ -674,7 +674,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtMedidas, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(34, 71);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.78788F));
@@ -761,7 +761,7 @@
             this.cmbMaterialArt.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbMaterialArt.ItemTopMargin = 3;
             this.cmbMaterialArt.Location = new System.Drawing.Point(2, 63);
-            this.cmbMaterialArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMaterialArt.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMaterialArt.Name = "cmbMaterialArt";
             this.cmbMaterialArt.Size = new System.Drawing.Size(120, 32);
             this.cmbMaterialArt.TabIndex = 11;
@@ -853,7 +853,7 @@
             this.cmbTipoArt.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbTipoArt.ItemTopMargin = 3;
             this.cmbTipoArt.Location = new System.Drawing.Point(316, 63);
-            this.cmbTipoArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTipoArt.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoArt.Name = "cmbTipoArt";
             this.cmbTipoArt.Size = new System.Drawing.Size(120, 32);
             this.cmbTipoArt.TabIndex = 13;
@@ -938,7 +938,7 @@
             this.txtArCodigo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtArCodigo.Lines = new string[0];
             this.txtArCodigo.Location = new System.Drawing.Point(2, 2);
-            this.txtArCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtArCodigo.MaxLength = 32767;
             this.txtArCodigo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtArCodigo.Modified = false;
@@ -964,7 +964,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtArCodigo.OnIdleState = stateProperties16;
-            this.txtArCodigo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArCodigo.Padding = new System.Windows.Forms.Padding(2);
             this.txtArCodigo.PasswordChar = '\0';
             this.txtArCodigo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtArCodigo.PlaceholderText = "Código";
@@ -1016,7 +1016,7 @@
             this.txtArNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtArNombre.Lines = new string[0];
             this.txtArNombre.Location = new System.Drawing.Point(126, 2);
-            this.txtArNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtArNombre.MaxLength = 32767;
             this.txtArNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtArNombre.Modified = false;
@@ -1042,7 +1042,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtArNombre.OnIdleState = stateProperties20;
-            this.txtArNombre.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArNombre.Padding = new System.Windows.Forms.Padding(2);
             this.txtArNombre.PasswordChar = '\0';
             this.txtArNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtArNombre.PlaceholderText = "Nombre";
@@ -1094,7 +1094,7 @@
             this.txtPUnitario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPUnitario.Lines = new string[0];
             this.txtPUnitario.Location = new System.Drawing.Point(336, 2);
-            this.txtPUnitario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPUnitario.Margin = new System.Windows.Forms.Padding(2);
             this.txtPUnitario.MaxLength = 32767;
             this.txtPUnitario.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPUnitario.Modified = false;
@@ -1120,7 +1120,7 @@
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPUnitario.OnIdleState = stateProperties24;
-            this.txtPUnitario.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPUnitario.Padding = new System.Windows.Forms.Padding(2);
             this.txtPUnitario.PasswordChar = '\0';
             this.txtPUnitario.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPUnitario.PlaceholderText = "Precio Unitario";
@@ -1198,7 +1198,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMedidas.OnIdleState = stateProperties28;
-            this.txtMedidas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMedidas.Padding = new System.Windows.Forms.Padding(2);
             this.txtMedidas.PasswordChar = '\0';
             this.txtMedidas.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMedidas.PlaceholderText = "Medidas";
@@ -1241,7 +1241,7 @@
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(148, 81);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1255,7 +1255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewAddArticle";
             this.Text = "ViewAddArticle";
             this.tableLayoutPanel1.ResumeLayout(false);
