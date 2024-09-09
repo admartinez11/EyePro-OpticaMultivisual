@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRecuperaciónPass));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,7 +77,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.075235F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.22257F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.015674F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(446, 353);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(446, 352);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -96,7 +96,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(408, 315);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(408, 314);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // btnInterAdmin
@@ -118,11 +118,11 @@
             this.btnInterAdmin.ColorContrastOnClick = 45;
             this.btnInterAdmin.ColorContrastOnHover = 45;
             this.btnInterAdmin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnInterAdmin.CustomizableEdges = borderEdges9;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnInterAdmin.CustomizableEdges = borderEdges1;
             this.btnInterAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInterAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnInterAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -181,7 +181,7 @@
             this.btnInterAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnInterAdmin.OnPressedState.IconLeftImage = null;
             this.btnInterAdmin.OnPressedState.IconRightImage = null;
-            this.btnInterAdmin.Size = new System.Drawing.Size(402, 75);
+            this.btnInterAdmin.Size = new System.Drawing.Size(402, 74);
             this.btnInterAdmin.TabIndex = 4;
             this.btnInterAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInterAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -208,11 +208,11 @@
             this.btnAdmin.ColorContrastOnClick = 45;
             this.btnAdmin.ColorContrastOnHover = 45;
             this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btnAdmin.CustomizableEdges = borderEdges10;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnAdmin.CustomizableEdges = borderEdges2;
             this.btnAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -298,11 +298,11 @@
             this.BtnSecurityQ.ColorContrastOnClick = 45;
             this.BtnSecurityQ.ColorContrastOnHover = 45;
             this.BtnSecurityQ.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.BtnSecurityQ.CustomizableEdges = borderEdges11;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.BtnSecurityQ.CustomizableEdges = borderEdges3;
             this.BtnSecurityQ.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnSecurityQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnSecurityQ.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -388,11 +388,11 @@
             this.BtnGmail.ColorContrastOnClick = 45;
             this.BtnGmail.ColorContrastOnHover = 45;
             this.BtnGmail.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.BtnGmail.CustomizableEdges = borderEdges12;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.BtnGmail.CustomizableEdges = borderEdges4;
             this.BtnGmail.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnGmail.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnGmail.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -466,6 +466,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "ViewRecuperaciónPass";

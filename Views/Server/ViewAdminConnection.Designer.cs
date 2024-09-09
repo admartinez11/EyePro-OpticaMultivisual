@@ -224,7 +224,7 @@
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
             this.btnGuardar.Size = new System.Drawing.Size(205, 34);
-            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
@@ -344,7 +344,7 @@
             this.txtSqlPass.ShortcutsEnabled = true;
             this.txtSqlPass.Size = new System.Drawing.Size(204, 28);
             this.txtSqlPass.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSqlPass.TabIndex = 14;
+            this.txtSqlPass.TabIndex = 3;
             this.txtSqlPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSqlPass.TextMarginBottom = 0;
             this.txtSqlPass.TextMarginLeft = 1;
@@ -421,7 +421,7 @@
             this.txtSqlAuth.ShortcutsEnabled = true;
             this.txtSqlAuth.Size = new System.Drawing.Size(204, 28);
             this.txtSqlAuth.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSqlAuth.TabIndex = 13;
+            this.txtSqlAuth.TabIndex = 2;
             this.txtSqlAuth.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSqlAuth.TextMarginBottom = 0;
             this.txtSqlAuth.TextMarginLeft = 1;
@@ -456,7 +456,7 @@
             this.rdDeshabilitarWindows.Location = new System.Drawing.Point(13, 69);
             this.rdDeshabilitarWindows.Name = "rdDeshabilitarWindows";
             this.rdDeshabilitarWindows.Size = new System.Drawing.Size(240, 17);
-            this.rdDeshabilitarWindows.TabIndex = 10;
+            this.rdDeshabilitarWindows.TabIndex = 5;
             this.rdDeshabilitarWindows.Text = "Desahibilitar seguridad integrada de Windows";
             this.rdDeshabilitarWindows.UseVisualStyleBackColor = true;
             // 
@@ -467,7 +467,7 @@
             this.rdHabilitarWindows.Location = new System.Drawing.Point(13, 46);
             this.rdHabilitarWindows.Name = "rdHabilitarWindows";
             this.rdHabilitarWindows.Size = new System.Drawing.Size(221, 17);
-            this.rdHabilitarWindows.TabIndex = 10;
+            this.rdHabilitarWindows.TabIndex = 4;
             this.rdHabilitarWindows.TabStop = true;
             this.rdHabilitarWindows.Text = "Habilitar seguridad integrada de Windows";
             this.rdHabilitarWindows.UseVisualStyleBackColor = true;
@@ -563,7 +563,7 @@
             this.txtDatabase.ShortcutsEnabled = true;
             this.txtDatabase.Size = new System.Drawing.Size(484, 32);
             this.txtDatabase.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDatabase.TabIndex = 12;
+            this.txtDatabase.TabIndex = 1;
             this.txtDatabase.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDatabase.TextMarginBottom = 0;
             this.txtDatabase.TextMarginLeft = 1;
@@ -640,7 +640,7 @@
             this.txtServer.ShortcutsEnabled = true;
             this.txtServer.Size = new System.Drawing.Size(484, 32);
             this.txtServer.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtServer.TabIndex = 11;
+            this.txtServer.TabIndex = 0;
             this.txtServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtServer.TextMarginBottom = 0;
             this.txtServer.TextMarginLeft = 1;
@@ -679,9 +679,10 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAdminConnection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ViewAdminConnection";
+            this.Text = "Administrar conexion";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

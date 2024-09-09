@@ -129,7 +129,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(241, 32);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 0;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMarginBottom = 0;
             this.txtPassword.TextMarginLeft = 1;
@@ -220,7 +220,7 @@
             this.btnConfirmar.OnPressedState.IconLeftImage = null;
             this.btnConfirmar.OnPressedState.IconRightImage = null;
             this.btnConfirmar.Size = new System.Drawing.Size(110, 31);
-            this.btnConfirmar.TabIndex = 15;
+            this.btnConfirmar.TabIndex = 1;
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConfirmar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnConfirmar.TextMarginLeft = 0;

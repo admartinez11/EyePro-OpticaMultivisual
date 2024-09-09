@@ -103,10 +103,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAOInsert.OI_AP1 = ObjAddDR.txtOIap.Text.Trim();
 
                 int valorRetornado = DAOInsert.InsertarDR();
-                MessageBox.Show($"Valor Retonado{valorRetornado}",
-                                    "xx",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -188,530 +184,344 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private bool ValidarCampos()
         {
             CommonClasses commonClasses = new CommonClasses();
+            //OD
             string OD_esfera = ObjAddDR.txtODEsfera.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_esfera))
-            {
-                return true;
-            }
-            else if (!Regex.IsMatch(OD_esfera, @"^\d+$")) // Si no está vacío, validamos el punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho Esfera",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_cilindro = ObjAddDR.txtODCilindro.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_cilindro))
-            {
-                return true;
-            }
-            //Si no está vacío, validamos el punto decimal
-            else if (!OD_cilindro.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho Cilindro",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // Validamos la cantidad de puntos decimales
-            int dotCount = OD_cilindro.Split('.').Length - 1;
-            if (dotCount != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Derecho Cilindro",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_eje = ObjAddDR.txtODEje.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_eje))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OD_eje.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho Eje",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount1 = OD_eje.Split('.').Length - 1;
-            if (dotCount1 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Derecho Eje",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_prisma = ObjAddDR.txtODPrisma.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_prisma))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OD_prisma, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho Prisma",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_adicion = ObjAddDR.txtODAdicion.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_adicion))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OD_adicion, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho Adicion",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_DP = ObjAddDR.txtODdp.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_DP))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OD_DP.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho DP",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount2 = OD_DP.Split('.').Length - 1;
-            if (dotCount2 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Derecho DP",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_AO = ObjAddDR.txtODao.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_AO))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OD_AO, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho AO",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OD_AP = ObjAddDR.txtODap.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OD_AP))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OD_AP.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Derecho AP",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount3 = OD_AP.Split('.').Length - 1;
-            if (dotCount3 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Derecho AP",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
-            string OI_esfera = ObjAddDR.txtODEsfera.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_esfera))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OI_esfera, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo Esfera",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
+            //OI
+            string OI_esfera = ObjAddDR.txtOIEsfera.Text.Trim();
             string OI_cilindro = ObjAddDR.txtOICilindro.Text.Trim();
-
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_cilindro))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OI_cilindro.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo Cilindro",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount4 = OD_cilindro.Split('.').Length - 1;
-            if (dotCount4 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Izquierdo Cilindro",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_eje = ObjAddDR.txtOIEje.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_eje))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OI_eje.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo Eje",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount5 = OI_eje.Split('.').Length - 1;
-            if (dotCount5 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Izquierdo Eje",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_prisma = ObjAddDR.txtOIPrisma.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_prisma))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OI_prisma, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo Prisma",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_adicion = ObjAddDR.txtOIAdicion.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_adicion))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OI_adicion, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo Adicion",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_DP = ObjAddDR.txtOIdp.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_DP))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OI_DP.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo DP",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount6 = OI_DP.Split('.').Length - 1;
-            if (dotCount6 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Izquierdo DP",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_AO = ObjAddDR.txtOIao.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_AO))
-            {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!Regex.IsMatch(OI_AO, @"^\d+$"))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo AO",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-
             string OI_AP = ObjAddDR.txtOIap.Text.Trim();
-            // Si está vacío, permitimos la inserción
-            if (string.IsNullOrEmpty(OI_AP))
+
+            // Validación de Ojo Derecho Esfera
+            if (!string.IsNullOrEmpty(OD_esfera))
             {
-                return true;
-            }
-            // Si no está vacío, validamos el punto decimal
-            if (!OI_AP.Contains("."))
-            {
-                MessageBox.Show("El tipo de valores ingresados son incorrectos",
-                                        "Validación de Ojo Izquierdo AP",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-                return false;
-            }
-            // Validamos la cantidad de puntos decimales
-            int dotCount7 = OI_AP.Split('.').Length - 1;
-            if (dotCount7 != 1)  // Verifica si no hay o hay más de un punto decimal
-            {
-                MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.",
-                                "Validación de Ojo Izquierdo AP",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                return false;
+                if (!Regex.IsMatch(OD_esfera, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho Esfera", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_esfera.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtODEsfera.Text.Length > 5)
+            // Validación de Ojo Derecho Cilindro
+            if (!string.IsNullOrEmpty(OD_cilindro))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODEsfera.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Derecho Esfera contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OD_cilindro))
-            {
-                return false;
+                if (!OD_cilindro.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho Cilindro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount = OD_cilindro.Split('.').Length - 1;
+                if (dotCount != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Derecho Cilindro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_cilindro.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODEje.Text.Trim()))
+            // Validación de Ojo Derecho Eje
+            if (!string.IsNullOrEmpty(OD_eje))
             {
-                MessageBox.Show("El campo de Ojo Derecho Eje contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OD_eje))
-            {
-                return false;
+                if (!OD_eje.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho Eje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount1 = OD_eje.Split('.').Length - 1;
+                if (dotCount1 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Derecho Eje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_eje.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtODPrisma.Text.Length > 5)
+            // Validación de Ojo Derecho Prisma
+            if (!string.IsNullOrEmpty(OD_prisma))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho Prisma.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtODPrisma.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Derecho Prisma contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!Regex.IsMatch(OD_prisma, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho Prisma", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_prisma.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtODAdicion.Text.Length > 5)
+            // Validación de Ojo Derecho Adición
+            if (!string.IsNullOrEmpty(OD_adicion))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho Adicion.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtODAdicion.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Derecho Adicion contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!Regex.IsMatch(OD_adicion, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho Adición", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_adicion.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODdp.Text.Trim()))
+            // Validación de Ojo Derecho DP
+            if (!string.IsNullOrEmpty(OD_DP))
             {
-                MessageBox.Show("El campo de Ojo Derecho DP contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OD_DP))
-            {
-                return false;
+                if (!OD_DP.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho DP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount2 = OD_DP.Split('.').Length - 1;
+                if (dotCount2 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Derecho DP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_DP.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtODao.Text.Length > 5)
+            // Validación de Ojo Derecho AO
+            if (!string.IsNullOrEmpty(OD_AO))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Derecho AO.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtODao.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Derecho AO contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!Regex.IsMatch(OD_AO, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho AO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_AO.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtODap.Text.Trim()))
+            // Validación de Ojo Derecho AP
+            if (!string.IsNullOrEmpty(OD_AP))
             {
-                MessageBox.Show("El campo de Ojo Derecho AP contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OD_AP))
-            {
-                return false;
+                if (!OD_AP.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Derecho AP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount3 = OD_AP.Split('.').Length - 1;
+                if (dotCount3 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Derecho AP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_AP.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-
-            if (ObjAddDR.txtOIEsfera.Text.Length > 5)
+            // Validación de Ojo Izquierdo Esfera
+            if (!string.IsNullOrEmpty(OI_esfera))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo Esfera.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtOIEsfera.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Izquierdo Esfera contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtOICilindro.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Izquierdo Cilindro contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OI_cilindro))
-            {
-                return false;
+                if (!Regex.IsMatch(OI_esfera, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo Esfera", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (OI_esfera.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtOIEje.Text.Trim()))
+            // Validación de Ojo Izquierdo Cilindro
+            if (!string.IsNullOrEmpty(OI_cilindro))
             {
-                MessageBox.Show("El campo de Ojo Izquierdo Eje contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OI_eje))
-            {
-                return false;
+                if (!OI_cilindro.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo Cilindro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount = OI_cilindro.Split('.').Length - 1;
+                if (dotCount != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Izquierdo Cilindro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OI_cilindro.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtOIPrisma.Text.Length > 5)
+            // Validación de Ojo Izquierdo Eje
+            if (!string.IsNullOrEmpty(OI_eje))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo Prisma.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtOIPrisma.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Izquierdo Prisma contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!OI_eje.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo Eje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount1 = OI_eje.Split('.').Length - 1;
+                if (dotCount1 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Izquierdo Eje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OI_eje.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtOIAdicion.Text.Length > 5)
+            // Validación de Ojo Izquierdo Prisma
+            if (!string.IsNullOrEmpty(OI_prisma))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo Adicion.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtOIAdicion.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Izquierdo Adicion contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!Regex.IsMatch(OI_prisma, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo Prisma", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OI_prisma.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtOIdp.Text.Trim()))
+            // Validación de Ojo Izquierdo Adición
+            if (!string.IsNullOrEmpty(OI_adicion))
             {
-                MessageBox.Show("El campo de Ojo Izquierdo DP contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OI_DP))
-            {
-                return false;
+                if (!Regex.IsMatch(OI_adicion, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo Adición", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_adicion.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (ObjAddDR.txtOIao.Text.Length > 5)
+            // Validación de Ojo Izquierdo DP
+            if (!string.IsNullOrEmpty(OI_DP))
             {
-                MessageBox.Show("El campo ha excedido el máximo de caracteres en Ojo Izquierdo AO.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if (!commonClasses.ValidarNumero(ObjAddDR.txtOIao.Text.Trim()))
-            {
-                MessageBox.Show("El campo de Ojo Izquierdo AO contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (!OI_DP.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo DP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount2 = OI_DP.Split('.').Length - 1;
+                if (dotCount2 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Izquierdo DP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_DP.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
-            if (!commonClasses.ValidarNumeroConPunto(ObjAddDR.txtOIap.Text.Trim()))
+            // Validación de Ojo Izquierdo AO
+            if (!string.IsNullOrEmpty(OI_AO))
             {
-                MessageBox.Show("El campo de Ojo Izquierdo AP contiene caracteres no válidos. Solo se permiten puntos y números.",
-                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            // Validar el valor decimal usando el método ValidarDecimal
-            if (!commonClasses.ValidarDecimal(OI_AP))
-            {
-                return false;
+                if (!Regex.IsMatch(OI_AO, @"^\d+$"))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo AO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
 
-            // Si todas las validaciones pasan, se puede continuar con el proceso
+            // Validación de Ojo Izquierdo AP
+            if (!string.IsNullOrEmpty(OI_AP))
+            {
+                if (!OI_AP.Contains("."))
+                {
+                    MessageBox.Show("El tipo de valores ingresados son incorrectos", "Validación de Ojo Izquierdo AP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                int dotCount3 = OI_AP.Split('.').Length - 1;
+                if (dotCount3 != 1)
+                {
+                    MessageBox.Show("El tipo de valores ingresados es incorrecto. Debe contener un solo punto decimal.", "Validación de Ojo Izquierdo AP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (OD_AP.Length > 5)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (5).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
             return true;
         }
         //finish validations

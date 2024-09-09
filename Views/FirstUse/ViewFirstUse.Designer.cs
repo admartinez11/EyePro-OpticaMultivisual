@@ -227,7 +227,7 @@
             this.txtPhone.ShortcutsEnabled = true;
             this.txtPhone.Size = new System.Drawing.Size(202, 32);
             this.txtPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPhone.TabIndex = 19;
+            this.txtPhone.TabIndex = 4;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPhone.TextMarginBottom = 0;
             this.txtPhone.TextMarginLeft = 1;
@@ -304,7 +304,7 @@
             this.txtPbx.ShortcutsEnabled = true;
             this.txtPbx.Size = new System.Drawing.Size(224, 32);
             this.txtPbx.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtPbx.TabIndex = 18;
+            this.txtPbx.TabIndex = 5;
             this.txtPbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPbx.TextMarginBottom = 0;
             this.txtPbx.TextMarginLeft = 1;
@@ -336,7 +336,7 @@
             this.dtCreation.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtCreation.Name = "dtCreation";
             this.dtCreation.Size = new System.Drawing.Size(235, 32);
-            this.dtCreation.TabIndex = 17;
+            this.dtCreation.TabIndex = 3;
             this.dtCreation.Value = new System.DateTime(2024, 8, 22, 21, 40, 0, 0);
             // 
             // txtEmailBussines
@@ -407,7 +407,7 @@
             this.txtEmailBussines.ShortcutsEnabled = true;
             this.txtEmailBussines.Size = new System.Drawing.Size(695, 32);
             this.txtEmailBussines.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEmailBussines.TabIndex = 16;
+            this.txtEmailBussines.TabIndex = 2;
             this.txtEmailBussines.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmailBussines.TextMarginBottom = 0;
             this.txtEmailBussines.TextMarginLeft = 1;
@@ -484,7 +484,7 @@
             this.txtAddressBussines.ShortcutsEnabled = true;
             this.txtAddressBussines.Size = new System.Drawing.Size(695, 54);
             this.txtAddressBussines.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAddressBussines.TabIndex = 15;
+            this.txtAddressBussines.TabIndex = 1;
             this.txtAddressBussines.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAddressBussines.TextMarginBottom = 0;
             this.txtAddressBussines.TextMarginLeft = 1;
@@ -561,7 +561,7 @@
             this.txtNameBussines.ShortcutsEnabled = true;
             this.txtNameBussines.Size = new System.Drawing.Size(695, 32);
             this.txtNameBussines.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNameBussines.TabIndex = 14;
+            this.txtNameBussines.TabIndex = 0;
             this.txtNameBussines.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNameBussines.TextMarginBottom = 0;
             this.txtNameBussines.TextMarginLeft = 1;
@@ -652,7 +652,7 @@
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
             this.btnSave.Size = new System.Drawing.Size(210, 34);
-            this.btnSave.TabIndex = 13;
+            this.btnSave.TabIndex = 7;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSave.TextMarginLeft = 0;
@@ -829,7 +829,7 @@
             this.btnAttach.OnPressedState.IconLeftImage = null;
             this.btnAttach.OnPressedState.IconRightImage = null;
             this.btnAttach.Size = new System.Drawing.Size(181, 34);
-            this.btnAttach.TabIndex = 14;
+            this.btnAttach.TabIndex = 6;
             this.btnAttach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAttach.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAttach.TextMarginLeft = 0;
