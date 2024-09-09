@@ -120,7 +120,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel3);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(19, 20);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(541, 290);
@@ -255,7 +255,7 @@
             this.btnRecover.OnPressedState.IconLeftImage = null;
             this.btnRecover.OnPressedState.IconRightImage = null;
             this.btnRecover.Size = new System.Drawing.Size(111, 29);
-            this.btnRecover.TabIndex = 31;
+            this.btnRecover.TabIndex = 2;
             this.btnRecover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecover.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRecover.TextMarginLeft = 0;
@@ -343,7 +343,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewPassword.OnIdleState = stateProperties4;
-            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewPassword.PlaceholderText = "";
@@ -355,7 +355,7 @@
             this.txtNewPassword.ShortcutsEnabled = false;
             this.txtNewPassword.Size = new System.Drawing.Size(487, 31);
             this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewPassword.TabIndex = 17;
+            this.txtNewPassword.TabIndex = 1;
             this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewPassword.TextMarginBottom = 0;
             this.txtNewPassword.TextMarginLeft = 1;
@@ -420,7 +420,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSecurityAnswer.OnIdleState = stateProperties8;
-            this.txtSecurityAnswer.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtSecurityAnswer.Padding = new System.Windows.Forms.Padding(3);
             this.txtSecurityAnswer.PasswordChar = '\0';
             this.txtSecurityAnswer.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSecurityAnswer.PlaceholderText = "";
@@ -432,7 +432,7 @@
             this.txtSecurityAnswer.ShortcutsEnabled = false;
             this.txtSecurityAnswer.Size = new System.Drawing.Size(487, 31);
             this.txtSecurityAnswer.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtSecurityAnswer.TabIndex = 16;
+            this.txtSecurityAnswer.TabIndex = 0;
             this.txtSecurityAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSecurityAnswer.TextMarginBottom = 0;
             this.txtSecurityAnswer.TextMarginLeft = 1;
@@ -492,10 +492,11 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1077);
             this.MinimumSize = new System.Drawing.Size(1026, 590);
             this.Name = "ViewRecoverByQuestion";
-            this.Text = "ViewRecoverByQuestion";
+            this.Text = "Recuperar por pregunta de seguridad";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);

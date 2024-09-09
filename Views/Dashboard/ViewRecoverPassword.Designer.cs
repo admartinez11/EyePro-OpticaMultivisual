@@ -100,7 +100,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(232, 144);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(575, 309);
@@ -235,7 +235,7 @@
             this.BtnSendEmail.OnPressedState.IconLeftImage = null;
             this.BtnSendEmail.OnPressedState.IconRightImage = null;
             this.BtnSendEmail.Size = new System.Drawing.Size(88, 33);
-            this.BtnSendEmail.TabIndex = 30;
+            this.BtnSendEmail.TabIndex = 1;
             this.BtnSendEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnSendEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.BtnSendEmail.TextMarginLeft = 0;
@@ -331,7 +331,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCorreo.OnIdleState = stateProperties4;
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(3);
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCorreo.PlaceholderText = "";
@@ -343,7 +343,7 @@
             this.txtCorreo.ShortcutsEnabled = false;
             this.txtCorreo.Size = new System.Drawing.Size(484, 39);
             this.txtCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtCorreo.TabIndex = 17;
+            this.txtCorreo.TabIndex = 0;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreo.TextMarginBottom = 0;
             this.txtCorreo.TextMarginLeft = 1;
@@ -384,6 +384,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1076);
             this.MinimumSize = new System.Drawing.Size(1026, 588);
             this.Name = "ViewRecoverPassword";
