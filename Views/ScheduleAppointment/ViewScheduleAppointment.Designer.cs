@@ -71,6 +71,7 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.DTPfechacita = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCiObs = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,7 +91,6 @@
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox6 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -140,7 +140,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel4);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
             this.bunifuPanel1.Location = new System.Drawing.Point(168, 87);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(690, 442);
@@ -188,12 +188,24 @@
             this.DTPfechacita.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DTPfechacita.LeftTextMargin = 5;
             this.DTPfechacita.Location = new System.Drawing.Point(8, 2);
-            this.DTPfechacita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTPfechacita.Margin = new System.Windows.Forms.Padding(2);
             this.DTPfechacita.MinimumSize = new System.Drawing.Size(4, 32);
             this.DTPfechacita.Name = "DTPfechacita";
             this.DTPfechacita.Size = new System.Drawing.Size(234, 32);
             this.DTPfechacita.TabIndex = 0;
             this.DTPfechacita.Value = new System.DateTime(2024, 9, 1, 11, 29, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(252, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha de la visita";
             // 
             // tableLayoutPanel9
             // 
@@ -208,7 +220,7 @@
             this.tableLayoutPanel9.Controls.Add(this.txtCiObs, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 1, 3);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(28, 256);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 4;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.66666F));
@@ -249,7 +261,7 @@
             this.txtCiObs.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCiObs.Lines = new string[0];
             this.txtCiObs.Location = new System.Drawing.Point(9, 2);
-            this.txtCiObs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiObs.Margin = new System.Windows.Forms.Padding(2);
             this.txtCiObs.MaxLength = 32767;
             this.txtCiObs.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCiObs.Modified = false;
@@ -275,7 +287,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiObs.OnIdleState = stateProperties4;
-            this.txtCiObs.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiObs.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiObs.PasswordChar = '\0';
             this.txtCiObs.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiObs.PlaceholderText = "Motivo de la visita";
@@ -308,7 +320,7 @@
             this.tableLayoutPanel10.Controls.Add(this.btnActualizar, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.btnAgendar, 2, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(9, 120);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
@@ -574,7 +586,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiDUI.OnIdleState = stateProperties8;
-            this.txtCiDUI.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiDUI.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiDUI.PasswordChar = '\0';
             this.txtCiDUI.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiDUI.PlaceholderText = "DUI";
@@ -684,7 +696,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(34, 15);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
@@ -785,7 +797,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiApellido.OnIdleState = stateProperties16;
-            this.txtCiApellido.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiApellido.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiApellido.PasswordChar = '\0';
             this.txtCiApellido.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiApellido.PlaceholderText = "Apellido";
@@ -863,7 +875,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiNombre.OnIdleState = stateProperties20;
-            this.txtCiNombre.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiNombre.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiNombre.PasswordChar = '\0';
             this.txtCiNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiNombre.PlaceholderText = "Nombre";
@@ -1040,7 +1052,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox3.OnIdleState = stateProperties28;
-            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox3.PasswordChar = '\0';
             this.bunifuTextBox3.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox3.PlaceholderText = "Apellido";
@@ -1118,7 +1130,7 @@
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox2.OnIdleState = stateProperties32;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox2.PlaceholderText = "Nombre";
@@ -1226,25 +1238,13 @@
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(148, 81);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 2;
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(252, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha de la visita";
             // 
             // ViewScheduleAppointment
             // 

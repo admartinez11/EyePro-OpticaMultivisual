@@ -31,5 +31,6 @@ namespace OpticaMultivisual.Views.Consultas
         {
             txtConID.Enabled = false;
         }
+
     }
 }

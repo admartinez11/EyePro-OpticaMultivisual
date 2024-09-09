@@ -49,13 +49,13 @@
             this.btnActualizar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnAgendar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.DTPfechaconsulta = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.txtObservaciones = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cmbDUI = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbVisita = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbEmpleado = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.DTPfechaconsulta = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -100,7 +100,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel3);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
             this.bunifuPanel1.Location = new System.Drawing.Point(166, 122);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(679, 330);
@@ -118,7 +118,7 @@
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.txtConID, 2, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(34, 15);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
@@ -172,7 +172,7 @@
             this.txtConID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtConID.Lines = new string[0];
             this.txtConID.Location = new System.Drawing.Point(518, 9);
-            this.txtConID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConID.Margin = new System.Windows.Forms.Padding(2);
             this.txtConID.MaxLength = 32767;
             this.txtConID.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtConID.Modified = false;
@@ -198,7 +198,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtConID.OnIdleState = stateProperties4;
-            this.txtConID.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConID.Padding = new System.Windows.Forms.Padding(2);
             this.txtConID.PasswordChar = '\0';
             this.txtConID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtConID.PlaceholderText = "ID";
@@ -233,7 +233,7 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtObservaciones, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 118);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.14634F));
@@ -254,7 +254,7 @@
             this.tableLayoutPanel5.Controls.Add(this.btnActualizar, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAgendar, 2, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 160);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
@@ -451,41 +451,12 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.54476F));
             this.tableLayoutPanel4.Controls.Add(this.DTPfechaconsulta, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(8, 119);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(586, 35);
             this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // DTPfechaconsulta
-            // 
-            this.DTPfechaconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DTPfechaconsulta.BackColor = System.Drawing.Color.White;
-            this.DTPfechaconsulta.BorderColor = System.Drawing.Color.Transparent;
-            this.DTPfechaconsulta.BorderRadius = 15;
-            this.DTPfechaconsulta.Color = System.Drawing.Color.Transparent;
-            this.DTPfechaconsulta.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DTPfechaconsulta.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.DTPfechaconsulta.DisabledColor = System.Drawing.Color.Gray;
-            this.DTPfechaconsulta.DisplayWeekNumbers = false;
-            this.DTPfechaconsulta.DPHeight = 0;
-            this.DTPfechaconsulta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DTPfechaconsulta.FillDatePicker = false;
-            this.DTPfechaconsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPfechaconsulta.ForeColor = System.Drawing.Color.Black;
-            this.DTPfechaconsulta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPfechaconsulta.Icon = ((System.Drawing.Image)(resources.GetObject("DTPfechaconsulta.Icon")));
-            this.DTPfechaconsulta.IconColor = System.Drawing.Color.Black;
-            this.DTPfechaconsulta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.DTPfechaconsulta.LeftTextMargin = 5;
-            this.DTPfechaconsulta.Location = new System.Drawing.Point(2, 2);
-            this.DTPfechaconsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DTPfechaconsulta.MinimumSize = new System.Drawing.Size(4, 32);
-            this.DTPfechaconsulta.Name = "DTPfechaconsulta";
-            this.DTPfechaconsulta.Size = new System.Drawing.Size(244, 32);
-            this.DTPfechaconsulta.TabIndex = 0;
-            this.DTPfechaconsulta.Value = new System.DateTime(2024, 8, 28, 16, 11, 0, 0);
             // 
             // txtObservaciones
             // 
@@ -518,7 +489,7 @@
             this.txtObservaciones.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtObservaciones.Lines = new string[0];
             this.txtObservaciones.Location = new System.Drawing.Point(8, 2);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservaciones.MaxLength = 32767;
             this.txtObservaciones.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtObservaciones.Modified = false;
@@ -544,7 +515,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtObservaciones.OnIdleState = stateProperties8;
-            this.txtObservaciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtObservaciones.Padding = new System.Windows.Forms.Padding(2);
             this.txtObservaciones.PasswordChar = '\0';
             this.txtObservaciones.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtObservaciones.PlaceholderText = "Observaciones";
@@ -578,7 +549,7 @@
             this.tableLayoutPanel2.Controls.Add(this.cmbVisita, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmbEmpleado, 2, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(34, 60);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
@@ -675,7 +646,7 @@
             this.cmbVisita.ItemHighLightForeColor = System.Drawing.Color.White;
             this.cmbVisita.ItemTopMargin = 3;
             this.cmbVisita.Location = new System.Drawing.Point(196, 10);
-            this.cmbVisita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbVisita.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVisita.Name = "cmbVisita";
             this.cmbVisita.Size = new System.Drawing.Size(205, 32);
             this.cmbVisita.TabIndex = 5;
@@ -740,7 +711,7 @@
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(8, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(148, 116);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -748,13 +719,42 @@
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
+            // DTPfechaconsulta
+            // 
+            this.DTPfechaconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.DTPfechaconsulta.BackColor = System.Drawing.Color.Transparent;
+            this.DTPfechaconsulta.BorderColor = System.Drawing.Color.Silver;
+            this.DTPfechaconsulta.BorderRadius = 17;
+            this.DTPfechaconsulta.Color = System.Drawing.Color.Silver;
+            this.DTPfechaconsulta.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DTPfechaconsulta.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DTPfechaconsulta.DisabledColor = System.Drawing.Color.Gray;
+            this.DTPfechaconsulta.DisplayWeekNumbers = false;
+            this.DTPfechaconsulta.DPHeight = 0;
+            this.DTPfechaconsulta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DTPfechaconsulta.FillDatePicker = false;
+            this.DTPfechaconsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPfechaconsulta.ForeColor = System.Drawing.Color.White;
+            this.DTPfechaconsulta.Icon = ((System.Drawing.Image)(resources.GetObject("DTPfechaconsulta.Icon")));
+            this.DTPfechaconsulta.IconColor = System.Drawing.Color.White;
+            this.DTPfechaconsulta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DTPfechaconsulta.LeftTextMargin = 5;
+            this.DTPfechaconsulta.Location = new System.Drawing.Point(2, 2);
+            this.DTPfechaconsulta.Margin = new System.Windows.Forms.Padding(2);
+            this.DTPfechaconsulta.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DTPfechaconsulta.Name = "DTPfechaconsulta";
+            this.DTPfechaconsulta.Size = new System.Drawing.Size(234, 32);
+            this.DTPfechaconsulta.TabIndex = 3;
+            this.DTPfechaconsulta.Value = new System.DateTime(2024, 9, 1, 11, 29, 0, 0);
+            // 
             // AñadirConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 576);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1444, 885);
             this.MinimumSize = new System.Drawing.Size(1028, 615);
             this.Name = "AñadirConsulta";
@@ -784,12 +784,12 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnActualizar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgendar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        public Bunifu.UI.WinForms.BunifuDatePicker DTPfechaconsulta;
         public Bunifu.UI.WinForms.BunifuTextBox txtObservaciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         public Bunifu.UI.WinForms.BunifuDropdown cmbDUI;
         public Bunifu.UI.WinForms.BunifuDropdown cmbVisita;
         public Bunifu.UI.WinForms.BunifuDropdown cmbEmpleado;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        public Bunifu.UI.WinForms.BunifuDatePicker DTPfechaconsulta;
     }
 }

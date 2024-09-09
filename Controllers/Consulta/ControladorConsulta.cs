@@ -18,15 +18,17 @@ namespace OpticaMultivisual.Controllers.Consulta
         {
             ObjverConsulta = Vista;
             ObjverConsulta.Load += new EventHandler(CargarInfoConsulta);
-            ObjverConsulta.btnBuscarConsulta.Click += new EventHandler(BuscarClientesControlador);
-            ObjverConsulta.btnNuevaConsulta.Click += new EventHandler(AgregarCliente);
-            ObjverConsulta.btnEliminarConsulta.Click += new EventHandler(EliminarCliente);
+            ObjverConsulta.btnBuscarConsulta.Click += new EventHandler(BuscarConsultaControlador);
+            ObjverConsulta.btnNuevaConsulta.Click += new EventHandler(AgregarConsulta);
+            ObjverConsulta.btnEliminarConsulta.Click += new EventHandler(EliminarConsulta);
             ObjverConsulta.btnActConsulta.Click += new EventHandler(ActualizarConsulta);
         }
         public void CargarInfoConsulta(object sender, EventArgs e)
         {
             ActualizarDatosConsulta();
         }
+
+
         public void ActualizarDatosConsulta()
         {
             DAOConsulta dAOConsulta = new DAOConsulta();
@@ -34,25 +36,25 @@ namespace OpticaMultivisual.Controllers.Consulta
             ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["Consulta"];
 
         }
-        public void BuscarClientesControlador(object sender, EventArgs e)
+        public void BuscarConsultaControlador(object sender, EventArgs e)
         {
             DAOConsulta dAOConsulta = new DAOConsulta();
             DataSet ds = dAOConsulta.BuscarConsulta(ObjverConsulta.txtBuscarConsulta.Text.Trim());
             ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["Consulta"];
         }
-        public void AgregarCliente(object sender, EventArgs e)
+        public void AgregarConsulta(object sender, EventArgs e)
         {
             AñadirConsulta openForm = new AñadirConsulta(1);
             openForm.ShowDialog();
             ActualizarDatosConsulta();
         }
-        private void EliminarCliente(object sender, EventArgs e)
+        private void EliminarConsulta(object sender, EventArgs e)
         {
             int pos = ObjverConsulta.dgvInfoConsulta.CurrentRow.Index;
             if (MessageBox.Show($"¿Esta seguro que desea eliminar a la consulta del DUI:\n {ObjverConsulta.dgvInfoConsulta[1, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOConsulta dAOConsulta = new DAOConsulta();
-                dAOConsulta.Con_ID = Convert.ToInt32(ObjverConsulta.dgvInfoConsulta[0, pos].Value);
+                dAOConsulta.Con_ID = int.Parse(ObjverConsulta.dgvInfoConsulta[0, pos].Value.ToString());
                 int valorRetornado = dAOConsulta.EliminarConsulta();
                 if (valorRetornado == 1)
                 {
