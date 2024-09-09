@@ -40,7 +40,7 @@ namespace OpticaMultivisual.Controllers.Login
                         }
                         else
                         {
-                            MessageBox.Show("La contraseña no pudo ser actualizada, vuelve a intentarlo, si el error persiste contacta al administrador del sistema.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else

@@ -49,7 +49,7 @@ namespace OpticaMultivisual.Models.DAO
                     catch (Exception ex)
                     {
                         // Manejo de excepciones
-                        MessageBox.Show($"Error al actualizar la contraseña: {ex.Message}",
+                        MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente",
                                         "Error",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -93,7 +93,7 @@ namespace OpticaMultivisual.Models.DAO
                     catch (Exception ex)
                     {
                         // Manejo de excepciones
-                        MessageBox.Show($"Error al almacenar el código de verificación: {ex.Message}",
+                        MessageBox.Show("EPV008 - No se pudo almacenar el código de verificación",
                                         "Error",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -137,7 +137,7 @@ namespace OpticaMultivisual.Models.DAO
                     catch (Exception ex)
                     {
                         // Manejo de excepciones
-                        MessageBox.Show($"Error al validar el código de verificación: {ex.Message}",
+                        MessageBox.Show("EPV007 - No se pudo enviar el código de verificación",
                                         "Error",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);

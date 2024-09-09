@@ -31,7 +31,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show($"Error al obtener el dui del cliente, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -80,7 +80,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show($"Error al obtener el nombre del empleado, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -107,7 +107,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error al guardar consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV006 - No se pudieron registrar los datos", "Error al guardar consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -144,7 +144,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Error de SQL: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV002 - Los datos no pudieron ser actualizados correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally

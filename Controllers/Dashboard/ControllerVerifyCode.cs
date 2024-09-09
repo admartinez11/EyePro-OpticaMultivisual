@@ -74,7 +74,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     }
                     else
                     {
-                        MessageBox.Show("Ocurrió un error al actualizar la contraseña.",
+                        MessageBox.Show("Error: EPV002 - Los datos no pudieron ser actualizados correctamente",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);

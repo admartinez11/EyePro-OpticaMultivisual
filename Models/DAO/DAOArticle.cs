@@ -53,7 +53,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} Error al obtener los detalles, verifique su conexion a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -76,7 +76,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} Error al obtener los detalles, verifique su conexion a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -103,7 +103,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} Error al obtener los detalles, verifique su conexion a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -127,7 +127,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} Error al obtener los detalles, verifique su conexion a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -159,7 +159,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error al insertar el Articulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV006 - No se pudieron registrar los datos", "Error al insertar el Articulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -193,7 +193,7 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException ex)
             {
                 // Mostrar el mensaje del error para fines de depuración
-                Console.WriteLine("Error de SQL: " + ex.Message);
+                Console.WriteLine("EPV002 - Los datos no pudieron ser actualizados correctamente");
                 return -1;
             }
             finally

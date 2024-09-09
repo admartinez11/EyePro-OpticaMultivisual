@@ -54,7 +54,7 @@ namespace OpticaMultivisual.Controllers.Article
             catch (Exception ex)
             {
                 // Mostrar un mensaje de error si algo falla
-                MessageBox.Show($"Error al abrir el formulario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void EliminarArticulo(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace OpticaMultivisual.Controllers.Article
                 }
                 else
                 {
-                    MessageBox.Show("Registro no pudo ser eliminado, verifique que el registro no tenga datos asociados.", "Acción interrumpida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("EPV003 - Los datos no pudieron ser eliminados", "Acción interrumpida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
