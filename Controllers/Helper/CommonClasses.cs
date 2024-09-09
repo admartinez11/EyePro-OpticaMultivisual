@@ -59,34 +59,39 @@ namespace OpticaMultivisual.Controllers.Helper
 
         public void LeerArchivoXMLConexion()
         {
+            // Construir la ruta del archivo XML combinando el directorio actual con el nombre del archivo
             string path = Path.Combine(Directory.GetCurrentDirectory().ToString(), "config_server.xml");
+            // Verificar si el archivo XML existe en la ruta especificada
             if (File.Exists(path))
             {
+                // Crear una instancia de XmlDocument para cargar y trabajar con el archivo XML
                 XmlDocument doc = new XmlDocument();
+                // Cargar el archivo XML en el objeto XmlDocument
                 doc.Load(path);
-
+                // Obtener el elemento raíz del XML
                 XmlNode root = doc.DocumentElement;
+                // Seleccionar los nodos específicos que contienen los datos de conexión (servidor, base de datos, autenticación SQL, y contraseña SQL)
                 XmlNode servernode = root.SelectSingleNode("Server/text()");
                 XmlNode databaseNode = root.SelectSingleNode("Database/text()");
                 XmlNode sqlAuthNode = root.SelectSingleNode("SqlAuth/text()");
                 XmlNode sqlPassNode = root.SelectSingleNode("SqlPass/text()");
-
+                // Obtener los valores de los nodos como cadenas
                 string serverCode = servernode.Value;
                 string databaseCode = databaseNode.Value;
                 string userCode = sqlAuthNode.Value;
                 string passwordCode = sqlPassNode.Value;
-
+                // Decodificar las cadenas cifradas utilizando el método DescifrarCadena
                 DTOdbContext.Server = DescifrarCadena(serverCode);
                 DTOdbContext.Database = DescifrarCadena(databaseCode);
                 DTOdbContext.User = DescifrarCadena(userCode);
                 DTOdbContext.Password = DescifrarCadena(passwordCode);
-                //MessageBox.Show($"{DTOdbContext.Server}, {DTOdbContext.Database}, {DTOdbContext.User}, {DTOdbContext.Password}");
             }
             else
             {
-                //Crear archivo
+                // Si el archivo XML no existe, crear una nueva instancia de ViewAdminConnection y mostrarla
                 ViewAdminConnection openForm = new ViewAdminConnection(1);
                 openForm.ShowDialog();
+                // Mostrar el formulario de inicio de sesión (ViewLogin)
                 ViewLogin openFormLog = new ViewLogin();
                 openFormLog.Show();
             }
@@ -96,13 +101,16 @@ namespace OpticaMultivisual.Controllers.Helper
         {
             try
             {
+                // Decodificar la cadena cifrada en Base64 a un arreglo de bytes
                 byte[] decodedBytes = Convert.FromBase64String(cadenaCode);
-                // Convertir los bytes a una cadena
+                // Convertir los bytes decodificados a una cadena utilizando UTF-8
                 string decodedString = Encoding.UTF8.GetString(decodedBytes);
+                // Retornar la cadena decodificada
                 return decodedString.ToString();
             }
             catch (Exception ex)
             {
+                // Si ocurre un error durante la decodificación, retornar un mensaje de error
                 return $"Error al descifrar: {ex.Message}";
             }
         }
