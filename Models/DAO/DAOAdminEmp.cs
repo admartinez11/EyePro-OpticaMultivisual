@@ -483,10 +483,10 @@ namespace OpticaMultivisual.Models.DAO
             catch (Exception ex)
             {
                 // Se retorna null si durante la ejecución del try ocurre algún error y se puede loguear el error
-                MessageBox.Show("EPV010 - Error de excepción",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                //MessageBox.Show("EPV010 - Error de excepción",
+                //    "Error",
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Error);
                 return null;
             }
             finally
