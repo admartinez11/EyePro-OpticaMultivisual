@@ -122,13 +122,13 @@ namespace OpticaMultivisual.Controllers.Login
             }
             catch (SmtpException ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show("EPV010 - Error de excepción");
                 return false;
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show("EPV010 - Error de excepción");
                 return false;
 
             }

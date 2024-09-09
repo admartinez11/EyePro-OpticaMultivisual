@@ -127,7 +127,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EPV001 - Error inesperado", "Error al procesar información", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

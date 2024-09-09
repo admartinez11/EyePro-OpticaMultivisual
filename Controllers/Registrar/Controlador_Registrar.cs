@@ -63,7 +63,7 @@ namespace AdministrarClientes.Controlador
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - No se pudieron registrar los datos",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -223,7 +223,7 @@ namespace AdministrarClientes.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show("Error: EPV010 - Error de excepción");
             }
         }
         public void AcualizarRegistro(object sender, EventArgs e)
@@ -252,14 +252,14 @@ namespace AdministrarClientes.Controlador
                     }
                     else if (valorRetornado == 0)
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                        MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                        MessageBox.Show("EPV001 - Error inesperado",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);

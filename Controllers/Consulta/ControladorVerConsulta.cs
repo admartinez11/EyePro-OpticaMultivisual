@@ -104,7 +104,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - No se pudieron registrar los datos",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -135,7 +135,8 @@ namespace OpticaMultivisual.Controllers.Consulta
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar valores: {ex.Message}");
+                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos",
+                                       "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void AcualizarRegistro(object sender, EventArgs e)
@@ -187,14 +188,14 @@ namespace OpticaMultivisual.Controllers.Consulta
                     }
                     else if (valorRetornado == 0)
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                        MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                        MessageBox.Show("EPV001 - Error inesperado",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -208,7 +209,7 @@ namespace OpticaMultivisual.Controllers.Consulta
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

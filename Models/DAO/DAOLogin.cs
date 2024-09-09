@@ -34,13 +34,13 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException sqlex)
             {
                 // Manejar el error
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
                 return -1;
             }
             catch (Exception ex)
             {
                 // Manejar el error
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
                 return -1;
             }
             finally
@@ -62,12 +62,12 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException sqlex)
             {
                 // Manejar el error
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
             }
             catch (Exception ex)
             {
                 // Manejar el error
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
             }
             finally
             {
@@ -89,13 +89,13 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException sqlex)
             {
                 // Manejar el error
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
                 return -1;
             }
             catch (Exception ex)
             {
                 // Manejar el error
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
                 return -1;
             }
             finally
@@ -122,7 +122,10 @@ namespace OpticaMultivisual.Models.DAO
             catch (Exception ex)
             {
                 // Manejo de excepción en caso de error
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("EPV010 - Error de excepción",
+                         "Error",
+                         MessageBoxButtons.OK,
+                         MessageBoxIcon.Error);
                 return false; // En caso de error, devuelve false por defecto
             }
         }
@@ -140,12 +143,12 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException sqlex)
             {
                 // Manejar el error
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
             }
             catch (Exception ex)
             {
                 // Manejar el error
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
             }
             finally
             {
@@ -166,12 +169,12 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException sqlex)
             {
                 // Manejar el error
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
             }
             catch (Exception ex)
             {
                 // Manejar el error
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
             }
             finally
             {
@@ -227,12 +230,12 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException sqlex)
             {
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
                 return -1; // Error en la base de datos
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV005 - No se pudieron cargar los datos");
                 return -1; // Otro tipo de error
             }
             finally
@@ -253,12 +256,12 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException sqlex)
             {
-                //MessageBox.Show(sqlex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
                 return -1;
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show("EPV010 - Error de excepción");
                 return -1;
             }
             finally

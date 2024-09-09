@@ -59,7 +59,7 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - No se pudieron registrar los datos",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -249,14 +249,14 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
             }
             else if (valorRetornado == 0)
             {
-                MessageBox.Show("No se encontró el registro para actualizar",
+                MessageBox.Show("EPV004 - No se encontraron los datos del registro",
                                 "Proceso interrumpido",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                MessageBox.Show("Error: EPV001 - Error inesperado",
                                 "Proceso interrumpido",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);

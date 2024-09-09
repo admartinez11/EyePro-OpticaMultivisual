@@ -116,7 +116,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser registrados",
+                MessageBox.Show("EPV006 - No se pudieron registrar los datos",
                                 "Proceso interrumpido",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -159,14 +159,14 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
                 }
                 else if (valorRetornado == 2)
                 {
-                    MessageBox.Show("Los datos no pudieron ser actualizados completamente",
+                    MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser actualizados debido a un error inesperado",
+                    MessageBox.Show("Error: EPV001 - Error inesperado",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);

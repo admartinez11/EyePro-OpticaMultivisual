@@ -218,7 +218,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
+                    MessageBox.Show("EPV006 - No se pudieron registrar los datos",
                                     "Proceso interrumpido",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);

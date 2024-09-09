@@ -60,7 +60,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo enviar el código de verificación.",
+                        MessageBox.Show("EPV007 - No se pudo enviar el código de verificación",
                                         "Proceso interrumpido",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -68,7 +68,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 }
                 else
                 {
-                    MessageBox.Show("Error almacenar el código de verificación",
+                    MessageBox.Show("EPV008 - No se pudo almacenar el código de verificación",
                                     "Error",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -117,7 +117,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al enviar el correo: {ex.Message}",
+                MessageBox.Show("EPV007 - No se pudo enviar el código de verificación",
                                 "Error",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);

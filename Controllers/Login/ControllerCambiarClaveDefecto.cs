@@ -52,7 +52,7 @@ namespace OpticaMultivisual.Controllers.Login
                     }
                     else
                     {
-                        MessageBox.Show("Contraseña no pudo ser actualizada.", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente", "Proceso incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
