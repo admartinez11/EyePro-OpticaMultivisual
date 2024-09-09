@@ -14,6 +14,7 @@ using static OpticaMultivisual.Controllers.ScheduleAppointment.ControllerSchedul
 
 namespace OpticaMultivisual.Views.ScheduleAppointment
 {
+    //caca
     public partial class ViewScheduleAppointment : Form
     {
         public DateTimePicker dtpFechaCita { get; set; }
