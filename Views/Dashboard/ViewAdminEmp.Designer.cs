@@ -49,20 +49,20 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.MenuRecu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsResPass = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnNuevo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEditar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEliminar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.MenuRecu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsResPass = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.MenuRecu.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.MenuRecu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -332,23 +332,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1307, 638);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // MenuRecu
-            // 
-            this.MenuRecu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MenuRecu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MenuRecu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsResPass});
-            this.MenuRecu.Name = "MenuRecu";
-            this.MenuRecu.Size = new System.Drawing.Size(216, 30);
-            // 
-            // cmsResPass
-            // 
-            this.cmsResPass.Image = global::OpticaMultivisual.Properties.Resources.Admin;
-            this.cmsResPass.Name = "cmsResPass";
-            this.cmsResPass.Size = new System.Drawing.Size(215, 26);
-            this.cmsResPass.Text = "Reiniciar contraseña";
-            this.cmsResPass.ToolTipText = "Cambiar la contraseña al empleado deseado";
             // 
             // tableLayoutPanel6
             // 
@@ -645,16 +628,29 @@
             this.btnEliminar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEliminar.UseDefaultRadiusAndThickness = true;
             // 
+            // MenuRecu
+            // 
+            this.MenuRecu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MenuRecu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuRecu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsResPass});
+            this.MenuRecu.Name = "MenuRecu";
+            this.MenuRecu.Size = new System.Drawing.Size(216, 30);
+            // 
+            // cmsResPass
+            // 
+            this.cmsResPass.Image = global::OpticaMultivisual.Properties.Resources.Admin;
+            this.cmsResPass.Name = "cmsResPass";
+            this.cmsResPass.Size = new System.Drawing.Size(215, 26);
+            this.cmsResPass.Text = "Reiniciar contraseña";
+            this.cmsResPass.ToolTipText = "Cambiar la contraseña al empleado deseado";
+            // 
             // dgvEmpleados
             // 
-            this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmpleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEmpleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -663,14 +659,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmpleados.ColumnHeadersHeight = 30;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmpleados.EnableHeadersVisualStyles = false;
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.dgvEmpleados.Location = new System.Drawing.Point(3, 2);
             this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -687,7 +682,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmpleados.Size = new System.Drawing.Size(1092, 634);
-            this.dgvEmpleados.TabIndex = 61;
+            this.dgvEmpleados.TabIndex = 51;
             // 
             // ViewAdminEmp
             // 
@@ -708,8 +703,8 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.MenuRecu.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.MenuRecu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
 
