@@ -75,11 +75,21 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     MessageBox.Show("El nombre ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                else if (ObjVista.txtFirstName.Text.Length > 100)
+                {
+                    MessageBox.Show("El campo de nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 string apellido = ObjVista.txtLastName.Text.Trim();
                 if (!commonClasses.EsNombreValido(apellido))
                 {
                     MessageBox.Show("El apellido ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (ObjVista.txtLastName.Text.Length > 100)
+                {
+                    MessageBox.Show("El campo de apellido no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
