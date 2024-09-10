@@ -92,6 +92,10 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAOInsert.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
 
                 int valorRetornado = DAOInsert.InsertarLens();
+                MessageBox.Show($"Valor retornado: {valorRetornado}",
+                                    "xx",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
                 //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {

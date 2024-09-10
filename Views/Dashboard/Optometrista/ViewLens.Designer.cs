@@ -129,7 +129,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLens.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLens.Size = new System.Drawing.Size(858, 318);
-            this.dgvLens.TabIndex = 61;
+            this.dgvLens.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -234,7 +234,7 @@
             this.btnAgregar.OnPressedState.IconLeftImage = null;
             this.btnAgregar.OnPressedState.IconRightImage = null;
             this.btnAgregar.Size = new System.Drawing.Size(93, 37);
-            this.btnAgregar.TabIndex = 53;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAgregar.TextMarginLeft = 0;
@@ -324,7 +324,7 @@
             this.btnEliminar.OnPressedState.IconLeftImage = null;
             this.btnEliminar.OnPressedState.IconRightImage = null;
             this.btnEliminar.Size = new System.Drawing.Size(93, 37);
-            this.btnEliminar.TabIndex = 54;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEliminar.TextMarginLeft = 0;
@@ -414,7 +414,7 @@
             this.btnEditar.OnPressedState.IconLeftImage = null;
             this.btnEditar.OnPressedState.IconRightImage = null;
             this.btnEditar.Size = new System.Drawing.Size(93, 37);
-            this.btnEditar.TabIndex = 55;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEditar.TextMarginLeft = 0;
