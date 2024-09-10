@@ -84,8 +84,10 @@ namespace AdministrarClientes.Controlador
             string telefono = ObjVistaR.txtTelefono.Text.Trim();
             if (!EsTelValido(telefono))
             {
+                MessageBox.Show("El número de teléfono debe contener un guion (-).", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
 
             string DUI = ObjVistaR.txtdui.Text.Trim();
             if (!EsDUIValido(DUI))
@@ -178,20 +180,13 @@ namespace AdministrarClientes.Controlador
         }
         private bool EsTelValido(string telefono)
         {
-            // Expresión regular para validar el formato del teléfono: Puede incluir el código de país opcional (+503) seguido de 8 dígitos.
-            string patronTelefono = @"^(\+503\s?)?\d{4}-?\d{4}$";
-
-            // Verifica si el teléfono ingresado cumple con el formato usando una expresión regular
-            if (System.Text.RegularExpressions.Regex.IsMatch(telefono, patronTelefono))
+            if (!telefono.Contains("-"))
             {
-                return true; // El formato es válido
+                return false;
             }
-            else
-            {
-                MessageBox.Show("El número de teléfono ingresado no es válido. Debe tener el formato +503 1234-5678 o 1234-5678.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false; // El formato es inválido
-            }
+            return true;
         }
+
 
         public Controlador_Registrar(RegistroClientes Vista, int p_accion, string DUI, string Nombre, string Apellido, string Correo_E, string Edad, char Genero, string Profeción, string Padecimientos, string Telefono)
         {
