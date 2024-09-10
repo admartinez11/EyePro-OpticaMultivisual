@@ -74,7 +74,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                         return;
                     }
 
-                    if (ObjVista.txtPhone.Text.Length > 25)
+                    if (ObjVista.txtPhone.Text.Length > 30)
                     {
                         MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -91,7 +91,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                         MessageBox.Show("El nombre de negocio ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (ObjVista.txtNameBussines.Text.Length > 100)
+                    else if (ObjVista.txtNameBussines.Text.Length > 50)
                     {
                         MessageBox.Show("El campo de nombre del negocio no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
