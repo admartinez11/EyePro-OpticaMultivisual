@@ -358,6 +358,13 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 return false;
             }
 
+            string telefono = ObjAddUser.txtPhone.Text.Trim();
+            if (!EsTelValido(telefono))
+            {
+                MessageBox.Show("El número de teléfono debe contener un guion (-).", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             if (!ObjAddUser.mskDocument.MaskCompleted)
             {
                 MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -495,6 +502,13 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 return false;
             }
 
+            string telefono = ObjAddUser.txtPhone.Text.Trim();
+            if (!EsTelValido(telefono))
+            {
+                MessageBox.Show("El número de teléfono debe contener un guion (-).", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             if (!ObjAddUser.mskDocument.MaskCompleted)
             {
                 MessageBox.Show("El campo de DUI es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -532,6 +546,15 @@ namespace OpticaMultivisual.Controllers.Dashboard
                                 "Error de validación",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private bool EsTelValido(string telefono)
+        {
+            if (!telefono.Contains("-"))
+            {
                 return false;
             }
             return true;
