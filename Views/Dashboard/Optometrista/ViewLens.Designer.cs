@@ -59,16 +59,16 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.642269F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.71545F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.642269F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.058366F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.39689F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.544747F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.597701F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.26765F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 609);
             this.tableLayoutPanel1.TabIndex = 4;
@@ -81,21 +81,23 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(81, 15);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(55, 31);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.61905F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.38095F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(864, 578);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(913, 562);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dgvLens
             // 
+            this.dgvLens.AllowUserToAddRows = false;
             this.dgvLens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLens.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvLens.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dgvLens.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvLens.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvLens.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
@@ -110,9 +112,10 @@
             this.dgvLens.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLens.EnableHeadersVisualStyles = false;
             this.dgvLens.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.dgvLens.Location = new System.Drawing.Point(3, 96);
+            this.dgvLens.Location = new System.Drawing.Point(3, 113);
             this.dgvLens.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLens.Name = "dgvLens";
+            this.dgvLens.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -128,7 +131,8 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLens.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLens.Size = new System.Drawing.Size(858, 318);
+            this.dgvLens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLens.Size = new System.Drawing.Size(907, 378);
             this.dgvLens.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -143,12 +147,12 @@
             this.tableLayoutPanel3.Controls.Add(this.btnEliminar, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnEditar, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 419);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 496);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.20513F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.79487F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(858, 156);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.55102F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.44898F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(907, 63);
             this.tableLayoutPanel3.TabIndex = 48;
             // 
             // btnAgregar
@@ -199,7 +203,7 @@
             this.btnAgregar.IdleIconLeftImage = null;
             this.btnAgregar.IdleIconRightImage = null;
             this.btnAgregar.IndicateFocus = false;
-            this.btnAgregar.Location = new System.Drawing.Point(517, 3);
+            this.btnAgregar.Location = new System.Drawing.Point(548, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregar.OnDisabledState.BorderRadius = 20;
@@ -289,7 +293,7 @@
             this.btnEliminar.IdleIconLeftImage = null;
             this.btnEliminar.IdleIconRightImage = null;
             this.btnEliminar.IndicateFocus = false;
-            this.btnEliminar.Location = new System.Drawing.Point(755, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(800, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminar.OnDisabledState.BorderRadius = 20;
@@ -379,7 +383,7 @@
             this.btnEditar.IdleIconLeftImage = null;
             this.btnEditar.IdleIconRightImage = null;
             this.btnEditar.IndicateFocus = false;
-            this.btnEditar.Location = new System.Drawing.Point(639, 3);
+            this.btnEditar.Location = new System.Drawing.Point(678, 5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEditar.OnDisabledState.BorderRadius = 20;
@@ -436,7 +440,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.03704F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.96296F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(858, 88);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(907, 105);
             this.tableLayoutPanel4.TabIndex = 49;
             // 
             // bunifuTextBox1
@@ -469,7 +473,7 @@
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[] {
         "Lensometría"};
-            this.bunifuTextBox1.Location = new System.Drawing.Point(318, 25);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(336, 31);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;

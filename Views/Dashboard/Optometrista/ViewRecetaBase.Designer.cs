@@ -95,10 +95,12 @@
             // 
             // dgvDR
             // 
+            this.dgvDR.AllowUserToAddRows = false;
             this.dgvDR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDR.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvDR.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             this.dgvDR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDR.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvDR.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
@@ -114,8 +116,9 @@
             this.dgvDR.EnableHeadersVisualStyles = false;
             this.dgvDR.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.dgvDR.Location = new System.Drawing.Point(2, 116);
-            this.dgvDR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDR.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDR.Name = "dgvDR";
+            this.dgvDR.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
@@ -131,6 +134,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvDR.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDR.Size = new System.Drawing.Size(951, 388);
             this.dgvDR.TabIndex = 60;
             // 
@@ -590,7 +594,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox1.PlaceholderText = "Enter text";
