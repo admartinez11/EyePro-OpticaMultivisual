@@ -117,11 +117,11 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query4 = "EXEC ActualizarLens @con_ID, @lens_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
+                string query4 = "EXEC ActualizarLens @lens_ID, @con_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion";
                 SqlCommand cmd = new SqlCommand(query4, Command.Connection);
 
-                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@lens_ID", lens_ID1);
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);
                 cmd.Parameters.AddWithValue("@OD_eje", OD_eje1);

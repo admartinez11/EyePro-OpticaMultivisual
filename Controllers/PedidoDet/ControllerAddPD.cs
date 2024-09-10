@@ -84,42 +84,45 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
 
         public void NewRegister(object sender, EventArgs e)
         {
-            //Se crea una instancia de la clase DAOPedidoDet llamada DAOInsert
-            DAOPedidoDet DAOInsert = new DAOPedidoDet();
-            DAOInsert.con_ID1 = ObjAddPD.cbcon_ID.SelectedValue.ToString();
-            DAOInsert.pd_fpedido1 = ObjAddPD.DTPpd_fpedido.Value;
-            DAOInsert.pd_fprogramada1 = ObjAddPD.DTPpd_fprogramada.Value;
-            DAOInsert.art_codigo1 = ObjAddPD.cbart_codigo.SelectedValue.ToString();
-            DAOInsert.art_cant1 = int.Parse(ObjAddPD.txtart_cant.Text.ToString());
-            if (ObjAddPD.cbpd_recetalab.Checked == true)
+            if (ValidarCampos())
             {
-                DAOInsert.pd_recetalab1 = 1;
-            }
-            else
-            {
-                DAOInsert.pd_recetalab1 = 0;
-            }
-            DAOInsert.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
-            int valorRetornado = DAOInsert.InsertarPedido();
-            MessageBox.Show($"Valor Retonado{valorRetornado}",
-                                "xx",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjAddPD.Close();
-            }
-            else
-            {
-                MessageBox.Show("EPV006 - No se pudieron registrar los datos",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                //Se crea una instancia de la clase DAOPedidoDet llamada DAOInsert
+                DAOPedidoDet DAOInsert = new DAOPedidoDet();
+                DAOInsert.con_ID1 = ObjAddPD.cbcon_ID.SelectedValue.ToString();
+                DAOInsert.pd_fpedido1 = ObjAddPD.DTPpd_fpedido.Value;
+                DAOInsert.pd_fprogramada1 = ObjAddPD.DTPpd_fprogramada.Value;
+                DAOInsert.art_codigo1 = ObjAddPD.cbart_codigo.SelectedValue.ToString();
+                DAOInsert.art_cant1 = int.Parse(ObjAddPD.txtart_cant.Text.ToString());
+                if (ObjAddPD.cbpd_recetalab.Checked == true)
+                {
+                    DAOInsert.pd_recetalab1 = 1;
+                }
+                else
+                {
+                    DAOInsert.pd_recetalab1 = 0;
+                }
+                DAOInsert.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
+                int valorRetornado = DAOInsert.InsertarPedido();
+                MessageBox.Show($"Valor Retonado{valorRetornado}",
+                                    "xx",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjAddPD.Close();
+                }
+                else
+                {
+                    MessageBox.Show("EPV006 - No se pudieron registrar los datos",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -210,12 +213,21 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
             }
 
             string pd_obser = ObjAddPD.txtpd_obser.Text.Trim();
-            if (!commonClasses.ObservacionValida(pd_obser))
+            if (!string.IsNullOrEmpty(pd_obser))
             {
-                MessageBox.Show("La observación ingresada contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+                if (!commonClasses.ObservacionValida(pd_obser))
+                {
+                    MessageBox.Show("La observación ingresada contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
 
+                if (pd_obser.Length > 100)
+                {
+                    MessageBox.Show("Ha excedido el máximo de caracteres (100).",
+                                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }        
 
             DateTime fpedidodet = ObjAddPD.DTPpd_fpedido.Value.Date;
             DateTime fprogramada = ObjAddPD.DTPpd_fprogramada.Value.Date;
