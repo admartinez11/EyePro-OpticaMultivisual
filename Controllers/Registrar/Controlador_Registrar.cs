@@ -102,21 +102,26 @@ namespace AdministrarClientes.Controlador
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Validación de Correo Electrónico", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (!VerificarTextoNombre(ObjVistaR.txtNombre.Text))
+            if (ObjVistaR.txtNombre.Text.Length > 100)
             {
-                return false;
+                MessageBox.Show("El campo de Nombre no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (!VerificarTextoNombre(ObjVistaR.txtApellido.Text))
+
+            if (ObjVistaR.txtApellido.Text.Length > 100)
             {
-                return false;
+                MessageBox.Show("El campo de Apellido no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (!VerificarTextoNombre(ObjVistaR.txtpadecimientos.Text))
+            if (ObjVistaR.txtpadecimientos.Text.Length > 100)
             {
-                return false;
+                MessageBox.Show("El campo de Padecimiento no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (!VerificarTextoNombre(ObjVistaR.txtprofecion.Text))
+            if (ObjVistaR.txtprofecion.Text.Length > 100)
             {
-                return false;
+                MessageBox.Show("El campo de Profecion no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (ObjVistaR.txtcorreo_electronico.Text.Length > 100)
+            {
+                MessageBox.Show("El campo de Correo Electronico no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (string.IsNullOrEmpty(ObjVistaR.txtNombre.Text.Trim()) ||
                 string.IsNullOrEmpty(ObjVistaR.txtApellido.Text.Trim()) ||
@@ -136,31 +141,6 @@ namespace AdministrarClientes.Controlador
         {
             string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(correo, patron);
-        }
-        private bool VerificarTextoNombre(string texto)
-        {
-            // Expresión regular para permitir solo letras y espacios
-            string patronTexto = @"^[a-zA-Z\s]+$";
-
-            // Verificar si el texto cumple con el patrón
-            if (!System.Text.RegularExpressions.Regex.IsMatch(texto, patronTexto))
-            {
-                MessageBox.Show("El texto solo puede contener letras y espacios.", "Texto Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // Verifica si la longitud del texto supera los 100 caracteres.
-            if (texto.Length > 100)
-            {
-                // Si el texto es demasiado largo, muestra un mensaje de advertencia
-                // y retorna false para indicar que la validación ha fallado.
-                MessageBox.Show("El texto no puede tener más de 100 caracteres.", "Texto Demasiado Largo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // Si el texto pasa todas las verificaciones, retorna true,
-            // indicando que la validación ha sido exitosa.
-            return true;
         }
         private bool EsDUIValido(string dui)
         {
