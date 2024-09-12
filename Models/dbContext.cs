@@ -11,7 +11,6 @@ namespace OpticaMultivisual.Models
         {
             try
             {
-                //MessageBox.Show($"{DTOdbContext.Server}, {DTOdbContext.Database}, {DTOdbContext.User}, {DTOdbContext.Password}");
                 SqlConnection conexion = new SqlConnection($"Server = {DTOdbContext.Server}; DataBase = {DTOdbContext.Database}; User Id = {DTOdbContext.User}; Password = {DTOdbContext.Password}");
                 conexion.Open();
                 return conexion;
@@ -27,7 +26,6 @@ namespace OpticaMultivisual.Models
         {
             try
             {
-                //MessageBox.Show($"{DTOdbContext.Server}, {DTOdbContext.Database}, {DTOdbContext.User}, {DTOdbContext.Password}");
                 SqlConnection conexion = new SqlConnection($"Server = {server}; DataBase = {database}; User Id = {user}; Password = {password}");
                 conexion.Open();
                 return conexion;

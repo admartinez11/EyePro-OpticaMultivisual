@@ -134,7 +134,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.34274F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.69394F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1517, 772);
-            this.tableLayoutPanel1.TabIndex = 12;
+            this.tableLayoutPanel1.TabIndex = 20;
             // 
             // bunifuPanel1
             // 
@@ -157,7 +157,7 @@
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1019, 560);
-            this.bunifuPanel1.TabIndex = 1;
+            this.bunifuPanel1.TabIndex = 20;
             // 
             // tableLayoutPanel9
             // 
@@ -179,7 +179,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(939, 227);
-            this.tableLayoutPanel9.TabIndex = 8;
+            this.tableLayoutPanel9.TabIndex = 20;
             // 
             // txtpadecimientos
             // 
@@ -249,7 +249,7 @@
             this.txtpadecimientos.ShortcutsEnabled = true;
             this.txtpadecimientos.Size = new System.Drawing.Size(913, 104);
             this.txtpadecimientos.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtpadecimientos.TabIndex = 0;
+            this.txtpadecimientos.TabIndex = 8;
             this.txtpadecimientos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtpadecimientos.TextMarginBottom = 0;
             this.txtpadecimientos.TextMarginLeft = 5;
@@ -276,7 +276,7 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.81481F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(913, 47);
-            this.tableLayoutPanel10.TabIndex = 7;
+            this.tableLayoutPanel10.TabIndex = 20;
             // 
             // btnActualizar
             // 
@@ -362,7 +362,7 @@
             this.btnActualizar.OnPressedState.IconLeftImage = null;
             this.btnActualizar.OnPressedState.IconRightImage = null;
             this.btnActualizar.Size = new System.Drawing.Size(276, 32);
-            this.btnActualizar.TabIndex = 34;
+            this.btnActualizar.TabIndex = 10;
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnActualizar.TextMarginLeft = 0;
@@ -453,7 +453,7 @@
             this.btnAgregarCliente.OnPressedState.IconLeftImage = null;
             this.btnAgregarCliente.OnPressedState.IconRightImage = null;
             this.btnAgregarCliente.Size = new System.Drawing.Size(281, 32);
-            this.btnAgregarCliente.TabIndex = 35;
+            this.btnAgregarCliente.TabIndex = 9;
             this.btnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarCliente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAgregarCliente.TextMarginLeft = 0;
@@ -477,7 +477,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(920, 72);
-            this.tableLayoutPanel7.TabIndex = 8;
+            this.tableLayoutPanel7.TabIndex = 20;
             // 
             // txtdui
             // 
@@ -548,7 +548,7 @@
             this.txtdui.ShortcutsEnabled = true;
             this.txtdui.Size = new System.Drawing.Size(330, 47);
             this.txtdui.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtdui.TabIndex = 8;
+            this.txtdui.TabIndex = 7;
             this.txtdui.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtdui.TextMarginBottom = 0;
             this.txtdui.TextMarginLeft = 3;
@@ -626,7 +626,7 @@
             this.txtprofecion.ShortcutsEnabled = true;
             this.txtprofecion.Size = new System.Drawing.Size(484, 47);
             this.txtprofecion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtprofecion.TabIndex = 7;
+            this.txtprofecion.TabIndex = 6;
             this.txtprofecion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtprofecion.TextMarginBottom = 0;
             this.txtprofecion.TextMarginLeft = 3;
@@ -654,7 +654,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(923, 72);
-            this.tableLayoutPanel8.TabIndex = 7;
+            this.tableLayoutPanel8.TabIndex = 20;
             // 
             // txtEdad
             // 
@@ -725,7 +725,7 @@
             this.txtEdad.ShortcutsEnabled = true;
             this.txtEdad.Size = new System.Drawing.Size(152, 47);
             this.txtEdad.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtEdad.TabIndex = 8;
+            this.txtEdad.TabIndex = 4;
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEdad.TextMarginBottom = 0;
             this.txtEdad.TextMarginLeft = 3;
@@ -803,7 +803,7 @@
             this.txtGenero.ShortcutsEnabled = true;
             this.txtGenero.Size = new System.Drawing.Size(173, 47);
             this.txtGenero.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtGenero.TabIndex = 7;
+            this.txtGenero.TabIndex = 3;
             this.txtGenero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtGenero.TextMarginBottom = 0;
             this.txtGenero.TextMarginLeft = 3;
@@ -881,7 +881,7 @@
             this.txtcorreo_electronico.ShortcutsEnabled = true;
             this.txtcorreo_electronico.Size = new System.Drawing.Size(474, 47);
             this.txtcorreo_electronico.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtcorreo_electronico.TabIndex = 10;
+            this.txtcorreo_electronico.TabIndex = 5;
             this.txtcorreo_electronico.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtcorreo_electronico.TextMarginBottom = 0;
             this.txtcorreo_electronico.TextMarginLeft = 3;
@@ -907,7 +907,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.30769F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(923, 63);
-            this.tableLayoutPanel6.TabIndex = 7;
+            this.tableLayoutPanel6.TabIndex = 20;
             // 
             // label1
             // 
@@ -941,7 +941,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(923, 72);
-            this.tableLayoutPanel4.TabIndex = 6;
+            this.tableLayoutPanel4.TabIndex = 20;
             // 
             // txtApellido
             // 
@@ -1012,7 +1012,7 @@
             this.txtApellido.ShortcutsEnabled = true;
             this.txtApellido.Size = new System.Drawing.Size(314, 47);
             this.txtApellido.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtApellido.TabIndex = 8;
+            this.txtApellido.TabIndex = 1;
             this.txtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtApellido.TextMarginBottom = 0;
             this.txtApellido.TextMarginLeft = 3;
@@ -1090,7 +1090,7 @@
             this.txtNombre.ShortcutsEnabled = true;
             this.txtNombre.Size = new System.Drawing.Size(288, 47);
             this.txtNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.TextMarginBottom = 0;
             this.txtNombre.TextMarginLeft = 3;
@@ -1168,7 +1168,7 @@
             this.txtTelefono.ShortcutsEnabled = true;
             this.txtTelefono.Size = new System.Drawing.Size(279, 47);
             this.txtTelefono.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtTelefono.TabIndex = 10;
+            this.txtTelefono.TabIndex = 2;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefono.TextMarginBottom = 0;
             this.txtTelefono.TextMarginLeft = 3;
