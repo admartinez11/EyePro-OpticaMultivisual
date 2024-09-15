@@ -209,7 +209,7 @@
             this.txtSecurityAnswer.Lines = new string[0];
             this.txtSecurityAnswer.Location = new System.Drawing.Point(32, 340);
             this.txtSecurityAnswer.MaximumSize = new System.Drawing.Size(443, 32);
-            this.txtSecurityAnswer.MaxLength = 32767;
+            this.txtSecurityAnswer.MaxLength = 256;
             this.txtSecurityAnswer.MinimumSize = new System.Drawing.Size(443, 32);
             this.txtSecurityAnswer.Modified = false;
             this.txtSecurityAnswer.Multiline = false;
@@ -514,6 +514,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(28, 86);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtUsername.MaxLength = 100;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ShortcutsEnabled = false;
             this.txtUsername.Size = new System.Drawing.Size(379, 20);
@@ -571,7 +572,7 @@
             this.txtPhone.Lines = new string[0];
             this.txtPhone.Location = new System.Drawing.Point(30, 213);
             this.txtPhone.MaximumSize = new System.Drawing.Size(181, 32);
-            this.txtPhone.MaxLength = 32767;
+            this.txtPhone.MaxLength = 25;
             this.txtPhone.MinimumSize = new System.Drawing.Size(181, 32);
             this.txtPhone.Modified = false;
             this.txtPhone.Multiline = false;
@@ -661,7 +662,7 @@
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(30, 101);
             this.txtEmail.MaximumSize = new System.Drawing.Size(447, 32);
-            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.MinimumSize = new System.Drawing.Size(447, 32);
             this.txtEmail.Modified = false;
             this.txtEmail.Multiline = false;
@@ -751,7 +752,7 @@
             this.txtAddress.Lines = new string[0];
             this.txtAddress.Location = new System.Drawing.Point(30, 155);
             this.txtAddress.MaximumSize = new System.Drawing.Size(445, 32);
-            this.txtAddress.MaxLength = 32767;
+            this.txtAddress.MaxLength = 150;
             this.txtAddress.MinimumSize = new System.Drawing.Size(445, 32);
             this.txtAddress.Modified = false;
             this.txtAddress.Multiline = false;
@@ -901,7 +902,7 @@
             this.txtLastName.Lines = new string[0];
             this.txtLastName.Location = new System.Drawing.Point(275, 47);
             this.txtLastName.MaximumSize = new System.Drawing.Size(202, 32);
-            this.txtLastName.MaxLength = 32767;
+            this.txtLastName.MaxLength = 100;
             this.txtLastName.MinimumSize = new System.Drawing.Size(202, 32);
             this.txtLastName.Modified = false;
             this.txtLastName.Multiline = false;
@@ -991,7 +992,7 @@
             this.txtFirstName.Lines = new string[0];
             this.txtFirstName.Location = new System.Drawing.Point(30, 47);
             this.txtFirstName.MaximumSize = new System.Drawing.Size(202, 32);
-            this.txtFirstName.MaxLength = 32767;
+            this.txtFirstName.MaxLength = 100;
             this.txtFirstName.MinimumSize = new System.Drawing.Size(202, 32);
             this.txtFirstName.Modified = false;
             this.txtFirstName.Multiline = false;

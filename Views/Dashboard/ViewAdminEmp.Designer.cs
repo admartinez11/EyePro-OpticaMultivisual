@@ -50,20 +50,20 @@
             this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.MenuRecu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsResPass = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btnNuevo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEditar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEliminar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.MenuRecu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsResPass = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
             this.MenuRecu.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -161,7 +161,7 @@
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
             this.txtSearch.Location = new System.Drawing.Point(3, 3);
-            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.MaxLength = 256;
             this.txtSearch.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
@@ -186,7 +186,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtSearch.OnIdleState = stateProperties4;
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(3);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtSearch.PlaceholderText = "Buscador";
@@ -348,7 +348,7 @@
             this.dgvEmpleados.EnableHeadersVisualStyles = false;
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
             this.dgvEmpleados.Location = new System.Drawing.Point(2, 2);
-            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -370,6 +370,23 @@
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(819, 514);
             this.dgvEmpleados.TabIndex = 51;
+            // 
+            // MenuRecu
+            // 
+            this.MenuRecu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MenuRecu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuRecu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsResPass});
+            this.MenuRecu.Name = "MenuRecu";
+            this.MenuRecu.Size = new System.Drawing.Size(185, 30);
+            // 
+            // cmsResPass
+            // 
+            this.cmsResPass.Image = global::OpticaMultivisual.Properties.Resources.Admin;
+            this.cmsResPass.Name = "cmsResPass";
+            this.cmsResPass.Size = new System.Drawing.Size(184, 26);
+            this.cmsResPass.Text = "Reiniciar contraseña";
+            this.cmsResPass.ToolTipText = "Cambiar la contraseña al empleado deseado";
             // 
             // tableLayoutPanel6
             // 
@@ -662,23 +679,6 @@
             this.btnEliminar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEliminar.UseDefaultRadiusAndThickness = true;
             // 
-            // MenuRecu
-            // 
-            this.MenuRecu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MenuRecu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MenuRecu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsResPass});
-            this.MenuRecu.Name = "MenuRecu";
-            this.MenuRecu.Size = new System.Drawing.Size(185, 30);
-            // 
-            // cmsResPass
-            // 
-            this.cmsResPass.Image = global::OpticaMultivisual.Properties.Resources.Admin;
-            this.cmsResPass.Name = "cmsResPass";
-            this.cmsResPass.Size = new System.Drawing.Size(184, 26);
-            this.cmsResPass.Text = "Reiniciar contraseña";
-            this.cmsResPass.ToolTipText = "Cambiar la contraseña al empleado deseado";
-            // 
             // ViewAdminEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,8 +698,8 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.MenuRecu.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

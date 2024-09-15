@@ -190,7 +190,7 @@
             this.txtPhone.Lines = new string[0];
             this.txtPhone.Location = new System.Drawing.Point(297, 300);
             this.txtPhone.MaximumSize = new System.Drawing.Size(202, 32);
-            this.txtPhone.MaxLength = 32767;
+            this.txtPhone.MaxLength = 30;
             this.txtPhone.MinimumSize = new System.Drawing.Size(202, 32);
             this.txtPhone.Modified = false;
             this.txtPhone.Multiline = false;
@@ -267,7 +267,7 @@
             this.txtPbx.Lines = new string[0];
             this.txtPbx.Location = new System.Drawing.Point(508, 300);
             this.txtPbx.MaximumSize = new System.Drawing.Size(224, 32);
-            this.txtPbx.MaxLength = 32767;
+            this.txtPbx.MaxLength = 30;
             this.txtPbx.MinimumSize = new System.Drawing.Size(224, 32);
             this.txtPbx.Modified = false;
             this.txtPbx.Multiline = false;
@@ -370,7 +370,7 @@
             this.txtEmailBussines.Lines = new string[0];
             this.txtEmailBussines.Location = new System.Drawing.Point(38, 220);
             this.txtEmailBussines.MaximumSize = new System.Drawing.Size(695, 32);
-            this.txtEmailBussines.MaxLength = 32767;
+            this.txtEmailBussines.MaxLength = 100;
             this.txtEmailBussines.MinimumSize = new System.Drawing.Size(695, 32);
             this.txtEmailBussines.Modified = false;
             this.txtEmailBussines.Multiline = false;
@@ -447,7 +447,7 @@
             this.txtAddressBussines.Lines = new string[0];
             this.txtAddressBussines.Location = new System.Drawing.Point(37, 133);
             this.txtAddressBussines.MaximumSize = new System.Drawing.Size(695, 54);
-            this.txtAddressBussines.MaxLength = 32767;
+            this.txtAddressBussines.MaxLength = 100;
             this.txtAddressBussines.MinimumSize = new System.Drawing.Size(695, 54);
             this.txtAddressBussines.Modified = false;
             this.txtAddressBussines.Multiline = false;
@@ -524,7 +524,7 @@
             this.txtNameBussines.Lines = new string[0];
             this.txtNameBussines.Location = new System.Drawing.Point(38, 66);
             this.txtNameBussines.MaximumSize = new System.Drawing.Size(695, 32);
-            this.txtNameBussines.MaxLength = 32767;
+            this.txtNameBussines.MaxLength = 50;
             this.txtNameBussines.MinimumSize = new System.Drawing.Size(695, 32);
             this.txtNameBussines.Modified = false;
             this.txtNameBussines.Multiline = false;
