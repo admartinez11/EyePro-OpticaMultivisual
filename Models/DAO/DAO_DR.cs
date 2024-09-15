@@ -54,13 +54,13 @@ namespace OpticaMultivisual.Models.DAO
             {
                 Command.Connection = getConnection();
                 //Definir instrucción de lo que se quiere hacer
-                string query = "SELECT con_ID FROM Consulta";
+                string query = "SELECT cli_DUI FROM Cliente";
                 //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
                 SqlCommand cmdSelect = new SqlCommand(query, Command.Connection);
                 cmdSelect.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, "Consulta");
+                adp.Fill(ds, "Cliente");
                 return ds;
             }
             catch (Exception)
