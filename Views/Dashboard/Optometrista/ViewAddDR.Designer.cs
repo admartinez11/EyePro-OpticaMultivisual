@@ -153,8 +153,8 @@
             this.btnGuardar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnActualizar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.cbcon_ID = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -2374,6 +2374,50 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(305, 97);
             this.tableLayoutPanel7.TabIndex = 8;
             // 
+            // cbcon_ID
+            // 
+            this.cbcon_ID.BackColor = System.Drawing.Color.Transparent;
+            this.cbcon_ID.BackgroundColor = System.Drawing.Color.White;
+            this.cbcon_ID.BorderColor = System.Drawing.Color.Silver;
+            this.cbcon_ID.BorderRadius = 1;
+            this.cbcon_ID.Color = System.Drawing.Color.Silver;
+            this.cbcon_ID.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbcon_ID.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cbcon_ID.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cbcon_ID.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cbcon_ID.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cbcon_ID.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cbcon_ID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbcon_ID.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cbcon_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbcon_ID.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbcon_ID.FillDropDown = true;
+            this.cbcon_ID.FillIndicator = false;
+            this.cbcon_ID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbcon_ID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbcon_ID.ForeColor = System.Drawing.Color.Black;
+            this.cbcon_ID.FormattingEnabled = true;
+            this.cbcon_ID.Icon = null;
+            this.cbcon_ID.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbcon_ID.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cbcon_ID.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbcon_ID.IndicatorThickness = 2;
+            this.cbcon_ID.IsDropdownOpened = false;
+            this.cbcon_ID.ItemBackColor = System.Drawing.Color.White;
+            this.cbcon_ID.ItemBorderColor = System.Drawing.Color.White;
+            this.cbcon_ID.ItemForeColor = System.Drawing.Color.Black;
+            this.cbcon_ID.ItemHeight = 26;
+            this.cbcon_ID.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cbcon_ID.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cbcon_ID.ItemTopMargin = 3;
+            this.cbcon_ID.Location = new System.Drawing.Point(84, 67);
+            this.cbcon_ID.Name = "cbcon_ID";
+            this.cbcon_ID.Size = new System.Drawing.Size(132, 32);
+            this.cbcon_ID.TabIndex = 114;
+            this.cbcon_ID.Text = null;
+            this.cbcon_ID.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbcon_ID.TextLeftMargin = 5;
+            // 
             // bunifuButton23
             // 
             this.bunifuButton23.AllowAnimations = true;
@@ -2463,50 +2507,6 @@
             this.bunifuButton23.TextMarginLeft = 0;
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
-            // 
-            // cbcon_ID
-            // 
-            this.cbcon_ID.BackColor = System.Drawing.Color.Transparent;
-            this.cbcon_ID.BackgroundColor = System.Drawing.Color.White;
-            this.cbcon_ID.BorderColor = System.Drawing.Color.Silver;
-            this.cbcon_ID.BorderRadius = 1;
-            this.cbcon_ID.Color = System.Drawing.Color.Silver;
-            this.cbcon_ID.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cbcon_ID.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cbcon_ID.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cbcon_ID.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cbcon_ID.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cbcon_ID.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cbcon_ID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbcon_ID.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cbcon_ID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbcon_ID.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cbcon_ID.FillDropDown = true;
-            this.cbcon_ID.FillIndicator = false;
-            this.cbcon_ID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbcon_ID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cbcon_ID.ForeColor = System.Drawing.Color.Black;
-            this.cbcon_ID.FormattingEnabled = true;
-            this.cbcon_ID.Icon = null;
-            this.cbcon_ID.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cbcon_ID.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.cbcon_ID.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cbcon_ID.IndicatorThickness = 2;
-            this.cbcon_ID.IsDropdownOpened = false;
-            this.cbcon_ID.ItemBackColor = System.Drawing.Color.White;
-            this.cbcon_ID.ItemBorderColor = System.Drawing.Color.White;
-            this.cbcon_ID.ItemForeColor = System.Drawing.Color.Black;
-            this.cbcon_ID.ItemHeight = 26;
-            this.cbcon_ID.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cbcon_ID.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cbcon_ID.ItemTopMargin = 3;
-            this.cbcon_ID.Location = new System.Drawing.Point(84, 67);
-            this.cbcon_ID.Name = "cbcon_ID";
-            this.cbcon_ID.Size = new System.Drawing.Size(132, 32);
-            this.cbcon_ID.TabIndex = 114;
-            this.cbcon_ID.Text = null;
-            this.cbcon_ID.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cbcon_ID.TextLeftMargin = 5;
             // 
             // ViewAddDR
             // 
