@@ -2362,8 +2362,8 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.88525F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.57377F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.86885F));
-            this.tableLayoutPanel7.Controls.Add(this.bunifuButton23, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.cbcon_ID, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.bunifuButton23, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(895, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -2373,7 +2373,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(305, 97);
             this.tableLayoutPanel7.TabIndex = 8;
-            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // bunifuButton23
             // 
