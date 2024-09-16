@@ -51,9 +51,9 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             DAOLens daoArt = new DAOLens();
             DataSet ds = daoArt.ObtenerConsulta();
-            ObjAddLens.cbcon_ID.DataSource = ds.Tables["Cliente"];
+            ObjAddLens.cbcon_ID.DataSource = ds.Tables["Consulta"];
             ObjAddLens.cbcon_ID.DisplayMember = "cli_DUI";
-            ObjAddLens.cbcon_ID.ValueMember = "cli_DUI";
+            ObjAddLens.cbcon_ID.ValueMember = "con_ID";
         }
 
         public void verificarAccion()

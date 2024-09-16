@@ -20,7 +20,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         private int accion;
         //pruebaaaa
 
-        public ControllerAddDR(ViewAddDR Vista, int accion, int DR_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
+        public ControllerAddDR(ViewAddDR Vista, int accion, int DR_ID, string con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
         {
             //Acciones Iniciales
             ObjAddDR = Vista;
@@ -54,11 +54,10 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             DAO_DR daoArt = new DAO_DR();
             DataSet ds = daoArt.ObtenerConsulta();
-            ObjAddDR.cbcon_ID.DataSource = ds.Tables["Cliente"];
+            ObjAddDR.cbcon_ID.DataSource = ds.Tables["Consulta"];
             ObjAddDR.cbcon_ID.DisplayMember = "cli_DUI";
-            ObjAddDR.cbcon_ID.ValueMember = "cli_DUI";
+            ObjAddDR.cbcon_ID.ValueMember = "con_ID";
         }
-
 
         public void verificarAccion()
         {
@@ -84,7 +83,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 //OD
                 //DAOInsert.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
                 DAOInsert.OD_esfera1 = ObjAddDR.txtOIEsfera.Text.Trim();
-                DAOInsert.con_ID1 = int.Parse(ObjAddDR.cbcon_ID.SelectedValue.ToString());
+                DAOInsert.con_ID1 = ObjAddDR.cbcon_ID.SelectedValue.ToString();
                 DAOInsert.OD_cilindro1 = ObjAddDR.txtOICilindro.Text.Trim();
                 DAOInsert.OD_eje1 = ObjAddDR.txtOIEje.Text.Trim();
                 DAOInsert.OD_prisma1 = ObjAddDR.txtOIPrisma.Text.Trim();
@@ -136,7 +135,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAO_DR daoUpdate = new DAO_DR();
 
                 daoUpdate.DR_ID1 = int.Parse(ObjAddDR.txtDRid.Text.ToString());
-                daoUpdate.con_ID1 = int.Parse(ObjAddDR.cbcon_ID.SelectedValue.ToString());
+                daoUpdate.con_ID1 = ObjAddDR.cbcon_ID.SelectedValue.ToString();
                 daoUpdate.OD_esfera1 = ObjAddDR.txtOIEsfera.Text.Trim();
                 daoUpdate.OD_cilindro1 = ObjAddDR.txtOICilindro.Text.ToString();
                 daoUpdate.OD_eje1 = ObjAddDR.txtOIEje.Text.ToString();
@@ -526,7 +525,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         }
         //finish validations
 
-        public void ChargeValues(int DR_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
+        public void ChargeValues(int DR_ID, string con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
         {
             //Asigna los valores recibidos a los campos correspondientes a la vista ObjAddDR
             //Valores de Ojo Derecho
