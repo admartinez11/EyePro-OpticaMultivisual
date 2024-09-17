@@ -483,10 +483,10 @@ namespace OpticaMultivisual.Models.DAO
             catch (Exception ex)
             {
                 // Se retorna null si durante la ejecución del try ocurre algún error y se puede loguear el error
-                MessageBox.Show("EPV010 - Error de excepción",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                //MessageBox.Show("EPV010 - Error de excepción",
+                //    "Error",
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -524,7 +524,7 @@ namespace OpticaMultivisual.Models.DAO
                 cmd2.Parameters.AddWithValue("userAttempts", UserAttempts);
                 cmd2.Parameters.AddWithValue("SecurityQuestion", SecurityQuestion);
                 cmd2.Parameters.AddWithValue("SecurityAnswer", SecurityAnswer);
-                cmd2.Parameters.AddWithValue("idNegocio", 2);
+                cmd2.Parameters.AddWithValue("idNegocio", 3);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 /*ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se
                 ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.*/

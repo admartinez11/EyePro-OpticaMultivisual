@@ -89,14 +89,14 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
             }
 
             string telefono = ObjVistaR.txtCiTel.Text.Trim();
-            if (!EsValido(telefono))
+            if (!EsTelValido(telefono))
             {
-                MessageBox.Show("El campo Teléfono solo puede contener números y un solo guion.", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El número de teléfono debe contener un guion (-).", "Validación de Teléfono", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             string DUI = ObjVistaR.txtCiDUI.Text.Trim();
-            if (!EsValido(DUI))
+            if (!EsDUIValido(DUI))
             {
                 MessageBox.Show("El campo DUI solo puede contener números y un solo guion.", "Validación de DUI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -153,21 +153,29 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
             string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(correo, patron);
         }
-        private bool EsValido(string valor)
+        private bool EsDUIValido(string dui)
         {
-            int guionCount = 0;
-            foreach (char c in valor)
+            // Expresión regular para validar el formato del DUI: 8 dígitos seguidos de un guion y un dígito.
+            string patronDUI = @"^\d{8}-\d{1}$";
+
+            // Verifica si el DUI ingresado cumple con el formato usando una expresión regular
+            if (System.Text.RegularExpressions.Regex.IsMatch(dui, patronDUI))
             {
-                if (c == '-')
-                {
-                    guionCount++;
-                }
-                else if (!char.IsDigit(c))
-                {
-                    return false;
-                }
+                return true; // El formato es válido
             }
-            return guionCount <= 1;
+            else
+            {
+                MessageBox.Show("El DUI ingresado no es válido. Debe tener el formato 12345678-9.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; // El formato es inválido
+            }
+        }
+        private bool EsTelValido(string telefono)
+        {
+            if (!telefono.Contains("-"))
+            {
+                return false;
+            }
+            return true;
         }
         private bool ValidarFechaSeleccionada(DateTime fecha)
         {
@@ -226,40 +234,43 @@ namespace OpticaMultivisual.Controllers.ScheduleAppointment
 
         public void ActualizarRegistro(object sender, EventArgs e)
         {
-            DAOScheduleAppointment DAOActualizar = new DAOScheduleAppointment
+            if (ValidarCampos())
             {
-                Vis_dui = ObjVistaR.txtCiDUI.Text.Trim(),
-                Vis_tel = ObjVistaR.txtCiTel.Text.Trim(),
-                Vis_obser = ObjVistaR.txtCiObs.Text.Trim(),
-                Vis_fcita = ObjVistaR.DTPfechacita.Value,
-                Vis_nombre = ObjVistaR.txtCiNombre.Text.Trim(),
-                Vis_apellido = ObjVistaR.txtCiApellido.Text.Trim(),
-                Vis_correo = ObjVistaR.txtCiCorreo.Text.Trim()
-            };
+                    DAOScheduleAppointment DAOActualizar = new DAOScheduleAppointment
+                    {
+                        Vis_dui = ObjVistaR.txtCiDUI.Text.Trim(),
+                        Vis_tel = ObjVistaR.txtCiTel.Text.Trim(),
+                        Vis_obser = ObjVistaR.txtCiObs.Text.Trim(),
+                        Vis_fcita = ObjVistaR.DTPfechacita.Value,
+                        Vis_nombre = ObjVistaR.txtCiNombre.Text.Trim(),
+                        Vis_apellido = ObjVistaR.txtCiApellido.Text.Trim(),
+                        Vis_correo = ObjVistaR.txtCiCorreo.Text.Trim()
+                    };
 
-            int valorRetornado = DAOActualizar.ActualizarVisita();
-            if (valorRetornado > 0)
-            {
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjVistaR.Close();
+                    int valorRetornado = DAOActualizar.ActualizarVisita();
+                if (valorRetornado > 0)
+                {
+                    MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjVistaR.Close();
 
-            }
-            else if (valorRetornado == 0)
-            {
-                MessageBox.Show("EPV004 - No se encontraron los datos del registro",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show("Error: EPV001 - Error inesperado",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                }
+                else if (valorRetornado == 0)
+                {
+                    MessageBox.Show("EPV004 - No se encontraron los datos del registro",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Error: EPV001 - Error inesperado",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
         public void verificarAccion()

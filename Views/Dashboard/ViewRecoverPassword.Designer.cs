@@ -306,7 +306,7 @@
             this.txtCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreo.Lines = new string[0];
             this.txtCorreo.Location = new System.Drawing.Point(3, 88);
-            this.txtCorreo.MaxLength = 32767;
+            this.txtCorreo.MaxLength = 150;
             this.txtCorreo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreo.Modified = false;
             this.txtCorreo.Multiline = false;

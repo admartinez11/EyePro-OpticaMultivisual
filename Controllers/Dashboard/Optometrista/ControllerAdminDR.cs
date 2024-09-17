@@ -94,11 +94,11 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
         {
             int pos = ObjAdminDR.dgvDR.CurrentRow.Index;
 
-            int DR_ID, con_ID; 
-            string OD_esfera, OD_prisma, OD_adicion, OD_AO, OI_prisma, OI_adicion, OI_AO, OD_cilindro, OI_esfera, OD_eje, OD_AP, OD_DP, OI_cilindro, OI_eje, OI_AP, OI_DP;
+            int DR_ID; 
+            string con_ID, OD_esfera, OD_prisma, OD_adicion, OD_AO, OI_prisma, OI_adicion, OI_AO, OD_cilindro, OI_esfera, OD_eje, OD_AP, OD_DP, OI_cilindro, OI_eje, OI_AP, OI_DP;
 
             DR_ID = int.Parse(ObjAdminDR.dgvDR[0, pos].Value.ToString());
-            con_ID = int.Parse(ObjAdminDR.dgvDR[1, pos].Value.ToString());
+            con_ID = ObjAdminDR.dgvDR[1, pos].Value.ToString();
             OD_esfera = ObjAdminDR.dgvDR[2, pos].Value.ToString();
             OD_cilindro = ObjAdminDR.dgvDR[3, pos].Value.ToString();
             OD_eje = ObjAdminDR.dgvDR[4, pos].Value.ToString();

@@ -318,7 +318,7 @@
             this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPassword.Lines = new string[0];
             this.txtNewPassword.Location = new System.Drawing.Point(3, 149);
-            this.txtNewPassword.MaxLength = 32767;
+            this.txtNewPassword.MaxLength = 100;
             this.txtNewPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPassword.Modified = false;
             this.txtNewPassword.Multiline = false;
@@ -395,7 +395,7 @@
             this.txtSecurityAnswer.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSecurityAnswer.Lines = new string[0];
             this.txtSecurityAnswer.Location = new System.Drawing.Point(3, 89);
-            this.txtSecurityAnswer.MaxLength = 32767;
+            this.txtSecurityAnswer.MaxLength = 256;
             this.txtSecurityAnswer.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSecurityAnswer.Modified = false;
             this.txtSecurityAnswer.Multiline = false;

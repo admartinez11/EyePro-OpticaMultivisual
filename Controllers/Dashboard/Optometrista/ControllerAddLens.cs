@@ -52,7 +52,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             DAOLens daoArt = new DAOLens();
             DataSet ds = daoArt.ObtenerConsulta();
             ObjAddLens.cbcon_ID.DataSource = ds.Tables["Consulta"];
-            ObjAddLens.cbcon_ID.DisplayMember = "con_ID";
+            ObjAddLens.cbcon_ID.DisplayMember = "cli_DUI";
             ObjAddLens.cbcon_ID.ValueMember = "con_ID";
         }
 
@@ -79,19 +79,23 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 //Datos para creación de persona
                 //OD
                 DAOInsert.con_ID1 = int.Parse(ObjAddLens.cbcon_ID.SelectedValue.ToString());
-                DAOInsert.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                DAOInsert.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
-                DAOInsert.OD_eje1 = ObjAddLens.txtODEje.Text.Trim();
-                DAOInsert.OD_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
-                DAOInsert.OD_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
+                DAOInsert.OD_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
+                DAOInsert.OD_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
+                DAOInsert.OD_eje1 = ObjAddLens.txtOIEje.Text.Trim();
+                DAOInsert.OD_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
+                DAOInsert.OD_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
                 //OI
-                DAOInsert.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                DAOInsert.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
-                DAOInsert.OI_eje1 = ObjAddLens.txtOIEje.Text.Trim();
-                DAOInsert.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
-                DAOInsert.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
+                DAOInsert.OI_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
+                DAOInsert.OI_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
+                DAOInsert.OI_eje1 = ObjAddLens.txtODEje.Text.Trim();
+                DAOInsert.OI_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
+                DAOInsert.OI_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
 
                 int valorRetornado = DAOInsert.InsertarLens();
+                MessageBox.Show($"Valor retornado: {valorRetornado}",
+                                    "xx",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
                 //Se verifica el valor que retornó el metodo anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -119,17 +123,17 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
                 DAOLens daoUpdate = new DAOLens();
                 daoUpdate.lens_ID1 = int.Parse(ObjAddLens.txtDRid.Text.ToString());
                 daoUpdate.con_ID1 = int.Parse(ObjAddLens.cbcon_ID.SelectedValue.ToString());
-                daoUpdate.OD_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
-                daoUpdate.OD_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
-                daoUpdate.OD_eje1 = ObjAddLens.txtODEje.Text.Trim();
-                daoUpdate.OD_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
-                daoUpdate.OD_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
+                daoUpdate.OD_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
+                daoUpdate.OD_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
+                daoUpdate.OD_eje1 = ObjAddLens.txtOIEje.Text.Trim();
+                daoUpdate.OD_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
+                daoUpdate.OD_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
                 //OI
-                daoUpdate.OI_esfera1 = ObjAddLens.txtOIEsfera.Text.Trim();
-                daoUpdate.OI_cilindro1 = ObjAddLens.txtOICilindro.Text.Trim();
-                daoUpdate.OI_eje1 = ObjAddLens.txtOIEje.Text.Trim();
-                daoUpdate.OI_prisma1 = ObjAddLens.txtOIPrisma.Text.Trim();
-                daoUpdate.OI_adicion1 = ObjAddLens.txtOIAdicion.Text.Trim();
+                daoUpdate.OI_esfera1 = ObjAddLens.txtODEsfera.Text.Trim();
+                daoUpdate.OI_cilindro1 = ObjAddLens.txtODCilindro.Text.Trim();
+                daoUpdate.OI_eje1 = ObjAddLens.txtODEje.Text.Trim();
+                daoUpdate.OI_prisma1 = ObjAddLens.txtODPrisma.Text.Trim();
+                daoUpdate.OI_adicion1 = ObjAddLens.txtODAdicion.Text.Trim();
 
                 int valorRetornado = daoUpdate.ActualizarLens();
                 if (valorRetornado == 1)
@@ -162,7 +166,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             CommonClasses commonClasses = new CommonClasses();
 
             // Validación Ojo Derecho Esfera
-            string OD_esfera = ObjAddLens.txtODEsfera.Text.Trim();
+            string OD_esfera = ObjAddLens.txtOIEsfera.Text.Trim();
             if (!string.IsNullOrEmpty(OD_esfera))
             {
                 if (!Regex.IsMatch(OD_esfera, @"^\d+$"))
@@ -180,7 +184,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Derecho Cilindro
-            string OD_cilindro = ObjAddLens.txtODCilindro.Text.Trim();
+            string OD_cilindro = ObjAddLens.txtOICilindro.Text.Trim();
             if (!string.IsNullOrEmpty(OD_cilindro))
             {
                 if (!OD_cilindro.Contains("."))
@@ -205,7 +209,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Derecho Eje
-            string OD_eje = ObjAddLens.txtODEje.Text.Trim();
+            string OD_eje = ObjAddLens.txtOIEje.Text.Trim();
             if (!string.IsNullOrEmpty(OD_eje))
             {
                 if (!OD_eje.Contains("."))
@@ -230,7 +234,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Derecho Prisma
-            string OD_prisma = ObjAddLens.txtODPrisma.Text.Trim();
+            string OD_prisma = ObjAddLens.txtOIPrisma.Text.Trim();
             if (!string.IsNullOrEmpty(OD_prisma))
             {
                 if (!Regex.IsMatch(OD_prisma, @"^\d+$"))
@@ -248,7 +252,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Derecho Adición
-            string OD_adicion = ObjAddLens.txtODPrisma.Text.Trim();
+            string OD_adicion = ObjAddLens.txtOIPrisma.Text.Trim();
             if (!string.IsNullOrEmpty(OD_adicion))
             {
                 if (!Regex.IsMatch(OD_adicion, @"^\d+$"))
@@ -266,7 +270,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Izquierdo Esfera
-            string OI_esfera = ObjAddLens.txtOIEsfera.Text.Trim();
+            string OI_esfera = ObjAddLens.txtODEsfera.Text.Trim();
             if (!string.IsNullOrEmpty(OI_esfera))
             {
                 if (!Regex.IsMatch(OI_esfera, @"^\d+$"))
@@ -283,7 +287,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             } 
 
             // Validación Ojo Izquierdo Cilindro
-            string OI_cilindro = ObjAddLens.txtOICilindro.Text.Trim();
+            string OI_cilindro = ObjAddLens.txtODCilindro.Text.Trim();
             if (!string.IsNullOrEmpty(OI_cilindro))
             {
                 if (!OI_cilindro.Contains("."))
@@ -308,7 +312,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Izquierdo Eje
-            string OI_eje = ObjAddLens.txtOIEje.Text.Trim();
+            string OI_eje = ObjAddLens.txtODEje.Text.Trim();
             if (!string.IsNullOrEmpty(OI_eje))
             {
                 if (!OI_eje.Contains("."))
@@ -333,7 +337,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Izquierdo Prisma
-            string OI_prisma = ObjAddLens.txtOIPrisma.Text.Trim();
+            string OI_prisma = ObjAddLens.txtODPrisma.Text.Trim();
             if (!string.IsNullOrEmpty(OI_prisma))
             {
                 if (!Regex.IsMatch(OI_prisma, @"^\d+$"))
@@ -351,7 +355,7 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             }
 
             // Validación Ojo Izquierdo Adición
-            string OI_adicion = ObjAddLens.txtOIAdicion.Text.Trim();
+            string OI_adicion = ObjAddLens.txtODAdicion.Text.Trim();
             if (!string.IsNullOrEmpty(OI_adicion))
             {
                 if (!Regex.IsMatch(OI_adicion, @"^\d+$"))
@@ -377,17 +381,17 @@ namespace OpticaMultivisual.Controllers.Dashboard.Optometrista
             //Valores de Ojo Derecho
             ObjAddLens.txtDRid.Text = lens_ID.ToString();
             ObjAddLens.cbcon_ID.SelectedValue = lens_ID.ToString();
-            ObjAddLens.txtODEsfera.Text = OD_esfera;
-            ObjAddLens.txtODCilindro.Text = OD_cilindro;
-            ObjAddLens.txtODEje.Text = OD_eje;
-            ObjAddLens.txtODPrisma.Text = OD_prisma;
-            ObjAddLens.txtODAdicion.Text = OD_adicion;
+            ObjAddLens.txtOIEsfera.Text = OD_esfera;
+            ObjAddLens.txtOICilindro.Text = OD_cilindro;
+            ObjAddLens.txtOIEje.Text = OD_eje;
+            ObjAddLens.txtOIPrisma.Text = OD_prisma;
+            ObjAddLens.txtOIAdicion.Text = OD_adicion;
             //Valores de Ojo Izquierdo
-            ObjAddLens.txtOIEsfera.Text = OI_esfera;
-            ObjAddLens.txtOICilindro.Text = OI_cilindro;
-            ObjAddLens.txtOIEje.Text = OI_eje;
-            ObjAddLens.txtOIPrisma.Text = OI_prisma;
-            ObjAddLens.txtOIAdicion.Text = OI_adicion;
+            ObjAddLens.txtODEsfera.Text = OI_esfera;
+            ObjAddLens.txtODCilindro.Text = OI_cilindro;
+            ObjAddLens.txtODEje.Text = OI_eje;
+            ObjAddLens.txtODPrisma.Text = OI_prisma;
+            ObjAddLens.txtODAdicion.Text = OI_adicion;
         }
     }
 }

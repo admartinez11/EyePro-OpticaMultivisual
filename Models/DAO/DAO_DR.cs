@@ -44,17 +44,17 @@ namespace OpticaMultivisual.Models.DAO
             finally
             {
                 //Independientemente se haga o no el proceso cerramos la conexión
-                getConnection().Close();
             }
         }
 
         public DataSet ObtenerConsulta()
         {
+                getConnection().Close();
             try
             {
                 Command.Connection = getConnection();
                 //Definir instrucción de lo que se quiere hacer
-                string query = "SELECT con_ID FROM Consulta";
+                string query = "SELECT con_ID, cli_dui FROM Consulta";
                 //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
                 SqlCommand cmdSelect = new SqlCommand(query, Command.Connection);
                 cmdSelect.ExecuteNonQuery();
@@ -122,7 +122,7 @@ namespace OpticaMultivisual.Models.DAO
                 string query4 = "EXEC ActualizarDR @DR_ID, @con_ID, @OD_esfera, @OD_cilindro, @OD_eje, @OD_prisma, @OD_adicion, @OD_AO, @OD_AP, @OD_DP, @OI_esfera, @OI_cilindro, @OI_eje, @OI_prisma, @OI_adicion, @OI_AO, @OI_AP, @OI_DP";
                 SqlCommand cmd = new SqlCommand(query4, Command.Connection);
 
-                cmd.Parameters.AddWithValue("@con_ID", con_ID1);
+                cmd.Parameters.AddWithValue("@con_ID", con_ID1); 
                 cmd.Parameters.AddWithValue("@DR_ID", DR_ID1);
                 cmd.Parameters.AddWithValue("@OD_esfera", OD_esfera1);
                 cmd.Parameters.AddWithValue("@OD_cilindro", OD_cilindro1);

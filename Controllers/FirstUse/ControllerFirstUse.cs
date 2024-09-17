@@ -55,7 +55,26 @@ namespace OpticaMultivisual.Controllers.FirstUse
                         MessageBox.Show("EL correo excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    if (ObjVista.txtPhone.Text.Length > 25)
+                    string correo = ObjVista.txtEmailBussines.Text.Trim();
+                    if (!ValidarCorreo())
+                    {
+                        return;
+                    }
+                    if (!commonClasses.EsCorreoValido(correo))
+                    {
+                        MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    DateTime selectedDate = ObjVista.dtCreation.Value;
+                    DateTime today = DateTime.Today;
+                    if (selectedDate > today)
+                    {
+                        MessageBox.Show("La fecha de creación no puede ser una fecha futura.", "Validación de Fecha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    if (ObjVista.txtPhone.Text.Length > 30)
                     {
                         MessageBox.Show("El campo de teléfono ha excedido el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -72,16 +91,23 @@ namespace OpticaMultivisual.Controllers.FirstUse
                         MessageBox.Show("El nombre de negocio ingresado contiene caracteres inválidos", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else if (ObjVista.txtNameBussines.Text.Length > 100)
+                    else if (ObjVista.txtNameBussines.Text.Length > 50)
                     {
                         MessageBox.Show("El campo de nombre del negocio no debe de exceder el máximo de caracteres.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    if (ObjVista.txtPbx.Text.Length > 100)
+                    if (ObjVista.txtPbx.Text.Length > 30)
                     {
-                        MessageBox.Show("EL correo excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("EL PBX excede el máximo de caracteres permitidos en ese campo", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
+                    else if (!commonClasses.ValidarTelefono(ObjVista.txtPbx.Text.Trim()))
+                    {
+                        MessageBox.Show("El campo de PBX contiene caracteres no válidos. Solo se permiten números, guiones y paréntesis.",
+                                        "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     DAOGuardar.NombreNegocio = ObjVista.txtNameBussines.Text.Trim();
                     DAOGuardar.DireccionNegocio = ObjVista.txtAddressBussines.Text.Trim();
                     DAOGuardar.CorreoNegocio = ObjVista.txtEmailBussines.Text.Trim();

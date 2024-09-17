@@ -25,7 +25,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT userStatus FROM Usuario WHERE username = @username";
+                string query = "SELECT userStatus FROM Usuario WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 int userStatus = Convert.ToInt32(cmd.ExecuteScalar());
@@ -54,7 +54,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Usuario SET userAttempts = userAttempts + 1 WHERE username = @username";
+                string query = "UPDATE Usuario SET userAttempts = userAttempts + 1 WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.ExecuteNonQuery();
@@ -80,7 +80,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT userAttempts FROM Usuario WHERE username = @username";
+                string query = "SELECT userAttempts FROM Usuario WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 int userAttempts = Convert.ToInt32(cmd.ExecuteScalar());
@@ -110,7 +110,7 @@ namespace OpticaMultivisual.Models.DAO
                 using (SqlConnection connection = getConnection())
                 {
                     // Consulta para verificar si el usuario tiene un código de verificación
-                    string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username AND VerificationCode IS NOT NULL";
+                    string query = "SELECT COUNT(1) FROM Usuario WHERE username = @username COLLATE Latin1_General_BIN AND VerificationCode IS NOT NULL";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@username", username);
                     // Ejecutar la consulta y obtener el resultado
@@ -135,7 +135,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Usuario SET userStatus = 0 WHERE username = @username";
+                string query = "UPDATE Usuario SET userStatus = 0 WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.ExecuteNonQuery();
@@ -161,7 +161,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Usuario SET userAttempts = 0 WHERE username = @username";
+                string query = "UPDATE Usuario SET userAttempts = 0 WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.ExecuteNonQuery();
@@ -187,9 +187,9 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-
                 // Primero, verificar si el usuario existe
-                string queryUserExists = "SELECT COUNT(*) FROM ViewLogin WHERE username = @username";
+                //COLLATE Latin1_General_BIN Esta collation asegura que las comparaciones del campo username sean sensibles a mayúsculas y minúsculas.
+                string queryUserExists = "SELECT COUNT(*) FROM ViewLogin WHERE username = @username COLLATE Latin1_General_BIN";
                 SqlCommand cmdUserExists = new SqlCommand(queryUserExists, Command.Connection);
                 cmdUserExists.Parameters.AddWithValue("username", Username);
                 int userCount = (int)cmdUserExists.ExecuteScalar();
@@ -201,7 +201,7 @@ namespace OpticaMultivisual.Models.DAO
                 }
 
                 // Si el usuario existe, verificar la contraseña
-                string query = "SELECT * FROM ViewLogin WHERE username = @username AND password = @password AND userStatus = @status";
+                string query = "SELECT * FROM ViewLogin WHERE username = @username COLLATE Latin1_General_BIN AND password = @password AND userStatus = @status";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("username", Username);
                 cmd.Parameters.AddWithValue("password", Password);

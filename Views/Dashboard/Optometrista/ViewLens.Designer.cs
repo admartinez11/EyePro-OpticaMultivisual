@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.Dashboard.Optometrista
+namespace OpticaMultivisual.Views.Dashboard.Optometrista
 {
     partial class ViewLens
     {

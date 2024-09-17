@@ -23,15 +23,10 @@ namespace OpticaMultivisual.Views.Dashboard.Optometrista
 
 
         //Constructor utilizado para la actualización de datos
-        public ViewAddDR(int accion, int DR_ID, int con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
+        public ViewAddDR(int accion, int DR_ID, string con_ID, string OD_esfera, string OD_cilindro, string OD_eje, string OD_prisma, string OD_adicion, string OD_AO, string OD_AP, string OD_DP, string OI_esfera, string OI_cilindro, string OI_eje, string OI_prisma, string OI_adicion, string OI_AO, string OI_AP, string OI_DP)
         {
             InitializeComponent();
             ControllerAddDR objAddDR = new ControllerAddDR(this, accion, DR_ID, con_ID, OD_esfera, OD_cilindro, OD_eje, OD_prisma, OD_adicion, OD_AO, OD_AP, OD_DP, OI_esfera, OI_cilindro, OI_eje, OI_prisma, OI_adicion, OI_AO, OI_AP, OI_DP);
-        }
-
-        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
