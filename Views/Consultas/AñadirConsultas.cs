@@ -18,19 +18,20 @@ namespace OpticaMultivisual.Views.Consultas
         {
             InitializeComponent();
             ControladorVerConsulta controladorVerConsulta = new ControladorVerConsulta(this, accion);
+
         }
 
         // Constructor para abrir el formulario con parámetros adicionales
-        public AñadirConsulta(int accion, string cli_DUI, string vis_ID, DateTime con_fechahora, string con_obser, string emp_ID, int con_ID)
+        public AñadirConsulta(int accion, string cli_DUI, string vis_ID, DateTime con_fecha, string con_obser, string emp_ID, int con_ID, DateTime con_hora, string est_ID)
         {
             InitializeComponent(); // Asegúrate de inicializar los componentes del formulario
-            ControladorVerConsulta controladorConsulta = new ControladorVerConsulta(this, accion, cli_DUI, vis_ID, con_fechahora, con_obser, emp_ID, con_ID);
+            ControladorVerConsulta controladorConsulta = new ControladorVerConsulta(this, accion, cli_DUI, vis_ID, con_fecha, con_obser, emp_ID, con_ID, con_hora, est_ID);
+
         }
 
         private void txtConID_TextChanged(object sender, EventArgs e)
         {
             txtConID.Enabled = false;
         }
-
     }
 }

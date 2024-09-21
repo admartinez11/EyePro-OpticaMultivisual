@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpticaMultivisual.Views.Consultas
+namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
 {
-    public partial class VerConsulta : Form
+    public partial class ViewAdminModelo : Form
     {
-        public VerConsulta()
+        public ViewAdminModelo()
         {
             InitializeComponent();
         }

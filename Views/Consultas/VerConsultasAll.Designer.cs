@@ -1,6 +1,6 @@
 ﻿namespace OpticaMultivisual.Views.Consultas
 {
-    partial class VerConsulta
+    partial class VerConsultasAll
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerConsulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerConsultasAll));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -43,32 +43,32 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvInfoConsulta = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnActConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnNuevaConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEliminarConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvInfoConsulta = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBuscarConsulta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnBuscarConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoConsulta)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -82,14 +82,13 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(1440, 878);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1348, 701);
-            this.tableLayoutPanel1.TabIndex = 11;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1349, 709);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
             // tableLayoutPanel2
             // 
@@ -109,7 +108,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1315, 672);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1316, 680);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -128,8 +127,19 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.44068F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1281, 49);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1282, 50);
             this.tableLayoutPanel3.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(1245, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -137,7 +147,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(1140, 8);
+            this.label1.Location = new System.Drawing.Point(1142, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 32);
             this.label1.TabIndex = 8;
@@ -149,7 +159,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label2.Location = new System.Drawing.Point(11, 17);
+            this.label2.Location = new System.Drawing.Point(11, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 32);
             this.label2.TabIndex = 7;
@@ -162,13 +172,24 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.495713F));
             this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 646);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 654);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1281, 24);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1282, 24);
             this.tableLayoutPanel4.TabIndex = 16;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(1176, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(103, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -177,135 +198,36 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(10, 55);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(10, 56);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.976936F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.26853F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.75453F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1281, 587);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1282, 594);
             this.tableLayoutPanel5.TabIndex = 17;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 7;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.298701F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.34847F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.680501F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58342F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.980127F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.00064F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.975851F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.66171F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.43696F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.08192F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.55644F));
             this.tableLayoutPanel6.Controls.Add(this.btnActConsulta, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnNuevaConsulta, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnEliminarConsulta, 5, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 548);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 555);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1275, 37);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1147, 34);
             this.tableLayoutPanel6.TabIndex = 1;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.dgvInfoConsulta, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 13);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.759124F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.24088F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1275, 531);
-            this.tableLayoutPanel7.TabIndex = 2;
-            // 
-            // dgvInfoConsulta
-            // 
-            this.dgvInfoConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvInfoConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            this.dgvInfoConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvInfoConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfoConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInfoConsulta.ColumnHeadersHeight = 30;
-            this.dgvInfoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvInfoConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInfoConsulta.EnableHeadersVisualStyles = false;
-            this.dgvInfoConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.dgvInfoConsulta.Location = new System.Drawing.Point(3, 48);
-            this.dgvInfoConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvInfoConsulta.Name = "dgvInfoConsulta";
-            this.dgvInfoConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfoConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInfoConsulta.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvInfoConsulta.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvInfoConsulta.Size = new System.Drawing.Size(1269, 481);
-            this.dgvInfoConsulta.TabIndex = 1;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.214F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.416208F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.85759F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.43352F));
-            this.tableLayoutPanel8.Controls.Add(this.txtBuscarConsulta, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnBuscarConsulta, 2, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1269, 42);
-            this.tableLayoutPanel8.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(1243, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(1175, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // btnActConsulta
             // 
@@ -354,8 +276,8 @@
             this.btnActConsulta.IdleIconLeftImage = null;
             this.btnActConsulta.IdleIconRightImage = null;
             this.btnActConsulta.IndicateFocus = false;
-            this.btnActConsulta.Location = new System.Drawing.Point(260, 4);
-            this.btnActConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActConsulta.Location = new System.Drawing.Point(241, 4);
+            this.btnActConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActConsulta.Name = "btnActConsulta";
             this.btnActConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnActConsulta.OnDisabledState.BorderRadius = 20;
@@ -389,7 +311,7 @@
             this.btnActConsulta.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnActConsulta.OnPressedState.IconLeftImage = null;
             this.btnActConsulta.OnPressedState.IconRightImage = null;
-            this.btnActConsulta.Size = new System.Drawing.Size(182, 29);
+            this.btnActConsulta.Size = new System.Drawing.Size(163, 26);
             this.btnActConsulta.TabIndex = 28;
             this.btnActConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActConsulta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -444,8 +366,8 @@
             this.btnNuevaConsulta.IdleIconLeftImage = null;
             this.btnNuevaConsulta.IdleIconRightImage = null;
             this.btnNuevaConsulta.IndicateFocus = false;
-            this.btnNuevaConsulta.Location = new System.Drawing.Point(20, 4);
-            this.btnNuevaConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaConsulta.Location = new System.Drawing.Point(18, 4);
+            this.btnNuevaConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevaConsulta.Name = "btnNuevaConsulta";
             this.btnNuevaConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNuevaConsulta.OnDisabledState.BorderRadius = 20;
@@ -479,7 +401,7 @@
             this.btnNuevaConsulta.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnNuevaConsulta.OnPressedState.IconLeftImage = null;
             this.btnNuevaConsulta.OnPressedState.IconRightImage = null;
-            this.btnNuevaConsulta.Size = new System.Drawing.Size(186, 29);
+            this.btnNuevaConsulta.Size = new System.Drawing.Size(180, 26);
             this.btnNuevaConsulta.TabIndex = 29;
             this.btnNuevaConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevaConsulta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -534,8 +456,8 @@
             this.btnEliminarConsulta.IdleIconLeftImage = null;
             this.btnEliminarConsulta.IdleIconRightImage = null;
             this.btnEliminarConsulta.IndicateFocus = false;
-            this.btnEliminarConsulta.Location = new System.Drawing.Point(487, 4);
-            this.btnEliminarConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarConsulta.Location = new System.Drawing.Point(445, 4);
+            this.btnEliminarConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarConsulta.Name = "btnEliminarConsulta";
             this.btnEliminarConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminarConsulta.OnDisabledState.BorderRadius = 20;
@@ -569,13 +491,95 @@
             this.btnEliminarConsulta.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnEliminarConsulta.OnPressedState.IconLeftImage = null;
             this.btnEliminarConsulta.OnPressedState.IconRightImage = null;
-            this.btnEliminarConsulta.Size = new System.Drawing.Size(190, 29);
+            this.btnEliminarConsulta.Size = new System.Drawing.Size(197, 26);
             this.btnEliminarConsulta.TabIndex = 30;
             this.btnEliminarConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminarConsulta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEliminarConsulta.TextMarginLeft = 0;
             this.btnEliminarConsulta.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEliminarConsulta.UseDefaultRadiusAndThickness = true;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.dgvInfoConsulta, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 13);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.759124F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.24088F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1276, 538);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // dgvInfoConsulta
+            // 
+            this.dgvInfoConsulta.AllowUserToAddRows = false;
+            this.dgvInfoConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInfoConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInfoConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvInfoConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.dgvInfoConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvInfoConsulta.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvInfoConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfoConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInfoConsulta.ColumnHeadersHeight = 30;
+            this.dgvInfoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvInfoConsulta.EnableHeadersVisualStyles = false;
+            this.dgvInfoConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.dgvInfoConsulta.Location = new System.Drawing.Point(3, 49);
+            this.dgvInfoConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvInfoConsulta.Name = "dgvInfoConsulta";
+            this.dgvInfoConsulta.ReadOnly = true;
+            this.dgvInfoConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfoConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvInfoConsulta.RowHeadersVisible = false;
+            this.dgvInfoConsulta.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvInfoConsulta.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInfoConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInfoConsulta.Size = new System.Drawing.Size(1270, 487);
+            this.dgvInfoConsulta.TabIndex = 1;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.214F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.416208F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.85759F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.43352F));
+            this.tableLayoutPanel8.Controls.Add(this.txtBuscarConsulta, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnBuscarConsulta, 2, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1141, 39);
+            this.tableLayoutPanel8.TabIndex = 2;
             // 
             // txtBuscarConsulta
             // 
@@ -608,7 +612,7 @@
             this.txtBuscarConsulta.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarConsulta.Lines = new string[0];
             this.txtBuscarConsulta.Location = new System.Drawing.Point(4, 4);
-            this.txtBuscarConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarConsulta.MaxLength = 32767;
             this.txtBuscarConsulta.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarConsulta.Modified = false;
@@ -634,7 +638,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarConsulta.OnIdleState = stateProperties4;
-            this.txtBuscarConsulta.Padding = new System.Windows.Forms.Padding(4);
+            this.txtBuscarConsulta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarConsulta.PasswordChar = '\0';
             this.txtBuscarConsulta.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtBuscarConsulta.PlaceholderText = "Buscador";
@@ -643,8 +647,8 @@
             this.txtBuscarConsulta.SelectedText = "";
             this.txtBuscarConsulta.SelectionLength = 0;
             this.txtBuscarConsulta.SelectionStart = 0;
-            this.txtBuscarConsulta.ShortcutsEnabled = true;
-            this.txtBuscarConsulta.Size = new System.Drawing.Size(858, 34);
+            this.txtBuscarConsulta.ShortcutsEnabled = false;
+            this.txtBuscarConsulta.Size = new System.Drawing.Size(770, 31);
             this.txtBuscarConsulta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarConsulta.TabIndex = 35;
             this.txtBuscarConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -660,7 +664,8 @@
             this.btnBuscarConsulta.AllowAnimations = true;
             this.btnBuscarConsulta.AllowMouseEffects = true;
             this.btnBuscarConsulta.AllowToggling = false;
-            this.btnBuscarConsulta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBuscarConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarConsulta.AnimationSpeed = 200;
             this.btnBuscarConsulta.AutoGenerateColors = false;
             this.btnBuscarConsulta.AutoRoundBorders = false;
@@ -703,8 +708,8 @@
             this.btnBuscarConsulta.IdleIconLeftImage = null;
             this.btnBuscarConsulta.IdleIconRightImage = null;
             this.btnBuscarConsulta.IndicateFocus = true;
-            this.btnBuscarConsulta.Location = new System.Drawing.Point(887, 4);
-            this.btnBuscarConsulta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarConsulta.Location = new System.Drawing.Point(798, 4);
+            this.btnBuscarConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarConsulta.Name = "btnBuscarConsulta";
             this.btnBuscarConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscarConsulta.OnDisabledState.BorderRadius = 20;
@@ -738,7 +743,7 @@
             this.btnBuscarConsulta.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBuscarConsulta.OnPressedState.IconLeftImage = null;
             this.btnBuscarConsulta.OnPressedState.IconRightImage = null;
-            this.btnBuscarConsulta.Size = new System.Drawing.Size(129, 33);
+            this.btnBuscarConsulta.Size = new System.Drawing.Size(115, 31);
             this.btnBuscarConsulta.TabIndex = 35;
             this.btnBuscarConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuscarConsulta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -750,24 +755,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1348, 701);
+            this.ClientSize = new System.Drawing.Size(1349, 709);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1366, 748);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1363, 717);
             this.Name = "VerConsulta";
             this.Text = "VerConsulta";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoConsulta)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

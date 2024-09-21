@@ -1,5 +1,6 @@
 ﻿using OpticaMultivisual.Models.DAO;
 using OpticaMultivisual.Views.Article;
+using OpticaMultivisual.Views.Dashboard.Article;
 using OpticaMultivisual.Views.ScheduleAppointment;
 using System;
 using System.Collections.Generic;
