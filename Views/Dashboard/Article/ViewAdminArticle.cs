@@ -20,5 +20,6 @@ namespace OpticaMultivisual.Views.Article
 
             ControllerAdminArticle objArticle = new ControllerAdminArticle(this);
         }
+
     }
 }

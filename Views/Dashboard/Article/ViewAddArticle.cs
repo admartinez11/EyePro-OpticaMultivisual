@@ -1,5 +1,4 @@
 ﻿using OpticaMultivisual.Controllers.Article;
-using OpticaMultivisual.Controllers.ScheduleAppointment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OpticaMultivisual.Views.Article
+namespace OpticaMultivisual.Views.Dashboard.Article
 {
     public partial class ViewAddArticle : Form
     {
@@ -45,4 +44,3 @@ namespace OpticaMultivisual.Views.Article
         }
     }
 }
-

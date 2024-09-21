@@ -31,26 +31,28 @@ namespace OpticaMultivisual.Controllers.Consulta
             LlenarComboDui();
             LlenarComboVisita();
             LlenarComboEmpleados();
-            //AñadirConsulta_Load();
+            LlenarComboEstado();
+            AñadirConsulta_Load();
+            ObjAañadirConsulta.cmbDUI.SelectedIndexChanged += new EventHandler(SELECIONARUNCOMBO);
         }
 
-        //private void AñadirConsulta_Load()
-        //{
-        //    // Configurar ComboBox para DUI con búsqueda y selección únicamente
-        //    ObjAañadirConsulta.cmbDUI.DropDownStyle = ComboBoxStyle.DropDown;
-        //    ObjAañadirConsulta.cmbDUI.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-        //    ObjAañadirConsulta.cmbDUI.AutoCompleteSource = AutoCompleteSource.ListItems;
+        private void AñadirConsulta_Load()
+        {
+            // Configurar ComboBox para DUI con búsqueda y selección únicamente
+            ObjAañadirConsulta.cmbDUI.DropDownStyle = ComboBoxStyle.DropDown;
+            ObjAañadirConsulta.cmbDUI.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ObjAañadirConsulta.cmbDUI.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-        //    // Configurar ComboBox para Visita con búsqueda y selección únicamente
-        //    ObjAañadirConsulta.cmbVisita.DropDownStyle = ComboBoxStyle.DropDown;
-        //    ObjAañadirConsulta.cmbVisita.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-        //    ObjAañadirConsulta.cmbVisita.AutoCompleteSource = AutoCompleteSource.ListItems;
+            // Configurar ComboBox para Visita con búsqueda y selección únicamente
+            ObjAañadirConsulta.cmbVisita.DropDownStyle = ComboBoxStyle.DropDown;
+            ObjAañadirConsulta.cmbVisita.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ObjAañadirConsulta.cmbVisita.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-        //    // Configurar ComboBox para Empleado con búsqueda y selección únicamente
-        //    ObjAañadirConsulta.cmbEmpleado.DropDownStyle = ComboBoxStyle.DropDown;
-        //    ObjAañadirConsulta.cmbEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-        //    ObjAañadirConsulta.cmbEmpleado.AutoCompleteSource = AutoCompleteSource.ListItems;
-        //}
+            // Configurar ComboBox para Empleado con búsqueda y selección únicamente
+            ObjAañadirConsulta.cmbEmpleado.DropDownStyle = ComboBoxStyle.DropDown;
+            ObjAañadirConsulta.cmbEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ObjAañadirConsulta.cmbEmpleado.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
         void LlenarComboDui()
         {
             DAOConsulta DaoDui = new DAOConsulta();
@@ -76,6 +78,14 @@ namespace OpticaMultivisual.Controllers.Consulta
             ObjAañadirConsulta.cmbEmpleado.DisplayMember = "emp_nombre";
             ObjAañadirConsulta.cmbEmpleado.ValueMember = "emp_ID";
         }
+        void LlenarComboEstado()
+        {
+            DAOConsulta DaoDui = new DAOConsulta();
+            DataSet dataSet = DaoDui.ObtenerEstado();
+            ObjAañadirConsulta.cmbEstado.DataSource = dataSet.Tables["Estado"];
+            ObjAañadirConsulta.cmbEstado.DisplayMember = "est_Nombre";
+            ObjAañadirConsulta.cmbEstado.ValueMember = "est_ID";
+        }
         public void NuevaConsulta(object sender, EventArgs e)
         {
             if (ValidarCampos())
@@ -83,11 +93,13 @@ namespace OpticaMultivisual.Controllers.Consulta
                 // Crear una nueva instancia de DAOConsulta con los valores correctos
                 DAOConsulta Consulta = new DAOConsulta
                 {
-                    Con_fechahora = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim()),
+                    Con_fecha = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim()),
                     Con_obser = ObjAañadirConsulta.txtObservaciones.Text.Trim(),
                     Cli_DUI = ObjAañadirConsulta.cmbDUI.SelectedValue.ToString().Trim(),
                     Vis_ID = ObjAañadirConsulta.cmbVisita.SelectedValue.ToString().Trim(),
                     Emp_ID = ObjAañadirConsulta.cmbEmpleado.SelectedValue.ToString().Trim(),
+                    Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim()),
+                    Est_ID = ObjAañadirConsulta.cmbEstado.SelectedValue.ToString().Trim(),
                 };
 
                 // Registrar la consulta en la base de datos
@@ -112,16 +124,16 @@ namespace OpticaMultivisual.Controllers.Consulta
             }
         }
 
-        public ControladorVerConsulta(AñadirConsulta Vista, int p_accion, string cli_DUI, string vis_ID, DateTime con_fechahora, string con_obser, string emp_ID, int con_ID)
+        public ControladorVerConsulta(AñadirConsulta Vista, int p_accion, string cli_DUI, string vis_ID, DateTime con_fecha, string con_obser, string emp_ID, int con_ID, DateTime con_hora, string est_ID)
         {
             ObjAañadirConsulta = Vista;
             ObjAañadirConsulta.Load += new EventHandler(CargaInicio);
             this.accion = p_accion;
             verificarAccion();
-            CargarValores(cli_DUI, vis_ID, con_fechahora, con_obser, emp_ID, con_ID);
+            CargarValores(cli_DUI, vis_ID, con_fecha, con_obser, emp_ID, con_ID, con_hora, est_ID);
             ObjAañadirConsulta.btnActualizar.Click += new EventHandler(AcualizarRegistro);
         }
-        public void CargarValores(string cli_DUI, string vis_ID, DateTime con_fechahora, string con_obser, string emp_ID, int con_ID)
+        public void CargarValores(string cli_DUI, string vis_ID, DateTime con_fecha, string con_obser, string emp_ID, int con_ID, DateTime con_hora, string est_ID)
         {
             try
             {
@@ -129,9 +141,10 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.cmbDUI.Text = cli_DUI;
                 ObjAañadirConsulta.cmbVisita.Text = vis_ID;
                 ObjAañadirConsulta.cmbEmpleado.Text = emp_ID;
-                ObjAañadirConsulta.DTPfechaconsulta.Value = con_fechahora;
+                ObjAañadirConsulta.DTPfechaconsulta.Value = con_fecha;
                 ObjAañadirConsulta.txtConID.Text = con_ID.ToString();
-
+                ObjAañadirConsulta.DTPHoraConsulta.Value = con_hora;
+                ObjAañadirConsulta.cmbEstado.Text = est_ID;
             }
             catch (Exception ex)
             {
@@ -151,7 +164,8 @@ namespace OpticaMultivisual.Controllers.Consulta
                     // Verificar si los elementos seleccionados en los ComboBox son válidos
                     if (ObjAañadirConsulta.cmbDUI.SelectedItem == null ||
                         ObjAañadirConsulta.cmbVisita.SelectedItem == null ||
-                        ObjAañadirConsulta.cmbEmpleado.SelectedItem == null)
+                        ObjAañadirConsulta.cmbEmpleado.SelectedItem == null ||
+                        ObjAañadirConsulta.cmbEstado.SelectedItem == null)
                     {
                         MessageBox.Show("Uno o más valores seleccionados no son válidos. Por favor, selecciona un valor existente.",
                                         "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -162,6 +176,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     DAOActualizar.Cli_DUI = ((DataRowView)ObjAañadirConsulta.cmbDUI.SelectedItem)["cli_DUI"].ToString().Trim();
                     DAOActualizar.Vis_ID = ((DataRowView)ObjAañadirConsulta.cmbVisita.SelectedItem)["vis_ID"].ToString().Trim();
                     DAOActualizar.Emp_ID = ((DataRowView)ObjAañadirConsulta.cmbEmpleado.SelectedItem)["emp_ID"].ToString().Trim();
+                    DAOActualizar.Emp_ID = ((DataRowView)ObjAañadirConsulta.cmbEstado.SelectedItem)["est_ID"].ToString().Trim();
 
                     // Solo lectura del TextBox para con_ID
                     ObjAañadirConsulta.txtConID.Enabled = false;
@@ -172,7 +187,8 @@ namespace OpticaMultivisual.Controllers.Consulta
                         return; // Si la fecha no es válida, salir del método
                     }
 
-                    DAOActualizar.Con_fechahora = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim());
+                    DAOActualizar.Con_fecha = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim());
+                    DAOActualizar.Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim());
                     DAOActualizar.Con_obser = ObjAañadirConsulta.txtObservaciones.Text.Trim();
                     DAOActualizar.Con_ID = int.Parse(ObjAañadirConsulta.txtConID.Text.Trim());
 
@@ -232,26 +248,8 @@ namespace OpticaMultivisual.Controllers.Consulta
             {
                 return false;
             }
-            //if (!CoincidanValores())
-            //{
-            //    return false;
-            //}
-            // Si todas las validaciones pasan, retorna true
             return true;
         }
-       // private bool CoincidanValores()
-       // {
-
-       //     if (ObjAañadirConsulta.cmbDUI.SelectedItem?.ToString() == ObjAañadirConsulta.cmbVisita.SelectedItem?.ToString())
-            //{
-            //    return true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Los valores no coinciden.");
-            //}
-            //return true;
-        //}
 
         private bool VerificacionCamposLlenos()
         {
@@ -287,7 +285,7 @@ namespace OpticaMultivisual.Controllers.Consulta
         private bool VerificarFecha()
         {
             DateTime fechaSeleccionada = ObjAañadirConsulta.DTPfechaconsulta.Value;
-            DateTime fechaActual = DateTime.Now;
+            DateTime fechaActual = DateTime.Today;
 
             // Compara si la fecha seleccionada es anterior a la fecha y hora actuales.
             if (fechaSeleccionada < fechaActual)
@@ -344,5 +342,18 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.btnActualizar.Enabled = true;
             }
         }
+        private void SELECIONARUNCOMBO(object sender, EventArgs e)
+        {
+            // Si el comboBox1 tiene un valor seleccionado, deshabilita el comboBox2
+            if (ObjAañadirConsulta.cmbDUI.SelectedIndex != -1)  // -1 significa que no hay nada seleccionado
+            {
+                ObjAañadirConsulta.cmbVisita.Enabled = false;  // Deshabilita comboBox2
+            }
+            else
+            {
+                ObjAañadirConsulta.cmbVisita.Enabled = true;  // Habilita comboBox2 si no hay selección en comboBox1
+            }
+        }
+
     }
 }

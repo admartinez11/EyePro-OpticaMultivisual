@@ -31,7 +31,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al obtener el dui del cliente, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -80,7 +80,32 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("Error: EPV005 - No se pudieron cargar los datos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al obtener el nombre del empleado, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+        }
+        public DataSet ObtenerEstado()
+        {
+            try
+            {
+                command.Connection = getConnection();
+                //Definir instrucción de lo que se quiere hacer
+                string query = "SELECT est_ID, est_Nombre FROM Estado";
+                //Creando un objeto de tipo comando donde recibe la instrucción y la conexión
+                SqlCommand cmdSelect = new SqlCommand(query, command.Connection);
+                cmdSelect.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmdSelect);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "Estado");
+                return ds;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Error al obtener el valor del estado, verifique su conexión a internet o que el acceso al servidor o base de datos esten activos", "Error de ejecución", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -93,21 +118,23 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "INSERT INTO Consulta (cli_DUI, vis_ID, con_fechahora, con_obser, emp_ID) VALUES (@DUI, @Visita, @Fecha, @Observacion, @Empleado)";
+                string query = "INSERT INTO Consulta (cli_DUI, vis_ID, con_fecha, con_obser, emp_ID, con_hora, est_ID) VALUES (@DUI, @Visita, @Fecha, @Observacion, @Empleado, @Hora, @Estado)";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
 
                 cmd.Parameters.AddWithValue("@DUI", Cli_DUI);
                 cmd.Parameters.AddWithValue("@Visita", Vis_ID);
-                cmd.Parameters.AddWithValue("@Fecha", Con_fechahora);
+                cmd.Parameters.AddWithValue("@Fecha", Con_fecha);
                 cmd.Parameters.AddWithValue("@Observacion", Con_obser);
                 cmd.Parameters.AddWithValue("@Empleado", Emp_ID);
+                cmd.Parameters.AddWithValue("@Hora", Con_hora);
+                cmd.Parameters.AddWithValue("@Estado", Est_ID);
 
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("EPV006 - No se pudieron registrar los datos", "Error al guardar consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error al guardar consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -124,18 +151,22 @@ namespace OpticaMultivisual.Models.DAO
                 string query = "UPDATE Consulta SET " +
                 "cli_DUI = @param1, " +
                 "vis_ID = @param2, " +
-                "con_fechahora = @param3, " +
+                "con_fecha = @param3, " +
                 "con_obser = @param4, " +
-                "emp_ID = @param5 " +  // Elimina la coma final
+                "emp_ID = @param5, " +
+                "con_hora = @param6, " +
+                "est_ID = @param7 " +
                 "WHERE con_ID = @param10";
 
 
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 cmd.Parameters.AddWithValue("@param1", Cli_DUI);
                 cmd.Parameters.AddWithValue("@param2", Vis_ID);  // Asignación corregida
-                cmd.Parameters.AddWithValue("@param3", Con_fechahora);
+                cmd.Parameters.AddWithValue("@param3", Con_fecha);
                 cmd.Parameters.AddWithValue("@param4", Con_obser);
                 cmd.Parameters.AddWithValue("@param5", Emp_ID);
+                cmd.Parameters.AddWithValue("@param6", Con_hora);
+                cmd.Parameters.AddWithValue("@param7", Est_ID);
                 cmd.Parameters.AddWithValue("@param10", Con_ID);
 
                 int respuesta = cmd.ExecuteNonQuery();
@@ -144,7 +175,7 @@ namespace OpticaMultivisual.Models.DAO
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Error: EPV002 - Los datos no pudieron ser actualizados correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error de SQL: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally
@@ -159,6 +190,54 @@ namespace OpticaMultivisual.Models.DAO
             {
                 command.Connection = getConnection();
                 string query = "SELECT * FROM VistaConsultas";
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                cmd.Parameters.AddWithValue("valor", true);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "VistaConsultas");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+        }
+        public DataSet ObtenerInfoConsultaPendiente()
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 1";
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                cmd.Parameters.AddWithValue("valor", true);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "VistaConsultas");
+                return ds;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+        }
+        public DataSet ObtenerInfoConsultaRealizada()
+        {
+            try
+            {
+                command.Connection = getConnection();
+                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 2";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 cmd.Parameters.AddWithValue("valor", true);
                 cmd.ExecuteNonQuery();

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static OpticaMultivisual.Models.DAO.DAOArticle;
 using System.Windows.Forms;
+using OpticaMultivisual.Views.Dashboard.Article;
 
 namespace OpticaMultivisual.Controllers.Article
 {
