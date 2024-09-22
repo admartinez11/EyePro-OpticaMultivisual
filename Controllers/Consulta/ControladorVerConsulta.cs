@@ -141,8 +141,6 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.DTPfechaconsulta.Value = con_fecha;
                 ObjAañadirConsulta.txtConID.Text = con_ID.ToString();
                 ObjAañadirConsulta.DTPHoraConsulta.Value = con_hora;
-                ObjAañadirConsulta.cmbEstado.Text = est_ID.ToString();
-
             }
             catch (Exception ex)
             {

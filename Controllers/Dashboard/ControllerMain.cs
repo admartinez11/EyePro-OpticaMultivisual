@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,6 +45,49 @@ namespace OpticaMultivisual.Controllers.Dashboard
             ObjMain.btnVisita.Click += new EventHandler(AbrirFormularioVis);
             ObjMain.btnArticulo.Click += new EventHandler(AbrirFormArt);
             ObjMain.btnServer.Click += new EventHandler(ConfServer);
+            ObjMain.btnDoc.Click += new EventHandler(DownloadManual);
+        }
+
+        private void DownloadManual(object sender, EventArgs e)
+        {
+            // Mostrar un cuadro de diálogo de confirmación antes de comenzar la descarga
+            DialogResult result = MessageBox.Show("¿Está seguro que desea descargar el manual de usuario?", "Confirmación de descarga", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Si el usuario elige "Sí", proceder con la descarga
+            if (result == DialogResult.Yes)
+            {
+                // URL del archivo en Google Drive
+                string url = "https://drive.google.com/uc?export=download&id=1s6P8GN_MiNmz77XocXOBAptcc_GSRNx1";
+                // Crear una instancia de SaveFileDialog para que el usuario elija la ubicación
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PDF Files|*.pdf";  // Filtrar solo archivos PDF
+                saveFileDialog.Title = "Guardar manual de usuario";
+                saveFileDialog.FileName = "Manual de Usuario - EyePro.pdf";  // Nombre predeterminado del archivo
+                // Mostrar el diálogo de guardado
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Obtener la ruta seleccionada por el usuario
+                    string destinationPath = saveFileDialog.FileName;
+                    using (var client = new WebClient())
+                    {
+                        try
+                        {
+                            // Descargar el archivo desde Google Drive
+                            client.DownloadFile(url, destinationPath);
+                            MessageBox.Show("Manual descargado con éxito", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al descargar el archivo: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // Si el usuario selecciona "No", cancelar la descarga
+                MessageBox.Show("Descarga cancelada", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         public void ConfServer(object sender, EventArgs e)

@@ -103,10 +103,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
                 }
                 DAOInsert.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
                 int valorRetornado = DAOInsert.InsertarPedido();
-                MessageBox.Show($"Valor Retonado{valorRetornado}",
-                                    "xx",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -148,10 +144,6 @@ namespace OpticaMultivisual.Controllers.Dashboard.PedidoDetalle
                 }
                 daoUpdate.pd_obser1 = ObjAddPD.txtpd_obser.Text.Trim();
                 int valorRetornado = daoUpdate.ActualizarPD();
-                MessageBox.Show($"valor retornado{valorRetornado}",
-                                    "xx",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
                 if (valorRetornado == 1)
                 {
                     MessageBox.Show("Los datos han sido actualizado exitosamente",

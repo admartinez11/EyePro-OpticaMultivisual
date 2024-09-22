@@ -60,7 +60,7 @@ namespace OpticaMultivisual.Controllers.Login
             switch (answer)
             {
                 case 0: // Usuario no existe
-                    MessageBox.Show("Usuario inexistente, ingrese con un usuario existente o en el caso de no tener un usuario regístrese.", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 1: // Contraseña incorrecta
                     // Verificar el estado del usuario (si está activo o inactivo)
@@ -83,7 +83,7 @@ namespace OpticaMultivisual.Controllers.Login
                         }
                         else
                         {
-                            MessageBox.Show("Contraseña incorrecta", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Usuario o contraseña incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     break;

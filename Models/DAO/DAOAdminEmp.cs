@@ -496,6 +496,38 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        public int ObtenerIdEmpresa()
+        {
+            int idEmpresa = -1; // Variable para almacenar el ID de la empresa
+            try
+            {
+                using (SqlConnection connection = getConnection())
+                {
+                    string query = "SELECT TOP 1 idNegocio FROM InfoNegocio ORDER BY idNegocio";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    try
+                    {
+                        object result = command.ExecuteScalar();
+                        idEmpresa = result != null ? Convert.ToInt32(result) : -1; // Asigna el valor a la variable
+                    }
+                    catch (Exception)
+                    {
+                        return -1; // Retorna -1 en caso de error al ejecutar la consulta
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return -1; // Retorna -1 en caso de error de conexión
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+            return idEmpresa; // Retorna el ID de la empresa
+        }
+
         /// <summary>
         /// Registrar usuario corresponde al primer mantenimiento del CRUD
         /// Inserción de datos a la base de datos
@@ -506,6 +538,17 @@ namespace OpticaMultivisual.Models.DAO
         {
             try
             {
+                // Obtener el idNegocio de la primera empresa registrada en la base de datos
+                int idNegocio = ObtenerIdEmpresa();
+                // Verificar si se pudo obtener un idNegocio válido
+                if (idNegocio == -1)
+                {
+                    MessageBox.Show("No se pudo obtener el ID del negocio.",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return -1;
+                }
                 //Se crea una conexión para garantizar que efectivamente haya conexión a la base.
                 Command.Connection = getConnection();
                 CommonClasses common = new CommonClasses();
@@ -524,7 +567,7 @@ namespace OpticaMultivisual.Models.DAO
                 cmd2.Parameters.AddWithValue("userAttempts", UserAttempts);
                 cmd2.Parameters.AddWithValue("SecurityQuestion", SecurityQuestion);
                 cmd2.Parameters.AddWithValue("SecurityAnswer", SecurityAnswer);
-                cmd2.Parameters.AddWithValue("idNegocio", 3);
+                cmd2.Parameters.AddWithValue("idNegocio", idNegocio);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 /*ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se
                 ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.*/
