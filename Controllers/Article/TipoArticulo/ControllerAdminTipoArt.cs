@@ -48,7 +48,7 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
         public void ActualizarVisita(object sender, EventArgs e)
         {
             int pos = ObjVista.dgvInfoTipoArticulo.CurrentRow.Index;
-            ViewAddTipoArt openForm = new ViewAddTipoArt(2,
+            ViewAddTipoArt openForm = new ViewAddTipoArt(//2,
             int.Parse(ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString()),//Id del tipo de articulo
             ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString(),        // Nombre
             ObjVista.dgvInfoTipoArticulo[3, pos].Value.ToString()     // descripcion
