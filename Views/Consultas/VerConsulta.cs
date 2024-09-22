@@ -17,7 +17,7 @@ namespace OpticaMultivisual.Views.Consultas
         public VerConsulta()
         {
             InitializeComponent();
-            ControladorConsulta objArticle = new ControladorConsulta(this);
+            ControladorConsulta Consulta = new ControladorConsulta(this);
         }
     }
 }
