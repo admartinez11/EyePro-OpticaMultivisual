@@ -51,14 +51,14 @@
             this.btnActualizar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnAgendar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.DTPHoraConsulta = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.DTPfechaconsulta = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cmbDUI = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbVisita = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbEmpleado = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.DTPHoraConsulta = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.cmbEstado = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -556,6 +556,37 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(781, 42);
             this.tableLayoutPanel4.TabIndex = 8;
             // 
+            // DTPHoraConsulta
+            // 
+            this.DTPHoraConsulta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.DTPHoraConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.DTPHoraConsulta.BorderColor = System.Drawing.Color.Silver;
+            this.DTPHoraConsulta.BorderRadius = 17;
+            this.DTPHoraConsulta.Color = System.Drawing.Color.Silver;
+            this.DTPHoraConsulta.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DTPHoraConsulta.CustomFormat = "hh:mm:ss tt";
+            this.DTPHoraConsulta.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.DTPHoraConsulta.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.DTPHoraConsulta.DisabledColor = System.Drawing.Color.Gray;
+            this.DTPHoraConsulta.DisplayWeekNumbers = false;
+            this.DTPHoraConsulta.DPHeight = 0;
+            this.DTPHoraConsulta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DTPHoraConsulta.FillDatePicker = false;
+            this.DTPHoraConsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPHoraConsulta.ForeColor = System.Drawing.Color.White;
+            this.DTPHoraConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPHoraConsulta.Icon = ((System.Drawing.Image)(resources.GetObject("DTPHoraConsulta.Icon")));
+            this.DTPHoraConsulta.IconColor = System.Drawing.Color.White;
+            this.DTPHoraConsulta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.DTPHoraConsulta.LeftTextMargin = 5;
+            this.DTPHoraConsulta.Location = new System.Drawing.Point(416, 4);
+            this.DTPHoraConsulta.Margin = new System.Windows.Forms.Padding(50, 2, 3, 2);
+            this.DTPHoraConsulta.MinimumSize = new System.Drawing.Size(4, 32);
+            this.DTPHoraConsulta.Name = "DTPHoraConsulta";
+            this.DTPHoraConsulta.Size = new System.Drawing.Size(181, 34);
+            this.DTPHoraConsulta.TabIndex = 4;
+            this.DTPHoraConsulta.Value = new System.DateTime(2024, 9, 1, 11, 29, 0, 0);
+            // 
             // DTPfechaconsulta
             // 
             this.DTPfechaconsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -753,52 +784,6 @@
             this.cmbEmpleado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbEmpleado.TextLeftMargin = 5;
             // 
-            // bunifuPictureBox1
-            // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BorderRadius = 0;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(10, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(197, 144);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 2;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
-            // DTPHoraConsulta
-            // 
-            this.DTPHoraConsulta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.DTPHoraConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.DTPHoraConsulta.BorderColor = System.Drawing.Color.Silver;
-            this.DTPHoraConsulta.BorderRadius = 17;
-            this.DTPHoraConsulta.Color = System.Drawing.Color.Silver;
-            this.DTPHoraConsulta.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.DTPHoraConsulta.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.DTPHoraConsulta.DisabledColor = System.Drawing.Color.Gray;
-            this.DTPHoraConsulta.DisplayWeekNumbers = false;
-            this.DTPHoraConsulta.DPHeight = 0;
-            this.DTPHoraConsulta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DTPHoraConsulta.FillDatePicker = false;
-            this.DTPHoraConsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPHoraConsulta.ForeColor = System.Drawing.Color.White;
-            this.DTPHoraConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPHoraConsulta.Icon = ((System.Drawing.Image)(resources.GetObject("DTPHoraConsulta.Icon")));
-            this.DTPHoraConsulta.IconColor = System.Drawing.Color.White;
-            this.DTPHoraConsulta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.DTPHoraConsulta.LeftTextMargin = 5;
-            this.DTPHoraConsulta.Location = new System.Drawing.Point(416, 4);
-            this.DTPHoraConsulta.Margin = new System.Windows.Forms.Padding(50, 2, 3, 2);
-            this.DTPHoraConsulta.MinimumSize = new System.Drawing.Size(4, 32);
-            this.DTPHoraConsulta.Name = "DTPHoraConsulta";
-            this.DTPHoraConsulta.Size = new System.Drawing.Size(181, 34);
-            this.DTPHoraConsulta.TabIndex = 4;
-            this.DTPHoraConsulta.Value = new System.DateTime(2024, 9, 1, 11, 29, 0, 0);
-            // 
             // cmbEstado
             // 
             this.cmbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -846,6 +831,23 @@
             this.cmbEstado.Text = "Profesional";
             this.cmbEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbEstado.TextLeftMargin = 5;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = false;
+            this.bunifuPictureBox1.BorderRadius = 0;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(10, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(197, 144);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 2;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // AñadirConsulta
             // 

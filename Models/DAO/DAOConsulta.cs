@@ -213,7 +213,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 1";
+                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 0";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 cmd.Parameters.AddWithValue("valor", true);
                 cmd.ExecuteNonQuery();
@@ -237,7 +237,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 2";
+                string query = "SELECT * \r\nFROM VistaConsultas \r\nWHERE [Estado de Consulta] = 1";
                 SqlCommand cmd = new SqlCommand(query, command.Connection);
                 cmd.Parameters.AddWithValue("valor", true);
                 cmd.ExecuteNonQuery();
@@ -302,3 +302,4 @@ namespace OpticaMultivisual.Models.DAO
         }
     }
 }
+
