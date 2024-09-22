@@ -27,10 +27,6 @@ namespace AdministrarClientes.View.RegistroCliente
             Controlador_Registrar objAddUser = new Controlador_Registrar(this, accion, DUI, Nombre, Apellido, Telefono, Edad, Genero, Correo_E, Profesion, Padecimientos);
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }
