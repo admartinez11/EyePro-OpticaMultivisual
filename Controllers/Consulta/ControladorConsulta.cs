@@ -22,24 +22,63 @@ namespace OpticaMultivisual.Controllers.Consulta
             ObjverConsulta.btnNuevaConsulta.Click += new EventHandler(AgregarConsulta);
             ObjverConsulta.btnEliminarConsulta.Click += new EventHandler(EliminarConsulta);
             ObjverConsulta.btnActConsulta.Click += new EventHandler(ActualizarConsulta);
-        }
-        public void CargarInfoConsulta(object sender, EventArgs e)
-        {
-            ActualizarDatosConsulta();
+
+            // Asociar el evento SelectedIndexChanged del ComboBox
+            ObjverConsulta.CMBTipoEstado.SelectedIndexChanged += new EventHandler(ComboBoxEstConsulta);
         }
 
+        public void CargarInfoConsulta(object sender, EventArgs e)
+        {
+            // Cargar la información inicial de las consultas al cargar la vista
+            ActualizarDatosConsulta();
+            ObjverConsulta.dgvInfoConsulta.ReadOnly = true;
+        }
+
+        private void ComboBoxEstConsulta(object sender, EventArgs e)
+        {
+            // Obtener la selección actual del ComboBox
+            string selectedValue = ObjverConsulta.CMBTipoEstado.SelectedItem.ToString();
+
+            // Realizar acciones dependiendo del valor seleccionado
+            if (selectedValue == "Realizada")
+            {
+                ComboBoxEstConsultaRealizado(sender, e);
+            }
+            else if (selectedValue == "Pendiente")
+            {
+                ComboBoxEstConsultaPendiente(sender, e);
+            }
+            else if (selectedValue == "Todas")
+            {
+                ActualizarDatosConsulta();
+            }
+        }
 
         public void ActualizarDatosConsulta()
         {
             DAOConsulta dAOConsulta = new DAOConsulta();
             DataSet ds = dAOConsulta.ObtenerInfoConsulta();
             ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["VistaConsultas"];
-
         }
-        public void BuscarConsultaControlador(object sender, EventArgs e)
+
+        public void ComboBoxEstConsultaPendiente(object sender, EventArgs e)
         {
             DAOConsulta dAOConsulta = new DAOConsulta();
-            DataSet ds = dAOConsulta.BuscarConsulta(ObjverConsulta.txtBuscarConsulta.Text.Trim());
+            DataSet ds = dAOConsulta.ObtenerInfoConsultaPendiente();
+            ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["VistaConsultas"];
+        }
+
+        public void ComboBoxEstConsultaRealizado(object sender, EventArgs e)
+        {
+            DAOConsulta dAOConsulta = new DAOConsulta();
+            DataSet ds = dAOConsulta.ObtenerInfoConsultaRealizada();  // Asumiendo que este método existe
+            ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["VistaConsultas"];
+        }
+
+        public void BuscarConsultaControlador(object sender, EventArgs e)
+        {
+            DAOConsulta Objadminregistro = new DAOConsulta();
+            DataSet ds = Objadminregistro.BuscarConsulta(ObjverConsulta.txtBuscarConsulta.Text.Trim());
             ObjverConsulta.dgvInfoConsulta.DataSource = ds.Tables["Consulta"];
         }
         public void AgregarConsulta(object sender, EventArgs e)
@@ -76,12 +115,13 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjverConsulta.dgvInfoConsulta[1, pos].Value.ToString(), // cli_DUI
                 ObjverConsulta.dgvInfoConsulta[2, pos].Value.ToString(), // vis_ID
                 DateTime.Parse(ObjverConsulta.dgvInfoConsulta[3, pos].Value.ToString()), // con_fechahora
-                ObjverConsulta.dgvInfoConsulta[4, pos].Value.ToString(), // con_obser
-                ObjverConsulta.dgvInfoConsulta[5, pos].Value.ToString(), // emp_ID
+                ObjverConsulta.dgvInfoConsulta[5, pos].Value.ToString(), // con_obser
+                ObjverConsulta.dgvInfoConsulta[6, pos].Value.ToString(), // emp_ID
                 int.Parse(ObjverConsulta.dgvInfoConsulta[0, pos].Value.ToString()),  // con_ID
-                DateTime.Parse(ObjverConsulta.dgvInfoConsulta[6, pos].Value.ToString()), // con_fechahora
-                ObjverConsulta.dgvInfoConsulta[7, pos].Value.ToString() // cli_DUI
-            );
+                DateTime.Parse(ObjverConsulta.dgvInfoConsulta[4, pos].Value.ToString()), // con_fechahora
+                bool.Parse(ObjverConsulta.dgvInfoConsulta[7, pos].Value.ToString()
+
+            ));
 
             openForm.ShowDialog();
             ActualizarDatosConsulta();

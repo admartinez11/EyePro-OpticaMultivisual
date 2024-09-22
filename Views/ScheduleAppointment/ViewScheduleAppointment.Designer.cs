@@ -155,7 +155,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.txtCiObs, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(45, 313);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -193,7 +193,7 @@
             this.txtCiObs.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCiObs.Lines = new string[0];
             this.txtCiObs.Location = new System.Drawing.Point(4, 4);
-            this.txtCiObs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCiObs.Margin = new System.Windows.Forms.Padding(4);
             this.txtCiObs.MaxLength = 32767;
             this.txtCiObs.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCiObs.Modified = false;
@@ -219,7 +219,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiObs.OnIdleState = stateProperties4;
-            this.txtCiObs.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCiObs.Padding = new System.Windows.Forms.Padding(4);
             this.txtCiObs.PasswordChar = '\0';
             this.txtCiObs.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiObs.PlaceholderText = "Observaciones";
@@ -309,7 +309,7 @@
             this.btnActualizar.IdleIconRightImage = null;
             this.btnActualizar.IndicateFocus = false;
             this.btnActualizar.Location = new System.Drawing.Point(311, 4);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnActualizar.OnDisabledState.BorderRadius = 20;
@@ -400,7 +400,7 @@
             this.btnAgendar.IdleIconRightImage = null;
             this.btnAgendar.IndicateFocus = false;
             this.btnAgendar.Location = new System.Drawing.Point(568, 4);
-            this.btnAgendar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgendar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgendar.Name = "btnAgendar";
             this.btnAgendar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgendar.OnDisabledState.BorderRadius = 20;
