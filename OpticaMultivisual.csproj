@@ -114,6 +114,8 @@
     <Compile Include="Controllers\Article\Color\ControllerAdminColor.cs" />
     <Compile Include="Controllers\Article\ControllerAddArticle.cs" />
     <Compile Include="Controllers\Article\ControllerAdminArticle.cs" />
+    <Compile Include="Controllers\Article\Modelo\ControllerAddModelo.cs" />
+    <Compile Include="Controllers\Article\Modelo\ControllerAdminModelo.cs" />
     <Compile Include="Controllers\Article\TipoArticulo\ControllerAddTipoArt.cs" />
     <Compile Include="Controllers\Article\TipoArticulo\ControllerAdminTipoArt.cs" />
     <Compile Include="Controllers\Consulta\ControladorConsulta.cs" />
