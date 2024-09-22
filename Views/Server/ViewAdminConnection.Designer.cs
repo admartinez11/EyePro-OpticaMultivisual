@@ -453,22 +453,22 @@
             // rdDeshabilitarWindows
             // 
             this.rdDeshabilitarWindows.AutoSize = true;
+            this.rdDeshabilitarWindows.Checked = true;
             this.rdDeshabilitarWindows.Location = new System.Drawing.Point(13, 69);
             this.rdDeshabilitarWindows.Name = "rdDeshabilitarWindows";
             this.rdDeshabilitarWindows.Size = new System.Drawing.Size(240, 17);
             this.rdDeshabilitarWindows.TabIndex = 5;
+            this.rdDeshabilitarWindows.TabStop = true;
             this.rdDeshabilitarWindows.Text = "Desahibilitar seguridad integrada de Windows";
             this.rdDeshabilitarWindows.UseVisualStyleBackColor = true;
             // 
             // rdHabilitarWindows
             // 
             this.rdHabilitarWindows.AutoSize = true;
-            this.rdHabilitarWindows.Checked = true;
             this.rdHabilitarWindows.Location = new System.Drawing.Point(13, 46);
             this.rdHabilitarWindows.Name = "rdHabilitarWindows";
             this.rdHabilitarWindows.Size = new System.Drawing.Size(221, 17);
             this.rdHabilitarWindows.TabIndex = 4;
-            this.rdHabilitarWindows.TabStop = true;
             this.rdHabilitarWindows.Text = "Habilitar seguridad integrada de Windows";
             this.rdHabilitarWindows.UseVisualStyleBackColor = true;
             // 
