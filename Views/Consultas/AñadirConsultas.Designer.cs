@@ -58,7 +58,6 @@
             this.cmbDUI = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbVisita = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbEmpleado = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.cmbEstado = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -102,7 +101,6 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuCheckBox1);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel7);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel6);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel3);
@@ -132,7 +130,7 @@
             this.bunifuCheckBox1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox1.CustomCheckmarkImage = null;
-            this.bunifuCheckBox1.Location = new System.Drawing.Point(871, 304);
+            this.bunifuCheckBox1.Location = new System.Drawing.Point(610, 13);
             this.bunifuCheckBox1.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox1.Name = "bunifuCheckBox1";
             this.bunifuCheckBox1.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -682,10 +680,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.9783F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.07822F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.82743F));
+            this.tableLayoutPanel2.Controls.Add(this.bunifuCheckBox1, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmbDUI, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmbVisita, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmbEmpleado, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.cmbEstado, 3, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(45, 74);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -840,54 +838,6 @@
             this.cmbEmpleado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbEmpleado.TextLeftMargin = 5;
             // 
-            // cmbEstado
-            // 
-            this.cmbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbEstado.BackColor = System.Drawing.Color.Transparent;
-            this.cmbEstado.BackgroundColor = System.Drawing.Color.White;
-            this.cmbEstado.BorderColor = System.Drawing.Color.Silver;
-            this.cmbEstado.BorderRadius = 12;
-            this.cmbEstado.Color = System.Drawing.Color.Silver;
-            this.cmbEstado.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cmbEstado.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbEstado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbEstado.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbEstado.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cmbEstado.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbEstado.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbEstado.FillDropDown = true;
-            this.cmbEstado.FillIndicator = false;
-            this.cmbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbEstado.ForeColor = System.Drawing.Color.Black;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Icon = null;
-            this.cmbEstado.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbEstado.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbEstado.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbEstado.IndicatorThickness = 2;
-            this.cmbEstado.IsDropdownOpened = false;
-            this.cmbEstado.ItemBackColor = System.Drawing.Color.White;
-            this.cmbEstado.ItemBorderColor = System.Drawing.Color.White;
-            this.cmbEstado.ItemForeColor = System.Drawing.Color.Black;
-            this.cmbEstado.ItemHeight = 26;
-            this.cmbEstado.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cmbEstado.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cmbEstado.ItemTopMargin = 3;
-            this.cmbEstado.Location = new System.Drawing.Point(627, 12);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(179, 32);
-            this.cmbEstado.TabIndex = 7;
-            this.cmbEstado.Text = "Profesional";
-            this.cmbEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbEstado.TextLeftMargin = 5;
-            // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
@@ -951,7 +901,6 @@
         public Bunifu.UI.WinForms.BunifuDropdown cmbEmpleado;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         public Bunifu.UI.WinForms.BunifuDatePicker DTPHoraConsulta;
-        public Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
         public Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox1;
     }
 }
