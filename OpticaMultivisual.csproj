@@ -110,6 +110,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Article\Color\ControllerAddColor.cs" />
+    <Compile Include="Controllers\Article\Color\ControllerAdminColor.cs" />
     <Compile Include="Controllers\Article\ControllerAddArticle.cs" />
     <Compile Include="Controllers\Article\ControllerAdminArticle.cs" />
     <Compile Include="Controllers\Article\TipoArticulo\ControllerAddTipoArt.cs" />

@@ -74,7 +74,7 @@ namespace OpticaMultivisual.Models.DAO
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 //Rellenamos con el Adaptador el DataSet diciéndole de que tabla provienen los datos
-                adp.Fill(ds, "Visita");
+                adp.Fill(ds, "TipoArt");
                 return ds;
             }
             catch (Exception)

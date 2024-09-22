@@ -18,10 +18,10 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
         {
             ObjVista = Vista;
             ObjVista.Load += new EventHandler(CargarInfo);
-            ObjVista.btnBuscar.Click += new EventHandler(BuscarVisitaControlador);
-            ObjVista.btnNuevoTipArt.Click += new EventHandler(AgregarVisita);
-            ObjVista.btnEliminarTipArt.Click += new EventHandler(EliminarVisita);
-            ObjVista.btnActTipArt.Click += new EventHandler(ActualizarVisita);
+            ObjVista.btnBuscar.Click += new EventHandler(BuscarTIPOARTControlador);
+            ObjVista.btnNuevoTipArt.Click += new EventHandler(AgregarTipArt);
+            ObjVista.btnEliminarTipArt.Click += new EventHandler(EliminarTipArt);
+            ObjVista.btnActTipArt.Click += new EventHandler(ActualizarTipArt);
         }
         public void CargarInfo(object sender, EventArgs e)
         {
@@ -33,37 +33,37 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
             DataSet ds = ObjRegistro.ObtenerInfoTipoArticulo();
             ObjVista.dgvInfoTipoArticulo.DataSource = ds.Tables["VistaTipoArt"];
         }
-        public void BuscarVisitaControlador(object sender, EventArgs e)
+        public void BuscarTIPOARTControlador(object sender, EventArgs e)
         {
             DAOTipoArticulo ObjRegistro = new DAOTipoArticulo();
             DataSet ds = ObjRegistro.BuscarTipoArticulo(ObjVista.txtBuscar.Text.Trim());
             ObjVista.dgvInfoTipoArticulo.DataSource = ds.Tables["Visita"];
         }
-        public void AgregarVisita(object sender, EventArgs e)
+        public void AgregarTipArt(object sender, EventArgs e)
         {
             ViewAddTipoArt openForm = new ViewAddTipoArt(1);
             openForm.ShowDialog();
             ActualizarDatos();
         }
-        public void ActualizarVisita(object sender, EventArgs e)
+        public void ActualizarTipArt(object sender, EventArgs e)
         {
             int pos = ObjVista.dgvInfoTipoArticulo.CurrentRow.Index;
-            ViewAddTipoArt openForm = new ViewAddTipoArt(//2,
-            int.Parse(ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString()),//Id del tipo de articulo
-            ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString(),        // Nombre
-            ObjVista.dgvInfoTipoArticulo[3, pos].Value.ToString()     // descripcion
+            ViewAddTipoArt openForm = new ViewAddTipoArt(2,
+            int.Parse(ObjVista.dgvInfoTipoArticulo[0, pos].Value.ToString()),//Id del tipo de articulo
+            ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString(),        // Nombre
+            ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString()     // descripcion
             );
 
             openForm.ShowDialog();
             ActualizarDatos();
         }
-        private void EliminarVisita(object sender, EventArgs e)
+        private void EliminarTipArt(object sender, EventArgs e)
         {
             int pos = ObjVista.dgvInfoTipoArticulo.CurrentRow.Index;
             if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString()} {ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOTipoArticulo daoDel = new DAOTipoArticulo();
-                daoDel.Tipoart_ID = int.Parse(ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString());
+                daoDel.Tipoart_ID = int.Parse(ObjVista.dgvInfoTipoArticulo[0, pos].Value.ToString());
                 int valorRetornado = daoDel.EliminarTipoArticulo();
                 if (valorRetornado == 1)
                 {

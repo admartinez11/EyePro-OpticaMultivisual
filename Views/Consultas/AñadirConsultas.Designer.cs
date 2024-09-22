@@ -41,6 +41,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuCheckBox1 = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.txtObservaciones = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,6 +102,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.bunifuCheckBox1);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel7);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel6);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel3);
@@ -111,6 +113,59 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(905, 408);
             this.bunifuPanel1.TabIndex = 1;
+            // 
+            // bunifuCheckBox1
+            // 
+            this.bunifuCheckBox1.AllowBindingControlAnimation = true;
+            this.bunifuCheckBox1.AllowBindingControlColorChanges = false;
+            this.bunifuCheckBox1.AllowBindingControlLocation = true;
+            this.bunifuCheckBox1.AllowCheckBoxAnimation = false;
+            this.bunifuCheckBox1.AllowCheckmarkAnimation = true;
+            this.bunifuCheckBox1.AllowOnHoverStates = true;
+            this.bunifuCheckBox1.AutoCheck = true;
+            this.bunifuCheckBox1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCheckBox1.BackgroundImage")));
+            this.bunifuCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bunifuCheckBox1.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.bunifuCheckBox1.BorderRadius = 12;
+            this.bunifuCheckBox1.Checked = true;
+            this.bunifuCheckBox1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.bunifuCheckBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuCheckBox1.CustomCheckmarkImage = null;
+            this.bunifuCheckBox1.Location = new System.Drawing.Point(871, 304);
+            this.bunifuCheckBox1.MinimumSize = new System.Drawing.Size(17, 17);
+            this.bunifuCheckBox1.Name = "bunifuCheckBox1";
+            this.bunifuCheckBox1.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox1.OnCheck.BorderRadius = 12;
+            this.bunifuCheckBox1.OnCheck.BorderThickness = 2;
+            this.bunifuCheckBox1.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuCheckBox1.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox1.OnCheck.CheckmarkThickness = 2;
+            this.bunifuCheckBox1.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox1.OnDisable.BorderRadius = 12;
+            this.bunifuCheckBox1.OnDisable.BorderThickness = 2;
+            this.bunifuCheckBox1.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox1.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.bunifuCheckBox1.OnDisable.CheckmarkThickness = 2;
+            this.bunifuCheckBox1.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox1.OnHoverChecked.BorderRadius = 12;
+            this.bunifuCheckBox1.OnHoverChecked.BorderThickness = 2;
+            this.bunifuCheckBox1.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox1.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.bunifuCheckBox1.OnHoverChecked.CheckmarkThickness = 2;
+            this.bunifuCheckBox1.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuCheckBox1.OnHoverUnchecked.BorderRadius = 12;
+            this.bunifuCheckBox1.OnHoverUnchecked.BorderThickness = 1;
+            this.bunifuCheckBox1.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox1.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuCheckBox1.OnUncheck.BorderRadius = 12;
+            this.bunifuCheckBox1.OnUncheck.BorderThickness = 1;
+            this.bunifuCheckBox1.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.bunifuCheckBox1.Size = new System.Drawing.Size(21, 21);
+            this.bunifuCheckBox1.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.bunifuCheckBox1.TabIndex = 9;
+            this.bunifuCheckBox1.ThreeState = false;
+            this.bunifuCheckBox1.ToolTipText = null;
             // 
             // tableLayoutPanel7
             // 
@@ -574,7 +629,7 @@
             this.DTPHoraConsulta.FillDatePicker = false;
             this.DTPHoraConsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPHoraConsulta.ForeColor = System.Drawing.Color.White;
-            this.DTPHoraConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPHoraConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.DTPHoraConsulta.Icon = ((System.Drawing.Image)(resources.GetObject("DTPHoraConsulta.Icon")));
             this.DTPHoraConsulta.IconColor = System.Drawing.Color.White;
             this.DTPHoraConsulta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
@@ -583,6 +638,7 @@
             this.DTPHoraConsulta.Margin = new System.Windows.Forms.Padding(50, 2, 3, 2);
             this.DTPHoraConsulta.MinimumSize = new System.Drawing.Size(4, 32);
             this.DTPHoraConsulta.Name = "DTPHoraConsulta";
+            this.DTPHoraConsulta.ShowCheckBox = true;
             this.DTPHoraConsulta.Size = new System.Drawing.Size(181, 34);
             this.DTPHoraConsulta.TabIndex = 4;
             this.DTPHoraConsulta.Value = new System.DateTime(2024, 9, 1, 11, 29, 0, 0);
@@ -896,5 +952,6 @@
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         public Bunifu.UI.WinForms.BunifuDatePicker DTPHoraConsulta;
         public Bunifu.UI.WinForms.BunifuDropdown cmbEstado;
+        public Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox1;
     }
 }
