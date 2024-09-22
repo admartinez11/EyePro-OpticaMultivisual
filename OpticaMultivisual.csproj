@@ -579,6 +579,7 @@
     <None Include="Resources\Gmail.png" />
     <None Include="Resources\Close.png" />
     <None Include="Resources\Sever.png" />
+    <None Include="Resources\Documents.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
