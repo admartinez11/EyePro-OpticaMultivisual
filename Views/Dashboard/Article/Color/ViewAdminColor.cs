@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpticaMultivisual.Controllers.Article.Color;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Color
         public ViewAdminColor()
         {
             InitializeComponent();
+            ControllerAdminColor objAppointment = new ControllerAdminColor(this);
         }
     }
 }

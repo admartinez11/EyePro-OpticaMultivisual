@@ -372,7 +372,7 @@
             this.btnAgregarTipArt.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btnAgregarTipArt.IconMarginLeft = 11;
             this.btnAgregarTipArt.IconPadding = 10;
-            this.btnAgregarTipArt.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarTipArt.IconRightAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregarTipArt.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnAgregarTipArt.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAgregarTipArt.IconSize = 25;

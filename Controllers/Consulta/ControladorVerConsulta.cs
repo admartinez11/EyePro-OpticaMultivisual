@@ -88,9 +88,9 @@ namespace OpticaMultivisual.Controllers.Consulta
                     Cli_DUI = ObjAañadirConsulta.cmbDUI.SelectedValue.ToString().Trim(),
                     Vis_ID = ObjAañadirConsulta.cmbVisita.SelectedValue.ToString().Trim(),
                     Emp_ID = ObjAañadirConsulta.cmbEmpleado.SelectedValue.ToString().Trim(),
-                    Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsultas.Text.Trim())
+                    Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim())
                 };
-                if (ObjAañadirConsulta.cmbEstado.Checked == true)
+                if (ObjAañadirConsulta.bunifuCheckBox1.Checked == true)
                 {
                     Consulta.Est_ID = true;
                 }
@@ -140,7 +140,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.cmbEmpleado.Text = emp_ID;
                 ObjAañadirConsulta.DTPfechaconsulta.Value = con_fecha;
                 ObjAañadirConsulta.txtConID.Text = con_ID.ToString();
-                ObjAañadirConsulta.DTPHoraConsultas.Value = con_hora;
+                ObjAañadirConsulta.DTPHoraConsulta.Value = con_hora;
                 ObjAañadirConsulta.cmbEstado.Text = est_ID.ToString();
 
             }
@@ -174,7 +174,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     DAOActualizar.Vis_ID = ((DataRowView)ObjAañadirConsulta.cmbVisita.SelectedItem)["vis_ID"].ToString().Trim();
                     DAOActualizar.Emp_ID = ((DataRowView)ObjAañadirConsulta.cmbEmpleado.SelectedItem)["emp_ID"].ToString().Trim();
 
-                    if (ObjAañadirConsulta.cmbEstado.Checked == true)
+                    if (ObjAañadirConsulta.bunifuCheckBox1.Checked == true)
                     {
                         DAOActualizar.Est_ID = true;
                     }
@@ -193,7 +193,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     }
 
                     DAOActualizar.Con_fecha = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim());
-                    DAOActualizar.Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsultas.Text.Trim());
+                    DAOActualizar.Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim());
                     DAOActualizar.Con_obser = ObjAañadirConsulta.txtObservaciones.Text.Trim();
                     DAOActualizar.Con_ID = int.Parse(ObjAañadirConsulta.txtConID.Text.Trim());
 
