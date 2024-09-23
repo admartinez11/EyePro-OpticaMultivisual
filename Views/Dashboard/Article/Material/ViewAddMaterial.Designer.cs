@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAddMaterial));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,15 +49,14 @@
             this.btnAgendarArt = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtArNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,13 +71,12 @@
             this.tableLayoutPanel1.Controls.Add(this.bunifuPictureBox1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.96333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.34274F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.69394F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1348, 701);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 576);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
             // bunifuPanel1
@@ -95,12 +93,11 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel7);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel3);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel6);
-            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
-            this.bunifuPanel1.Location = new System.Drawing.Point(221, 99);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPanel1.Location = new System.Drawing.Point(166, 82);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(904, 510);
+            this.bunifuPanel1.Size = new System.Drawing.Size(679, 418);
             this.bunifuPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -110,16 +107,17 @@
             this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(45, 212);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel7.Controls.Add(this.txtArNombre, 0, 1);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(31, 103);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.843444F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.47359F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.841484F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.841484F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(808, 50);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(607, 55);
             this.tableLayoutPanel7.TabIndex = 15;
             // 
             // tableLayoutPanel3
@@ -134,15 +132,15 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.9937888F));
             this.tableLayoutPanel3.Controls.Add(this.txtDescArt, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(45, 270);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(31, 187);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.92105F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.07895F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 7F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(804, 215);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.06349F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.936508F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(604, 205);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // txtDescArt
@@ -175,34 +173,34 @@
             this.txtDescArt.IconRight = null;
             this.txtDescArt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescArt.Lines = new string[0];
-            this.txtDescArt.Location = new System.Drawing.Point(11, 2);
-            this.txtDescArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescArt.Location = new System.Drawing.Point(8, 2);
+            this.txtDescArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescArt.MaxLength = 32767;
             this.txtDescArt.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescArt.Modified = false;
             this.txtDescArt.Multiline = true;
             this.txtDescArt.Name = "txtDescArt";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDescArt.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDescArt.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDescArt.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDescArt.OnIdleState = stateProperties4;
-            this.txtDescArt.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescArt.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtDescArt.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescArt.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDescArt.OnIdleState = stateProperties8;
+            this.txtDescArt.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescArt.PasswordChar = '\0';
             this.txtDescArt.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDescArt.PlaceholderText = "Descripción del producto";
@@ -212,7 +210,7 @@
             this.txtDescArt.SelectionLength = 0;
             this.txtDescArt.SelectionStart = 0;
             this.txtDescArt.ShortcutsEnabled = true;
-            this.txtDescArt.Size = new System.Drawing.Size(781, 80);
+            this.txtDescArt.Size = new System.Drawing.Size(587, 136);
             this.txtDescArt.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDescArt.TabIndex = 0;
             this.txtDescArt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -234,14 +232,14 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.4578F));
             this.tableLayoutPanel5.Controls.Add(this.btnActualizarArt, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAgendarArt, 2, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(11, 159);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 160);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.81481F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(781, 47);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(587, 38);
             this.tableLayoutPanel5.TabIndex = 7;
             // 
             // btnActualizarArt
@@ -286,14 +284,13 @@
             this.btnActualizarArt.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnActualizarArt.IconSize = 25;
             this.btnActualizarArt.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.btnActualizarArt.IdleBorderRadius = 30;
+            this.btnActualizarArt.IdleBorderRadius = 24;
             this.btnActualizarArt.IdleBorderThickness = 1;
             this.btnActualizarArt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnActualizarArt.IdleIconLeftImage = null;
             this.btnActualizarArt.IdleIconRightImage = null;
             this.btnActualizarArt.IndicateFocus = false;
-            this.btnActualizarArt.Location = new System.Drawing.Point(295, 4);
-            this.btnActualizarArt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizarArt.Location = new System.Drawing.Point(222, 3);
             this.btnActualizarArt.Name = "btnActualizarArt";
             this.btnActualizarArt.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnActualizarArt.OnDisabledState.BorderRadius = 20;
@@ -327,7 +324,7 @@
             this.btnActualizarArt.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnActualizarArt.OnPressedState.IconLeftImage = null;
             this.btnActualizarArt.OnPressedState.IconRightImage = null;
-            this.btnActualizarArt.Size = new System.Drawing.Size(235, 32);
+            this.btnActualizarArt.Size = new System.Drawing.Size(177, 26);
             this.btnActualizarArt.TabIndex = 34;
             this.btnActualizarArt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnActualizarArt.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -377,14 +374,13 @@
             this.btnAgendarArt.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAgendarArt.IconSize = 25;
             this.btnAgendarArt.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.btnAgendarArt.IdleBorderRadius = 30;
+            this.btnAgendarArt.IdleBorderRadius = 24;
             this.btnAgendarArt.IdleBorderThickness = 1;
             this.btnAgendarArt.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
             this.btnAgendarArt.IdleIconLeftImage = null;
             this.btnAgendarArt.IdleIconRightImage = null;
             this.btnAgendarArt.IndicateFocus = false;
-            this.btnAgendarArt.Location = new System.Drawing.Point(538, 4);
-            this.btnAgendarArt.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgendarArt.Location = new System.Drawing.Point(405, 3);
             this.btnAgendarArt.Name = "btnAgendarArt";
             this.btnAgendarArt.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgendarArt.OnDisabledState.BorderRadius = 20;
@@ -418,7 +414,7 @@
             this.btnAgendarArt.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAgendarArt.OnPressedState.IconLeftImage = null;
             this.btnAgendarArt.OnPressedState.IconRightImage = null;
-            this.btnAgendarArt.Size = new System.Drawing.Size(239, 32);
+            this.btnAgendarArt.Size = new System.Drawing.Size(179, 26);
             this.btnAgendarArt.TabIndex = 35;
             this.btnAgendarArt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgendarArt.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -436,14 +432,14 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.5297F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(45, 18);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(34, 15);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.30769F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(808, 63);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(607, 51);
             this.tableLayoutPanel6.TabIndex = 7;
             // 
             // label1
@@ -452,34 +448,13 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(2, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 45);
+            this.label1.Size = new System.Drawing.Size(190, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Artículo";
+            this.label1.Text = "Material";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.22014F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90238F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.1912F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.68628F));
-            this.tableLayoutPanel2.Controls.Add(this.txtArNombre, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(45, 87);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.78788F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.24242F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.05618F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(808, 132);
-            this.tableLayoutPanel2.TabIndex = 6;
             // 
             // txtArNombre
             // 
@@ -502,7 +477,7 @@
             this.txtArNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtArNombre.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtArNombre.DefaultText = "";
-            this.txtArNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtArNombre.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtArNombre.FillColor = System.Drawing.Color.White;
             this.txtArNombre.HideSelection = true;
             this.txtArNombre.IconLeft = null;
@@ -511,34 +486,34 @@
             this.txtArNombre.IconRight = null;
             this.txtArNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtArNombre.Lines = new string[0];
-            this.txtArNombre.Location = new System.Drawing.Point(166, 2);
-            this.txtArNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtArNombre.Location = new System.Drawing.Point(2, 6);
+            this.txtArNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtArNombre.MaxLength = 32767;
             this.txtArNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtArNombre.Modified = false;
             this.txtArNombre.Multiline = false;
             this.txtArNombre.Name = "txtArNombre";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtArNombre.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtArNombre.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtArNombre.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtArNombre.OnIdleState = stateProperties8;
-            this.txtArNombre.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtArNombre.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtArNombre.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtArNombre.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtArNombre.OnIdleState = stateProperties4;
+            this.txtArNombre.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtArNombre.PasswordChar = '\0';
             this.txtArNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtArNombre.PlaceholderText = "Nombre";
@@ -548,7 +523,7 @@
             this.txtArNombre.SelectionLength = 0;
             this.txtArNombre.SelectionStart = 0;
             this.txtArNombre.ShortcutsEnabled = true;
-            this.txtArNombre.Size = new System.Drawing.Size(243, 34);
+            this.txtArNombre.Size = new System.Drawing.Size(365, 38);
             this.txtArNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtArNombre.TabIndex = 8;
             this.txtArNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -567,10 +542,10 @@
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(10, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(8, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(197, 93);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(148, 76);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 2;
             this.bunifuPictureBox1.TabStop = false;
@@ -578,21 +553,22 @@
             // 
             // ViewAddMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1348, 701);
+            this.ClientSize = new System.Drawing.Size(1012, 576);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.MinimumSize = new System.Drawing.Size(1366, 748);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(1444, 885);
+            this.MinimumSize = new System.Drawing.Size(1028, 615);
             this.Name = "ViewAddMaterial";
             this.Text = "ViewAddMaterial";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -610,7 +586,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgendarArt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         public Bunifu.UI.WinForms.BunifuTextBox txtArNombre;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
     }
