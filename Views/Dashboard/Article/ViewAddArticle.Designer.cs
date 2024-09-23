@@ -61,13 +61,16 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbTipoArt = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbColorArt = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbModeloArt = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cmbMaterialArt = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtArCodigo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtArNombre = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -84,11 +87,9 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.cmbTipoArt = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -96,7 +97,6 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -142,6 +142,71 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(679, 418);
             this.bunifuPanel1.TabIndex = 1;
             // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel11.ColumnCount = 4;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label4, 3, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(33, 88);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(606, 26);
+            this.tableLayoutPanel11.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 19);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Tipo de Artículo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(456, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Modelo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(305, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Color";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(154, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Material";
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -163,6 +228,51 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(607, 35);
             this.tableLayoutPanel8.TabIndex = 17;
+            // 
+            // cmbTipoArt
+            // 
+            this.cmbTipoArt.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTipoArt.BackgroundColor = System.Drawing.Color.White;
+            this.cmbTipoArt.BorderColor = System.Drawing.Color.Silver;
+            this.cmbTipoArt.BorderRadius = 15;
+            this.cmbTipoArt.Color = System.Drawing.Color.Silver;
+            this.cmbTipoArt.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cmbTipoArt.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbTipoArt.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbTipoArt.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbTipoArt.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbTipoArt.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbTipoArt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTipoArt.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cmbTipoArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoArt.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbTipoArt.FillDropDown = true;
+            this.cmbTipoArt.FillIndicator = false;
+            this.cmbTipoArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipoArt.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.cmbTipoArt.ForeColor = System.Drawing.Color.Black;
+            this.cmbTipoArt.FormattingEnabled = true;
+            this.cmbTipoArt.Icon = null;
+            this.cmbTipoArt.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbTipoArt.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbTipoArt.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbTipoArt.IndicatorThickness = 2;
+            this.cmbTipoArt.IsDropdownOpened = false;
+            this.cmbTipoArt.ItemBackColor = System.Drawing.Color.White;
+            this.cmbTipoArt.ItemBorderColor = System.Drawing.Color.White;
+            this.cmbTipoArt.ItemForeColor = System.Drawing.Color.Black;
+            this.cmbTipoArt.ItemHeight = 26;
+            this.cmbTipoArt.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbTipoArt.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbTipoArt.ItemTopMargin = 3;
+            this.cmbTipoArt.Location = new System.Drawing.Point(2, 2);
+            this.cmbTipoArt.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoArt.Name = "cmbTipoArt";
+            this.cmbTipoArt.Size = new System.Drawing.Size(119, 32);
+            this.cmbTipoArt.TabIndex = 13;
+            this.cmbTipoArt.Text = null;
+            this.cmbTipoArt.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbTipoArt.TextLeftMargin = 5;
             // 
             // cmbColorArt
             // 
@@ -298,39 +408,6 @@
             this.cmbMaterialArt.Text = null;
             this.cmbMaterialArt.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbMaterialArt.TextLeftMargin = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(154, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Material";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(305, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Color";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(456, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Modelo";
             // 
             // tableLayoutPanel4
             // 
@@ -1195,89 +1272,13 @@
             this.bunifuPictureBox1.TabStop = false;
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
-            // cmbTipoArt
-            // 
-            this.cmbTipoArt.BackColor = System.Drawing.Color.Transparent;
-            this.cmbTipoArt.BackgroundColor = System.Drawing.Color.White;
-            this.cmbTipoArt.BorderColor = System.Drawing.Color.Silver;
-            this.cmbTipoArt.BorderRadius = 15;
-            this.cmbTipoArt.Color = System.Drawing.Color.Silver;
-            this.cmbTipoArt.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.cmbTipoArt.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbTipoArt.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.cmbTipoArt.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cmbTipoArt.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.cmbTipoArt.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbTipoArt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTipoArt.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.cmbTipoArt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoArt.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbTipoArt.FillDropDown = true;
-            this.cmbTipoArt.FillIndicator = false;
-            this.cmbTipoArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipoArt.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.cmbTipoArt.ForeColor = System.Drawing.Color.Black;
-            this.cmbTipoArt.FormattingEnabled = true;
-            this.cmbTipoArt.Icon = null;
-            this.cmbTipoArt.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbTipoArt.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.cmbTipoArt.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.cmbTipoArt.IndicatorThickness = 2;
-            this.cmbTipoArt.IsDropdownOpened = false;
-            this.cmbTipoArt.ItemBackColor = System.Drawing.Color.White;
-            this.cmbTipoArt.ItemBorderColor = System.Drawing.Color.White;
-            this.cmbTipoArt.ItemForeColor = System.Drawing.Color.Black;
-            this.cmbTipoArt.ItemHeight = 26;
-            this.cmbTipoArt.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.cmbTipoArt.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.cmbTipoArt.ItemTopMargin = 3;
-            this.cmbTipoArt.Location = new System.Drawing.Point(2, 2);
-            this.cmbTipoArt.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbTipoArt.Name = "cmbTipoArt";
-            this.cmbTipoArt.Size = new System.Drawing.Size(119, 32);
-            this.cmbTipoArt.TabIndex = 13;
-            this.cmbTipoArt.Text = null;
-            this.cmbTipoArt.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.cmbTipoArt.TextLeftMargin = 5;
-            // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel11.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel11.ColumnCount = 4;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label4, 3, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label3, 2, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(33, 88);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(606, 26);
-            this.tableLayoutPanel11.TabIndex = 20;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Tipo de Artículo";
-            // 
             // ViewAddArticle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 576);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1444, 885);
             this.MinimumSize = new System.Drawing.Size(1028, 615);
@@ -1285,6 +1286,8 @@
             this.Text = "ViewAddArticle";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1293,8 +1296,6 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
