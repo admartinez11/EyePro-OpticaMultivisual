@@ -210,7 +210,6 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 DAOInsert.SecurityAnswer = ObjVista.txtSecurityAnswer.Text.Trim();
                 //Se invoca al método RegistrarUsuario mediante el objeto DAOInsert
                 int valorRetornado = DAOInsert.RegistrarUsuario();
-                MessageBox.Show("Filas afectadas: " + valorRetornado);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -221,7 +220,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     MessageBox.Show($"Usuario administrador: {ObjVista.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjVista.txtUsername.Text.Trim()}OP123",
                                     "Credenciales de acceso",
                                     MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                                    MessageBoxIcon.Warning);
                     ViewLogin login = new ViewLogin();
                     login.Show();
                     ObjVista.Hide();

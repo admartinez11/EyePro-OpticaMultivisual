@@ -173,7 +173,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT * FROM Usuario WHERE username = @username AND VerificationCode = @pin AND userStatus = @status";
+                string query = "SELECT * FROM Usuario WHERE username = @username COLLATE Latin1_General_BIN AND VerificationCode = @pin AND userStatus = @status";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("username", User);
                 cmd.Parameters.AddWithValue("pin", VerificationCode);

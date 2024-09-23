@@ -195,7 +195,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     MessageBox.Show($"Usuario: {ObjAddUser.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjAddUser.txtUsername.Text.Trim()}OP123",
                                     "Credenciales de acceso",
                                     MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                                    MessageBoxIcon.Warning);
                     ObjAddUser.Close();
                 }
                 else

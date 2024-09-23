@@ -340,7 +340,7 @@
             this.txtPassword.Lines = new string[0];
             this.txtPassword.Location = new System.Drawing.Point(45, 247);
             this.txtPassword.MaximumSize = new System.Drawing.Size(379, 39);
-            this.txtPassword.MaxLength = 100;
+            this.txtPassword.MaxLength = 50;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
             this.txtPassword.Multiline = false;
@@ -417,7 +417,7 @@
             this.txtUsername.Lines = new string[0];
             this.txtUsername.Location = new System.Drawing.Point(45, 178);
             this.txtUsername.MaximumSize = new System.Drawing.Size(379, 39);
-            this.txtUsername.MaxLength = 100;
+            this.txtUsername.MaxLength = 50;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsername.Modified = false;
             this.txtUsername.Multiline = false;

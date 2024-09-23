@@ -558,7 +558,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(28, 86);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtUsername.MaxLength = 100;
+            this.txtUsername.MaxLength = 50;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ShortcutsEnabled = false;
             this.txtUsername.Size = new System.Drawing.Size(388, 20);
