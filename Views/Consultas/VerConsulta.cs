@@ -1,3 +1,4 @@
+﻿using OpticaMultivisual.Controllers.Article;
 using OpticaMultivisual.Controllers.Consulta;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,7 @@ namespace OpticaMultivisual.Views.Consultas
         public VerConsulta()
         {
             InitializeComponent();
-            ControladorConsulta Control = new ControladorConsulta(this);
+            ControladorConsulta Consulta = new ControladorConsulta(this);
         }
-
-
     }
 }
-

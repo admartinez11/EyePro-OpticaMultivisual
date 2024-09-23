@@ -1,4 +1,4 @@
-namespace OpticaMultivisual.Views.Consultas
+﻿namespace OpticaMultivisual.Views.Consultas
 {
     partial class VerConsulta
     {
@@ -28,48 +28,48 @@ namespace OpticaMultivisual.Views.Consultas
         /// </summary>
         private void InitializeComponent()
         {
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerConsulta));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnActConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.btnNuevaConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.btnEliminarConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvInfoConsulta = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.CMBTipoEstado = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnActConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnNuevaConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnEliminarConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtBuscarConsulta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnBuscarConsulta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.CMBTipoEstado = new Bunifu.UI.WinForms.BunifuDropdown();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoConsulta)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,7 +89,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 576);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1011, 570);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // tableLayoutPanel2
@@ -110,7 +110,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(987, 551);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(986, 546);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -129,19 +129,8 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.44068F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(962, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(961, 39);
             this.tableLayoutPanel3.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(933, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(14, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -149,7 +138,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(854, 7);
+            this.label1.Location = new System.Drawing.Point(853, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 25);
@@ -162,7 +151,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(31)))), ((int)(((byte)(92)))));
-            this.label2.Location = new System.Drawing.Point(8, 15);
+            this.label2.Location = new System.Drawing.Point(8, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
@@ -176,24 +165,13 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.495713F));
             this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(7, 530);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(7, 525);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(962, 19);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(961, 19);
             this.tableLayoutPanel4.TabIndex = 16;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(882, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -202,14 +180,14 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 46);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 45);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.976936F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.26853F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.75453F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(962, 480);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(961, 476);
             this.tableLayoutPanel5.TabIndex = 17;
             // 
             // tableLayoutPanel6
@@ -226,13 +204,166 @@ namespace OpticaMultivisual.Views.Consultas
             this.tableLayoutPanel6.Controls.Add(this.btnNuevaConsulta, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnEliminarConsulta, 5, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 449);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 445);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(958, 29);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(957, 29);
             this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.dgvInfoConsulta, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 11);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.759124F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.24088F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(957, 430);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // dgvInfoConsulta
+            // 
+            this.dgvInfoConsulta.AllowUserToAddRows = false;
+            this.dgvInfoConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvInfoConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvInfoConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            this.dgvInfoConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvInfoConsulta.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvInfoConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfoConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInfoConsulta.ColumnHeadersHeight = 30;
+            this.dgvInfoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvInfoConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInfoConsulta.EnableHeadersVisualStyles = false;
+            this.dgvInfoConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.dgvInfoConsulta.Location = new System.Drawing.Point(2, 39);
+            this.dgvInfoConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInfoConsulta.Name = "dgvInfoConsulta";
+            this.dgvInfoConsulta.ReadOnly = true;
+            this.dgvInfoConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfoConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvInfoConsulta.RowHeadersVisible = false;
+            this.dgvInfoConsulta.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvInfoConsulta.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInfoConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInfoConsulta.Size = new System.Drawing.Size(953, 389);
+            this.dgvInfoConsulta.TabIndex = 1;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.214F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.416208F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.85759F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.43352F));
+            this.tableLayoutPanel8.Controls.Add(this.txtBuscarConsulta, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnBuscarConsulta, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.CMBTipoEstado, 3, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(953, 33);
+            this.tableLayoutPanel8.TabIndex = 2;
+            // 
+            // CMBTipoEstado
+            // 
+            this.CMBTipoEstado.BackColor = System.Drawing.Color.Transparent;
+            this.CMBTipoEstado.BackgroundColor = System.Drawing.Color.White;
+            this.CMBTipoEstado.BorderColor = System.Drawing.Color.Silver;
+            this.CMBTipoEstado.BorderRadius = 1;
+            this.CMBTipoEstado.Color = System.Drawing.Color.Silver;
+            this.CMBTipoEstado.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.CMBTipoEstado.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CMBTipoEstado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.CMBTipoEstado.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CMBTipoEstado.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.CMBTipoEstado.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.CMBTipoEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CMBTipoEstado.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.CMBTipoEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CMBTipoEstado.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.CMBTipoEstado.FillDropDown = true;
+            this.CMBTipoEstado.FillIndicator = false;
+            this.CMBTipoEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMBTipoEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CMBTipoEstado.ForeColor = System.Drawing.Color.Black;
+            this.CMBTipoEstado.FormattingEnabled = true;
+            this.CMBTipoEstado.Icon = null;
+            this.CMBTipoEstado.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.CMBTipoEstado.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.CMBTipoEstado.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.CMBTipoEstado.IndicatorThickness = 2;
+            this.CMBTipoEstado.IsDropdownOpened = false;
+            this.CMBTipoEstado.ItemBackColor = System.Drawing.Color.White;
+            this.CMBTipoEstado.ItemBorderColor = System.Drawing.Color.White;
+            this.CMBTipoEstado.ItemForeColor = System.Drawing.Color.Black;
+            this.CMBTipoEstado.ItemHeight = 26;
+            this.CMBTipoEstado.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.CMBTipoEstado.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.CMBTipoEstado.Items.AddRange(new object[] {
+            "Realizada",
+            "Pendiente",
+            "Todas"});
+            this.CMBTipoEstado.ItemTopMargin = 3;
+            this.CMBTipoEstado.Location = new System.Drawing.Point(768, 2);
+            this.CMBTipoEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CMBTipoEstado.Name = "CMBTipoEstado";
+            this.CMBTipoEstado.Size = new System.Drawing.Size(183, 32);
+            this.CMBTipoEstado.TabIndex = 36;
+            this.CMBTipoEstado.Text = "Estado";
+            this.CMBTipoEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.CMBTipoEstado.TextLeftMargin = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(932, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(14, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(881, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(78, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // btnActConsulta
             // 
@@ -253,11 +384,11 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnActConsulta.ColorContrastOnClick = 45;
             this.btnActConsulta.ColorContrastOnHover = 45;
             this.btnActConsulta.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnActConsulta.CustomizableEdges = borderEdges6;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnActConsulta.CustomizableEdges = borderEdges1;
             this.btnActConsulta.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnActConsulta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnActConsulta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -342,11 +473,11 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnNuevaConsulta.ColorContrastOnClick = 45;
             this.btnNuevaConsulta.ColorContrastOnHover = 45;
             this.btnNuevaConsulta.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.btnNuevaConsulta.CustomizableEdges = borderEdges7;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnNuevaConsulta.CustomizableEdges = borderEdges2;
             this.btnNuevaConsulta.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnNuevaConsulta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNuevaConsulta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -431,11 +562,11 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnEliminarConsulta.ColorContrastOnClick = 45;
             this.btnEliminarConsulta.ColorContrastOnHover = 45;
             this.btnEliminarConsulta.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btnEliminarConsulta.CustomizableEdges = borderEdges8;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnEliminarConsulta.CustomizableEdges = borderEdges3;
             this.btnEliminarConsulta.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEliminarConsulta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminarConsulta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -459,7 +590,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnEliminarConsulta.IdleIconLeftImage = null;
             this.btnEliminarConsulta.IdleIconRightImage = null;
             this.btnEliminarConsulta.IndicateFocus = false;
-            this.btnEliminarConsulta.Location = new System.Drawing.Point(367, 3);
+            this.btnEliminarConsulta.Location = new System.Drawing.Point(366, 3);
             this.btnEliminarConsulta.Name = "btnEliminarConsulta";
             this.btnEliminarConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEliminarConsulta.OnDisabledState.BorderRadius = 20;
@@ -501,83 +632,6 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnEliminarConsulta.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEliminarConsulta.UseDefaultRadiusAndThickness = true;
             // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.dgvInfoConsulta, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 11);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.759124F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.24088F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(958, 434);
-            this.tableLayoutPanel7.TabIndex = 2;
-            // 
-            // dgvInfoConsulta
-            // 
-            this.dgvInfoConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvInfoConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgvInfoConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            this.dgvInfoConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvInfoConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(174)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfoConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvInfoConsulta.ColumnHeadersHeight = 30;
-            this.dgvInfoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvInfoConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInfoConsulta.EnableHeadersVisualStyles = false;
-            this.dgvInfoConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            this.dgvInfoConsulta.Location = new System.Drawing.Point(2, 40);
-            this.dgvInfoConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvInfoConsulta.Name = "dgvInfoConsulta";
-            this.dgvInfoConsulta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfoConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvInfoConsulta.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvInfoConsulta.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvInfoConsulta.Size = new System.Drawing.Size(954, 392);
-            this.dgvInfoConsulta.TabIndex = 1;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.214F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.416208F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.85759F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.43352F));
-            this.tableLayoutPanel8.Controls.Add(this.txtBuscarConsulta, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnBuscarConsulta, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.CMBTipoEstado, 3, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(954, 34);
-            this.tableLayoutPanel8.TabIndex = 2;
-            // 
             // txtBuscarConsulta
             // 
             this.txtBuscarConsulta.AcceptsReturn = false;
@@ -614,27 +668,27 @@ namespace OpticaMultivisual.Views.Consultas
             this.txtBuscarConsulta.Modified = false;
             this.txtBuscarConsulta.Multiline = false;
             this.txtBuscarConsulta.Name = "txtBuscarConsulta";
-            stateProperties5.BorderColor = System.Drawing.Color.Silver;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarConsulta.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.Silver;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarConsulta.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.Silver;
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarConsulta.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarConsulta.OnIdleState = stateProperties8;
-            this.txtBuscarConsulta.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            stateProperties1.BorderColor = System.Drawing.Color.Silver;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarConsulta.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Silver;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarConsulta.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.Silver;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarConsulta.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarConsulta.OnIdleState = stateProperties4;
+            this.txtBuscarConsulta.Padding = new System.Windows.Forms.Padding(3);
             this.txtBuscarConsulta.PasswordChar = '\0';
             this.txtBuscarConsulta.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtBuscarConsulta.PlaceholderText = "Buscador";
@@ -644,7 +698,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.txtBuscarConsulta.SelectionLength = 0;
             this.txtBuscarConsulta.SelectionStart = 0;
             this.txtBuscarConsulta.ShortcutsEnabled = true;
-            this.txtBuscarConsulta.Size = new System.Drawing.Size(645, 28);
+            this.txtBuscarConsulta.Size = new System.Drawing.Size(644, 27);
             this.txtBuscarConsulta.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarConsulta.TabIndex = 35;
             this.txtBuscarConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -675,11 +729,11 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnBuscarConsulta.ColorContrastOnClick = 45;
             this.btnBuscarConsulta.ColorContrastOnHover = 45;
             this.btnBuscarConsulta.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnBuscarConsulta.CustomizableEdges = borderEdges5;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnBuscarConsulta.CustomizableEdges = borderEdges4;
             this.btnBuscarConsulta.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscarConsulta.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscarConsulta.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -703,7 +757,7 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnBuscarConsulta.IdleIconLeftImage = null;
             this.btnBuscarConsulta.IdleIconRightImage = null;
             this.btnBuscarConsulta.IndicateFocus = true;
-            this.btnBuscarConsulta.Location = new System.Drawing.Point(667, 3);
+            this.btnBuscarConsulta.Location = new System.Drawing.Point(666, 3);
             this.btnBuscarConsulta.Name = "btnBuscarConsulta";
             this.btnBuscarConsulta.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscarConsulta.OnDisabledState.BorderRadius = 20;
@@ -745,78 +799,29 @@ namespace OpticaMultivisual.Views.Consultas
             this.btnBuscarConsulta.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnBuscarConsulta.UseDefaultRadiusAndThickness = true;
             // 
-            // CMBTipoEstado
-            // 
-            this.CMBTipoEstado.BackColor = System.Drawing.Color.Transparent;
-            this.CMBTipoEstado.BackgroundColor = System.Drawing.Color.White;
-            this.CMBTipoEstado.BorderColor = System.Drawing.Color.Silver;
-            this.CMBTipoEstado.BorderRadius = 15;
-            this.CMBTipoEstado.Color = System.Drawing.Color.Silver;
-            this.CMBTipoEstado.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.CMBTipoEstado.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CMBTipoEstado.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.CMBTipoEstado.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CMBTipoEstado.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CMBTipoEstado.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.CMBTipoEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CMBTipoEstado.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.CMBTipoEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMBTipoEstado.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CMBTipoEstado.FillDropDown = true;
-            this.CMBTipoEstado.FillIndicator = false;
-            this.CMBTipoEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CMBTipoEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.CMBTipoEstado.ForeColor = System.Drawing.Color.Black;
-            this.CMBTipoEstado.FormattingEnabled = true;
-            this.CMBTipoEstado.Icon = null;
-            this.CMBTipoEstado.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CMBTipoEstado.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.CMBTipoEstado.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CMBTipoEstado.IndicatorThickness = 2;
-            this.CMBTipoEstado.IsDropdownOpened = false;
-            this.CMBTipoEstado.ItemBackColor = System.Drawing.Color.White;
-            this.CMBTipoEstado.ItemBorderColor = System.Drawing.Color.White;
-            this.CMBTipoEstado.ItemForeColor = System.Drawing.Color.Black;
-            this.CMBTipoEstado.ItemHeight = 26;
-            this.CMBTipoEstado.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.CMBTipoEstado.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.CMBTipoEstado.Items.AddRange(new object[] {
-            "Realizada",
-            "Pendiente",
-            "Todas"});
-            this.CMBTipoEstado.ItemTopMargin = 3;
-            this.CMBTipoEstado.Location = new System.Drawing.Point(769, 2);
-            this.CMBTipoEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.CMBTipoEstado.Name = "CMBTipoEstado";
-            this.CMBTipoEstado.Size = new System.Drawing.Size(183, 32);
-            this.CMBTipoEstado.TabIndex = 36;
-            this.CMBTipoEstado.Text = "Estado";
-            this.CMBTipoEstado.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CMBTipoEstado.TextLeftMargin = 5;
-            // 
             // VerConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 576);
+            this.ClientSize = new System.Drawing.Size(1011, 570);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximumSize = new System.Drawing.Size(1444, 885);
-            this.MinimumSize = new System.Drawing.Size(1028, 615);
+            this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "VerConsulta";
             this.Text = "VerConsulta";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoConsulta)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

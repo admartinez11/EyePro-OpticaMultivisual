@@ -1,4 +1,4 @@
-namespace OpticaMultivisual.Views.ScheduleAppointment
+﻿namespace OpticaMultivisual.Views.ScheduleAppointment
 {
     partial class ViewScheduleAppointment
     {
@@ -141,7 +141,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel4);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel2);
             this.bunifuPanel1.Location = new System.Drawing.Point(168, 87);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(690, 442);
@@ -216,7 +216,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiObs.OnIdleState = stateProperties4;
-            this.txtCiObs.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtCiObs.Padding = new System.Windows.Forms.Padding(3);
             this.txtCiObs.PasswordChar = '\0';
             this.txtCiObs.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiObs.PlaceholderText = "Observaciones";
@@ -249,7 +249,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             this.tableLayoutPanel10.Controls.Add(this.btnActualizar, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.btnAgendar, 2, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(34, 369);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.18519F));
@@ -443,11 +443,11 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.43366F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.56635F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.63107F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.36893F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.DTPfechacita, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.DTPfechacita, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(34, 198);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(19, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -477,8 +477,8 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             this.DTPfechacita.IconColor = System.Drawing.Color.White;
             this.DTPfechacita.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DTPfechacita.LeftTextMargin = 5;
-            this.DTPfechacita.Location = new System.Drawing.Point(153, 2);
-            this.DTPfechacita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DTPfechacita.Location = new System.Drawing.Point(2, 2);
+            this.DTPfechacita.Margin = new System.Windows.Forms.Padding(2);
             this.DTPfechacita.MinimumSize = new System.Drawing.Size(4, 32);
             this.DTPfechacita.Name = "DTPfechacita";
             this.DTPfechacita.Size = new System.Drawing.Size(258, 32);
@@ -488,12 +488,12 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Location = new System.Drawing.Point(285, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 9, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 21);
+            this.label2.Size = new System.Drawing.Size(132, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Fecha de la visita";
             // 
@@ -574,7 +574,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiDUI.OnIdleState = stateProperties8;
-            this.txtCiDUI.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiDUI.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiDUI.PasswordChar = '\0';
             this.txtCiDUI.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiDUI.PlaceholderText = "DUI";
@@ -684,7 +684,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(34, 15);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
@@ -785,7 +785,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiApellido.OnIdleState = stateProperties16;
-            this.txtCiApellido.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiApellido.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiApellido.PasswordChar = '\0';
             this.txtCiApellido.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiApellido.PlaceholderText = "Apellido";
@@ -863,7 +863,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCiNombre.OnIdleState = stateProperties20;
-            this.txtCiNombre.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCiNombre.Padding = new System.Windows.Forms.Padding(2);
             this.txtCiNombre.PasswordChar = '\0';
             this.txtCiNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtCiNombre.PlaceholderText = "Nombre";
@@ -1040,7 +1040,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox3.OnIdleState = stateProperties28;
-            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuTextBox3.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox3.PasswordChar = '\0';
             this.bunifuTextBox3.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox3.PlaceholderText = "Apellido";
@@ -1118,7 +1118,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox2.OnIdleState = stateProperties32;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox2.PasswordChar = '\0';
             this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox2.PlaceholderText = "Nombre";
@@ -1226,7 +1226,7 @@ namespace OpticaMultivisual.Views.ScheduleAppointment
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
             this.bunifuPictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(148, 81);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
