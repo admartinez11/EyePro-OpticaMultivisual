@@ -91,6 +91,8 @@ namespace OpticaMultivisual.Controllers.Article.Modelo
             ObjVistaR = Vista;
             this.accion = p_accion;
 
+            Vista.Load += new EventHandler(CargaInicial);
+
             // Verificar la acción a realizar
             verificarAccion();
 

@@ -24,7 +24,7 @@ namespace OpticaMultivisual.Models.DAO
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
-                adp.Fill(ds, " VistaColor");
+                adp.Fill(ds, "VistaColor");
                 return ds;
             }
             catch (Exception)
@@ -47,7 +47,7 @@ namespace OpticaMultivisual.Models.DAO
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
                 cmd.Parameters.AddWithValue("@Nombre", Color_nombre);
-                cmd.Parameters.AddWithValue("@Descripcion", Color_nombre);
+                cmd.Parameters.AddWithValue("@Descripcion", Color_descripcion);
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }

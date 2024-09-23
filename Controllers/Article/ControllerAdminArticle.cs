@@ -1,6 +1,10 @@
 ﻿using OpticaMultivisual.Models.DAO;
 using OpticaMultivisual.Views.Article;
 using OpticaMultivisual.Views.Dashboard.Article;
+using OpticaMultivisual.Views.Dashboard.Article.Color;
+using OpticaMultivisual.Views.Dashboard.Article.Material;
+using OpticaMultivisual.Views.Dashboard.Article.Modelo;
+using OpticaMultivisual.Views.Dashboard.Article.TipoArticulo;
 using OpticaMultivisual.Views.ScheduleAppointment;
 using System;
 using System.Collections.Generic;
@@ -24,6 +28,66 @@ namespace OpticaMultivisual.Controllers.Article
             ObjVista.btnNuevoArt.Click += new EventHandler(AgregarArticulo);
             ObjVista.btnEliminarArt.Click += new EventHandler(EliminarArticulo);
             ObjVista.btnActArt.Click += new EventHandler(ActualizarArticulo);
+            //ObjVista.administrarColorToolStripMenuItem.Click += new EventHandler(AdminColor);
+            //ObjVista.administrarModeloToolStripMenuItem.Click += new EventHandler(AdminModelo);
+            //ObjVista.administrarTipoToolStripMenuItem.Click += new EventHandler(AdminTipoArt);
+            //ObjVista.administrarMaterialesToolStripMenuItem.Click += new EventHandler(AdminMaterial);
+        }
+        public void AdminColor(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear una instancia del formulario con el constructor adecuado
+                ViewAdminColor openForm = new ViewAdminColor();
+                openForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si algo falla
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AdminMaterial(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear una instancia del formulario con el constructor adecuado
+                ViewAdminMaterial openForm = new ViewAdminMaterial();
+                openForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si algo falla
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AdminTipoArt(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear una instancia del formulario con el constructor adecuado
+                ViewAdminTipoArt openForm = new ViewAdminTipoArt();
+                openForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si algo falla
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AdminModelo(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear una instancia del formulario con el constructor adecuado
+                ViewAdminModelo openForm = new ViewAdminModelo  ();
+                openForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si algo falla
+                MessageBox.Show("EPV001 - Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void CargarInfo(object sender, EventArgs e)
         {

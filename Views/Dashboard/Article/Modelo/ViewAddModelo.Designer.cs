@@ -619,7 +619,7 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(212, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(212, 27);
             this.toolStrip1.TabIndex = 40;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -629,13 +629,13 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
             this.toolStripButton1.Image = global::OpticaMultivisual.Properties.Resources.Close;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "btnCerrarPa";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(88, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel1.Text = "Cerrar Panel";
             // 
             // label3
