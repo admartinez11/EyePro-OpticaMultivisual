@@ -57,7 +57,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             if (result == DialogResult.Yes)
             {
                 // URL del archivo en Google Drive del Manual de Usuario
-                string url = "https://drive.google.com/uc?export=download&id=14w7WusMB2UMn-tmxa8agM5F66etDhTyN";
+                string url = "https://drive.google.com/uc?export=download&id=1pRvsLTh4Cbo44xstGkr8X081Oh-vy5Ze";
                 // Crear una instancia de SaveFileDialog para que el usuario elija la ubicación
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF Files|*.pdf";  // Filtrar solo archivos PDF
@@ -78,7 +78,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error al descargar el archivo: " + ex.Message);
+                            MessageBox.Show("Error al descargar el manual de usuario", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
