@@ -57,12 +57,12 @@ namespace OpticaMultivisual.Controllers.Dashboard
             if (result == DialogResult.Yes)
             {
                 // URL del archivo en Google Drive del Manual de Usuario
-                string url = "https://drive.google.com/uc?export=download&id=1NlS1BTPOPsF-BtIkZZ5Rx0ChvRklkxUn";
+                string url = "https://drive.google.com/uc?export=download&id=14w7WusMB2UMn-tmxa8agM5F66etDhTyN";
                 // Crear una instancia de SaveFileDialog para que el usuario elija la ubicación
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF Files|*.pdf";  // Filtrar solo archivos PDF
                 saveFileDialog.Title = "Guardar manual de usuario";
-                saveFileDialog.FileName = "Manual de Usuario - EyePro.pdf";  // Nombre predeterminado del archivo
+                saveFileDialog.FileName = "Manual de Usuario EyePro - V 1.0.pdf";  // Nombre predeterminado del archivo
                 // Mostrar el diálogo de guardado
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
