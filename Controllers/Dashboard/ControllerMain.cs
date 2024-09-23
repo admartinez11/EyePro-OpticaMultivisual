@@ -56,7 +56,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
             // Si el usuario elige "Sí", proceder con la descarga
             if (result == DialogResult.Yes)
             {
-                // URL del archivo en Google Drive
+                // URL del archivo en Google Drive del Manual de Usuario
                 string url = "https://drive.google.com/uc?export=download&id=1NlS1BTPOPsF-BtIkZZ5Rx0ChvRklkxUn";
                 // Crear una instancia de SaveFileDialog para que el usuario elija la ubicación
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
