@@ -62,7 +62,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF Files|*.pdf";  // Filtrar solo archivos PDF
                 saveFileDialog.Title = "Guardar manual de usuario";
-                saveFileDialog.FileName = "Manual de Usuario EyePro - V 1.0.pdf";  // Nombre predeterminado del archivo
+                saveFileDialog.FileName = "Manual de Usuario EyePro - V 1.0.pdf";  // Nombre predeterminado del archivo que se va a guardar
                 // Mostrar el diálogo de guardado
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
