@@ -56,13 +56,13 @@ namespace OpticaMultivisual.Controllers.Dashboard
             // Si el usuario elige "Sí", proceder con la descarga
             if (result == DialogResult.Yes)
             {
-                // URL del archivo en Google Drive del manual de usuario
-                string url = "https://drive.google.com/uc?export=download&id=1NlS1BTPOPsF-BtIkZZ5Rx0ChvRklkxUn";
+                // URL del archivo en Google Drive del Manual de Usuario
+                string url = "https://drive.google.com/uc?export=download&id=1pRvsLTh4Cbo44xstGkr8X081Oh-vy5Ze";
                 // Crear una instancia de SaveFileDialog para que el usuario elija la ubicación
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "PDF Files|*.pdf";  // Filtrar solo archivos PDF
                 saveFileDialog.Title = "Guardar manual de usuario";
-                saveFileDialog.FileName = "Manual de Usuario - EyePro.pdf";  // Nombre predeterminado del archivo
+                saveFileDialog.FileName = "Manual de Usuario EyePro - V 1.0.pdf";  // Nombre predeterminado del archivo que se va a guardar
                 // Mostrar el diálogo de guardado
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -72,13 +72,13 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     {
                         try
                         {
-                            // Descargar el archivo desde Google Drive
+                            // Descargar el archivo desde Google Driv
                             client.DownloadFile(url, destinationPath);
                             MessageBox.Show("Manual descargado con éxito", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error al descargar el archivo: " + ex.Message);
+                            MessageBox.Show("Error al descargar el manual de usuario", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

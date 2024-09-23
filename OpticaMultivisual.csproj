@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F8C33B53-EF6F-45E5-BB2B-C12523BF0FD2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EyePro</RootNamespace>
-    <AssemblyName>EyePro</AssemblyName>
+    <RootNamespace>OpticaMultivisual</RootNamespace>
+    <AssemblyName>OpticaMultivisual</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>743DED3764E3A3323236FC935E65C6DE6027150C</ManifestCertificateThumbprint>
+    <ApplicationIcon>Eyeproico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B99E560B74A84DE81E3AF6EFAD88623D81A025F2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>OpticaMultivisual_TemporaryKey.pfx</ManifestKeyFile>
@@ -59,9 +62,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Eyeproico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
