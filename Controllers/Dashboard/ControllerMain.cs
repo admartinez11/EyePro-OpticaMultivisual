@@ -72,7 +72,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     {
                         try
                         {
-                            // Descargar el archivo desde Google Drive
+                            // Descargar el archivo desde Google Driv
                             client.DownloadFile(url, destinationPath);
                             MessageBox.Show("Manual descargado con éxito", "Manual", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
