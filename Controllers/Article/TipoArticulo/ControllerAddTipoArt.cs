@@ -108,6 +108,7 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
         }
         public void ActualizarRegistro(object sender, EventArgs e)
         {
+
             if (ValidarCampos())
             {
                 DAOTipoArticulo DAOActualizar = new DAOTipoArticulo
@@ -117,6 +118,7 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
                 };
 
                 int valorRetornado = DAOActualizar.ActualizarTipoArticulo();
+
                 if (valorRetornado > 0)
                 {
                     MessageBox.Show("Los datos han sido actualizados exitosamente",

@@ -172,7 +172,7 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 command.Connection = getConnection();
-                string query = "UPDATE Visita SET art_codigo = @Codigo, art_nombre = @Nombre, art_descripcion = @Descripcion, tipoart_ID = @TipoArt, mod_ID = @Modelo, art_medidas = @Medidas, material_ID = @Material, color_ID = @Color, art_urlimagen = @URLimagen, art_comentarios = @Comentarios, art_punitario = @Precio " +
+                string query = "UPDATE Articulo SET art_codigo = @Codigo, art_nombre = @Nombre, art_descripcion = @Descripcion, tipoart_ID = @TipoArt, mod_ID = @Modelo, art_medidas = @Medidas, material_ID = @Material, color_ID = @Color, art_urlimagen = @URLimagen, art_comentarios = @Comentarios, art_punitario = @Precio " +
                     "WHERE art_codigo = @Codigo";
 
                 SqlCommand cmd = new SqlCommand(query, command.Connection);

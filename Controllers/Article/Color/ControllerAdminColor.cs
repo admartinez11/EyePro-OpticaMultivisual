@@ -21,7 +21,7 @@ namespace OpticaMultivisual.Controllers.Article.Color
             ObjVista.Load += new EventHandler(CargarInfo);
             ObjVista.btnBuscar.Click += new EventHandler(BuscarColor);
             ObjVista.btnNuevoColor.Click += new EventHandler(AgregarColor);
-            ObjVista.btnEliminarColor.Click += new EventHandler(EliminarTipArt);
+            ObjVista.btnEliminarColor.Click += new EventHandler(EliminarColor);
             ObjVista.btnActColor.Click += new EventHandler(ActualizarColor);
         }
         public void CargarInfo(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace OpticaMultivisual.Controllers.Article.Color
         }
         public void BuscarColor(object sender, EventArgs e)
         {
-            DAOTipoArticulo ObjRegistro = new DAOTipoArticulo();
+            DAOColor ObjRegistro = new DAOColor();
             DataSet ds = ObjRegistro.BuscarTipoArticulo(ObjVista.txtBuscar.Text.Trim());
             ObjVista.dgvInfoColor.DataSource = ds.Tables["Color"];
         }
@@ -58,14 +58,14 @@ namespace OpticaMultivisual.Controllers.Article.Color
             openForm.ShowDialog();
             ActualizarDatos();
         }
-        private void EliminarTipArt(object sender, EventArgs e)
+        private void EliminarColor(object sender, EventArgs e)
         {
             int pos = ObjVista.dgvInfoColor.CurrentRow.Index;
             if (MessageBox.Show($"¿Esta seguro que desea elimar a:\n {ObjVista.dgvInfoColor[1, pos].Value.ToString()} {ObjVista.dgvInfoColor[2, pos].Value.ToString()}.\nConsidere que dicha acción no se podrá revertir.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DAOTipoArticulo daoDel = new DAOTipoArticulo();
-                daoDel.Tipoart_ID = int.Parse(ObjVista.dgvInfoColor[0, pos].Value.ToString());
-                int valorRetornado = daoDel.EliminarTipoArticulo();
+                DAOColor daoDel = new DAOColor();
+                daoDel.Color_ID = int.Parse(ObjVista.dgvInfoColor[0, pos].Value.ToString());
+                int valorRetornado = daoDel.EliminarColor();
                 if (valorRetornado == 1)
                 {
                     MessageBox.Show("Registro eliminado", "Acción completada", MessageBoxButtons.OK, MessageBoxIcon.Information);

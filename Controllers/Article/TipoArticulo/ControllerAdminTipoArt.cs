@@ -1,4 +1,5 @@
 ﻿using OpticaMultivisual.Models.DAO;
+using OpticaMultivisual.Views.Dashboard.Article;
 using OpticaMultivisual.Views.Dashboard.Article.TipoArticulo;
 using OpticaMultivisual.Views.ScheduleAppointment;
 using System;
@@ -37,7 +38,7 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
         {
             DAOTipoArticulo ObjRegistro = new DAOTipoArticulo();
             DataSet ds = ObjRegistro.BuscarTipoArticulo(ObjVista.txtBuscar.Text.Trim());
-            ObjVista.dgvInfoTipoArticulo.DataSource = ds.Tables["Visita"];
+            ObjVista.dgvInfoTipoArticulo.DataSource = ds.Tables["TipoArt"];
         }
         public void AgregarTipArt(object sender, EventArgs e)
         {
@@ -49,9 +50,9 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
         {
             int pos = ObjVista.dgvInfoTipoArticulo.CurrentRow.Index;
             ViewAddTipoArt openForm = new ViewAddTipoArt(2,
-            int.Parse(ObjVista.dgvInfoTipoArticulo[0, pos].Value.ToString()),//Id del tipo de articulo
-            ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString(),        // Nombre
-            ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString()     // descripcion
+            int.Parse(ObjVista.dgvInfoTipoArticulo[0, pos].Value.ToString()),// Codigo del articulo
+            ObjVista.dgvInfoTipoArticulo[1, pos].Value.ToString(),// Nombre
+            ObjVista.dgvInfoTipoArticulo[2, pos].Value.ToString() // Descripcion
             );
 
             openForm.ShowDialog();
