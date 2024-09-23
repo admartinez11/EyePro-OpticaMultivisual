@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("OpticaMultivisual")]
-[assembly: AssemblyDescription("Sistema de Administración de Clientes, Empleados y Articulos")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Equipo C122-24.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OpticaMultivisual")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
