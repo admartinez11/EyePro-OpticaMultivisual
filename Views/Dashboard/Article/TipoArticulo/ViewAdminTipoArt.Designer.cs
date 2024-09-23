@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.Dashboard.Article.TipoArticulo
+namespace OpticaMultivisual.Views.Dashboard.Article.TipoArticulo
 {
     partial class ViewAdminTipoArt
     {

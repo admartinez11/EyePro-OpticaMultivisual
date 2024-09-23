@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.Consultas
+namespace OpticaMultivisual.Views.Consultas
 {
     partial class VerConsulta
     {

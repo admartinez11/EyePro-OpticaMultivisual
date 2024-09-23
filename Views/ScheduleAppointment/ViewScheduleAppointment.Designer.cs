@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.ScheduleAppointment
+namespace OpticaMultivisual.Views.ScheduleAppointment
 {
     partial class ViewScheduleAppointment
     {

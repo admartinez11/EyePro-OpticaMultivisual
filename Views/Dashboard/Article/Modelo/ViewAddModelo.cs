@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpticaMultivisual.Controllers.Article.Modelo;
+using OpticaMultivisual.Controllers.Article.TipoArticulo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,15 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
 {
     public partial class ViewAddModelo : Form
     {
-        public ViewAddModelo()
+        public ViewAddModelo(int accion)
         {
             InitializeComponent();
+            ControllerAddModelo objAddUser = new ControllerAddModelo(this, accion);
+        }
+        public ViewAddModelo(int accion, int mod_ID, string Mod_nombre, int Marca_ID)
+        {
+            InitializeComponent();
+            ControllerAddModelo objAddUser = new ControllerAddModelo(this, accion, Mod_nombre, Marca_ID);
         }
     }
 }

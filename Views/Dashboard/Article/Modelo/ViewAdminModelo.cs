@@ -1,4 +1,7 @@
-﻿using System;
+﻿using OpticaMultivisual.Controllers.Article.Modelo;
+using OpticaMultivisual.Controllers.Article.TipoArticulo;
+using OpticaMultivisual.Controllers.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,9 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
         public ViewAdminModelo()
         {
             InitializeComponent();
+
+
+            ControllerAdminModelo objAppointment = new ControllerAdminModelo(this);
         }
     }
 }

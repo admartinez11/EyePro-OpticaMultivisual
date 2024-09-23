@@ -90,7 +90,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     Emp_ID = ObjAañadirConsulta.cmbEmpleado.SelectedValue.ToString().Trim(),
                     Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim())
                 };
-                if (ObjAañadirConsulta.cmbEstado.Checked == true)
+                if (ObjAañadirConsulta.bunifuCheckBox1.Checked == true)
                 {
                     Consulta.Est_ID = true;
                 }
@@ -142,7 +142,6 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.txtConID.Text = con_ID.ToString();
                 ObjAañadirConsulta.DTPHoraConsulta.Value = con_hora;
                 ObjAañadirConsulta.cmbEstado.Text = est_ID.ToString();
-
             }
             catch (Exception ex)
             {
@@ -174,7 +173,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     DAOActualizar.Vis_ID = ((DataRowView)ObjAañadirConsulta.cmbVisita.SelectedItem)["vis_ID"].ToString().Trim();
                     DAOActualizar.Emp_ID = ((DataRowView)ObjAañadirConsulta.cmbEmpleado.SelectedItem)["emp_ID"].ToString().Trim();
 
-                    if (ObjAañadirConsulta.cmbEstado.Checked == true)
+                    if (ObjAañadirConsulta.bunifuCheckBox1.Checked == true)
                     {
                         DAOActualizar.Est_ID = true;
                     }

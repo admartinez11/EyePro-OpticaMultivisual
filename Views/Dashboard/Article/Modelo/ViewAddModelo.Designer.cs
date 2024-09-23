@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
+namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
 {
     partial class ViewAddModelo
     {

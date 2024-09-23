@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpticaMultivisual.Controllers.Article.TipoArticulo;
+using OpticaMultivisual.Controllers.Dashboard.ScheduleAppointment;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,8 @@ namespace OpticaMultivisual.Views.Dashboard.Article.TipoArticulo
         public ViewAdminTipoArt()
         {
             InitializeComponent();
+
+            ControllerAdminTipoArt objAppointment = new ControllerAdminTipoArt(this);
         }
     }
 }

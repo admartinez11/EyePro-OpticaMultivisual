@@ -1,4 +1,4 @@
-﻿using OpticaMultivisual.Controllers.Consulta;
+using OpticaMultivisual.Controllers.Consulta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,3 +22,4 @@ namespace OpticaMultivisual.Views.Consultas
 
     }
 }
+

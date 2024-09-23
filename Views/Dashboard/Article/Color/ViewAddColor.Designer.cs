@@ -1,4 +1,4 @@
-﻿namespace OpticaMultivisual.Views.Dashboard.Article.Color
+namespace OpticaMultivisual.Views.Dashboard.Article.Color
 {
     partial class ViewAddColor
     {
