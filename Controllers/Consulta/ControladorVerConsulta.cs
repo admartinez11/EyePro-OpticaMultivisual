@@ -31,26 +31,26 @@ namespace OpticaMultivisual.Controllers.Consulta
             LlenarComboDui();
             LlenarComboVisita();
             LlenarComboEmpleados();
-            AñadirConsulta_Load();
+            //AñadirConsulta_Load();
         }
 
-        private void AñadirConsulta_Load()
-        {
-            // Configurar ComboBox para DUI con búsqueda y selección únicamente
-            ObjAañadirConsulta.cmbDUI.DropDownStyle = ComboBoxStyle.DropDown;
-            ObjAañadirConsulta.cmbDUI.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            ObjAañadirConsulta.cmbDUI.AutoCompleteSource = AutoCompleteSource.ListItems;
+        //private void AñadirConsulta_Load()
+        //{
+        //    // Configurar ComboBox para DUI con búsqueda y selección únicamente
+        //    ObjAañadirConsulta.cmbDUI.DropDownStyle = ComboBoxStyle.DropDown;
+        //    ObjAañadirConsulta.cmbDUI.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+        //    ObjAañadirConsulta.cmbDUI.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            // Configurar ComboBox para Visita con búsqueda y selección únicamente
-            ObjAañadirConsulta.cmbVisita.DropDownStyle = ComboBoxStyle.DropDown;
-            ObjAañadirConsulta.cmbVisita.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            ObjAañadirConsulta.cmbVisita.AutoCompleteSource = AutoCompleteSource.ListItems;
+        //    // Configurar ComboBox para Visita con búsqueda y selección únicamente
+        //    ObjAañadirConsulta.cmbVisita.DropDownStyle = ComboBoxStyle.DropDown;
+        //    ObjAañadirConsulta.cmbVisita.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+        //    ObjAañadirConsulta.cmbVisita.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            // Configurar ComboBox para Empleado con búsqueda y selección únicamente
-            ObjAañadirConsulta.cmbEmpleado.DropDownStyle = ComboBoxStyle.DropDown;
-            ObjAañadirConsulta.cmbEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            ObjAañadirConsulta.cmbEmpleado.AutoCompleteSource = AutoCompleteSource.ListItems;
-        }
+        //    // Configurar ComboBox para Empleado con búsqueda y selección únicamente
+        //    ObjAañadirConsulta.cmbEmpleado.DropDownStyle = ComboBoxStyle.DropDown;
+        //    ObjAañadirConsulta.cmbEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+        //    ObjAañadirConsulta.cmbEmpleado.AutoCompleteSource = AutoCompleteSource.ListItems;
+        //}
         void LlenarComboDui()
         {
             DAOConsulta DaoDui = new DAOConsulta();
@@ -88,7 +88,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     Cli_DUI = ObjAañadirConsulta.cmbDUI.SelectedValue.ToString().Trim(),
                     Vis_ID = ObjAañadirConsulta.cmbVisita.SelectedValue.ToString().Trim(),
                     Emp_ID = ObjAañadirConsulta.cmbEmpleado.SelectedValue.ToString().Trim(),
-                    Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsultas.Text.Trim())
+                    Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim())
                 };
                 if (ObjAañadirConsulta.cmbEstado.Checked == true)
                 {
@@ -140,7 +140,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                 ObjAañadirConsulta.cmbEmpleado.Text = emp_ID;
                 ObjAañadirConsulta.DTPfechaconsulta.Value = con_fecha;
                 ObjAañadirConsulta.txtConID.Text = con_ID.ToString();
-                ObjAañadirConsulta.DTPHoraConsultas.Value = con_hora;
+                ObjAañadirConsulta.DTPHoraConsulta.Value = con_hora;
                 ObjAañadirConsulta.cmbEstado.Text = est_ID.ToString();
 
             }
@@ -193,7 +193,7 @@ namespace OpticaMultivisual.Controllers.Consulta
                     }
 
                     DAOActualizar.Con_fecha = DateTime.Parse(ObjAañadirConsulta.DTPfechaconsulta.Text.Trim());
-                    DAOActualizar.Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsultas.Text.Trim());
+                    DAOActualizar.Con_hora = DateTime.Parse(ObjAañadirConsulta.DTPHoraConsulta.Text.Trim());
                     DAOActualizar.Con_obser = ObjAañadirConsulta.txtObservaciones.Text.Trim();
                     DAOActualizar.Con_ID = int.Parse(ObjAañadirConsulta.txtConID.Text.Trim());
 
@@ -249,13 +249,16 @@ namespace OpticaMultivisual.Controllers.Consulta
                 return false;
             }
 
+
             // Finalmente, verifica que el texto en txtObservaciones sea válido
             if (!VerificarTexto(ObjAañadirConsulta.txtObservaciones.Text))
             {
                 return false;
             }
+
             return true;
         }
+
 
         private bool VerificacionCamposLlenos()
         {
