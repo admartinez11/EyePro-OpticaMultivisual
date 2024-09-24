@@ -613,6 +613,7 @@
     <None Include="Resources\Sever.png" />
     <None Include="Resources\Documents.png" />
     <Content Include="Eyeproico.ico" />
+    <None Include="Resources\EyePro.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

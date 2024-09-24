@@ -40,9 +40,13 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chkRememberMe = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PasswordHide = new Bunifu.UI.WinForms.BunifuImageButton();
             this.PasswordVisible = new Bunifu.UI.WinForms.BunifuImageButton();
             this.BtnStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -53,16 +57,16 @@
             this.LblPassword = new System.Windows.Forms.Label();
             this.LblForgotpass = new System.Windows.Forms.LinkLabel();
             this.Lblregistration = new System.Windows.Forms.LinkLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnExit = new System.Windows.Forms.ToolStripButton();
             this.BtnTest = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -93,20 +97,10 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.11801F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.34161F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.695652F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.06832F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.968944F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1342, 644);
             this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 129);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -119,11 +113,35 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(272, 138);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.363229F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.52914F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.10762F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(740, 446);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.702128F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.95744F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.34043F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(740, 470);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnExit,
+            this.BtnTest});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1348, 29);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OpticaMultivisual.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(263, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuPanel1
             // 
@@ -133,6 +151,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(172)))));
             this.bunifuPanel1.BorderRadius = 40;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.panel1);
+            this.bunifuPanel1.Controls.Add(this.label1);
             this.bunifuPanel1.Controls.Add(this.PasswordHide);
             this.bunifuPanel1.Controls.Add(this.PasswordVisible);
             this.bunifuPanel1.Controls.Add(this.BtnStart);
@@ -144,11 +164,88 @@
             this.bunifuPanel1.Controls.Add(this.LblForgotpass);
             this.bunifuPanel1.Controls.Add(this.Lblregistration);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel1.Location = new System.Drawing.Point(181, 18);
+            this.bunifuPanel1.Location = new System.Drawing.Point(181, 11);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(460, 371);
+            this.bunifuPanel1.Size = new System.Drawing.Size(460, 398);
             this.bunifuPanel1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.chkRememberMe);
+            this.panel1.Location = new System.Drawing.Point(38, 296);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(41, 33);
+            this.panel1.TabIndex = 20;
+            // 
+            // chkRememberMe
+            // 
+            this.chkRememberMe.AllowBindingControlAnimation = true;
+            this.chkRememberMe.AllowBindingControlColorChanges = false;
+            this.chkRememberMe.AllowBindingControlLocation = false;
+            this.chkRememberMe.AllowCheckBoxAnimation = false;
+            this.chkRememberMe.AllowCheckmarkAnimation = true;
+            this.chkRememberMe.AllowOnHoverStates = true;
+            this.chkRememberMe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chkRememberMe.AutoCheck = true;
+            this.chkRememberMe.BackColor = System.Drawing.Color.Transparent;
+            this.chkRememberMe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkRememberMe.BackgroundImage")));
+            this.chkRememberMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkRememberMe.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.chkRememberMe.BorderRadius = 12;
+            this.chkRememberMe.Checked = false;
+            this.chkRememberMe.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.chkRememberMe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkRememberMe.CustomCheckmarkImage = null;
+            this.chkRememberMe.Location = new System.Drawing.Point(11, 5);
+            this.chkRememberMe.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.chkRememberMe.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.OnCheck.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.chkRememberMe.OnCheck.BorderRadius = 12;
+            this.chkRememberMe.OnCheck.BorderThickness = 2;
+            this.chkRememberMe.OnCheck.CheckBoxColor = System.Drawing.Color.PaleTurquoise;
+            this.chkRememberMe.OnCheck.CheckmarkColor = System.Drawing.Color.Black;
+            this.chkRememberMe.OnCheck.CheckmarkThickness = 2;
+            this.chkRememberMe.OnDisable.BorderColor = System.Drawing.Color.LightGray;
+            this.chkRememberMe.OnDisable.BorderRadius = 12;
+            this.chkRememberMe.OnDisable.BorderThickness = 2;
+            this.chkRememberMe.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkRememberMe.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
+            this.chkRememberMe.OnDisable.CheckmarkThickness = 2;
+            this.chkRememberMe.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.chkRememberMe.OnHoverChecked.BorderRadius = 12;
+            this.chkRememberMe.OnHoverChecked.BorderThickness = 2;
+            this.chkRememberMe.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.chkRememberMe.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.chkRememberMe.OnHoverChecked.CheckmarkThickness = 2;
+            this.chkRememberMe.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.chkRememberMe.OnHoverUnchecked.BorderRadius = 12;
+            this.chkRememberMe.OnHoverUnchecked.BorderThickness = 1;
+            this.chkRememberMe.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.chkRememberMe.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
+            this.chkRememberMe.OnUncheck.BorderRadius = 12;
+            this.chkRememberMe.OnUncheck.BorderThickness = 1;
+            this.chkRememberMe.OnUncheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            this.chkRememberMe.Size = new System.Drawing.Size(25, 25);
+            this.chkRememberMe.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.chkRememberMe.TabIndex = 18;
+            this.chkRememberMe.ThreeState = false;
+            this.chkRememberMe.ToolTipText = "Llena las credenciales del usuario y la contraseña si esta marcado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(78, 301);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 21);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Recuerdame";
             // 
             // PasswordHide
             // 
@@ -267,7 +364,7 @@
             this.BtnStart.IdleIconLeftImage = null;
             this.BtnStart.IdleIconRightImage = null;
             this.BtnStart.IndicateFocus = false;
-            this.BtnStart.Location = new System.Drawing.Point(275, 303);
+            this.BtnStart.Location = new System.Drawing.Point(275, 335);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnStart.OnDisabledState.BorderRadius = 20;
@@ -471,7 +568,7 @@
             this.bunifuPictureBox1.BorderRadius = 61;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(169, 25);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(169, 24);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(122, 122);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -512,7 +609,7 @@
             this.LblForgotpass.BackColor = System.Drawing.Color.Transparent;
             this.LblForgotpass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblForgotpass.LinkColor = System.Drawing.Color.White;
-            this.LblForgotpass.Location = new System.Drawing.Point(42, 296);
+            this.LblForgotpass.Location = new System.Drawing.Point(255, 302);
             this.LblForgotpass.Name = "LblForgotpass";
             this.LblForgotpass.Size = new System.Drawing.Size(169, 20);
             this.LblForgotpass.TabIndex = 3;
@@ -526,26 +623,12 @@
             this.Lblregistration.BackColor = System.Drawing.Color.Transparent;
             this.Lblregistration.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lblregistration.LinkColor = System.Drawing.Color.White;
-            this.Lblregistration.Location = new System.Drawing.Point(42, 324);
+            this.Lblregistration.Location = new System.Drawing.Point(49, 334);
             this.Lblregistration.Name = "Lblregistration";
             this.Lblregistration.Size = new System.Drawing.Size(88, 20);
             this.Lblregistration.TabIndex = 4;
             this.Lblregistration.TabStop = true;
             this.Lblregistration.Text = "Registrarse";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(227)))), ((int)(((byte)(255)))));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnExit,
-            this.BtnTest});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1348, 29);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
             // 
             // BtnExit
             // 
@@ -582,13 +665,14 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +697,8 @@
         public System.Windows.Forms.LinkLabel Lblregistration;
         public Bunifu.UI.WinForms.BunifuImageButton PasswordVisible;
         public Bunifu.UI.WinForms.BunifuImageButton PasswordHide;
+        public Bunifu.UI.WinForms.BunifuCheckBox chkRememberMe;
+        public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

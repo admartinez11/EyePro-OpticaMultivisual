@@ -93,6 +93,16 @@ namespace OpticaMultivisual.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EyePro {
+            get {
+                object obj = ResourceManager.GetObject("EyePro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gmail {
             get {
                 object obj = ResourceManager.GetObject("Gmail", resourceCulture);

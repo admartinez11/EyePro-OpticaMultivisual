@@ -69,6 +69,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 string.IsNullOrEmpty(ObjVista.txtUsername.Text.Trim())))
             {
                 CommonClasses commonClasses = new CommonClasses();
+                DAOAdminEmp daoAdminEmp = new DAOAdminEmp();
                 string nombre = ObjVista.txtFirstName.Text.Trim();
                 if (!commonClasses.EsNombreValido(nombre))
                 {
@@ -150,6 +151,28 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 {
                     MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
+                }
+
+                // Verificar si el DUI ya está registrado
+                bool existeDui = daoAdminEmp.VerificarDuiExistente(ObjVista.mskDocument.Text.Trim());
+                if (existeDui)
+                {
+                    MessageBox.Show("El DUI ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un DUI diferente.",
+                                    "Error de validación",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return; // Detener el proceso si el DUI ya existe
+                }
+
+                // Verificar si el correo ya está registrado
+                bool existeCorreo = daoAdminEmp.VerificarCorreoExistente(ObjVista.txtEmail.Text.Trim());
+                if (existeCorreo)
+                {
+                    MessageBox.Show("El correo electrónico ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un correo electrónico diferente.",
+                                    "Error de validación",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return; // Detener el proceso si el correo ya existe
                 }
 
                 if (string.IsNullOrWhiteSpace(ObjVista.txtUsername.Text.Trim()))

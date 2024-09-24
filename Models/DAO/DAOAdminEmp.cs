@@ -616,6 +616,54 @@ namespace OpticaMultivisual.Models.DAO
             }
         }
 
+        // Método para verificar si el DUI ya está registrado
+        public bool VerificarDuiExistente(string dui)
+        {
+            bool existe = false;
+            try
+            {
+                using (var connection = getConnection())
+                {
+                    string query = "SELECT COUNT(*) FROM Empleado WHERE emp_DUI = @dui";
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@dui", dui);
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return existe;
+        }
+
+        // Método para verificar si el correo ya está registrado
+        public bool VerificarCorreoExistente(string correo)
+        {
+            bool existe = false;
+            try
+            {
+                using (var connection = getConnection())
+                {
+                    string query = "SELECT COUNT(*) FROM Empleado WHERE emp_correo = @correo";
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return existe;
+        }
+
         public void RollBack()
         {
             //Eliminar el usuario ingresado
