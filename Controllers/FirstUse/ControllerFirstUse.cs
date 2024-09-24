@@ -114,7 +114,6 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     DAOGuardar.FechaNegocio = ObjVista.dtCreation.Value.Date;
                     DAOGuardar.TelefonoNegocio = ObjVista.txtPhone.Text.Trim();
                     DAOGuardar.PbxNegocio = ObjVista.txtPbx.Text.Trim();
-
                     //Guardar imagen
                     Image imagen = ObjVista.picBussines.Image;
                     byte[] imageBytes;

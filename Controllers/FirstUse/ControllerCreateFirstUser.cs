@@ -69,6 +69,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 string.IsNullOrEmpty(ObjVista.txtUsername.Text.Trim())))
             {
                 CommonClasses commonClasses = new CommonClasses();
+                DAOAdminEmp daoAdminEmp = new DAOAdminEmp();
                 string nombre = ObjVista.txtFirstName.Text.Trim();
                 if (!commonClasses.EsNombreValido(nombre))
                 {
@@ -152,6 +153,28 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     return;
                 }
 
+                // Verificar si el DUI ya está registrado
+                bool existeDui = daoAdminEmp.VerificarDuiExistente(ObjVista.mskDocument.Text.Trim());
+                if (existeDui)
+                {
+                    MessageBox.Show("El DUI ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un DUI diferente.",
+                                    "Error de validación",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return; // Detener el proceso si el DUI ya existe
+                }
+
+                // Verificar si el correo ya está registrado
+                bool existeCorreo = daoAdminEmp.VerificarCorreoExistente(ObjVista.txtEmail.Text.Trim());
+                if (existeCorreo)
+                {
+                    MessageBox.Show("El correo electrónico ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un correo electrónico diferente.",
+                                    "Error de validación",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return; // Detener el proceso si el correo ya existe
+                }
+
                 if (string.IsNullOrWhiteSpace(ObjVista.txtUsername.Text.Trim()))
                 {
                     MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -210,7 +233,6 @@ namespace OpticaMultivisual.Controllers.FirstUse
                 DAOInsert.SecurityAnswer = ObjVista.txtSecurityAnswer.Text.Trim();
                 //Se invoca al método RegistrarUsuario mediante el objeto DAOInsert
                 int valorRetornado = DAOInsert.RegistrarUsuario();
-                MessageBox.Show("Filas afectadas: " + valorRetornado);
                 //Se verifica el valor que retornó el método anterior y que fue almacenado en la variable valorRetornado
                 if (valorRetornado == 1)
                 {
@@ -221,7 +243,7 @@ namespace OpticaMultivisual.Controllers.FirstUse
                     MessageBox.Show($"Usuario administrador: {ObjVista.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjVista.txtUsername.Text.Trim()}OP123",
                                     "Credenciales de acceso",
                                     MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                                    MessageBoxIcon.Warning);
                     ViewLogin login = new ViewLogin();
                     login.Show();
                     ObjVista.Hide();

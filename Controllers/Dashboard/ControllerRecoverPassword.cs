@@ -107,7 +107,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 mail.From = new MailAddress("ccom.ptc2024@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Recuperación de contraseña";
-                mail.Body = $"Hola,\n\nHemos recibido tu solicitud para restablecer la contraseña de tu cuenta. Para continuar, por favor ingresa el siguiente código de verificación en nuestra página de recuperación de contraseña:\n\n{verificationCode}\n\n";
+                mail.Body = $"Hola,\n\nHemos recibido tu solicitud para restablecer la contraseña de tu cuenta. Para continuar, por favor ingresa el siguiente código de verificación en nuestro sistema de recuperación de contraseña:\n\n{verificationCode}\n\n";
                 //mail.Body = $"Tu código de verificación es: {verificationCode}";
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("ccom.ptc2024@gmail.com", "ngqy wagb fchr uvfr");

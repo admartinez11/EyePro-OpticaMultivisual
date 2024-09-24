@@ -36,6 +36,55 @@ namespace OpticaMultivisual.Controllers.Login
             ObjLogin.PasswordHide.Click += new EventHandler(HidePassword);
         }
 
+        // Método para guardar las credenciales
+        private void GuardarCredenciales(string username, string password)
+        {
+            CommonClasses commonClasses = new CommonClasses();
+            // Guardar el nombre de usuario en la configuración
+            Properties.Settings.Default.Username = username;
+            // Usamos SHA-256 para encriptar la contraseña antes de guardarla
+            Properties.Settings.Default.Password = Encriptar(password);
+            // Guardamos que el usuario quiere ser recordado
+            Properties.Settings.Default.RememberMe = true;
+            // Guardamos los cambios en la configuración
+            Properties.Settings.Default.Save();
+        }
+
+        // Método para cargar las credenciales si existen
+        private void CargarCredenciales()
+        {
+            if (Properties.Settings.Default.RememberMe)
+            {
+                ObjLogin.txtUsername.Text = Properties.Settings.Default.Username;
+                ObjLogin.txtPassword.Text = Desencriptar(Properties.Settings.Default.Password); // Desencripta la contraseña al cargarla
+                ObjLogin.chkRememberMe.Checked = true;
+            }
+        }
+
+        // Método para eliminar las credenciales guardadas
+        private void EliminarCredenciales()
+        {
+            // Eliminamos el nombre de usuario y la contraseña de la configuración
+            Properties.Settings.Default.Username = "";
+            Properties.Settings.Default.Password = "";
+            Properties.Settings.Default.RememberMe = false; // Desmarcamos la opción de recordar
+            Properties.Settings.Default.Save(); // Guardamos los cambios
+        }
+
+        // Método de ejemplo para encriptar (deberías usar una técnica de encriptación más robusta)
+        protected string Encriptar(string text)
+        {
+            byte[] data = System.Text.Encoding.Unicode.GetBytes(text);
+            return Convert.ToBase64String(data);
+        }
+
+        // Método de ejemplo para desencriptar
+        protected string Desencriptar(string encryptedText)
+        {
+            byte[] data = Convert.FromBase64String(encryptedText);
+            return System.Text.Encoding.Unicode.GetString(data);
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -92,6 +141,15 @@ namespace OpticaMultivisual.Controllers.Login
                     DAOData.ResetUserAttempts(username); // Enviar username como parámetro
                     // Verificar si el usuario tiene un VerificationCode
                     bool hasVerificationCode = DAOData.HasVerificationCode(ObjLogin.txtUsername.Text);
+                    // Si el usuario selecciona 'Recordar usuario y contraseña'
+                    if (ObjLogin.chkRememberMe.Checked)
+                    {
+                        GuardarCredenciales(ObjLogin.txtUsername.Text.Trim(), ObjLogin.txtPassword.Text.Trim());
+                    }
+                    else
+                    {
+                        EliminarCredenciales();
+                    }
                     // Verificar si la contraseña ingresada es la contraseña por defecto esperada
                     string defaultPassword = ObjLogin.txtUsername.Text + "OP123"; // Concatenar el nombre de usuario con "OP123"
                     bool isDefaultPassword = ObjLogin.txtPassword.Text == defaultPassword;
@@ -128,6 +186,8 @@ namespace OpticaMultivisual.Controllers.Login
 
         public void ConfigurarValidacionDeComandos(object sender, EventArgs e)
         {
+            // Cargar las credenciales guardadas si existen
+            CargarCredenciales();
             CommonClasses commonClasses = new CommonClasses();
             // Asociar el evento KeyDown a los TextBox que se quiere proteger
             ObjLogin.txtUsername.KeyDown += commonClasses.ValidarComandos;

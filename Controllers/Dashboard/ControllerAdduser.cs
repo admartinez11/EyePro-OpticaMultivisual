@@ -195,7 +195,7 @@ namespace OpticaMultivisual.Controllers.Dashboard
                     MessageBox.Show($"Usuario: {ObjAddUser.txtUsername.Text.Trim()}\nContraseña de usuario: {ObjAddUser.txtUsername.Text.Trim()}OP123",
                                     "Credenciales de acceso",
                                     MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                                    MessageBoxIcon.Warning);
                     ObjAddUser.Close();
                 }
                 else
@@ -389,6 +389,28 @@ namespace OpticaMultivisual.Controllers.Dashboard
                 return false;
             }
 
+            // Verificar si el DUI ya está registrado
+            bool existeDui = daoAdminEmp.VerificarDuiExistente(ObjAddUser.mskDocument.Text.Trim());
+            if (existeDui)
+            {
+                MessageBox.Show("El DUI ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un DUI diferente.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false; // Detener el proceso si el DUI ya existe
+            }
+
+            // Verificar si el correo ya está registrado
+            bool existeCorreo = daoAdminEmp.VerificarCorreoExistente(ObjAddUser.txtEmail.Text.Trim());
+            if (existeCorreo)
+            {
+                MessageBox.Show("El correo electrónico ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un correo electrónico diferente.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false; // Detener el proceso si el correo ya existe
+            }
+
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtUsername.Text.Trim()))
             {
                 MessageBox.Show("El campo de nombre de usuario es obligatorio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -483,6 +505,28 @@ namespace OpticaMultivisual.Controllers.Dashboard
             {
                 MessageBox.Show("El campo Correo Electrónico no tiene un formato válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
+            }
+
+            // Verificar si el DUI ya está registrado
+            bool existeDui = daoAdminEmp.VerificarDuiExistente(ObjAddUser.mskDocument.Text.Trim());
+            if (existeDui)
+            {
+                MessageBox.Show("El DUI ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un DUI diferente.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false; // Detener el proceso si el DUI ya existe
+            }
+
+            // Verificar si el correo ya está registrado
+            bool existeCorreo = daoAdminEmp.VerificarCorreoExistente(ObjAddUser.txtEmail.Text.Trim());
+            if (existeCorreo)
+            {
+                MessageBox.Show("El correo electrónico ingresado ya está asociado a otro usuario. Por favor, verifique e ingrese un correo electrónico diferente.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false; // Detener el proceso si el correo ya existe
             }
 
             if (string.IsNullOrWhiteSpace(ObjAddUser.txtPhone.Text.Trim()))
