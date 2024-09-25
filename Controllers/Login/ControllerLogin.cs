@@ -142,7 +142,7 @@ namespace OpticaMultivisual.Controllers.Login
                     // Verificar si el usuario tiene un VerificationCode
                     bool hasVerificationCode = DAOData.HasVerificationCode(ObjLogin.txtUsername.Text);
                     // Si el usuario selecciona 'Recordar usuario y contraseña'
-                    if (ObjLogin.chkRememberMe.Checked)
+                    if (ObjLogin.chkRememberMe.Checked == true)
                     {
                         GuardarCredenciales(ObjLogin.txtUsername.Text.Trim(), ObjLogin.txtPassword.Text.Trim());
                     }
