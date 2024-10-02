@@ -4,6 +4,7 @@ using OpticaMultivisual.Views.Dashboard.Article.TipoArticulo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace OpticaMultivisual.Controllers.Article.Color
 
         ViewAddColor ObjVistaR;
         private int accion;
+        protected int Colorid;
         public ControllerAddColor(ViewAddColor Vista, int accion)
         {
             //Acciones iniciales
@@ -75,18 +77,16 @@ namespace OpticaMultivisual.Controllers.Article.Color
             }
             return true;
         }
-        public ControllerAddColor(ViewAddColor Vista, int p_accion, string Color_nombre, string Color_descripcion)
+        public ControllerAddColor(ViewAddColor Vista, int p_accion, int Color_ID, string Color_nombre, string Color_descripcion)
         {
             // Acciones iniciales
             ObjVistaR = Vista;
             this.accion = p_accion;
-
+            this.Colorid = Color_ID;
             // Verificar la acción a realizar
             verificarAccion();
-
             // Cargar los valores en la articulo
             Cargarvalores(Color_nombre, Color_descripcion);
-
             // Métodos que se ejecutan al ocurrir eventos
             ObjVistaR.btnActualizarColor.Click += new EventHandler(ActualizarRegistro);
             // ObjAddUser.btnFoto.Click += new EventHandler(ChargePhoto);
@@ -109,12 +109,10 @@ namespace OpticaMultivisual.Controllers.Article.Color
         {
             if (ValidarCampos())
             {
-                DAOColor DAOActualizar = new DAOColor
-                {
-                    Color_nombre = ObjVistaR.txtColorNombre.Text.Trim(),
-                    Color_descripcion = ObjVistaR.txtDescColor.Text.Trim(),
-                };
-
+                DAOColor DAOActualizar = new DAOColor();
+                DAOActualizar.Color_ID = Colorid;
+                DAOActualizar.Color_nombre = ObjVistaR.txtColorNombre.Text.Trim();
+                DAOActualizar.Color_descripcion = ObjVistaR.txtDescColor.Text.Trim();
                 int valorRetornado = DAOActualizar.ActualizarColor();
                 if (valorRetornado > 0)
                 {

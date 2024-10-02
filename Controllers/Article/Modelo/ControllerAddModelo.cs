@@ -15,7 +15,7 @@ namespace OpticaMultivisual.Controllers.Article.Modelo
     {
         ViewAddModelo ObjVistaR;
         private int accion;
-
+        protected int modId;
         public ControllerAddModelo(ViewAddModelo Vista, int accion)
         {
             //Acciones iniciales
@@ -85,20 +85,17 @@ namespace OpticaMultivisual.Controllers.Article.Modelo
             }
             return true;
         }
-        public ControllerAddModelo(ViewAddModelo Vista, int p_accion, string Mod_nombre, int Marca_ID)
+        public ControllerAddModelo(ViewAddModelo Vista, int p_accion, int mod_ID, string Mod_nombre, int Marca_ID)
         {
             // Acciones iniciales
             ObjVistaR = Vista;
             this.accion = p_accion;
-
+            this.modId = mod_ID;
             Vista.Load += new EventHandler(CargaInicial);
-
             // Verificar la acción a realizar
             verificarAccion();
-
             // Cargar los valores en la articulo
             Cargarvalores(Mod_nombre, Marca_ID);
-
             // Métodos que se ejecutan al ocurrir eventos
             ObjVistaR.btnActualizarModelo.Click += new EventHandler(ActualizarRegistro);
             // ObjAddUser.btnFoto.Click += new EventHandler(ChargePhoto);
@@ -121,12 +118,10 @@ namespace OpticaMultivisual.Controllers.Article.Modelo
         {
             if (ValidarCampos())
             {
-                DAOModelo DAOActualizar = new DAOModelo
-                {
-                    Mod_nombre = ObjVistaR.txtModeloNombre.Text.Trim(),
-                    Marca_ID = (int)ObjVistaR.cmbMarca.SelectedValue,
-                };
-
+                DAOModelo DAOActualizar = new DAOModelo();
+                DAOActualizar.Mod_ID = modId;
+                DAOActualizar.Mod_nombre = ObjVistaR.txtModeloNombre.Text.Trim();
+                DAOActualizar.Marca_ID = (int)ObjVistaR.cmbMarca.SelectedValue;
                 int valorRetornado = DAOActualizar.ActualizarModelo();
                 if (valorRetornado > 0)
                 {

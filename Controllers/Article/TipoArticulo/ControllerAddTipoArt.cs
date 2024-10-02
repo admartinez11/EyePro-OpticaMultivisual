@@ -14,6 +14,7 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
     {
         ViewAddTipoArt ObjVistaR;
         private int accion;
+        protected int tipoartID;
 
         public ControllerAddTipoArt(ViewAddTipoArt Vista, int accion)
         {
@@ -76,18 +77,16 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
             return true;
         }
 
-        public ControllerAddTipoArt(ViewAddTipoArt Vista, int p_accion, string Tipoart_nombre, string Tipoart_descripcion)
+        public ControllerAddTipoArt(ViewAddTipoArt Vista, int p_accion, int Tipoart_ID, string Tipoart_nombre, string Tipoart_descripcion)
         {
             // Acciones iniciales
             ObjVistaR = Vista;
             this.accion = p_accion;
-
+            this.tipoartID = Tipoart_ID;
             // Verificar la acción a realizar
             verificarAccion();
-
             // Cargar los valores en la articulo
             Cargarvalores(Tipoart_nombre, Tipoart_descripcion);
-
             // Métodos que se ejecutan al ocurrir eventos
             ObjVistaR.btnActualizarTipArt.Click += new EventHandler(ActualizarRegistro);
             // ObjAddUser.btnFoto.Click += new EventHandler(ChargePhoto);
@@ -111,22 +110,19 @@ namespace OpticaMultivisual.Controllers.Article.TipoArticulo
 
             if (ValidarCampos())
             {
-                DAOTipoArticulo DAOActualizar = new DAOTipoArticulo
-                {
-                    Tipoart_nombre = ObjVistaR.txtTipArNombre.Text.Trim(),
-                    Tipoart_descripcion = ObjVistaR.txtDescTipArt.Text.Trim(),
-                };
-
-                int valorRetornado = DAOActualizar.ActualizarTipoArticulo();
-
-                if (valorRetornado > 0)
+                DAOTipoArticulo dAOTipoArticulo = new DAOTipoArticulo();
+                dAOTipoArticulo.Tipoart_ID = tipoartID;
+                dAOTipoArticulo.Tipoart_nombre = ObjVistaR.txtTipArNombre.Text.Trim();
+                dAOTipoArticulo.Tipoart_descripcion = ObjVistaR.txtDescTipArt.Text.Trim();
+                int valorRetornado = dAOTipoArticulo.ActualizarTipoArticulo();
+                MessageBox.Show($"{valorRetornado}", "Error al cargar valores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (valorRetornado == 1)
                 {
                     MessageBox.Show("Los datos han sido actualizados exitosamente",
                                     "Proceso completado",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     ObjVistaR.Close();
-
                 }
                 else if (valorRetornado == 0)
                 {

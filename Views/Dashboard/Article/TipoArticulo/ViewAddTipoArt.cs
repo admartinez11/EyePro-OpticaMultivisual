@@ -24,7 +24,7 @@ namespace OpticaMultivisual.Views.Dashboard.Article.TipoArticulo
             InitializeComponent();
             // Se invoca al controlador de la vista y se le envía el formulario, la acción y los datos que recibió la vista.
             // La vista al recibir los datos de un controlador externo los reenvia a su propio controlador.
-            ControllerAddTipoArt objAddUser = new ControllerAddTipoArt(this, accion,Tipoart_nombre, Tipoart_descripcion);
+            ControllerAddTipoArt objAddUser = new ControllerAddTipoArt(this, accion, Tipoart_ID, Tipoart_nombre, Tipoart_descripcion);
         }
     }
 }
