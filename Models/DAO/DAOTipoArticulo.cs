@@ -93,9 +93,7 @@ namespace OpticaMultivisual.Models.DAO
             {
                 Command.Connection = getConnection();
                 MessageBox.Show($"{Tipoart_descripcion} {Tipoart_ID} {Tipoart_nombre}", "Error al cargar valores", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string query = "UPDATE TipoArt SET tipoart_nombre=@Nombre, tipoart_descripcion=@Descripcion" +
-                    "WHERE tipoart_ID = @ID";
-
+                string query = "UPDATE TipoArt SET tipoart_nombre = @Nombre, tipoart_descripcion = @Descripcion " + "WHERE tipoart_ID = @ID";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@Nombre", Tipoart_nombre);
                 cmd.Parameters.AddWithValue("@Descripcion", Tipoart_descripcion);
@@ -106,16 +104,12 @@ namespace OpticaMultivisual.Models.DAO
             catch (SqlException ex)
             {
                 // Mostrar el mensaje del error para fines de depuración
-                Console.WriteLine("EPV002 - Los datos no pudieron ser actualizados correctamente");
+                MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente");
                 return -1;
             }
             finally
             {
-                // Asegúrate de cerrar la conexión después de usarla
-                if (Command.Connection.State == ConnectionState.Open)
-                {
-                    Command.Connection.Close();
-                }
+                Command.Connection.Close();
             }
         }
 

@@ -17,7 +17,6 @@ namespace OpticaMultivisual.Views.Dashboard.Article.TipoArticulo
         public ViewAdminTipoArt()
         {
             InitializeComponent();
-
             ControllerAdminTipoArt objAppointment = new ControllerAdminTipoArt(this);
         }
     }

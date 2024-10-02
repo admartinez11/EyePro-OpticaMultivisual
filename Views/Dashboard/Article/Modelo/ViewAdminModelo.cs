@@ -18,8 +18,6 @@ namespace OpticaMultivisual.Views.Dashboard.Article.Modelo
         public ViewAdminModelo()
         {
             InitializeComponent();
-
-
             ControllerAdminModelo objAppointment = new ControllerAdminModelo(this);
         }
     }

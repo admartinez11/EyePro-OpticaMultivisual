@@ -17,7 +17,6 @@ namespace OpticaMultivisual.Views.Article
         public ViewAdminArticle()
         {
             InitializeComponent();
-
             ControllerAdminArticle objArticle = new ControllerAdminArticle(this);
         }
 

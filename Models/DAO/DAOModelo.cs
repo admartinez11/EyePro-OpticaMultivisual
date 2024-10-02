@@ -111,20 +111,18 @@ namespace OpticaMultivisual.Models.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "UPDATE Modelo SET mod_nombre = @Nombre, marca_ID = @Marca WHERE mod_ID = @Modelo";
-
+                string query = "UPDATE Modelo SET mod_nombre = @Nombre, marca_ID = @Marca WHERE mod_ID = @ID";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 cmd.Parameters.AddWithValue("@Nombre", Mod_nombre);
                 cmd.Parameters.AddWithValue("@Marca", Marca_ID);
                 cmd.Parameters.AddWithValue("@ID", Mod_ID);
-
                 int respuesta = cmd.ExecuteNonQuery();
                 return respuesta;
             }
             catch (SqlException ex)
             {
                 // Mostrar el mensaje del error para fines de depuración
-                Console.WriteLine("EPV002 - Los datos no pudieron ser actualizados correctamente");
+                MessageBox.Show("EPV002 - Los datos no pudieron ser actualizados correctamente" + ex.Message);
                 return -1;
             }
             finally

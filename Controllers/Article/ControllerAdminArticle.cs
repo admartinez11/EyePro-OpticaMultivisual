@@ -28,10 +28,10 @@ namespace OpticaMultivisual.Controllers.Article
             ObjVista.btnNuevoArt.Click += new EventHandler(AgregarArticulo);
             ObjVista.btnEliminarArt.Click += new EventHandler(EliminarArticulo);
             ObjVista.btnActArt.Click += new EventHandler(ActualizarArticulo);
-            //ObjVista.administrarColorToolStripMenuItem.Click += new EventHandler(AdminColor);
-            //ObjVista.administrarModeloToolStripMenuItem.Click += new EventHandler(AdminModelo);
-            //ObjVista.administrarTipoToolStripMenuItem.Click += new EventHandler(AdminTipoArt);
-            //ObjVista.administrarMaterialesToolStripMenuItem.Click += new EventHandler(AdminMaterial);
+            ObjVista.administrarColorToolStripMenuItem.Click += new EventHandler(AdminColor);
+            ObjVista.administrarModeloToolStripMenuItem.Click += new EventHandler(AdminModelo);
+            ObjVista.administrarTipoToolStripMenuItem.Click += new EventHandler(AdminTipoArt);
+            ObjVista.administrarMaterialesToolStripMenuItem.Click += new EventHandler(AdminMaterial);
         }
         public void AdminColor(object sender, EventArgs e)
         {
